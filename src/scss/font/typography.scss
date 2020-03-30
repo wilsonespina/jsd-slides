@@ -1,17 +1,28 @@
 @import url(./font/news-706/news-706.css);
 @import url(./font/pf-din/pf-din.css);
 
+// SITE COLORS
+$darkblue: #358DF2;
+$lightblue: #E4F1FE;
+$red: #E51B24;
+$yellow: #FFD800;
+$darkgrey: #222222;
+$medgrey: #585858;
+$lightgrey: #F6F6F6;
+$grey: #ececec;
+$white: #FFFFFF;
+$black: #000000;
+
 h1 {
 	font-family: 'Pf Din', Impact, sans-serif;
 	text-transform: uppercase;
-	color: white;
-	font-size: 63px;
+	font-size: 160px;
+	line-height: 1;
 }
 
 p, h2, h3, h4, h5, th, li, table, a {
-	font-family: 'Circular', sans-serif;
-	color: #222222;
-	letter-spacing: 0.50px;
+	font-family: 'Pf Din', Impact, sans-serif;
+	letter-spacing: -0.50px;
 }
 
 p, li {
