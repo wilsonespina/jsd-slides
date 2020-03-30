@@ -1,3 +1,54 @@
+@font-face {
+    font-family: 'News 706';
+    src: url('/news-706-regular.da36801d.otf');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pf Din';
+    src: url('/pf-din-text-comp-pro-bold.15139315.ttf') format('truetype');
+
+    font-weight: bold;
+    font-style: normal
+}
+
+h1 {
+  font-family: "Pf Din", Impact, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 63px;
+}
+
+p, h2, h3, h4, h5, th, li, table, a {
+  font-family: "Circular", sans-serif;
+  color: #222222;
+  letter-spacing: 0.5px;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  color: #358DF2;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+hr {
+  border-top: 1px solid black;
+}
+
 /*!
  * reveal.js
  * http://revealjs.com

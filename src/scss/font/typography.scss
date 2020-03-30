@@ -1,0 +1,37 @@
+@import url(./font/news-706/news-706.css);
+@import url(./font/pf-din/pf-din.css);
+
+h1 {
+	font-family: 'Pf Din', Impact, sans-serif;
+	text-transform: uppercase;
+	color: white;
+	font-size: 63px;
+}
+
+p, h2, h3, h4, h5, th, li, table, a {
+	font-family: 'Circular', sans-serif;
+	color: #222222;
+	letter-spacing: 0.50px;
+}
+
+p, li {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+h2 {
+	text-align: center;
+}
+
+a {
+	color: #358DF2;
+	font-weight: 700;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+hr {
+	border-top: 1px solid black;
+}
