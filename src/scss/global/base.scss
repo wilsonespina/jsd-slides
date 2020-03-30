@@ -11,12 +11,27 @@ html, body {
 }
 
 html {
-    // color: $font-color--base;
     font-size: 16px;
-    // font-weight: $font-weight--thick;
 }
 
 body {
     line-height: 1.5;
     overflow: auto;
+}
+
+li {
+    list-style: none;
+    padding-left: 1em;
+    position: relative;
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent $black;
+        position: absolute;
+        top: calc(0.5em - 2px);
+        left: 0;
+    }
 }

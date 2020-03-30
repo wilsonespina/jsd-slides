@@ -20,14 +20,20 @@ h1 {
 	line-height: 1;
 }
 
-p, h2, h3, h4, h5, th, li, table, a {
+h2 {
 	font-family: 'Pf Din', Impact, sans-serif;
 	letter-spacing: -0.50px;
 }
 
+p, h3, h4, h5, th, li, table, a {
+	// font-family: 'Circular', sans-serif;
+	font-family: 'News 706', sans-serif;
+	letter-spacing: 0.50px;
+}
+
 p, li {
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 2rem;
+	// line-height: 22px;
 }
 
 h2 {
