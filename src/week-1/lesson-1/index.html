@@ -8,6 +8,7 @@
 		<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16" />
 		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
 		<link rel="stylesheet" href="../../scss/main.scss">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -92,39 +93,57 @@
 						<h2 class="slide__header--title">Installfest</h2>
 					</header>
 					<div class="slide__content">
-						<!-- <pre><code class="hljs" data-line-numbers="4,8-11">
-							import React, { useState } from 'react';
 
-							function Example() {
-							  const [count, setCount] = useState(0);
+						<pre><code class="hljs" data-trim data-line-numbers="4|9|4,8-11">
+import React, { useState } from 'react';
 
-							  return (
-								<div>
-								  <p>You clicked {count} times</p>
-								  <button onClick={() => setCount(count + 1)}>
-									Click me
-								  </button>
-								</div>
-							  );
-							}
-							</code></pre> -->
-							```
-								<div>Testing Markdown</div>
-							```
+function Example() {
+	const [count, setCount] = useState(0);
+
+	return (
+	&lt;div&gt;
+		&lt;p&gt;You clicked {count} times&lt;/p&gt;
+		&lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+		Click me
+		&lt;/button&gt;
+	&lt;/div&gt;
+	);
+}
+						</code></pre>
+
+
+							<h2 class="slide__content--title">Tiled Backgrounds</h2>
+							<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+							<pre><code class="html">&lt;html&gt; testing header &lt;html&gt;</code></pre>
+							<pre><code class="hljs js">const test = test</code></pre>
 					</div>
 				</section>
 
 			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script> -->
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.8.2/marked.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js"></script> -->
 		<script>
+			const srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
             Reveal.initialize({
 				controls: true,
 				history: true,
 				transition: 'fade',
 				center: false,
-				progress: false
+				progress: false,
+				dependencies: [
+					// Interpret Markdown in <section> elements
+					// { src: `${srcUrlPrefix}lib/plugin/marked.min.js`, condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+					// { src: 'lib/plugin/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// {src: `${srcUrlPrefix}plugin/highlight/highlight.js`, async: true, callback: function() { hljs.initHighlightingOnLoad();}}
+					{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: function() { hljs.initHighlightingOnLoad();} },
+				]
 			});
-        </script>
+		</script>
+		<!-- <script>hljs.initHighlightingOnLoad();</script> -->
 	</body>
 </html>
