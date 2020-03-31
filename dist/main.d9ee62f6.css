@@ -1975,6 +1975,9 @@ li:before {
   margin: 1rem 0;
   text-align: left;
 }
+.slides .slide__content--text-align-center {
+  text-align: center;
+}
 .slides .slide__content--name {
   position: absolute;
   bottom: 4rem;
@@ -1982,14 +1985,17 @@ li:before {
   font-family: "News 706";
   font-size: 1.5rem;
 }
-.slides .slide__content--title {
+.slides .slide__content__title {
   color: #000000;
   text-align: left;
   text-transform: uppercase;
   font-size: 4rem;
 }
-.slides .slide__content--title--white {
+.slides .slide__content__title--white {
   color: #FFFFFF;
+}
+.slides .slide__content__image--code-along {
+  width: 30rem;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */

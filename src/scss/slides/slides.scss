@@ -41,6 +41,9 @@
         &__content {
             margin: 1rem 0;
             text-align: left;
+            &--text-align-center {
+                text-align: center;
+            }
 
             &--name {
                 position: absolute;
@@ -50,13 +53,19 @@
                 font-size: 1.5rem;
             }
 
-            &--title {
+            &__title {
                 color: $black;
                 text-align: left;
                 text-transform: uppercase;
                 font-size: 4rem;
                 &--white {
                     color: $white;
+                }
+            }
+
+            &__image {
+                &--code-along {
+                    width: 30rem;
                 }
             }
 
