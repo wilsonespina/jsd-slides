@@ -1936,6 +1936,57 @@ li:before {
   left: 0;
 }
 
+.contents header {
+  background-color: #358DF2;
+}
+.contents .header-block, .contents .info {
+  margin: 0 auto;
+  max-width: 95%;
+  width: 64rem;
+}
+.contents .header-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+.contents .header-block__logo {
+  width: 7rem;
+  height: 7rem;
+}
+.contents .header-block__title {
+  font-size: 6rem;
+  color: #FFFFFF;
+  margin: 0.75rem 0 0 0.75rem;
+}
+.contents .info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.contents .info .schedule__heading {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.contents .info .schedule__list--item a {
+  font-size: 1.5rem;
+}
+.contents .info .instructor {
+  padding-top: 1rem;
+}
+.contents .info .instructor__image {
+  width: 16rem;
+  border-radius: 9rem;
+}
+.contents .info .instructor__name {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.contents .info .instructor__title {
+  font-size: 1.3rem;
+}
+
 .slides .slide {
   height: 100%;
 }

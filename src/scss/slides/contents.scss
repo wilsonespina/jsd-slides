@@ -1,5 +1,64 @@
 .contents {
-    &-header {
-        
+    header {
+        background-color: $darkblue;
     }
+
+    .header-block, .info {
+        margin: 0 auto;
+        max-width: 95%;
+        width: 64rem;
+    }
+
+    .header-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem 0;
+        &__logo {
+            width: 7rem;
+            height: 7rem;
+        }
+        &__title {
+            font-size: 6rem;
+            color: $white;
+            margin: 0.75rem 0 0 0.75rem;
+        }
+    }
+
+    .info {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .schedule {
+            &__heading {
+                text-align: left;
+                text-transform: uppercase;
+                font-size: 4rem;
+            }
+            &__list {
+                &--item {
+                    a {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        .instructor {
+            padding-top: 1rem;
+            &__image {
+                width: 16rem;
+                border-radius: 9rem;
+            }
+            &__name {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            &__title {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+
 }
