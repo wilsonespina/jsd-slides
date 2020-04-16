@@ -2,6 +2,7 @@
 .slides {
     .slide {
         height: 100%;
+
         // HEADER
         &__header-intro, &__header {
             height: 2.5rem;
@@ -41,16 +42,73 @@
         &__content {
             margin: 1rem 0;
             text-align: left;
+
+            &--text {
+            }
+
+            &__container {
+                text-align: center;
+                margin-top: 2re;
+            }
+
+            &__image {
+                width: 30rem;
+                &--code-along {
+                    width: 30rem;
+                }
+                &--instructor {
+                    width: 25rem;
+                }
+                &--gallery {
+                    width: 100%;
+                }
+                &--homepage {
+                    width: 80%;
+                }
+            }
+
+            &__background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                background-position: top;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            &__table {
+                th {
+                    text-transform: uppercase;
+                }
+                li {
+                    font-size: 1.5rem;
+                    &:before {
+                        border-width: 0.4rem 0 0.4rem 0.4rem;
+                    }
+                }
+            }
+
             &--text-align-center {
                 text-align: center;
+            }
+
+            &--timing {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                text-align: left;
             }
 
             &--name {
                 position: absolute;
                 bottom: 4rem;
-                color: $white;
+                color: $black;
                 font-family: 'News 706';
                 font-size: 1.5rem;
+                &.white {
+                    color: $white;
+                }
             }
 
             &__title {
@@ -63,11 +121,11 @@
                 }
             }
 
-            &__image {
-                &--code-along {
-                    width: 30rem;
-                }
+            &__link {
+                font-style: italic;
+                font-size: 1.4rem;
             }
+
 
         }
     }

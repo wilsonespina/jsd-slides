@@ -2026,15 +2026,61 @@ li:before {
   margin: 1rem 0;
   text-align: left;
 }
+.slides .slide__content__container {
+  text-align: center;
+  margin-top: 2re;
+}
+.slides .slide__content__image {
+  width: 30rem;
+}
+.slides .slide__content__image--code-along {
+  width: 30rem;
+}
+.slides .slide__content__image--instructor {
+  width: 25rem;
+}
+.slides .slide__content__image--gallery {
+  width: 100%;
+}
+.slides .slide__content__image--homepage {
+  width: 80%;
+}
+.slides .slide__content__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.slides .slide__content__table th {
+  text-transform: uppercase;
+}
+.slides .slide__content__table li {
+  font-size: 1.5rem;
+}
+.slides .slide__content__table li:before {
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+}
 .slides .slide__content--text-align-center {
   text-align: center;
+}
+.slides .slide__content--timing {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: left;
 }
 .slides .slide__content--name {
   position: absolute;
   bottom: 4rem;
-  color: #FFFFFF;
+  color: #000000;
   font-family: "News 706";
   font-size: 1.5rem;
+}
+.slides .slide__content--name.white {
+  color: #FFFFFF;
 }
 .slides .slide__content__title {
   color: #000000;
@@ -2045,8 +2091,9 @@ li:before {
 .slides .slide__content__title--white {
   color: #FFFFFF;
 }
-.slides .slide__content__image--code-along {
-  width: 30rem;
+.slides .slide__content__link {
+  font-style: italic;
+  font-size: 1.4rem;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
