@@ -2028,10 +2028,24 @@ li:before {
 }
 .slides .slide__content__container {
   text-align: center;
-  margin-top: 2re;
+  margin-top: 2rem;
+}
+.slides .slide__content__block {
+  display: flex;
 }
 .slides .slide__content__image {
   width: 30rem;
+}
+.slides .slide__content__image--pug, .slides .slide__content__image--cat {
+  position: absolute;
+}
+.slides .slide__content__image--pug {
+  width: 20rem;
+}
+.slides .slide__content__image--cat {
+  width: 20rem;
+  right: 0;
+  top: 290px;
 }
 .slides .slide__content__image--code-along {
   width: 30rem;
@@ -2044,6 +2058,12 @@ li:before {
 }
 .slides .slide__content__image--homepage {
   width: 80%;
+}
+.slides .slide__content__image--slack {
+  width: 20rem;
+}
+.slides .slide__content__image--github {
+  width: 18rem;
 }
 .slides .slide__content__background {
   position: absolute;

@@ -48,11 +48,26 @@
 
             &__container {
                 text-align: center;
-                margin-top: 2re;
+                margin-top: 2rem;
+            }
+
+            &__block {
+                display: flex;
             }
 
             &__image {
                 width: 30rem;
+                &--pug, &--cat {
+                    position: absolute;
+                }
+                &--pug {
+                    width: 20rem;
+                }
+                &--cat {
+                    width: 20rem;
+                    right: 0;
+                    top: 290px;
+                }
                 &--code-along {
                     width: 30rem;
                 }
@@ -64,6 +79,12 @@
                 }
                 &--homepage {
                     width: 80%;
+                }
+                &--slack {
+                    width: 20rem;
+                }
+                &--github {
+                    width: 18rem;
                 }
             }
 
