@@ -55,6 +55,10 @@ code {
 	font-family: monaco, Consolas, "Lucida Console", monospace;
 }
 
-strong {
+strong, em {
 	font-weight: bold;
+}
+
+em {
+	color: $red;
 }

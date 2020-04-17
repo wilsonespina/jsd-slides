@@ -1898,8 +1898,12 @@ code {
   font-family: monaco, Consolas, "Lucida Console", monospace;
 }
 
-strong {
+strong, em {
   font-weight: bold;
+}
+
+em {
+  color: #E51B24;
 }
 
 *, *:after, *:before {
@@ -2055,6 +2059,9 @@ li:before {
 .slides .slide__content__image.width-30 {
   width: 30rem;
 }
+.slides .slide__content__image.width-35 {
+  width: 35rem;
+}
 .slides .slide__content__image.width-40 {
   width: 40rem;
 }
@@ -2068,10 +2075,10 @@ li:before {
   right: 0;
   top: 290px;
 }
-.slides .slide__content__image--gallery, .slides .slide__content__image--javascript-fe-be {
+.slides .slide__content__image--gallery, .slides .slide__content__image--javascript-fe-be, .slides .slide__content__image--request-response, .slides .slide__content__image--dns {
   width: 100%;
 }
-.slides .slide__content__image--homepage {
+.slides .slide__content__image--homepage, .slides .slide__content__image--request-response {
   width: 80%;
 }
 .slides .slide__content__image--website {
@@ -2079,6 +2086,9 @@ li:before {
 }
 .slides .slide__content__image--javascript {
   margin-left: 5rem;
+}
+.slides .slide__content__image--web {
+  margin-top: -2rem;
 }
 .slides .slide__content__background {
   position: absolute;

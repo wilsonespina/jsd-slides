@@ -37,7 +37,6 @@
             }
         }
 
-
         // CONTENT
         &__content {
             margin: 1rem 0;
@@ -72,6 +71,9 @@
                 &.width-30 {
                     width: 30rem;
                 }
+                &.width-35 {
+                    width: 35rem;
+                }
                 &.width-40 {
                     width: 40rem;
                 }
@@ -85,10 +87,10 @@
                     right: 0;
                     top: 290px;
                 }
-                &--gallery, &--javascript-fe-be {
+                &--gallery, &--javascript-fe-be, &--request-response, &--dns {
                     width: 100%;
                 }
-                &--homepage {
+                &--homepage, &--request-response {
                     width: 80%;
                 }
                 &--website {
@@ -96,6 +98,9 @@
                 }
                 &--javascript {
                     margin-left: 5rem;
+                }
+                &--web {
+                    margin-top: -2rem;
                 }
             }
 
