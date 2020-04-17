@@ -26,14 +26,12 @@ h2 {
 }
 
 p, h3, h4, h5, th, li, table, a {
-	// font-family: 'Circular', sans-serif;
 	font-family: 'News 706', sans-serif;
 	letter-spacing: 0.50px;
 }
 
 p, li {
 	font-size: 2rem;
-	// line-height: 22px;
 }
 
 h2 {
@@ -55,4 +53,8 @@ hr {
 
 code {
 	font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+strong {
+	font-weight: bold;
 }

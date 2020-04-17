@@ -48,43 +48,54 @@
 
             &__container {
                 text-align: center;
-                margin-top: 2rem;
             }
 
             &__block {
                 display: flex;
+                justify-content: space-betweenr;
             }
 
             &__image {
                 width: 30rem;
+                &.width-10 {
+                    width: 10rem;
+                }
+                &.width-15 {
+                    width: 15rem;
+                }
+                &.width-20 {
+                    width: 20rem;
+                }
+                &.width-25 {
+                    width: 25rem;
+                }
+                &.width-30 {
+                    width: 30rem;
+                }
+                &.width-40 {
+                    width: 40rem;
+                }
+                &.width-50 {
+                    width: 50rem;
+                }
                 &--pug, &--cat {
                     position: absolute;
                 }
-                &--pug {
-                    width: 20rem;
-                }
                 &--cat {
-                    width: 20rem;
                     right: 0;
                     top: 290px;
                 }
-                &--code-along {
-                    width: 30rem;
-                }
-                &--instructor {
-                    width: 25rem;
-                }
-                &--gallery {
+                &--gallery, &--javascript-fe-be {
                     width: 100%;
                 }
                 &--homepage {
                     width: 80%;
                 }
-                &--slack {
-                    width: 20rem;
+                &--website {
+                    margin-top: -5rem;
                 }
-                &--github {
-                    width: 18rem;
+                &--javascript {
+                    margin-left: 5rem;
                 }
             }
 
