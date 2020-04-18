@@ -62,3 +62,7 @@ strong, em {
 em {
 	color: $red;
 }
+
+ol {
+	list-style: decimal outside none;
+}

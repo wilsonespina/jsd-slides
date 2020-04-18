@@ -51,7 +51,7 @@
 
             &__block {
                 display: flex;
-                justify-content: space-betweenr;
+                justify-content: space-evenly;
             }
 
             &__image {
@@ -102,6 +102,10 @@
                 &--web {
                     margin-top: -2rem;
                 }
+                &--exercise {
+                    height: 100%;
+                    margin-top: 4rem;
+                }
             }
 
             &__background {
@@ -123,6 +127,14 @@
                     font-size: 1.5rem;
                     &:before {
                         border-width: 0.4rem 0 0.4rem 0.4rem;
+                    }
+                }
+                td {
+                    &:not(:last-of-type) {
+                        padding-right: 0.6rem;
+                    }
+                    &.col-4 {
+                        width: 25%;
                     }
                 }
             }
@@ -161,6 +173,33 @@
             &__link {
                 font-style: italic;
                 font-size: 1.4rem;
+            }
+
+            &__exercise {
+                &__header {
+                    font-size: 1.2rem;
+                }
+                &__header {
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 50%;
+                        border-bottom: 1px solid black;
+                    }
+                    &:not(:first-child) {
+                        padding-top: 2rem;
+                    }
+                    &__list {
+                        padding-left: 4rem;
+                        li {
+                            font-size: 1.2rem;
+                            &:before {
+                                border-width: 0.4rem 0 0.4rem 0.4rem;
+                            }
+                        }
+                    }
+
+                }
             }
 
 
