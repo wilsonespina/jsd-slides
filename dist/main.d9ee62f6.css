@@ -2045,6 +2045,12 @@ ul li:before {
   display: flex;
   justify-content: space-evenly;
 }
+.slides .slide__content__block.start {
+  justify-content: start;
+}
+.slides .slide__content__block.space-between {
+  justify-content: space-between;
+}
 .slides .slide__content__image {
   width: 30rem;
 }
@@ -2097,6 +2103,13 @@ ul li:before {
 .slides .slide__content__image--exercise {
   height: 100%;
   margin-top: 4rem;
+  margin: 4rem 6rem 0 3rem;
+}
+.slides .slide__content__image--terminal {
+  margin-right: 3rem;
+}
+.slides .slide__content__image--visual-studio {
+  margin-top: 3rem;
 }
 .slides .slide__content__background {
   position: absolute;

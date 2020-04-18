@@ -52,6 +52,12 @@
             &__block {
                 display: flex;
                 justify-content: space-evenly;
+                &.start {
+                    justify-content: start;
+                }
+                &.space-between {
+                    justify-content: space-between;
+                }
             }
 
             &__image {
@@ -105,6 +111,13 @@
                 &--exercise {
                     height: 100%;
                     margin-top: 4rem;
+                    margin: 4rem 6rem 0 3rem
+                }
+                &--terminal {
+                    margin-right: 3rem;
+                }
+                &--visual-studio {
+                    margin-top: 3rem;
                 }
             }
 
