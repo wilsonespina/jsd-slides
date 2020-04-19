@@ -58,6 +58,20 @@
                 &.space-between {
                     justify-content: space-between;
                 }
+                &__profile {
+                    &__info {
+                        position: relative;
+                        display: flex;
+                        h3, img {
+                            position: absolute;
+                            top: 0;
+                        }
+                    }
+                }
+                &__thoughts {
+                    position: relative;
+                    flex-basis: 60%;
+                }
             }
 
             &__image {
@@ -89,9 +103,13 @@
                 &--pug, &--cat {
                     position: absolute;
                 }
+                &--pug {
+                    left: 2rem;
+                    top: 2rem;
+                }
                 &--cat {
-                    right: 0;
-                    top: 290px;
+                    right: 6rem;
+                    top: 8rem;
                 }
                 &--gallery, &--javascript-fe-be, &--request-response, &--dns {
                     width: 100%;
@@ -118,6 +136,9 @@
                 }
                 &--visual-studio {
                     margin-top: 3rem;
+                }
+                &--itv {
+                    right: 0;
                 }
             }
 

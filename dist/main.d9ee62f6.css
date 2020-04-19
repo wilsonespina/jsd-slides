@@ -2051,6 +2051,18 @@ ul li:before {
 .slides .slide__content__block.space-between {
   justify-content: space-between;
 }
+.slides .slide__content__block__profile__info {
+  position: relative;
+  display: flex;
+}
+.slides .slide__content__block__profile__info h3, .slides .slide__content__block__profile__info img {
+  position: absolute;
+  top: 0;
+}
+.slides .slide__content__block__thoughts {
+  position: relative;
+  flex-basis: 60%;
+}
 .slides .slide__content__image {
   width: 30rem;
 }
@@ -2081,9 +2093,13 @@ ul li:before {
 .slides .slide__content__image--pug, .slides .slide__content__image--cat {
   position: absolute;
 }
+.slides .slide__content__image--pug {
+  left: 2rem;
+  top: 2rem;
+}
 .slides .slide__content__image--cat {
-  right: 0;
-  top: 290px;
+  right: 6rem;
+  top: 8rem;
 }
 .slides .slide__content__image--gallery, .slides .slide__content__image--javascript-fe-be, .slides .slide__content__image--request-response, .slides .slide__content__image--dns {
   width: 100%;
@@ -2110,6 +2126,9 @@ ul li:before {
 }
 .slides .slide__content__image--visual-studio {
   margin-top: 3rem;
+}
+.slides .slide__content__image--itv {
+  right: 0;
 }
 .slides .slide__content__background {
   position: absolute;
