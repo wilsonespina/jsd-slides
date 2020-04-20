@@ -2038,6 +2038,9 @@ ul li:before {
   margin: 1rem 0;
   text-align: left;
 }
+.slides .slide__content--text.white {
+  color: #FFFFFF;
+}
 .slides .slide__content__container {
   text-align: center;
 }
@@ -2063,6 +2066,83 @@ ul li:before {
   position: relative;
   flex-basis: 60%;
 }
+.slides .slide__content__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.slides .slide__content__table th {
+  text-transform: uppercase;
+}
+.slides .slide__content__table li {
+  font-size: 1.5rem;
+}
+.slides .slide__content__table li:before {
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+}
+.slides .slide__content__table td.col-4 {
+  width: 25%;
+}
+.slides .slide__content--text-align-center {
+  text-align: center;
+}
+.slides .slide__content--timing {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.slides .slide__content--name {
+  position: absolute;
+  bottom: 4rem;
+  color: #000000;
+  font-family: "News 706";
+  font-size: 1.5rem;
+}
+.slides .slide__content--name.white {
+  color: #FFFFFF;
+}
+.slides .slide__content__title {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.slides .slide__content__title--white {
+  color: #FFFFFF;
+}
+.slides .slide__content__title--black {
+  color: #000000;
+}
+.slides .slide__content__link {
+  font-style: italic;
+  font-size: 1.4rem;
+}
+.slides .slide__content__exercise__header {
+  font-size: 1.2rem;
+}
+.slides .slide__content__exercise__header:after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-bottom: 1px solid black;
+}
+.slides .slide__content__exercise__header:not(:first-child) {
+  padding-top: 2rem;
+}
+.slides .slide__content__exercise__header__list {
+  padding-left: 4rem;
+}
+.slides .slide__content__exercise__header__list li {
+  font-size: 1.2rem;
+}
+.slides .slide__content__exercise__header__list li:before {
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+}
+
 .slides .slide__content__image {
   width: 30rem;
 }
@@ -2089,6 +2169,9 @@ ul li:before {
 }
 .slides .slide__content__image.width-50 {
   width: 50rem;
+}
+.slides .slide__content__image.width-100-p {
+  width: 100%;
 }
 .slides .slide__content__image--pug, .slides .slide__content__image--cat {
   position: absolute;
@@ -2130,82 +2213,11 @@ ul li:before {
 .slides .slide__content__image--itv {
   right: 0;
 }
-.slides .slide__content__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background-position: top;
-  background-size: 100%;
-  background-repeat: no-repeat;
+.slides .slide__content__image--command-line {
+  margin-left: 0.5rem;
 }
-.slides .slide__content__table th {
-  text-transform: uppercase;
-}
-.slides .slide__content__table li {
-  font-size: 1.5rem;
-}
-.slides .slide__content__table li:before {
-  border-width: 0.4rem 0 0.4rem 0.4rem;
-}
-.slides .slide__content__table td:not(:last-of-type) {
-  padding-right: 0.6rem;
-}
-.slides .slide__content__table td.col-4 {
-  width: 25%;
-}
-.slides .slide__content--text-align-center {
-  text-align: center;
-}
-.slides .slide__content--timing {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-align: left;
-}
-.slides .slide__content--name {
-  position: absolute;
-  bottom: 4rem;
-  color: #000000;
-  font-family: "News 706";
-  font-size: 1.5rem;
-}
-.slides .slide__content--name.white {
-  color: #FFFFFF;
-}
-.slides .slide__content__title {
-  color: #000000;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 4rem;
-}
-.slides .slide__content__title--white {
-  color: #FFFFFF;
-}
-.slides .slide__content__link {
-  font-style: italic;
-  font-size: 1.4rem;
-}
-.slides .slide__content__exercise__header {
-  font-size: 1.2rem;
-}
-.slides .slide__content__exercise__header:after {
-  content: "";
-  display: block;
-  width: 50%;
-  border-bottom: 1px solid black;
-}
-.slides .slide__content__exercise__header:not(:first-child) {
-  padding-top: 2rem;
-}
-.slides .slide__content__exercise__header__list {
-  padding-left: 4rem;
-}
-.slides .slide__content__exercise__header__list li {
-  font-size: 1.2rem;
-}
-.slides .slide__content__exercise__header__list li:before {
-  border-width: 0.4rem 0 0.4rem 0.4rem;
+.slides .slide__content__image--cli {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
