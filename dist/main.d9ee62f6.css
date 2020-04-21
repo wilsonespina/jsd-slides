@@ -2034,6 +2034,29 @@ ul li:before {
 .slides .slide__header--title {
   color: #000000;
 }
+.slides .slide__content {
+  margin: 1rem 0;
+  text-align: left;
+}
+.slides .slide__content__table th {
+  text-transform: uppercase;
+}
+.slides .slide__content__table li {
+  font-size: 1.5rem;
+}
+.slides .slide__content__table li:before {
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+}
+.slides .slide__content__table td.col-4 {
+  width: 25%;
+}
+.slides .slide__content--text-align-center {
+  text-align: center;
+}
+.slides .slide__content__link {
+  font-style: italic;
+  font-size: 1.4rem;
+}
 .slides .slide__title {
   text-align: left;
   text-transform: uppercase;
@@ -2054,28 +2077,6 @@ ul li:before {
 }
 .slides .slide__name.white {
   color: #FFFFFF;
-}
-.slides .slide__block {
-  display: flex;
-  justify-content: space-evenly;
-}
-.slides .slide__block.start {
-  justify-content: start;
-}
-.slides .slide__block.space-between {
-  justify-content: space-between;
-}
-.slides .slide__block__profile__info {
-  position: relative;
-  display: flex;
-}
-.slides .slide__block__profile__info h3, .slides .slide__block__profile__info img {
-  position: absolute;
-  top: 0;
-}
-.slides .slide__block__thoughts {
-  position: relative;
-  flex-basis: 60%;
 }
 .slides .slide__text.white {
   color: #FFFFFF;
@@ -2116,31 +2117,30 @@ ul li:before {
 .slides .slide__exercise__header__list li:before {
   border-width: 0.4rem 0 0.4rem 0.4rem;
 }
-.slides .slide__content {
-  margin: 1rem 0;
-  text-align: left;
-}
-.slides .slide__content__container {
+.slides .slide__container-center {
   text-align: center;
 }
-.slides .slide__content__table th {
-  text-transform: uppercase;
+.slides .slide__container-flex {
+  display: flex;
+  justify-content: space-evenly;
 }
-.slides .slide__content__table li {
-  font-size: 1.5rem;
+.slides .slide__container-flex.start {
+  justify-content: start;
 }
-.slides .slide__content__table li:before {
-  border-width: 0.4rem 0 0.4rem 0.4rem;
+.slides .slide__container-flex.space-between {
+  justify-content: space-between;
 }
-.slides .slide__content__table td.col-4 {
-  width: 25%;
+.slides .slide__container-flex--profile__info {
+  position: relative;
+  display: flex;
 }
-.slides .slide__content--text-align-center {
-  text-align: center;
+.slides .slide__container-flex--profile__info h3, .slides .slide__container-flex--profile__info img {
+  position: absolute;
+  top: 0;
 }
-.slides .slide__content__link {
-  font-style: italic;
-  font-size: 1.4rem;
+.slides .slide__container-flex__thoughts {
+  position: relative;
+  flex-basis: 60%;
 }
 
 .slides .slide__image {
