@@ -2010,7 +2010,7 @@ ul li:before {
   justify-content: space-evenly;
 }
 .slides .slide__container-flex.start {
-  justify-content: start;
+  justify-content: flex-start;
 }
 .slides .slide__container-flex.space-between {
   justify-content: space-between;
@@ -2066,6 +2066,10 @@ ul li:before {
 .slides .slide__content__link {
   font-style: italic;
   font-size: 1.4rem;
+}
+.slides .slide__code {
+  font-size: 2.5rem;
+  color: #34DADF;
 }
 .slides .slide__title {
   text-align: left;
@@ -2143,6 +2147,9 @@ ul li:before {
 .slides .slide__image {
   width: 30rem;
 }
+.slides .slide__image.width-5 {
+  width: 5rem;
+}
 .slides .slide__image.width-10 {
   width: 10rem;
 }
@@ -2169,6 +2176,27 @@ ul li:before {
 }
 .slides .slide__image.width-100-p {
   width: 100%;
+}
+.slides .slide__image.height-100-p {
+  height: 100%;
+}
+.slides .slide__image.margin-left-2 {
+  margin-left: 2rem;
+}
+.slides .slide__image.margin-right-2 {
+  margin-right: 2rem;
+}
+.slides .slide__image.margin-left-5 {
+  margin-left: 5rem;
+}
+.slides .slide__image.margin-right-5 {
+  margin-right: 5rem;
+}
+.slides .slide__image.margin-left-10 {
+  margin-left: 10rem;
+}
+.slides .slide__image.margin-right-10 {
+  margin-right: 10rem;
 }
 .slides .slide__image--pug, .slides .slide__image--cat {
   position: absolute;

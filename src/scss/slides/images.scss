@@ -2,6 +2,9 @@
     .slide__image {
         // Utils
         width: 30rem;
+        &.width-5 {
+            width: 5rem;
+        }
         &.width-10 {
             width: 10rem;
         }
@@ -28,6 +31,28 @@
         }
         &.width-100-p {
             width: 100%;
+        }
+        &.height-100-p {
+            height: 100%;
+        }
+
+        &.margin-left-2 {
+            margin-left: 2rem;
+        }
+        &.margin-right-2 {
+            margin-right: 2rem;
+        }
+        &.margin-left-5 {
+            margin-left: 5rem;
+        }
+        &.margin-right-5 {
+            margin-right: 5rem;
+        }
+        &.margin-left-10 {
+            margin-left: 10rem;
+        }
+        &.margin-right-10 {
+            margin-right: 10rem;
         }
 
         // Assets modifiers

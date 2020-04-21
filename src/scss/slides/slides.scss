@@ -12,7 +12,7 @@
                 display: flex;
                 justify-content: space-evenly;
                 &.start {
-                    justify-content: start;
+                    justify-content: flex-start;
                 }
                 &.space-between {
                     justify-content: space-between;
@@ -80,6 +80,12 @@
                 font-style: italic;
                 font-size: 1.4rem;
             }
+        }
+
+
+        &__code {
+            font-size: 2.5rem;
+            color: $cyan;
         }
 
         &__title {
