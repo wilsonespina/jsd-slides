@@ -230,8 +230,8 @@
 								<table class="slide__content__table">
 									<tbody>
 										<tr>
-											<td>
-												<h2 class="slide__timing">15 mins</h2>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">15 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
@@ -335,6 +335,38 @@
 						<h2 class="slide__header--title">The Command Line & Data Types</h2>
 					</header>
 					<div class="slide__content">
+						<h2 class="slide__title">Local vs Remote</h2>
+						<div class="slide__container-flex space-between">
+							<div class="flex-basis-half">
+								<div class="slide__container-center">
+									<p class="slide__text">Local</p>
+									<img class="slide__image slide__image--laptop width-20" src="../../assets/images/week-1/laptop.jpg" alt="Laptop"/>
+								</div>
+								<ul class="slide__list">
+									<li class="slide__list--item">Repository on your own machine</li>
+									<li class="slide__list--item">Similar to saving on MS Word</li>
+								</ul>
+							</div>
+							<div class="flex-basis-half">
+								<div class="slide__container-center">
+									<p class="slide__text">Remote</p>
+									<img class="slide__image slide__image--cloud width-20" src="../../assets/images/week-1/cloud.jpeg" alt="Cloud computing"/>
+								</div>
+								<ul class="slide__list">
+									<li class="slide__list--item">Code is stored in the Cloud and is accessible by others</li>
+									<li class="slide__list--item">Similar to saving on Google Drive</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
 						<h2 class="slide__title">Git Commands</h2>
 						<pre><code class="slide__code hljs bash large" data-trim>
 git init
@@ -353,16 +385,132 @@ git init
 					<div class="slide__content">
 						<h2 class="slide__title">Git Commands</h2>
 						<pre><code class="slide__code hljs bash large" data-trim>
-git add -A
-						</code></pre>
-						<p class="slide__text">OR</p>
-						<pre><code class="slide__code hljs bash large" data-trim>
 git add .
 						</code></pre>
+						<p class="slide__text">Or for individual files</p>
+						<pre><code class="slide__code hljs bash large" data-trim>
+git add filename
+						</code></pre>
 						<ul class="slide__list">
-							<li class="slide__list--item">Initiates a new local Git repository</li>
-							<li class="slide__list--item">Creates a <code>.git</code> subdirectory in the current working directory</li>
+							<li class="slide__list--item">Adds or stages changes in the working directory to the files to be included in the commit snapshot.</li>
+							<li class="slide__list--item">This snapshot is now stored in a temporary staging area which Git calls the "index".</li>
 						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Git Commands</h2>
+						<pre><code class="slide__code hljs bash large" data-trim>
+git commit
+git commit -m "Commit Message"
+						</code></pre>
+						<ul class="slide__list">
+							<li class="slide__list--item">Permanently stores the contents of the index in the repository.</li>
+							<li class="slide__list--item">Commits the staged files to the project history as a snapshot.</li>
+							<li class="slide__list--item">Also adds a timestamp and records who made the changes.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Git Commands</h2>
+						<pre><code class="slide__code hljs bash large" data-trim>
+git branch newbranchname
+git checkout -b newbranchname
+						</code></pre>
+						<ul class="slide__list">
+							<li class="slide__list--item">Makes a copy of the working directory in the current branch and allows you to make changes without affect the other branch.</li>
+							<li class="slide__list--item">The <code class="slide__code">git checkout –b</code> command is a shortcut to create the branch and move into it.</li>
+							<li class="slide__list--item">Use <code class="slide__code">git checkout branchname</code>, to return to an existing branch.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Git Workflow</h2>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--git-workflow width-40" src="../../assets/images/week-1/git-flow.jpeg" alt="Git workflow diagram">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text">Let's try out Git Commands</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Understand how to initialize a local Git repository and push/pull changes to a remote Git repository.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Whiteboard / Slack</li>
+									<li class="slide__exercise__header__list--item">Group Exercise (2-3 people)</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__content__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Describe what Git is to a 3 year old, including:</li>
+													<ul class="slide__exercise__header__list">
+														<li class="slide__exercise__header__list--item">git init</li>
+														<li class="slide__exercise__header__list--item">git add</li>
+														<li class="slide__exercise__header__list--item">git commit</li>
+														<li class="slide__exercise__header__list--item">git branch</li>
+													</ul>
+													<li class="slide__exercise__header__list--item">Use the whiteboard to draw diagrams, if desired.</li>
+													<li class="slide__exercise__header__list--item">When your group has agreed on an explanation, type it out or take a picture and add it to the Slack thread for the command.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Node js</h1>
 					</div>
 				</section>
 

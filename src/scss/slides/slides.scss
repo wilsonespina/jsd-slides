@@ -17,6 +17,9 @@
                 &.space-between {
                     justify-content: space-between;
                 }
+                .flex-basis-half {
+                    flex-basis: 50%;
+                }
             }
         }
 
@@ -116,10 +119,13 @@
             }
         }
 
-        &__timing {
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            text-align: left;
+        &-timing {
+            width: 3rem;
+            &__header {
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                text-align: left;
+            }
         }
 
         &__background {
@@ -146,7 +152,7 @@
                     padding-top: 2rem;
                 }
                 &__list {
-                    padding-left: 4rem;
+                    padding-left: 3rem;
                     li {
                         font-size: 1.2rem;
                         &:before {
