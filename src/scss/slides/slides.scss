@@ -1,4 +1,3 @@
-
 .slides {
     .slide {
         height: 100%;
@@ -33,7 +32,6 @@
                     width: 30rem;
                 }
             }
-
         }
 
         // HEADER
@@ -74,10 +72,6 @@
         &__content {
             margin: 1rem 0;
             text-align: left;
-
-            &--height-100-p {
-                height: 100%;
-            }
 
             &__table {
                 th {
@@ -134,9 +128,7 @@
                         border-bottom: 0.2rem solid white;
                         padding: 0.3rem 0.2rem;
                     }
-
                 }
-
             }
 
             &__link {
@@ -144,19 +136,6 @@
                 font-size: 1.4rem;
             }
         }
-
-        &__pre {
-            &.width-100-p {
-                width: 100%;
-            }
-            &.height-100-p {
-                height: 100%;
-            }
-            &.margin-top-2 {
-                margin-top: 2rem;
-            }
-        }
-
 
         &__code {
             &--light-blue {
@@ -284,7 +263,6 @@
                         }
                     }
                 }
-
             }
         }
 
@@ -311,9 +289,6 @@
                     &:before {
                         border-width: 0.4rem 0 0.4rem 0.4rem;
                     }
-                }
-                &.margin-left-2 {
-                    margin-left: 2rem;
                 }
             }
         }

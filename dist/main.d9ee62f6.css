@@ -2066,9 +2066,6 @@ ul li:before {
   margin: 1rem 0;
   text-align: left;
 }
-.slides .slide__content--height-100-p {
-  height: 100%;
-}
 .slides .slide__content__table th {
   text-transform: uppercase;
 }
@@ -2120,15 +2117,6 @@ ul li:before {
 .slides .slide__content__link {
   font-style: italic;
   font-size: 1.4rem;
-}
-.slides .slide__pre.width-100-p {
-  width: 100%;
-}
-.slides .slide__pre.height-100-p {
-  height: 100%;
-}
-.slides .slide__pre.margin-top-2 {
-  margin-top: 2rem;
 }
 .slides .slide__code--light-blue {
   color: #34DADF;
@@ -2265,69 +2253,9 @@ ul li:before {
 .slides .slide__list--item--small:before {
   border-width: 0.4rem 0 0.4rem 0.4rem;
 }
-.slides .slide__list--item.margin-left-2 {
-  margin-left: 2rem;
-}
 
 .slides .slide__image {
   width: 30rem;
-}
-.slides .slide__image.width-5 {
-  width: 5rem;
-}
-.slides .slide__image.width-10 {
-  width: 10rem;
-}
-.slides .slide__image.width-12 {
-  width: 12rem;
-}
-.slides .slide__image.width-15 {
-  width: 15rem;
-}
-.slides .slide__image.width-20 {
-  width: 20rem;
-}
-.slides .slide__image.width-25 {
-  width: 25rem;
-}
-.slides .slide__image.width-30 {
-  width: 30rem;
-}
-.slides .slide__image.width-35 {
-  width: 35rem;
-}
-.slides .slide__image.width-40 {
-  width: 40rem;
-}
-.slides .slide__image.width-50 {
-  width: 50rem;
-}
-.slides .slide__image.width-100-p {
-  width: 100%;
-}
-.slides .slide__image.height-100-p {
-  height: 100%;
-}
-.slides .slide__image.margin-left-2 {
-  margin-left: 2rem;
-}
-.slides .slide__image.margin-right-2 {
-  margin-right: 2rem;
-}
-.slides .slide__image.margin-left-5 {
-  margin-left: 5rem;
-}
-.slides .slide__image.margin-right-5 {
-  margin-right: 5rem;
-}
-.slides .slide__image.margin-left-10 {
-  margin-left: 10rem;
-}
-.slides .slide__image.margin-right-10 {
-  margin-right: 10rem;
-}
-.slides .slide__image.margin-top-2 {
-  margin-top: 2rem;
 }
 .slides .slide__image--pug, .slides .slide__image--cat {
   position: absolute;
@@ -2340,17 +2268,11 @@ ul li:before {
   right: 6rem;
   top: 8rem;
 }
-.slides .slide__image--gallery, .slides .slide__image--javascript-fe-be, .slides .slide__image--request-response, .slides .slide__image--dns {
-  width: 100%;
-}
 .slides .slide__image--homepage, .slides .slide__image--request-response {
   width: 80%;
 }
 .slides .slide__image--website {
   margin-top: -5rem;
-}
-.slides .slide__image--javascript {
-  margin-left: 5rem;
 }
 .slides .slide__image--web {
   margin-top: -2rem;
@@ -2359,12 +2281,6 @@ ul li:before {
   height: 100%;
   margin-top: 4rem;
   margin: 4rem 6rem 0 3rem;
-}
-.slides .slide__image--terminal {
-  margin-right: 3rem;
-}
-.slides .slide__image--visual-studio {
-  margin-top: 3rem;
 }
 .slides .slide__image--itv {
   right: 0;
@@ -2381,6 +2297,79 @@ ul li:before {
 }
 .slides .slide__image--iceburg-abstraction:not(.current-fragment), .slides .slide__image--iceburg-abstraction-highlight:not(.current-fragment) {
   display: none;
+}
+
+.slides .slide {
+  width: 30rem;
+}
+.slides .slide .width-5 {
+  width: 5rem;
+}
+.slides .slide .width-10 {
+  width: 10rem;
+}
+.slides .slide .width-12 {
+  width: 12rem;
+}
+.slides .slide .width-15 {
+  width: 15rem;
+}
+.slides .slide .width-20 {
+  width: 20rem;
+}
+.slides .slide .width-25 {
+  width: 25rem;
+}
+.slides .slide .width-30 {
+  width: 30rem;
+}
+.slides .slide .width-35 {
+  width: 35rem;
+}
+.slides .slide .width-40 {
+  width: 40rem;
+}
+.slides .slide .width-50 {
+  width: 50rem;
+}
+.slides .slide .width-100-p {
+  width: 100%;
+}
+.slides .slide .height-100-p {
+  height: 100%;
+}
+.slides .slide .margin-left-2 {
+  margin-left: 2rem;
+}
+.slides .slide .margin-left-3 {
+  margin-left: 3rem;
+}
+.slides .slide .margin-left-5 {
+  margin-left: 5rem;
+}
+.slides .slide .margin-left-10 {
+  margin-left: 10rem;
+}
+.slides .slide .margin-right-2 {
+  margin-right: 2rem;
+}
+.slides .slide .margin-right-3 {
+  margin-right: 3rem;
+}
+.slides .slide .margin-right-5 {
+  margin-right: 5rem;
+}
+.slides .slide .margin-right-10 {
+  margin-right: 10rem;
+}
+.slides .slide .margin-top-1 {
+  margin-top: 1rem;
+}
+.slides .slide .margin-top-2 {
+  margin-top: 2rem;
+}
+.slides .slide .margin-top-3 {
+  margin-top: 3rem;
 }
 
 /*# sourceMappingURL=/main.d9ee62f6.css.map */
