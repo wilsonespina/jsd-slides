@@ -367,7 +367,7 @@
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Git Commands</h2>
-						<pre><code class="slide__code hljs bash large" data-trim>
+						<pre><code class="slide__code slide__code--light-blue hljs bash large" data-trim>
 git init
 						</code></pre>
 						<ul class="slide__list">
@@ -383,11 +383,11 @@ git init
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Git Commands</h2>
-						<pre><code class="slide__code hljs bash large" data-trim>
+						<pre><code class="slide__code slide__code--light-blue hljs bash large" data-trim>
 git add .
 						</code></pre>
 						<p class="slide__text">Or for individual files</p>
-						<pre><code class="slide__code hljs bash large" data-trim>
+						<pre><code class="slide__code slide__code--light-blue hljs bash large" data-trim>
 git add filename
 						</code></pre>
 						<ul class="slide__list">
@@ -403,7 +403,7 @@ git add filename
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Git Commands</h2>
-						<pre><code class="slide__code hljs bash large" data-trim>
+						<pre><code class="slide__code slide__code--light-blue hljs bash large" data-trim>
 git commit
 git commit -m "Commit Message"
 						</code></pre>
@@ -421,7 +421,7 @@ git commit -m "Commit Message"
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Git Commands</h2>
-						<pre><code class="slide__code hljs bash large" data-trim>
+						<pre><code class="slide__code slide__code--light-blue hljs bash large" data-trim>
 git branch newbranchname
 git checkout -b newbranchname
 						</code></pre>
@@ -485,7 +485,7 @@ git checkout -b newbranchname
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
-													<li class="slide__exercise__header__list--item">Describe what Git is to a 3 year old, including:</li>
+													<li class="slide__exercise__header__list--item">Describe what Git is to a toddler, including:</li>
 													<ul class="slide__exercise__header__list">
 														<li class="slide__exercise__header__list--item">git init</li>
 														<li class="slide__exercise__header__list--item">git add</li>
@@ -570,7 +570,7 @@ git checkout -b newbranchname
 									<tr>
 										<td class="col-2">
 											<ul>
-												<li>Can interact with the local OS and filesystem<li>
+												<li>Can interact with the local OS and filesystem</li>
 											</ul>
 										</td>
 										<td class="col-2">
@@ -606,7 +606,7 @@ git checkout -b newbranchname
 									<tr>
 										<td class="col-2">
 											<ul>
-												<li>Everything is written insidde modules</li>
+												<li>Everything is written inside modules</li>
 											</ul>
 										</td>
 										<td class="col-2">
@@ -620,6 +620,243 @@ git checkout -b newbranchname
 						</div>
 					</div>
 				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is Node used for</h2>
+						<div class="slide__container">
+							<div class="slide__container-center">
+								<img class="slide__image slide__image--swiss-army-knife width-25" src="../../assets/images/week-1/swiss-army-knife.jpg" alt="Swiss army knife">
+							</div>
+							<ul class="slide__list fragment">
+								<li class="slide__list--item">Allows us to run JavaScript from our terminal applications</li>
+								<li class="slide__list--item">Creating and running scripts</li>
+								<li class="slide__list--item">File management</li>
+								<li class="slide__list--item">Creating a backend server for a web application</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Running Node in the Command Line</h2>
+						<div class="slide__container">
+							<div>
+								<p class="slide__text">Interactive command line</p>
+								<ul class="slide__list">
+									<li class="slide__list--item slide__list--item--small margin-left-2">To enter mode type: <em><code>node</code></em> at the command prompt.</li>
+									<li class="slide__list--item slide__list--item--small margin-left-2">To exit type: <em><code>.exit</code></em> or press <code>CTRL + C</code> twice</li>
+								</ul>
+								<pre><code class="slide__code hljs node small" data-trim>
+	> 3 + 4 // your command
+	< 7 // Node's response
+								</code></pre>
+							</div>
+
+							<div class="fragment">
+								<p class="slide__text margin-top-2">Running a file</p>
+								<ul class="slide__list">
+									<li class="slide__list--item slide__list--item--small margin-left-2">Run a file by using <em><code>node</code></em> and the filepath as the first argument:</li>
+								</ul>
+								<pre><code class="slide__code hljs node small" data-trim>
+	> node /filepath/script.js
+								</code></pre>
+								<ul class="slide__list">
+									<li class="slide__list--item slide__list--item--small margin-left-2 ">Node loads the <code>script.js</code> file and executes the contents</li>
+								</ul>
+								<pre><code class="slide__code hljs node small" data-trim>
+	> 7
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">JavaScript Variables</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Variables</h2>
+						<div class="slide__container">
+							<p class="slide__text">Containers for data that allow us to store values</p>
+							<ul class="slide__list">
+								<li class="slide__list--item">Allows our program to remember values for us to use later on</li>
+								<li class="slide__list--item">The action of saving a value to a variable is called <strong>assignment</strong></li>
+								<li class="slide__list--item">Similar to putting information on a shelf</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image slide__image--jar width-15" src="../../assets/images/week-1/variable-jar.png" alt="Jar">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content slide__content--height-100-p">
+						<h2 class="slide__title">Declare the Variable</h2>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle large javascript height-100-p text-align-center" data-trim>
+let age;
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content slide__content--height-100-p">
+						<h2 class="slide__title">Assign a value</h2>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle large javascript height-100-p text-align-center" data-trim>
+let age = 32;
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content slide__content--height-100-p">
+						<h2 class="slide__title">Declare and assign a value</h2>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle large javascript height-100-p text-align-center" data-trim>
+let age = 32;
+const age = 32;
+var age = 32;
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Naming Variables</h2>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--camel-case width-12" src="../../assets/images/week-1/camel-case.png" alt="Camelcase">
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list--item">Use camelCase - first letter is lowercase and proceeding words are uppercase: <em><code>anExampleOfCamelCase</code></em></li>
+							<li class="slide__list--item">Names can only contain: letters, numbers, $ and _</li>
+							<li class="slide__list--item">No dashes, no full stops and cannot start with a number<li>
+							<li class="slide__list--item">Case sensitive - <em><code>numberofbooks</code></em> is not the same as <em><code>numberOfBooks</code></em></li>
+						</ul>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content slide__content--height-100-p">
+						<h2 class="slide__title">Printing things out for inspection</h2>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p text-align-center" data-trim>
+console.log(age)
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">When do you use console.log</h2>
+						<ul class="slide__list">
+							<li class="slide__list--item">Used only during development to check what's going on</li>
+							<li class="slide__list--item">Allows you to debug your code</li>
+							<li class="slide__list--item">You can add multiple <code>console.log</code>'s</li>
+						</ul>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/sSmxfWnEVxtWU/giphy.gif" alt="Code Along"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Data Types</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Primitive Data Types</h2>
+						<div class="slide__container">
+							<p class="slide__text">A data type provided by a programming language as a basic building block. Examples in JavaScript are:</p>
+							<ul class="slide__list">
+								<li class="slide__list--item fragment"><code class="slide__code margin-right-2">String</code> <em>"All strings are wrapped in quotations"</em></li>
+								<li class="slide__list--item fragment"><code class="slide__code margin-right-2">Number</code> <em>15</em></li>
+								<li class="slide__list--item fragment"><code class="slide__code margin-right-2">Boolean</code> <em>true</em></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">The Command Line & Data Types</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Strings</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list--item fragment"><code class="slide__code margin-right-2">Number</code> <em>15</em></li>
+								<li class="slide__list--item fragment"><code class="slide__code margin-right-2">String</code> <em>"All strings are wrapped in quotations"</em></li>
+								<li class="slide__list--item fragment"><code class="slide__code margin-right-2">Boolean</code> <em>true</em></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
 
 
 

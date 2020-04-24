@@ -2005,6 +2005,9 @@ ul li:before {
 .slides .slide__container-center {
   text-align: center;
 }
+.slides .slide__container-vertical-center {
+  vertical-align: middle;
+}
 .slides .slide__container-flex {
   display: flex;
   justify-content: space-evenly;
@@ -2017,6 +2020,9 @@ ul li:before {
 }
 .slides .slide__container-flex .flex-basis-half {
   flex-basis: 50%;
+}
+.slides .slide__container-flex.height-100-p {
+  height: 100%;
 }
 .slides .slide__container-relative {
   position: relative;
@@ -2060,6 +2066,9 @@ ul li:before {
   margin: 1rem 0;
   text-align: left;
 }
+.slides .slide__content--height-100-p {
+  height: 100%;
+}
 .slides .slide__content__table th {
   text-transform: uppercase;
 }
@@ -2090,13 +2099,53 @@ ul li:before {
 .slides .slide__content__table--node tr:nth-child(even) {
   background-color: #E4F1FE;
 }
+.slides .slide__content__table--node tr {
+  height: 6rem;
+}
+.slides .slide__content__table--node td {
+  padding-left: 0.5rem;
+  border: 0.2rem solid white;
+}
 .slides .slide__content__link {
   font-style: italic;
   font-size: 1.4rem;
 }
-.slides .slide__code {
-  font-size: 2.5rem;
+.slides .slide__pre.width-100-p {
+  width: 100%;
+}
+.slides .slide__pre.height-100-p {
+  height: 100%;
+}
+.slides .slide__code--light-blue {
+  font-size: 2rem;
   color: #34DADF;
+}
+.slides .slide__code--middle {
+  margin: auto 0;
+}
+.slides .slide__code.small {
+  font-size: 1.2rem;
+}
+.slides .slide__code.large {
+  font-size: 3rem;
+}
+.slides .slide__code.width-30 {
+  width: 30rem;
+}
+.slides .slide__code.width-40 {
+  width: 40rem;
+}
+.slides .slide__code.margin-right-2 {
+  margin-right: 2rem;
+}
+.slides .slide__code.margin-right-5 {
+  margin-right: 5rem;
+}
+.slides .slide__code.height-100-p {
+  height: 100%;
+}
+.slides .slide__code.text-align-center {
+  text-align: center;
 }
 .slides .slide__title {
   text-align: left;
@@ -2121,6 +2170,12 @@ ul li:before {
 }
 .slides .slide__text.white {
   color: #FFFFFF;
+}
+.slides .slide__text.margin-top-2 {
+  margin-top: 2rem;
+}
+.slides .slide__text.margin-top-5 {
+  margin-top: 5rem;
 }
 .slides .slide-timing {
   width: 3rem;
@@ -2173,6 +2228,15 @@ ul li:before {
   position: relative;
   flex-basis: 60%;
 }
+.slides .slide__list--item--small {
+  font-size: 1.5rem;
+}
+.slides .slide__list--item--small:before {
+  border-width: 0.4rem 0 0.4rem 0.4rem;
+}
+.slides .slide__list--item.margin-left-2 {
+  margin-left: 2rem;
+}
 
 .slides .slide__image {
   width: 30rem;
@@ -2182,6 +2246,9 @@ ul li:before {
 }
 .slides .slide__image.width-10 {
   width: 10rem;
+}
+.slides .slide__image.width-12 {
+  width: 12rem;
 }
 .slides .slide__image.width-15 {
   width: 15rem;
