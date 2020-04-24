@@ -21,6 +21,12 @@
                     flex-basis: 50%;
                 }
             }
+            &-relative {
+                position: relative;
+                &.width-30 {
+                    width: 30rem;
+                }
+            }
         }
 
         // HEADER
@@ -65,18 +71,41 @@
             &__table {
                 th {
                     text-transform: uppercase;
+                    &.large-font {
+                        font-size: 2rem;
+                    }
                 }
                 li {
                     font-size: 1.5rem;
                     &:before {
                         border-width: 0.4rem 0 0.4rem 0.4rem;
                     }
+                    &.no-bullet {
+                        padding-left: 0;
+                        &:before {
+                            display: none;
+                        }
+                    }
                 }
                 td {
+                    &.col-2 {
+                        width: 50%;
+                    }
                     &.col-4 {
                         width: 25%;
                     }
                 }
+
+                &--node {
+
+                    tr:nth-child(odd) {
+                        background-color: $darkblue;
+                    }
+                    tr:nth-child(even) {
+                        background-color: $lightblue;
+                    }
+                }
+
             }
 
             &__link {

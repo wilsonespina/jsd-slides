@@ -103,5 +103,11 @@
         &--cli {
             margin-top: 1rem;
         }
+        &--iceburg-abstraction, &--iceburg-abstraction-highlight {
+            width: 23rem;
+            &:not(.current-fragment) {
+                display: none;
+            }
+        }
     }
 }
