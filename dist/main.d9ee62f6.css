@@ -2116,18 +2116,29 @@ ul li:before {
 .slides .slide__pre.height-100-p {
   height: 100%;
 }
+.slides .slide__pre.margin-top-2 {
+  margin-top: 2rem;
+}
 .slides .slide__code--light-blue {
-  font-size: 2rem;
   color: #34DADF;
 }
 .slides .slide__code--middle {
   margin: auto 0;
 }
+.slides .slide__code.xsmall {
+  font-size: 0.8rem;
+}
 .slides .slide__code.small {
   font-size: 1.2rem;
 }
+.slides .slide__code.medium {
+  font-size: 1.8rem;
+}
 .slides .slide__code.large {
   font-size: 3rem;
+}
+.slides .slide__code.inline {
+  display: inline-block;
 }
 .slides .slide__code.width-30 {
   width: 30rem;

@@ -138,22 +138,33 @@
             &.height-100-p {
                 height: 100%;
             }
+            &.margin-top-2 {
+                margin-top: 2rem;
+            }
         }
 
 
         &__code {
             &--light-blue {
-                font-size: 2rem;
                 color: $cyan;
             }
             &--middle {
                 margin: auto 0;
             }
+            &.xsmall {
+                font-size: 0.8rem;
+            }
             &.small {
                 font-size: 1.2rem;
             }
+            &.medium {
+                font-size: 1.8rem;
+            }
             &.large {
                 font-size: 3rem;
+            }
+            &.inline {
+                display: inline-block;
             }
             &.width-30 {
                 width: 30rem;
