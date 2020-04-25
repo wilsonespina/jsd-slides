@@ -1962,7 +1962,7 @@ ul li:before {
   justify-content: center;
   padding: 1.5rem 0;
 }
-.contents .header-block__logo {
+.contents .header-block__logo height-100-p {
   width: 7rem;
   height: 7rem;
 }
@@ -2036,16 +2036,12 @@ ul li:before {
   text-align: left;
   display: flex;
 }
-.slides .slide__header-intro--logo, .slides .slide__header--logo {
-  width: 2.5rem;
-  margin: 0.25rem 0;
-}
 .slides .slide__header-intro--title, .slides .slide__header--title {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
 }
-.slides .slide__header-intro--title, .slides .slide__header-intro--logo, .slides .slide__header--title, .slides .slide__header--logo {
+.slides .slide__header-intro--title, .slides .slide__header-intro--logo height-100-p, .slides .slide__header--title, .slides .slide__header--logo {
   display: inline-block;
 }
 .slides .slide__header-intro {
