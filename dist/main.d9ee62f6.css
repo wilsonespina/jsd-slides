@@ -1962,7 +1962,7 @@ ul li:before {
   justify-content: center;
   padding: 1.5rem 0;
 }
-.contents .header-block__logo height-100-p {
+.contents .header-block__logo {
   width: 7rem;
   height: 7rem;
 }
@@ -2041,7 +2041,7 @@ ul li:before {
   font-weight: 700;
   font-size: 1.5rem;
 }
-.slides .slide__header-intro--title, .slides .slide__header-intro--logo height-100-p, .slides .slide__header--title, .slides .slide__header--logo {
+.slides .slide__header-intro--title, .slides .slide__header-intro--logo, .slides .slide__header--title, .slides .slide__header--logo {
   display: inline-block;
 }
 .slides .slide__header-intro {
