@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 14</title>
+		<link rel="icon" type="image/png" href="../../../favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16" />
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="../../scss/main.scss">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo" src="../../assets/images/ga/ga-logo.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Prototypal Inheritance</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>
+			const srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+            Reveal.initialize({
+				controls: true,
+				history: true,
+				transition: 'fade',
+				center: false,
+				progress: false,
+				dependencies: [
+					{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: () => { hljs.initHighlightingOnLoad();} },
+				]
+			});
+		</script>
+	</body>
+</html>
