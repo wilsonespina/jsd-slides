@@ -41,6 +41,7 @@
 						<h2 class="slide__title">Learning Objectives</h2>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
+							<li class="slide__list--item">Run JavaScript in the Browser</li>
 							<li class="slide__list--item">Create arrays and access values in them</li>
 							<li class="slide__list--item">Build iterative loops using <em>for</em> statements.</li>
 							<li class="slide__list--item">Iterate over and manipulate values in an array. </li>
@@ -56,55 +57,11 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
+							<li class="slide__list--item">JavaScript in the Browser</li>
 							<li class="slide__list--item">Arrays</li>
 							<li class="slide__list--item">Loops</li>
 							<li class="slide__list--item">Array iterators</li>
 						</ul>
-					</div>
-				</section>
-
-				<section class="slide">
-					<header class="slide__header">
-						<h2 class="slide__header--title">Arrays and Loops</h2>
-					</header>
-					<div class="slide__content">
-						<h2 class="slide__title">Arrays</h2>
-						<p class="slide__text">JavaScript arrays are used to store multiple values in a single variable.</p>
-						<ul class="slide__list">
-							<li class="slide__list--item slide__list--item--small">Can be declared using an array literal <em><code>[ ]</code></em></li>
-						</ul>
-						<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
-> let a = ['dog', 'cat', 'hen'];
-undefined
-
-> a.length; // array method
-3
-						</code></pre>
-					</div>
-				</section>
-
-				<section class="slide">
-					<header class="slide__header">
-						<h2 class="slide__header--title">Arrays and Loops</h2>
-					</header>
-					<div class="slide__content">
-						<h2 class="slide__title">Getting values from an Array</h2>
-						<ul class="slide__list">
-							<li class="slide__list--item slide__list--item--small">Array index starts from <em>0</em></li>
-						</ul>
-						<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
-> let a = ['dog', 'cat', 'hen'];
-undefined
-
-> a[0];
-"dog"
-
-> a[1];
-"dog"
-
-> a[2];
-"hen"
-						</code></pre>
 					</div>
 				</section>
 
@@ -134,6 +91,63 @@ undefined
 							<li class="slide__list--item">Error messages can be useful when debugging code</li>
 							<li class="slide__list--item">Often verbose in saying what the mistake is and which line it's on</li>
 						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Arrays</h2>
+						<p class="slide__text">JavaScript arrays are used to store multiple values in a single variable.</p>
+						<ul class="slide__list">
+							<li class="slide__list--item slide__list--item--small">Can be declared using an array literal <em><code>[ ]</code></em></li>
+							<li class="slide__list--item slide__list--item--small">Array items are separated by commas</li>
+						</ul>
+						<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+let a = ['dog', 'cat', 'hen'];
+undefined
+
+a.length; // array property
+3
+						</code></pre>
+						<ul class="slide__list margin-top-2 fragment">
+							<li class="slide__list--item slide__list--item--small"><code>length</code> property is always one more than the highest index in the array.</li>
+							<li class="slide__list--item slide__list--item--small">Highest index in this case is <em>2</em></li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Getting values from an Array</h2>
+						<ul class="slide__list">
+							<li class="slide__list--item slide__list--item--small">Array index starts from <em>0</em></li>
+						</ul>
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+let a = ['dog', 'cat', 'hen'];
+undefined
+
+a[0];
+"dog"
+
+a[1];
+"cat"
+
+a[2];
+"hen"
+						</code></pre>
+						<ul class="slide__list margin-top-1 fragment">
+							<li class="slide__list--item slide__list--item--small"><code>array.length</code> isn't necessarily the number of items in the array</li>
+						<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+a[100] = 'fox';
+a.length; // 101
+						</code></pre>
+					</ul>
 					</div>
 				</section>
 
@@ -246,11 +260,10 @@ undefined
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
-													<li class="slide__exercise__header__list--item">Open up the starter code in VS Code</li>
-													<li class="slide__exercise__header__list--item">Open <code>index.html</code> in Chrome</li>
-													<li class="slide__exercise__header__list--item">Open the console</li>
-													<li class="slide__exercise__header__list--item">Answer the questions 1-4</li>
-													<li class="slide__exercise__header__list--item">BONUS: Answer the questions 5-6</li>
+													<li class="slide__exercise__header__list--item">Download the starter code and open the folder in VS Code.</li>
+													<li class="slide__exercise__header__list--item">Open <code>index.html</code> file in your Browser and open the developer console</li>
+													<li class="slide__exercise__header__list--item">Answer questions 1-5</li>
+													<li class="slide__exercise__header__list--item">BONUS: Answer the questions 6-8</li>
 												</ol>
 											</td>
 										</tr>
@@ -266,7 +279,7 @@ undefined
 						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
 					</header>
 					<div class="slide__content">
-						<h1 class="slide__title--white">For Loops</h1>
+						<h1 class="slide__title--white">Iteration</h1>
 					</div>
 				</section>
 
@@ -276,13 +289,132 @@ undefined
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Iteration</h2>
-						<img class="slide__image slide__image--chrome-console-debug width-100-p" src="/chrome-console-debug.87d22619.png" alt="Chrome dev debugging tools">
-						<ul class="slide__list">
-							<li class="slide__list--item">Error messages can be useful when debugging code</li>
-							<li class="slide__list--item">Often verbose in saying what the mistake is and which line it's on</li>
-						</ul>
+						<p class="slide__text">Iterating is a way of incrementally repeating a task, one at a time.</p>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--stacking-cat width-30" src="https://media.giphy.com/media/E6OyZu1OU3emc/giphy.gif" alt="Stacking cat">
+						</div>
 					</div>
 				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">While</h2>
+						<p class="slide__text"><code>while</code> is a loop statement that will run while a condition is <code>true</code></p>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list--item">While loops are good for basic looping, but there's a possibility it will never get run</li>
+							</ul>
+							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+while (true) {
+// an infinite loop!
+}
+							</code></pre>
+							<ul class="slide__list">
+								<li class="slide__list--item fragment">This would cause a Browser to break</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Do-While</h2>
+						<p class="slide__text">Using a <code>do-while</code> loop makes sure that the body of the loop is executed at least once</p>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list--item"><code>while()</code> isn't evaluated until after the block of code runs</li>
+							</ul>
+							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+let input = 0;
+do {
+  console.log(input++);
+} while (input < 10);
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">While Loop</h2>
+						<p class="slide__text">It is possible to iterate over an array with a while loop:</p>
+						<div class="slide__container">
+							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const a = [1, 2, 3, 4, 5]
+const len = a.length;
+let i = 0;
+
+while(i < len) {
+  console.log(i);
+  i++;
+}
+// 0
+// 1
+// 2
+// 3
+// 4
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">For Loop</h2>
+						<p class="slide__text">You can also iterate over an array with:</p>
+						<div class="slide__container">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+let teams = ['Liverpool', 'Arsenal', 'Chelsea'];
+
+for (let i = 0; i < teams.length; i++) {
+	console.log(teams[i]);
+}
+// Liverpool
+// Arsenal
+// Chelsea
+							</code></pre>
+							<div class="slide__container">
+								<img class="slide__image slide__image--for-loop width-45 fragment" src="/for-statement.77bfea84.png" alt="For statement">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">forEach Loop</h2>
+						<p class="slide__text">Another way of iterating over an array that was added with ECMAScript 5 is <code>forEach()</code>:</p>
+						<div class="slide__container">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+let teams = ['Tottenham', 'QPR', 'Watford'];
+
+teams.forEach(function(element)) {
+	console.log(element);
+}
+							</code></pre>
+							<div class="slide__container">
+								<img class="slide__image slide__image--for-each-loop margin-top-1 width-45 fragment" src="/for-each.555a4584.png" alt="For each statement">
+							</div>
+						</div>
+					</div>
+				</section>
+
+
 
 
 

@@ -119,7 +119,7 @@
                         border: 0.2rem solid white;
                     }
                 }
-                &--arrays {
+                &--arrays, &--compound-operators {
                     tr:nth-child(odd) {
                         background-color: $lightgrey;
                     }

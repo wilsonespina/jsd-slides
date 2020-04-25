@@ -2106,10 +2106,10 @@ ul li:before {
   padding-left: 0.5rem;
   border: 0.2rem solid white;
 }
-.slides .slide__content__table--arrays tr:nth-child(odd) {
+.slides .slide__content__table--arrays tr:nth-child(odd), .slides .slide__content__table--compound-operators tr:nth-child(odd) {
   background-color: #F6F6F6;
 }
-.slides .slide__content__table--arrays td {
+.slides .slide__content__table--arrays td, .slides .slide__content__table--compound-operators td {
   border-top: 0.2rem solid white;
   border-bottom: 0.2rem solid white;
   padding: 0.3rem 0.2rem;
@@ -2328,6 +2328,9 @@ ul li:before {
 }
 .slides .slide .width-40 {
   width: 40rem;
+}
+.slides .slide .width-45 {
+  width: 45rem;
 }
 .slides .slide .width-50 {
   width: 50rem;
