@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
     "build": "parcel build index.html",
-    "predeploy": "rm -rf dist && parcel build index.html --public-url https://wilsonespina.github.io/GA-JSD/",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
