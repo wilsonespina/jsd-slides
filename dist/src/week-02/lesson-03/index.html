@@ -38,7 +38,10 @@
 						<h2 class="slide__header--title">Arrays and Loops</h2>
 					</header>
 					<div class="slide__content">
-						<h2 class="slide__title">Learning Objectives</h2>
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">Learning Objectives</h2>
+							<img class="slide__image slide__image--learning-objective margin-left-1 height-100-p width-10" src="/learning-objective.8734f815.png" alt="Learning Objective">
+						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
 							<li class="slide__list--item">Run JavaScript in the Browser</li>
@@ -395,19 +398,19 @@ for (let i = 0; i < teams.length; i++) {
 
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Activity</h2>
+						<h2 class="slide__header--title">Lab</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-flex">
 							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
 							<div class="slide__exercise">
-								<p class="slide__exercise__header">Key Objective</p>
-								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item">Understand how to use and apply Array methods</li>
-								</ul>
 								<p class="slide__exercise__header">Type of Exercise</p>
 								<ul class="slide__exercise__header__list">
 									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">starter-code > 2-loops-exercise</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
 								<table class="slide__content__table">
@@ -418,10 +421,10 @@ for (let i = 0; i < teams.length; i++) {
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
-													<li class="slide__exercise__header__list--item">Download the starter code and open the folder in VS Code.</li>
-													<li class="slide__exercise__header__list--item">Open <code>index.html</code> file in your Browser and open the developer console</li>
-													<li class="slide__exercise__header__list--item">Answer questions 1-5</li>
-													<li class="slide__exercise__header__list--item">BONUS: Answer the questions 6-8</li>
+													<li class="slide__exercise__header__list--item">Write code that creates a for loop that calculates 2 to the 10th power, and console.logs each step of the calculation.</li>
+													<li class="slide__exercise__header__list--item">BONUS 1: Rewrite your code to allow a user to enter the exponent value, rather than hard-coding it into your program. (Hint: Read up on the window.prompt method.)</li>
+													<li class="slide__exercise__header__list--item">BONUS 2: Rewrite your code to use a while loop rather than a for loop.</li>
+													<li class="slide__exercise__header__list--item">BONUS 3: Rewrite your code to use a do/while loop rather than a for loop or while loop.</li>
 												</ol>
 											</td>
 										</tr>
@@ -454,21 +457,163 @@ teams.forEach(function(element)) {
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Array Iterator Methods</h2>
+						<table class="slide__content__table">
+							<thead>
+								<tr>
+									<th class="large-font">Method</th>
+									<th class="large-font">Use</th>
+								</tr>
+							</thead>
+							<tbody class="slide__content__table--arrays">
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">forEach()</code>
+									</td>
+									<td class="col-75-p ">
+										<p class="slide__text slide__text--table">Executes a provided function once per array element</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">every()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Tests whether all elements in the array pass the test implemented by the provided function</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">some()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Tests whether some element in the array passes the text implemented by the provided function</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">filter()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Creates a new array with all elements that pass the test implemented by the provided function</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">map()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Creates a new array with the results of calling a provided function on every element in this array</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">starter-code > 0-arrays-loops-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__content__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">In the index.js file, complete questions 7</li>
+													<li class="slide__exercise__header__list--item">As in the section you did earlier, your answer should be stored in a variable called q7 and the variable logged to the console.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Putting it all together</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">starter-code > 4-arrays-loops-exercise-2</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__content__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Write code for a website shopping cart that calculates the sales tax for each item in a cart array and stores the result in a 2nd array</li>
+													<li class="slide__exercise__header__list--item">Calculate the total with tax of all cart items and store the result in a new variable.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Learning Objectives - Review</h2>
+						<ul class="slide__list">
+							<li class="slide__list--item">Run JavaScript in the Browser</li>
+							<li class="slide__list--item">Create arrays and access values in them</li>
+							<li class="slide__list--item">Build iterative loops using <em>for</em> statements.</li>
+							<li class="slide__list--item">Iterate over and manipulate values in an array. </li>
+							
+						</ul>
+					</div>
+				</section>
 
-
-
-
-
-
-
-
-
-
-
-
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Q&A</h1>
+					</div>
+				</section>
 
 			</div>
 		</div>
