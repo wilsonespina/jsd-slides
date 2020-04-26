@@ -620,6 +620,246 @@ undefined
 				</div>
 			</section>
 
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Functions</h2>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<div class="flex-basis-third text-align-center">
+								<img class="slide__image slide__image--functions-modular width-15" src="../../assets/images/week-2/functions-modular.png" alt="Modular"/>
+								<p class="slide__text slide__text--small">Allow us to group a  series of statements  together to perform a  specific task</p>
+							</div>
+							<div class="flex-basis-third text-align-center">
+								<img class="slide__image slide__image--functions-reusable width-15" src="../../assets/images/week-2/functions-reusable.png" alt="Reusable"/>
+								<p class="slide__text slide__text--small">We can use the same  function multiple times</p>
+							</div>
+							<div class="flex-basis-third text-align-center">
+								<img class="slide__image slide__image--functions-efficient width-15" src="../../assets/images/week-2/functions-efficient.png" alt="Efficient"/>
+								<p class="slide__text slide__text--small">Not always executed when a page loads. Provide us with a way to 'store' the steps needed to achieve a task</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Developers should be lazy</h2>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--lazy-dog width-30" src="https://media.giphy.com/media/FdWU4HtO5vTGw/giphy.gif" alt="Lazy dog"/>
+							<div class="margin-left-2 fragment">
+								<p class="slide__text">Code should be written with <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a> principals:</p>
+								<ul class="slide__list margin-left-2">
+									<li class="slide__list--item slide__list--item--medium"><em>D</em>on't</li>
+									<li class="slide__list--item slide__list--item--medium"><em>R</em>epeat</li>
+									<li class="slide__list--item slide__list--item--medium"><em>Y</em>ourself</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Function Declaration Syntax</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim>
+function name(parameters) {
+  // do something
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Function Declaration example</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim>
+function sayHello() {
+  console.log(“Hello!”);
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Function Expression syntax</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim>
+let name = function(parameters) {
+  // do something
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Function Expression example</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim>
+let sayHello = function(parameters) {
+  console.log("Hello!");
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Arrow Function syntax</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim>
+let name = (parameters) => {
+  // do something
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Arrow Function syntax</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim>
+let sayHello = (parameters) => {
+  console.log("Hello!");
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Invoking a Function</h2>
+					<div class="slide__content">
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list--item slide__list--item--medium">When we want to execute the function (make it run), we use the function name followed by parentheses <em>( )</em></li>
+								<li class="slide__list--item slide__list--item--medium">We can say:</li>
+								<li class="slide__list--item slide__list--item--medium no-arrow">
+									<div class="slide__container-flex">
+										<ul class="slide__list">
+											<li class="slide__list--item slide__list--item--medium bullet margin-left-5">Call the function</li>
+											<li class="slide__list--item slide__list--item--medium bullet margin-left-5">Invoke the function</li>
+											<li class="slide__list--item slide__list--item--medium bullet margin-left-5">Execute the function</li>
+										</ul>
+										<pre class="slide__pre width-50-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim>
+function sayGoodbye(){
+  console.log('good bye');
+}
+
+sayGoodbye();
+=> good bye
+										</code></pre>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Code along</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-center">
+						<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+					</div>
+					<div class="slide__container-center">
+						<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/UcK7JalnjCz0k/giphy.gif" alt="Code Along"/>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Lab</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-flex">
+						<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+						<div class="slide__exercise">
+							<p class="slide__exercise__header">Key Objective</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Practice defining and executing functions</li>
+							</ul>
+							<p class="slide__exercise__header">Type of Exercise</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+							</ul>
+							<p class="slide__exercise__header">Location</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">starter-code > 6-functions-exercise (part 1)</li>
+							</ul>
+							<p class="slide__exercise__header">Timing</p>
+							<table class="slide__table">
+								<tbody>
+									<tr>
+										<td class="slide-timing">
+											<h2 class="slide-timing__header">4 mins</h2>
+										</td>
+										<td>
+											<ol class="slide__exercise__header__list">
+												<li class="slide__exercise__header__list--item">Follow the instructions under Part 1</li>
+											</ol>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide" data-background-color="black">
+				<header class="slide__header-intro">
+					<h2 class="slide__header-intro--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h1 class="slide__title--white">Parameters</h1>
+				</div>
+			</section>
+
 
 
 

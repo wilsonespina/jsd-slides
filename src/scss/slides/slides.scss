@@ -22,6 +22,9 @@
                 .flex-basis-half {
                     flex-basis: 50%;
                 }
+                .flex-basis-third {
+                    flex-basis: 33.333%;
+                }
                 &.height-100-p {
                     height: 100%;
                 }
@@ -169,7 +172,7 @@
                 font-size: 1.8rem;
             }
             &.large {
-                font-size: 3rem;
+                font-size: 2.2rem;
             }
             &.inline {
                 display: inline-block;
@@ -223,13 +226,10 @@
             &.white {
                 color: $white;
             }
-            &.margin-top-2 {
-                margin-top: 2rem;
-            }
-            &.margin-top-5 {
-                margin-top: 5rem;
-            }
             &--table {
+                font-size: 1.2rem;
+            }
+            &--small {
                 font-size: 1.2rem;
             }
         }
@@ -242,6 +242,7 @@
             width: 3rem;
             &__header {
                 text-transform: uppercase;
+                font-style: italic;
                 font-size: 1.1rem;
                 text-align: left;
             }
@@ -261,6 +262,8 @@
         &__exercise {
             &__header {
                 font-size: 1.2rem;
+                text-transform: uppercase;
+                font-family: 'Pf Din', Impact, sans-serif;
                 &:after {
                     content: "";
                     display: block;
@@ -271,11 +274,11 @@
                     padding-top: 2rem;
                 }
                 &__list {
-                    padding-left: 3rem;
+                    padding-left: 2rem;
                     li {
                         font-size: 1.2rem;
                         &:before {
-                            border-width: 0.4rem 0 0.4rem 0.4rem;
+                            border-width: 0.3rem 0 0.3rem 0.3rem;
                         }
                     }
                 }
@@ -311,6 +314,19 @@
                     &:before {
                         border-width: 0.5rem 0 0.5rem 0.5rem;
                     }
+                }
+                &.no-arrow {
+                    padding-left: 0;
+                    &:before {
+                        display: none;
+                    }
+                }
+                &.bullet {
+                    &:before {
+                        display: none;
+                    }
+                    padding-left: 0;
+                    list-style-type: disc;
                 }
             }
         }
