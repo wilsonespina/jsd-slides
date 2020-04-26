@@ -40,8 +40,9 @@
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5"
+							src="../../assets/images/general/learning-objective.jpg" alt="Learning Objective">
 							<h2 class="slide__title">Learning Objectives</h2>
-							<img class="slide__image slide__image--learning-objective margin-left-1 height-100-p width-10" src="../../assets/images/general/learning-objective.png" alt="Learning Objective">
 						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
@@ -1100,6 +1101,7 @@ undefined
 				transition: 'fade',
 				center: false,
 				progress: false,
+				previewLinks: true,
 				dependencies: [
 					{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: () => { hljs.initHighlightingOnLoad();} },
 				]

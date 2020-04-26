@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
 	<link rel="stylesheet" href="../../scss/main.scss">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
 </head>
+
 <body>
 	<div class="reveal">
 		<div class="slides">
@@ -40,17 +42,21 @@
 				</header>
 				<div class="slide__content">
 					<div class="slide__container-flex start">
+						<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5"
+						src="../../assets/images/general/learning-objective.jpg" alt="Learning Objective">
 						<h2 class="slide__title">Learning Objectives</h2>
-						<img class="slide__image slide__image--learning-objective margin-left-1 height-100-p width-10" src="../../assets/images/general/learning-objective.png" alt="Learning Objective">
 					</div>
 					<p class="slide__text">At the end of this class, you will be able to:</p>
 					<ul class="slide__list">
 						<li class="slide__list--item">Differentiate between true, false, 'truth-y', and 'false-y'</li>
-						<li class="slide__list--item">Use <code>if/else</code> conditionals to control program flow based on boolean conditions</li>
+						<li class="slide__list--item">Use <code>if/else</code> conditionals to control program flow
+							based on boolean conditions</li>
 						<li class="slide__list--item">Use comparison operators to evaluate and compare statements</li>
 						<li class="slide__list--item">Describe how parameters and arguments relate to functions</li>
-						<li class="slide__list--item">Create and call a function that accepts parameters to solve a problem</li>
-						<li class="slide__list--item">Return a value from a function using the <em>return</em> keyword</li>
+						<li class="slide__list--item">Create and call a function that accepts parameters to solve a
+							problem</li>
+						<li class="slide__list--item">Return a value from a function using the <em>return</em> keyword
+						</li>
 						</li>
 					</ul>
 				</div>
@@ -79,6 +85,41 @@
 					<h1 class="slide__title--white">Conditionals</h1>
 				</div>
 			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Conditional Statements</h2>
+					<ul class="slide__list">
+						<li class="slide__list--item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
+						<li class="slide__list--item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">If Statement</h2>
+					<ul class="slide__list">
+						<li class="slide__list--item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
+						<li class="slide__list--item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
+					</ul>
+				</div>
+
+
+			</section>
+
+
+
+
+
+
+
 
 
 
@@ -118,6 +159,7 @@
 			transition: 'fade',
 			center: false,
 			progress: false,
+			previewLinks: true,
 			dependencies: [
 				{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: () => { hljs.initHighlightingOnLoad(); } },
 			]
