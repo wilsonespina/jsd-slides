@@ -8,7 +8,7 @@
 		<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16" />
 		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
 		<link rel="stylesheet" href="../../scss/main.scss">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
+		
 	</head>
 	<body>
 		<div class="reveal">
@@ -91,7 +91,7 @@
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Syllabus</h2>
-						<table class="slide__content__table">
+						<table class="slide__table">
 							<thead>
 								<tr>
 									<th>Unit 1:</th>
@@ -164,10 +164,8 @@
 						<h2 class="slide__header--title">Final Projects</h2>
 					</header>
 					<div class="slide__content">
-						<img class="slide__image slide__image--gallery width-100-p" src="../../assets/images/week-1/ga_gallery.png" alt="General Assembly Gallery">
-						<br/>
-						<br/>
-						<a class="" href="https://gallery.generalassemb.ly/JS" target="_blank">https://gallery.generalassemb.ly/JS</a>
+						<img class="slide__image slide__image--gallery width-100-p margin-bottom-1" src="../../assets/images/week-1/ga_gallery.png" alt="General Assembly Gallery">
+						<a class="slide__link " href="https://gallery.generalassemb.ly/JS" target="_blank" data-preview-link="false">https://gallery.generalassemb.ly/JS</a>
 					</div>
 				</section>
 
@@ -533,7 +531,7 @@
 									<li class="slide__exercise__header__list--item">Group Activity - Pairs</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -636,7 +634,7 @@ comment
 									<li class="slide__exercise__header__list--item">Groups (2-3 people)</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -694,7 +692,6 @@ comment
 				transition: 'fade',
 				center: false,
 				progress: false,
-				previewLinks: true,
 				dependencies: [
 					{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: () => { hljs.initHighlightingOnLoad();} },
 				]

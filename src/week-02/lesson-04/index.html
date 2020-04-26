@@ -9,7 +9,6 @@
 	<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16" />
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="../../scss/main.scss">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
 </head>
 
 <body>
@@ -92,10 +91,47 @@
 				</header>
 				<div class="slide__content">
 					<h2 class="slide__title">Conditional Statements</h2>
+					<div class="slide__container-flex">
+						<ul class="slide__list">
+							<li class="slide__list--item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
+							<li class="slide__list--item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
+						</ul>
+						<img class="slide__image slide__image--control-flow height-100-p width-20" src="../../assets/images/week-2/control-flow.png" alt="Control flow diagram"/>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Philosophical JavaScript</h2>
+					<div class="slide__container">
+						<div class="slide__container-start">
+							<img class="slide__image slide__image--control-flow height-100-p width-20" src="https://media.giphy.com/media/l3nWhI38IWDofyDrW/giphy.gif" alt="Pensive statue"/>
+							<p class="slide__text margin-top-2">JavaScript always tries to look for truth</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Block Statements</h2>
 					<ul class="slide__list">
-						<li class="slide__list--item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
-						<li class="slide__list--item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
+						<li class="slide__list--item">Statements meant to be executed after a control flow operation will be grouped into what is called a <em>block statement</em></li>
+						<li class="slide__list--item">These statements are wrapped into a pair of curly braces:</li>
 					</ul>
+					<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+{
+  console.log("hello");
+  console.log("good bye");
+}
+					</code></pre>
 				</div>
 			</section>
 
@@ -105,14 +141,488 @@
 				</header>
 				<div class="slide__content">
 					<h2 class="slide__title">If Statement</h2>
-					<ul class="slide__list">
-						<li class="slide__list--item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
-						<li class="slide__list--item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
+					<i class="slide__icon">✅</i>
+					<pre class="slide__pre width-100-p height-100-p margin-bottom-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+if (expression) {
+  code
+}
+					</code></pre>
+					<i class="slide__icon">❌</i>
+					<pre class="slide__pre width-100-p height-100-p margin-bottom-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+if (expression) { code }
+
+					</code></pre>
+					<ul class="slide__list fragment">
+						<li class="slide__list--item">Both versions will still be be interpreted as valid JavaScript</li>
+						<li class="slide__list--item">The correct version is best practice for code readability</li>
 					</ul>
 				</div>
-
-
 			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Comparison Operators</h2>
+					<div class="slide__container-flex">
+						<table class="slide__table">
+							<tbody class="slide__body slide__body--comparison-operators">
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">></code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">greater than</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">>=</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">greater than or equal to</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold"><</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">less than</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">===</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">strict equal, type and value</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">==</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">coercive equal (AVOID)</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">!==</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">strict not equal, type and value</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">!=</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">coercive not equal (AVOID)</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="slide__container margin-left-2 fragment">
+							<pre class="slide__pre width-40"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+-1 > 2
+//=> false
+
+123 < 6;
+//=> false
+
+0.12 >= 0.0023;
+//=> true
+							</code></pre>
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list--item--small">Always returns a <em>Boolean</em> value</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Type coercion</h2>
+					<div class="slide__container-flex">
+						<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+'A' > 'a'
+//=> false
+
+'b' > 'a';
+//=> true
+
+12 > '12';
+//=> false
+
+12 >= '12';
+//=> true
+
+'Glow' > 'Glee';
+//=> true
+						</code></pre>
+						<ul class="slide__list margin-left-2 fragment">
+							<li class="slide__list--item slide__list--item--medium">JavaScript assumes you mean something else when data types don't match with non-strict comparison</li>
+							<li class="slide__list--item slide__list--item--medium">This can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers</li>
+							<li class="slide__list--item slide__list--item--medium">JavaScript uses the so-called <em>dictionary</em> or <em>lexicographical</em> order</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">If statement</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+let weather = "sunny";
+
+if (weather === "sunny") {
+  console.log("Grab your sunglasses");
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">If / else statement</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+let weather = "sunny";
+
+if (weather === "sunny") {
+  console.log("Grab your sunglasses");
+} else {
+  console.log("Grab a coat");
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Else if Statement</h2>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+let weather = "sunny";
+
+if (weather === "sunny") {
+  console.log("Grab your sunglasses");
+} else if (weather === "rainy") {
+  console.log("Take an umbrella");
+} else {
+  console.log("Grab a coat");
+}
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Ternary Operator</h2>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--medium">You can think about the ternary operator as a concise "if-else in one line"</li>
+					</ul>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+(expression) ? trueCode : falseCode;
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Ternary Operator</h2>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--medium">Can produce one of two values, which can be assigned to a variable in the same statement</li>
+					</ul>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+let drink = (expression) ? trueCode : falseCode;
+
+let sunny = true;
+let drink = sunny ? 'beer' : 'coffee';
+console.log(drink) // beer
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Switch Statement</h2>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--medium">The switch statement can be used for multiple branches based on a number or string:</li>
+					</ul>
+					<div class="slide__container-flex height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim>
+const food = 'apple';
+
+switch(food) {
+	case 'pear':
+	  console.log('I like pears');
+	  break;
+	case 'apple':
+	  console.log('I like apples');
+	  break;
+	default:
+	  console.log('No favourite');
+}
+//=> I like apples
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Logical Operators</h2>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--medium">Operators that let you chain conditional expressions</li>
+					</ul>
+					<table class="slide__table margin-top-1">
+						<tbody class="slide__body slide__body--logical-operators">
+							<tr>
+								<td class="col-15-p">
+									<code class="slide__code small bold">&&</code>
+								</td>
+								<td class="col-15-p">
+									<code class="slide__code small bold">AND</code>
+								</td>
+								<td class="col-75-p">
+									<p class="slide__text slide__text--table">Returns <code>true</code> when both left and right values are true</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="col-15-p">
+									<code class="slide__code small bold">||</code>
+								</td>
+								<td class="col-15-p">
+									<code class="slide__code small bold">OR</code>
+								</td>
+								<td class="col-75-p">
+									<p class="slide__text slide__text--table">Returns <code>true</code> when at least one of the left or right values is <code>true</code></p>
+								</td>
+							</tr>
+							<tr>
+								<td class="col-15-p">
+									<code class="slide__code small bold">!</code>
+								</td>
+								<td class="col-15-p">
+									<code class="slide__code small bold">NOT</code>
+								</td>
+								<td class="col-75-p">
+									<p class="slide__text slide__text--table">Takes a single value and returns the opposite Boolean value</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">&& (AND)</h2>
+					<div class="slide__container">
+						<ul class="slide__list margin-left-2">
+							<li class="slide__list--item slide__list--item--medium">The <code>&&</code> operator requires both left and right values to be true in order to return <em>true</em>:</li>
+						</ul>
+						<div class="slide__container-flex">
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+true && true
+//=> true
+							</code></pre>
+						</div>
+					</div>
+					<div class="slide__container margin-top-1 fragment">
+						<ul class="slide__list margin-left-2">
+							<li class="slide__list--item slide__list--item--medium">Any other combination is <em>false</em></li>
+						</ul>
+						<div class="slide__container-flex">
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+true && false
+//=> false
+
+false && false
+//=> false
+							</code></pre>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">|| (OR)</h2>
+					<div class="slide__container">
+						<ul class="slide__list margin-left-2">
+							<li class="slide__list--item slide__list--item--medium">The <code>||</code> operator requires just one of the left or right values to be true in order to return <em>true</em></li>
+						</ul>
+						<div class="slide__container-flex">
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+true || false
+//=> true
+
+false || true
+//=> true
+
+false || false
+//=> false
+							</code></pre>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide" data-background-color="black">
+				<header class="slide__header-intro">
+					<h2 class="slide__header-intro--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h1 class="slide__title--white">Truthy & Falsy</h1>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Falsy Values</h2>
+					<p class="slide__text">All of the following become false when converted to a Boolean:</p>
+					<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+false
+0
+'' // (empty string)
+NaN
+null
+undefined
+					</code></pre>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Converting to Boolean</h2>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--small">Adding <em>!</em> before a value returns the <strong>inverse</strong> of the value as a Boolean</li>
+						<li class="slide__list--item slide__list--item--small">Adding <em>!!</em> before a value gives you the <strong>original</strong> value as a Boolean:</li>
+					</ul>
+					<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim>
+!!1
+//=> true
+
+!!0
+//=> false
+
+!![]
+//=> true
+
+!!{}
+//=> true
+
+!!null
+//=> false
+
+!!""
+//=> false
+					</code></pre>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Lab</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-flex">
+						<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+						<div class="slide__exercise">
+							<p class="slide__exercise__header">Type of Exercise</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Pairs</li>
+							</ul>
+							<p class="slide__exercise__header">Location</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">starter-code > 4-ages-lab</li>
+							</ul>
+							<p class="slide__exercise__header">Timing</p>
+							<table class="slide__table">
+								<tbody>
+									<tr>
+										<td class="slide-timing">
+											<h2 class="slide-timing__header">15 mins</h2>
+										</td>
+										<td>
+											<ol class="slide__exercise__header__list">
+												<li class="slide__exercise__header__list--item">Write a program that outputs results based on users’ age. Use the list of conditions in the app.js file</li>
+												<li class="slide__exercise__header__list--item">BONUS 1: Rewrite your code to allow a user to enter the exponent value, rather than hard-coding it into your program. (Hint: Read up on the window.prompt method.)</li>
+												<li class="slide__exercise__header__list--item">BONUS 2: Rewrite your code to use a switch statement rather than if and else statements.)</li>
+											</ol>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide" data-background-color="black">
+				<header class="slide__header-intro">
+					<h2 class="slide__header-intro--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h1 class="slide__title--white">Functions</h1>
+				</div>
+			</section>
+
+
+
+
 
 
 
@@ -159,7 +669,6 @@
 			transition: 'fade',
 			center: false,
 			progress: false,
-			previewLinks: true,
 			dependencies: [
 				{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: () => { hljs.initHighlightingOnLoad(); } },
 			]

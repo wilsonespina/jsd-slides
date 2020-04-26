@@ -8,7 +8,7 @@
 		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
 		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
 		<link rel="stylesheet" href="/main.d9ee62f6.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
+		
 	</head>
 	<body>
 		<div class="reveal">
@@ -116,7 +116,7 @@
 						<div class="slide__container-center">
 							<img class="slide__image slide__image--shell width-10" src="/shell.d1fb2bf3.jpg" alt="Shell">
 						</div>
-						<p class="slide__text fragment">BONUS: <a href="http://hackertyper.com/" target="_blank">Type like a Hacker</a></p>
+						<p class="slide__text fragment">BONUS: <a href="http://hackertyper.com/" target="_blank" data-preview-link="true">Type like a Hacker</a></p>
 					</div>
 				</section>
 
@@ -230,7 +230,7 @@
 									<li class="slide__exercise__header__list--item">Individual</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -480,7 +480,7 @@ git checkout -b newbranchname
 									<li class="slide__exercise__header__list--item">Group Exercise (2-3 people)</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -562,14 +562,14 @@ git checkout -b newbranchname
 					<div class="slide__content">
 						<h2 class="slide__title">Node vs the Browser</h2>
 						<div class="slide__container">
-							<table class="slide__content__table">
+							<table class="slide__table">
 								<thead>
 									<tr>
 										<th class="large-font">Node</th>
 										<th class="large-font">Browser</th>
 									</tr>
 								</thead>
-								<tbody class="slide__content__table--node">
+								<tbody class="slide__body slide__body--node">
 									<tr>
 										<td class="col-50-p">
 											<ul>
@@ -917,8 +917,8 @@ title.toUpperCase();
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Compound Operators</h2>
-						<table class="slide__content__table">
-							<tbody class="slide__content__table--compound-operators">
+						<table class="slide__table">
+							<tbody class="slide__body slide__body--compound-operators">
 								<tr>
 									<td class="col-25-p">
 										<code class="slide__code small bold margin-left-2">+=</code>
@@ -1001,15 +1001,6 @@ Math.ceil(n) 	// Returns smallest integer greater than or equal to n
 					<div class="slide__content">
 						<h2 class="slide__title">Boolean</h2>
 						<p class="slide__text">A Boolean value can either be <code class="slide__code slide__code--light-blue">true</code> or <code class="slide__code slide__code--light-blue">false</code>. Any value can be converted to a boolean value in JS</p>
-						<p class="slide__text">All of the following become false when converted to a Boolean:</p>
-						<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
-false
-0
-'' // (empty string)
-NaN
-null
-undefined
-						</code></pre>
 					</div>
 				</section>
 
@@ -1031,7 +1022,7 @@ undefined
 									<li class="slide__exercise__header__list--item">Add comments to the Slack threads</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -1099,7 +1090,6 @@ Reveal.initialize({
   transition: 'fade',
   center: false,
   progress: false,
-  previewLinks: true,
   dependencies: [{
     src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
     async: true,

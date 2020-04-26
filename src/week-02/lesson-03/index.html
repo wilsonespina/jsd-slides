@@ -8,7 +8,6 @@
 		<link rel="icon" type="image/png" href="../../../favicon-16x16.png" sizes="16x16" />
 		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
 		<link rel="stylesheet" href="../../scss/main.scss">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/a11y-dark.min.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -161,14 +160,14 @@ a.length; // 101
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Array Helper Methods</h2>
-						<table class="slide__content__table">
+						<table class="slide__table">
 							<thead>
 								<tr>
 									<th class="large-font">Method</th>
 									<th class="large-font">Use</th>
 								</tr>
 							</thead>
-							<tbody class="slide__content__table--arrays">
+							<tbody class="slide__body slide__body--arrays">
 								<tr>
 									<td class="col-25-p">
 										<code class="slide__code small bold">toString()</code>
@@ -256,7 +255,7 @@ a.length; // 101
 									<li class="slide__exercise__header__list--item">Individual</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -414,7 +413,7 @@ for (let i = 0; i < teams.length; i++) {
 									<li class="slide__exercise__header__list--item">starter-code > 2-loops-exercise</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -464,14 +463,14 @@ teams.forEach(function(element)) {
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Array Iterator Methods</h2>
-						<table class="slide__content__table">
+						<table class="slide__table">
 							<thead>
 								<tr>
 									<th class="large-font">Method</th>
 									<th class="large-font">Use</th>
 								</tr>
 							</thead>
-							<tbody class="slide__content__table--arrays">
+							<tbody class="slide__body slide__body--arrays">
 								<tr>
 									<td class="col-25-p">
 										<code class="slide__code small bold">forEach()</code>
@@ -534,7 +533,7 @@ teams.forEach(function(element)) {
 									<li class="slide__exercise__header__list--item">starter-code > 0-arrays-loops-exercise</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -571,7 +570,7 @@ teams.forEach(function(element)) {
 									<li class="slide__exercise__header__list--item">starter-code > 4-arrays-loops-exercise-2</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
-								<table class="slide__content__table">
+								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
@@ -629,7 +628,6 @@ teams.forEach(function(element)) {
 				transition: 'fade',
 				center: false,
 				progress: false,
-				previewLinks: true,
 				dependencies: [
 					{ src: `${srcUrlPrefix}plugin/highlight/highlight.min.js`, async: true, callback: () => { hljs.initHighlightingOnLoad();} },
 				]
