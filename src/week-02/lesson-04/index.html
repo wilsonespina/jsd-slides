@@ -538,6 +538,28 @@ NaN
 null
 undefined
 					</code></pre>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--medium">These are known as <code class="color-light-blue">falsy</code> values because they are equivalent to <code>false</code></li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Truthy Values</h2>
+					<ul class="slide__list margin-left-2">
+						<li class="slide__list--item slide__list--item--medium">All values other than <code>false, 0,	"", NaN, null</code>, and <code>undefined</code> become	true when converted to a Boolean</li>
+						<li class="slide__list--item slide__list--item--medium">All values besides these six are known as <code class="color-light-blue">truthy</code> values because they are equivalent to <code>true</code></li>
+					</ul>
+					<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+17193
+true
+'0'
+'false'
+					</code></pre>
 				</div>
 			</section>
 
@@ -587,7 +609,7 @@ undefined
 							</ul>
 							<p class="slide__exercise__header">Location</p>
 							<ul class="slide__exercise__header__list">
-								<li class="slide__exercise__header__list--item">starter-code > 4-ages-lab</li>
+								<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 4-ages-lab</li>
 							</ul>
 							<p class="slide__exercise__header">Timing</p>
 							<table class="slide__table">
@@ -625,6 +647,28 @@ undefined
 					<h2 class="slide__header--title">Conditionals & Functions</h2>
 				</header>
 				<div class="slide__content">
+					<h2 class="slide__title">Developers should be lazy</h2>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--lazy-dog width-30" src="https://media.giphy.com/media/FdWU4HtO5vTGw/giphy.gif" alt="Lazy dog"/>
+							<div class="margin-left-2 fragment">
+								<p class="slide__text">Code should be written with <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a> principals:</p>
+								<ul class="slide__list margin-left-2">
+									<li class="slide__list--item slide__list--item--medium"><em>D</em>on't</li>
+									<li class="slide__list--item slide__list--item--medium"><em>R</em>epeat</li>
+									<li class="slide__list--item slide__list--item--medium"><em>Y</em>ourself</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
 					<h2 class="slide__title">Functions</h2>
 					<div class="slide__content">
 						<div class="slide__container-flex space-between">
@@ -639,28 +683,6 @@ undefined
 							<div class="flex-basis-third text-align-center">
 								<img class="slide__image slide__image--functions-efficient width-15" src="../../assets/images/week-2/functions-efficient.png" alt="Efficient"/>
 								<p class="slide__text slide__text--small">Not always executed when a page loads. Provide us with a way to 'store' the steps needed to achieve a task</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="slide">
-				<header class="slide__header">
-					<h2 class="slide__header--title">Conditionals & Functions</h2>
-				</header>
-				<div class="slide__content">
-					<h2 class="slide__title">Developers should be lazy</h2>
-					<div class="slide__content">
-						<div class="slide__container-flex start">
-							<img class="slide__image slide__image--lazy-dog width-30" src="https://media.giphy.com/media/FdWU4HtO5vTGw/giphy.gif" alt="Lazy dog"/>
-							<div class="margin-left-2 fragment">
-								<p class="slide__text">Code should be written with <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a> principals:</p>
-								<ul class="slide__list margin-left-2">
-									<li class="slide__list--item slide__list--item--medium"><em>D</em>on't</li>
-									<li class="slide__list--item slide__list--item--medium"><em>R</em>epeat</li>
-									<li class="slide__list--item slide__list--item--medium"><em>Y</em>ourself</li>
-								</ul>
 							</div>
 						</div>
 					</div>
@@ -825,11 +847,11 @@ sayGoodbye();
 							</ul>
 							<p class="slide__exercise__header">Type of Exercise</p>
 							<ul class="slide__exercise__header__list">
-								<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+								<li class="slide__exercise__header__list--item">Individual</li>
 							</ul>
 							<p class="slide__exercise__header">Location</p>
 							<ul class="slide__exercise__header__list">
-								<li class="slide__exercise__header__list--item">starter-code > 6-functions-exercise (part 1)</li>
+								<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 6-functions-exercise (part 1)</li>
 							</ul>
 							<p class="slide__exercise__header">Timing</p>
 							<table class="slide__table">
@@ -860,6 +882,315 @@ sayGoodbye();
 				</div>
 			</section>
 
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Parameters make functions reusable</h2>
+					<div class="slide__content">
+					<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim>
+function newFunc(parameter1, parameter2, parameter3){
+	console.log(parameter1 + parameter2 + parameter3);
+}
+						</code></pre>
+						<p class="slide__text">The values in the parentheses are placeholders for the data that we pass to our functions and are known as <em>parameters</em>:</p>
+						<ul class="slide__list margin-left-2">
+							<li class="slide__list--item slide__list--item--medium">Parameters are variables listed as a part of the function definition</li>
+							<li class="slide__list--item slide__list--item--medium">When we invoke a function, we the data we pass are given to the placeholders in the order that the parameters appear when the function is defined</li>
+							<li class="slide__list--item slide__list--item--medium">The data we pass to the function are called <em>arguments</em></li>
+						</ul>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Using Parameters</h2>
+					<div class="slide__container height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+function sayHello(name) {
+  console.log('Hello!' + name);
+}
+
+sayHello('Wilson'); // 'Wilson' is an argument
+=> 'Hello Wilson'
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Using Multiple Parameters</h2>
+					<div class="slide__container height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+function sum(num1, num2) {
+  console.log(num1 + num2);
+}
+
+sum(1, 2); // 1 and 2 are arguments
+=> 3
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Default Parameters</h2>
+					<div class="slide__container height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+function multiply(num1, num2 = 2) {
+  console.log(num1 * num2);
+}
+
+multiply(4,5);
+=> 20
+
+multiply(3);
+=> 6 // (argument) * 2 (default value)
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Lab - Reading Functions</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-flex">
+						<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+						<div class="slide__exercise">
+							<p class="slide__exercise__header">Type of Exercise</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Individual</li>
+							</ul>
+							<p class="slide__exercise__header">Location</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 6-functions-exercise (part 2)</li>
+								<li class="slide__exercise__header__list--item">Add your answer as a comment on the Slack thread</li>
+							</ul>
+							<p class="slide__exercise__header">Timing</p>
+							<table class="slide__table">
+								<tbody>
+									<tr>
+										<td class="slide-timing">
+											<h2 class="slide-timing__header">3 mins</h2>
+										</td>
+										<td>
+											<ol class="slide__exercise__header__list">
+												<li class="slide__exercise__header__list--item">Look at Part 2 A and B. Predict what will happen when each function is called.</li>
+											</ol>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Lab -  Creating Functions</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-flex">
+						<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+						<div class="slide__exercise">
+							<p class="slide__exercise__header">Type of Exercise</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Individual</li>
+							</ul>
+							<p class="slide__exercise__header">Location</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 6-functions-exercise (part 3)</li>
+							</ul>
+							<p class="slide__exercise__header">Timing</p>
+							<table class="slide__table">
+								<tbody>
+									<tr>
+										<td class="slide-timing">
+											<h2 class="slide-timing__header">8 mins</h2>
+										</td>
+										<td>
+											<ol class="slide__exercise__header__list">
+												<li class="slide__exercise__header__list--item">See if you can write one function that takes some parameters and combines the functionality of the <code>makeAPizza</code> and <code>makeAVeggiePizza</code> functions</li>
+												<li class="slide__exercise__header__list--item">BONUS: Create your own function with parameters. This function could do anything!</li>
+											</ol>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide" data-background-color="black">
+				<header class="slide__header-intro">
+					<h2 class="slide__header-intro--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h1 class="slide__title--white">Return Statements</h1>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Return Statement</h2>
+					<div class="slide__content">
+						<div class="slide__container">
+							<ul class="slide__list margin-left-2">
+								<li class="slide__list--item slide__list--item">Ends function’s execution</li>
+								<li class="slide__list--item slide__list--item">Returns a value — the result of running the function</li>
+								<li class="slide__list--item slide__list--item"><code class="color-light-blue">console.log()</code> is only useful for the developer</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Returning values</h2>
+					<div class="slide__container height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+let calculation = subtract(10,5);
+=>5
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content height-100-p">
+					<h2 class="slide__title">Return stops a functions's execution</h2>
+					<div class="slide__container height-100-p">
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
+function speak(words) {
+  return words;
+
+  // The following code will not run:
+  let x = 1;
+  let y = 2;
+  console.log(x + y)
+}
+
+speak('Hey!');
+// "Hey!"
+						</code></pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Lab -  Using parameters</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-flex">
+						<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+						<div class="slide__exercise">
+							<p class="slide__exercise__header">Key Objective</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Create and call a function that accepts parameters to solve a problem</li>
+							</ul>
+							<p class="slide__exercise__header">Type of Exercise</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+							</ul>
+							<p class="slide__exercise__header">Location</p>
+							<ul class="slide__exercise__header__list">
+								<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 7-price-calculator</li>
+							</ul>
+							<p class="slide__exercise__header">Timing</p>
+							<table class="slide__table">
+								<tbody>
+									<tr>
+										<td class="slide-timing">
+											<h2 class="slide-timing__header">10 mins</h2>
+										</td>
+										<td>
+											<ol class="slide__exercise__header__list">
+												<li class="slide__exercise__header__list--item">Write code to to calculate a customer's total cost in pounds based on product price, tax rate, shipping cost, and the currency they're using for the purchase (pounds or euros).</li>
+												<li class="slide__exercise__header__list--item">BONUS 1: Convert your function to assume a currency of "pound" by default.</li>
+												<li class="slide__exercise__header__list--item">BONUS 2: Convert your function to an arrow function.</li>
+											</ol>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide">
+				<header class="slide__header">
+					<h2 class="slide__header--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<h2 class="slide__title">Learning Objectives - Review</h2>
+					<ul class="slide__list">
+						<li class="slide__list--item">Differentiate between true, false, 'truth-y', and 'false-y'</li>
+						<li class="slide__list--item">Use <code>if/else</code> conditionals to control program flow based on boolean conditions</li>
+						<li class="slide__list--item">Use comparison operators to evaluate and compare statements</li>
+						<li class="slide__list--item">Describe how parameters and arguments relate to functions</li>
+						<li class="slide__list--item">Create and call a function that accepts parameters to solve a problem</li>
+						<li class="slide__list--item">Return a value from a function using the <em>return</em> keyword</li>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="slide" data-background-color="black">
+				<header class="slide__header-intro">
+					<h2 class="slide__header-intro--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-center margin-top-10">
+						<h1 class="slide__title--white">Q&A</h1>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide" data-background-color="black">
+				<header class="slide__header-intro">
+					<h2 class="slide__header-intro--title">Conditionals & Functions</h2>
+				</header>
+				<div class="slide__content">
+					<div class="slide__container-center margin-top-10">
+						<h1 class="slide__title--white">Exit Ticket</h1>
+						<p class="slide__text color-white">(Lesson 04)</p>
+					</div>
+				</div>
+			</section>
 
 
 

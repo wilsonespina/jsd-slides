@@ -71,3 +71,18 @@ ol {
 i {
 	font-size: 3rem;
 }
+
+.slides {
+    .slide {
+		.color-dark-blue {
+			color: $darkblue;
+		}
+		.color-light-blue {
+			color: $cyan;
+		}
+		.color-white {
+			color: $white;
+		}
+
+	}
+}
