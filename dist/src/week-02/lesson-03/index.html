@@ -43,10 +43,10 @@
 						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
-							<li class="slide__list--item">Run JavaScript in the Browser</li>
-							<li class="slide__list--item">Create arrays and access values in them</li>
-							<li class="slide__list--item">Build iterative loops using <em>for</em> statements.</li>
-							<li class="slide__list--item">Iterate over and manipulate values in an array. </li>
+							<li class="slide__list-item">Run JavaScript in the Browser</li>
+							<li class="slide__list-item">Create arrays and access values in them</li>
+							<li class="slide__list-item">Build iterative loops using <em>for</em> statements.</li>
+							<li class="slide__list-item">Iterate over and manipulate values in an array. </li>
 							
 						</ul>
 					</div>
@@ -59,10 +59,10 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
-							<li class="slide__list--item">JavaScript in the Browser</li>
-							<li class="slide__list--item">Arrays</li>
-							<li class="slide__list--item">Loops</li>
-							<li class="slide__list--item">Array iterators</li>
+							<li class="slide__list-item">JavaScript in the Browser</li>
+							<li class="slide__list-item">Arrays</li>
+							<li class="slide__list-item">Loops</li>
+							<li class="slide__list-item">Array iterators</li>
 						</ul>
 					</div>
 				</section>
@@ -76,8 +76,8 @@
 						<p class="slide__text">Access by pressing <em><code>cmd + alt + j</code></em></p>
 						<img class="slide__image slide__image--chrome-console margin-top-2 width-100-p" src="/chrome-console.6215f720.png" alt="Chrome dev tools">
 						<ul class="slide__list fragment">
-							<li class="slide__list--item">JavaScript can be run directly in the console</li>
-							<li class="slide__list--item">Useful to write and execute code quickly</li>
+							<li class="slide__list-item">JavaScript can be run directly in the console</li>
+							<li class="slide__list-item">Useful to write and execute code quickly</li>
 						</ul>
 					</div>
 				</section>
@@ -90,8 +90,8 @@
 						<h2 class="slide__title">Debugging</h2>
 						<img class="slide__image slide__image--chrome-console-debug width-100-p" src="/chrome-console-debug.87d22619.png" alt="Chrome dev debugging tools">
 						<ul class="slide__list">
-							<li class="slide__list--item">Error messages can be useful when debugging code</li>
-							<li class="slide__list--item">Often verbose in saying what the mistake is and which line it's on</li>
+							<li class="slide__list-item">Error messages can be useful when debugging code</li>
+							<li class="slide__list-item">Often verbose in saying what the mistake is and which line it's on</li>
 						</ul>
 					</div>
 				</section>
@@ -104,8 +104,8 @@
 						<h2 class="slide__title">Arrays</h2>
 						<p class="slide__text">JavaScript arrays are used to store multiple values in a single variable.</p>
 						<ul class="slide__list">
-							<li class="slide__list--item slide__list--item--small">Can be declared using an array literal <em><code>[ ]</code></em></li>
-							<li class="slide__list--item slide__list--item--small">Array items are separated by commas</li>
+							<li class="slide__list-item slide__list-item--small">Can be declared using an array literal <em><code>[ ]</code></em></li>
+							<li class="slide__list-item slide__list-item--small">Array items are separated by commas</li>
 						</ul>
 						<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let a = ['dog', 'cat', 'hen'];
@@ -115,8 +115,8 @@ a.length; // array property
 3
 						</code></pre>
 						<ul class="slide__list margin-top-2 fragment">
-							<li class="slide__list--item slide__list--item--small"><code>length</code> property is always one more than the highest index in the array.</li>
-							<li class="slide__list--item slide__list--item--small">Highest index in this case is <em>2</em></li>
+							<li class="slide__list-item slide__list-item--small"><code>length</code> property is always one more than the highest index in the array.</li>
+							<li class="slide__list-item slide__list-item--small">Highest index in this case is <em>2</em></li>
 						</ul>
 					</div>
 				</section>
@@ -128,7 +128,7 @@ a.length; // array property
 					<div class="slide__content">
 						<h2 class="slide__title">Getting values from an Array</h2>
 						<ul class="slide__list">
-							<li class="slide__list--item slide__list--item--small">Array index starts from <em>0</em></li>
+							<li class="slide__list-item slide__list-item--small">Array index starts from <em>0</em></li>
 						</ul>
 						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let a = ['dog', 'cat', 'hen'];
@@ -144,7 +144,7 @@ a[2];
 "hen"
 						</code></pre>
 						<ul class="slide__list margin-top-1 fragment">
-							<li class="slide__list--item slide__list--item--small"><code>array.length</code> isn't necessarily the number of items in the array</li>
+							<li class="slide__list-item slide__list-item--small"><code>array.length</code> isn't necessarily the number of items in the array</li>
 						<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 a[100] = 'fox';
 a.length; // 101
@@ -307,7 +307,7 @@ a.length; // 101
 						<p class="slide__text"><code>while</code> is a loop statement that will run while a condition is <code>true</code></p>
 						<div class="slide__container">
 							<ul class="slide__list">
-								<li class="slide__list--item">While loops are good for basic looping, but there's a possibility it will never get run</li>
+								<li class="slide__list-item">While loops are good for basic looping, but there's a possibility it will never get run</li>
 							</ul>
 							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 while (true) {
@@ -315,7 +315,7 @@ while (true) {
 }
 							</code></pre>
 							<ul class="slide__list">
-								<li class="slide__list--item fragment">This would cause a Browser to break</li>
+								<li class="slide__list-item fragment">This would cause a Browser to break</li>
 							</ul>
 						</div>
 					</div>
@@ -330,7 +330,7 @@ while (true) {
 						<p class="slide__text">Using a <code>do-while</code> loop makes sure that the body of the loop is executed at least once</p>
 						<div class="slide__container">
 							<ul class="slide__list">
-								<li class="slide__list--item"><code>while()</code> isn't evaluated until after the block of code runs</li>
+								<li class="slide__list-item"><code>while()</code> isn't evaluated until after the block of code runs</li>
 							</ul>
 							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let input = 0;
@@ -596,10 +596,10 @@ teams.forEach(function(element)) {
 					<div class="slide__content">
 						<h2 class="slide__title">Learning Objectives - Review</h2>
 						<ul class="slide__list">
-							<li class="slide__list--item">Run JavaScript in the Browser</li>
-							<li class="slide__list--item">Create arrays and access values in them</li>
-							<li class="slide__list--item">Build iterative loops using <em>for</em> statements.</li>
-							<li class="slide__list--item">Iterate over and manipulate values in an array.</li>
+							<li class="slide__list-item">Run JavaScript in the Browser</li>
+							<li class="slide__list-item">Create arrays and access values in them</li>
+							<li class="slide__list-item">Build iterative loops using <em>for</em> statements.</li>
+							<li class="slide__list-item">Iterate over and manipulate values in an array.</li>
 							
 						</ul>
 					</div>

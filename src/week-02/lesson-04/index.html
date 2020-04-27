@@ -47,14 +47,14 @@
 					</div>
 					<p class="slide__text">At the end of this class, you will be able to:</p>
 					<ul class="slide__list">
-						<li class="slide__list--item">Differentiate between true, false, 'truth-y', and 'false-y'</li>
-						<li class="slide__list--item">Use <code>if/else</code> conditionals to control program flow
+						<li class="slide__list-item">Differentiate between true, false, 'truth-y', and 'false-y'</li>
+						<li class="slide__list-item">Use <code>if/else</code> conditionals to control program flow
 							based on boolean conditions</li>
-						<li class="slide__list--item">Use comparison operators to evaluate and compare statements</li>
-						<li class="slide__list--item">Describe how parameters and arguments relate to functions</li>
-						<li class="slide__list--item">Create and call a function that accepts parameters to solve a
+						<li class="slide__list-item">Use comparison operators to evaluate and compare statements</li>
+						<li class="slide__list-item">Describe how parameters and arguments relate to functions</li>
+						<li class="slide__list-item">Create and call a function that accepts parameters to solve a
 							problem</li>
-						<li class="slide__list--item">Return a value from a function using the <em>return</em> keyword
+						<li class="slide__list-item">Return a value from a function using the <em>return</em> keyword
 						</li>
 						</li>
 					</ul>
@@ -68,10 +68,10 @@
 				<div class="slide__content">
 					<h2 class="slide__title">Agenda</h2>
 					<ul class="slide__list">
-						<li class="slide__list--item">Conditionals</li>
-						<li class="slide__list--item">Logical operators </li>
-						<li class="slide__list--item">Truthy & Falsy</li>
-						<li class="slide__list--item">Functions</li>
+						<li class="slide__list-item">Conditionals</li>
+						<li class="slide__list-item">Logical operators </li>
+						<li class="slide__list-item">Truthy & Falsy</li>
+						<li class="slide__list-item">Functions</li>
 					</ul>
 				</div>
 			</section>
@@ -93,8 +93,8 @@
 					<h2 class="slide__title">Conditional Statements</h2>
 					<div class="slide__container-flex">
 						<ul class="slide__list">
-							<li class="slide__list--item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
-							<li class="slide__list--item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
+							<li class="slide__list-item">Conditional statements are a way of essentially skipping over a block of code if it does not pass a boolean expression</li>
+							<li class="slide__list-item">Known as <em>control flow statements</em>, because they let the program make decisions about which statement should be executed next, rather than just going in order</li>
 						</ul>
 						<img class="slide__image slide__image--control-flow height-100-p width-20" src="../../assets/images/week-2/control-flow.png" alt="Control flow diagram"/>
 					</div>
@@ -123,8 +123,8 @@
 				<div class="slide__content">
 					<h2 class="slide__title">Block Statements</h2>
 					<ul class="slide__list">
-						<li class="slide__list--item">Statements meant to be executed after a control flow operation will be grouped into what is called a <em>block statement</em></li>
-						<li class="slide__list--item">These statements are wrapped into a pair of curly braces:</li>
+						<li class="slide__list-item">Statements meant to be executed after a control flow operation will be grouped into what is called a <em>block statement</em></li>
+						<li class="slide__list-item">These statements are wrapped into a pair of curly braces:</li>
 					</ul>
 					<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
 {
@@ -153,8 +153,8 @@ if (expression) { code }
 
 					</code></pre>
 					<ul class="slide__list fragment">
-						<li class="slide__list--item">Both versions will still be be interpreted as valid JavaScript</li>
-						<li class="slide__list--item">The correct version is best practice for code readability</li>
+						<li class="slide__list-item">Both versions will still be be interpreted as valid JavaScript</li>
+						<li class="slide__list-item">The correct version is best practice for code readability</li>
 					</ul>
 				</div>
 			</section>
@@ -238,7 +238,7 @@ if (expression) { code }
 //=> true
 							</code></pre>
 							<ul class="slide__list margin-top-1">
-								<li class="slide__list--item--small">Always returns a <em>Boolean</em> value</li>
+								<li class="slide__list-item--small">Always returns a <em>Boolean</em> value</li>
 							</ul>
 
 						</div>
@@ -270,9 +270,9 @@ if (expression) { code }
 //=> true
 						</code></pre>
 						<ul class="slide__list margin-left-2 fragment">
-							<li class="slide__list--item slide__list--item--medium">JavaScript assumes you mean something else when data types don't match with non-strict comparison</li>
-							<li class="slide__list--item slide__list--item--medium">This can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers</li>
-							<li class="slide__list--item slide__list--item--medium">JavaScript uses the so-called <em>dictionary</em> or <em>lexicographical</em> order</li>
+							<li class="slide__list-item slide__list-item--medium">JavaScript assumes you mean something else when data types don't match with non-strict comparison</li>
+							<li class="slide__list-item slide__list-item--medium">This can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers</li>
+							<li class="slide__list-item slide__list-item--medium">JavaScript uses the so-called <em>dictionary</em> or <em>lexicographical</em> order</li>
 						</ul>
 					</div>
 				</div>
@@ -345,7 +345,7 @@ if (weather === "sunny") {
 				<div class="slide__content height-100-p">
 					<h2 class="slide__title">Ternary Operator</h2>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--medium">You can think about the ternary operator as a concise "if-else in one line"</li>
+						<li class="slide__list-item slide__list-item--medium">You can think about the ternary operator as a concise "if-else in one line"</li>
 					</ul>
 					<div class="slide__container-flex height-100-p">
 						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
@@ -362,7 +362,7 @@ if (weather === "sunny") {
 				<div class="slide__content height-100-p">
 					<h2 class="slide__title">Ternary Operator</h2>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--medium">Can produce one of two values, which can be assigned to a variable in the same statement</li>
+						<li class="slide__list-item slide__list-item--medium">Can produce one of two values, which can be assigned to a variable in the same statement</li>
 					</ul>
 					<div class="slide__container-flex height-100-p">
 						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
@@ -383,7 +383,7 @@ console.log(drink) // beer
 				<div class="slide__content height-100-p">
 					<h2 class="slide__title">Switch Statement</h2>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--medium">The switch statement can be used for multiple branches based on a number or string:</li>
+						<li class="slide__list-item slide__list-item--medium">The switch statement can be used for multiple branches based on a number or string:</li>
 					</ul>
 					<div class="slide__container-flex height-100-p">
 						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim>
@@ -412,7 +412,7 @@ switch(food) {
 				<div class="slide__content height-100-p">
 					<h2 class="slide__title">Logical Operators</h2>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--medium">Operators that let you chain conditional expressions</li>
+						<li class="slide__list-item slide__list-item--medium">Operators that let you chain conditional expressions</li>
 					</ul>
 					<table class="slide__table margin-top-1">
 						<tbody class="slide__body slide__body--logical-operators">
@@ -462,7 +462,7 @@ switch(food) {
 					<h2 class="slide__title">&& (AND)</h2>
 					<div class="slide__container">
 						<ul class="slide__list margin-left-2">
-							<li class="slide__list--item slide__list--item--medium">The <code>&&</code> operator requires both left and right values to be true in order to return <em>true</em>:</li>
+							<li class="slide__list-item slide__list-item--medium">The <code>&&</code> operator requires both left and right values to be true in order to return <em>true</em>:</li>
 						</ul>
 						<div class="slide__container-flex">
 							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
@@ -473,7 +473,7 @@ true && true
 					</div>
 					<div class="slide__container margin-top-1 fragment">
 						<ul class="slide__list margin-left-2">
-							<li class="slide__list--item slide__list--item--medium">Any other combination is <em>false</em></li>
+							<li class="slide__list-item slide__list-item--medium">Any other combination is <em>false</em></li>
 						</ul>
 						<div class="slide__container-flex">
 							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
@@ -496,7 +496,7 @@ false && false
 					<h2 class="slide__title">|| (OR)</h2>
 					<div class="slide__container">
 						<ul class="slide__list margin-left-2">
-							<li class="slide__list--item slide__list--item--medium">The <code>||</code> operator requires just one of the left or right values to be true in order to return <em>true</em></li>
+							<li class="slide__list-item slide__list-item--medium">The <code>||</code> operator requires just one of the left or right values to be true in order to return <em>true</em></li>
 						</ul>
 						<div class="slide__container-flex">
 							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium height-100-p" data-trim>
@@ -539,7 +539,7 @@ null
 undefined
 					</code></pre>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--medium">These are known as <code class="color-light-blue">falsy</code> values because they are equivalent to <code>false</code></li>
+						<li class="slide__list-item slide__list-item--medium">These are known as <code class="color-light-blue">falsy</code> values because they are equivalent to <code>false</code></li>
 					</ul>
 				</div>
 			</section>
@@ -551,8 +551,8 @@ undefined
 				<div class="slide__content height-100-p">
 					<h2 class="slide__title">Truthy Values</h2>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--medium">All values other than <code>false, 0,	"", NaN, null</code>, and <code>undefined</code> become	true when converted to a Boolean</li>
-						<li class="slide__list--item slide__list--item--medium">All values besides these six are known as <code class="color-light-blue">truthy</code> values because they are equivalent to <code>true</code></li>
+						<li class="slide__list-item slide__list-item--medium">All values other than <code>false, 0,	"", NaN, null</code>, and <code>undefined</code> become	true when converted to a Boolean</li>
+						<li class="slide__list-item slide__list-item--medium">All values besides these six are known as <code class="color-light-blue">truthy</code> values because they are equivalent to <code>true</code></li>
 					</ul>
 					<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
 17193
@@ -570,8 +570,8 @@ true
 				<div class="slide__content height-100-p">
 					<h2 class="slide__title">Converting to Boolean</h2>
 					<ul class="slide__list margin-left-2">
-						<li class="slide__list--item slide__list--item--small">Adding <em>!</em> before a value returns the <strong>inverse</strong> of the value as a Boolean</li>
-						<li class="slide__list--item slide__list--item--small">Adding <em>!!</em> before a value gives you the <strong>original</strong> value as a Boolean:</li>
+						<li class="slide__list-item slide__list-item--small">Adding <em>!</em> before a value returns the <strong>inverse</strong> of the value as a Boolean</li>
+						<li class="slide__list-item slide__list-item--small">Adding <em>!!</em> before a value gives you the <strong>original</strong> value as a Boolean:</li>
 					</ul>
 					<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim>
 !!1
@@ -654,9 +654,9 @@ true
 							<div class="margin-left-2 fragment">
 								<p class="slide__text">Code should be written with <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY</a> principals:</p>
 								<ul class="slide__list margin-left-2">
-									<li class="slide__list--item slide__list--item--medium"><em>D</em>on't</li>
-									<li class="slide__list--item slide__list--item--medium"><em>R</em>epeat</li>
-									<li class="slide__list--item slide__list--item--medium"><em>Y</em>ourself</li>
+									<li class="slide__list-item slide__list-item--medium"><em>D</em>on't</li>
+									<li class="slide__list-item slide__list-item--medium"><em>R</em>epeat</li>
+									<li class="slide__list-item slide__list-item--medium"><em>Y</em>ourself</li>
 								</ul>
 							</div>
 						</div>
@@ -674,7 +674,7 @@ true
 						<div class="slide__container-flex space-between">
 							<div class="flex-basis-third text-align-center">
 								<img class="slide__image slide__image--functions-modular width-15" src="../../assets/images/week-2/functions-modular.png" alt="Modular"/>
-								<p class="slide__text slide__text--small">Allow us to group a  series of statements  together to perform a  specific task</p>
+								<p class="slide__text slide__text--small">Allow us to group a  series of statements  together to perform a specific task</p>
 							</div>
 							<div class="flex-basis-third text-align-center">
 								<img class="slide__image slide__image--functions-reusable width-15" src="../../assets/images/week-2/functions-reusable.png" alt="Reusable"/>
@@ -794,14 +794,14 @@ let sayHello = (parameters) => {
 					<div class="slide__content">
 						<div class="slide__container">
 							<ul class="slide__list">
-								<li class="slide__list--item slide__list--item--medium">When we want to execute the function (make it run), we use the function name followed by parentheses <em>( )</em></li>
-								<li class="slide__list--item slide__list--item--medium">We can say:</li>
-								<li class="slide__list--item slide__list--item--medium no-arrow">
+								<li class="slide__list-item slide__list-item--medium">When we want to execute the function (make it run), we use the function name followed by parentheses <em>( )</em></li>
+								<li class="slide__list-item slide__list-item--medium">We can say:</li>
+								<li class="slide__list-item slide__list-item--medium no-arrow">
 									<div class="slide__container-flex">
 										<ul class="slide__list">
-											<li class="slide__list--item slide__list--item--medium bullet margin-left-5">Call the function</li>
-											<li class="slide__list--item slide__list--item--medium bullet margin-left-5">Invoke the function</li>
-											<li class="slide__list--item slide__list--item--medium bullet margin-left-5">Execute the function</li>
+											<li class="slide__list-item slide__list-item--medium bullet margin-left-5">Call the function</li>
+											<li class="slide__list-item slide__list-item--medium bullet margin-left-5">Invoke the function</li>
+											<li class="slide__list-item slide__list-item--medium bullet margin-left-5">Execute the function</li>
 										</ul>
 										<pre class="slide__pre width-50-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim>
 function sayGoodbye(){
@@ -896,9 +896,9 @@ function newFunc(parameter1, parameter2, parameter3){
 						</code></pre>
 						<p class="slide__text">The values in the parentheses are placeholders for the data that we pass to our functions and are known as <em>parameters</em>:</p>
 						<ul class="slide__list margin-left-2">
-							<li class="slide__list--item slide__list--item--medium">Parameters are variables listed as a part of the function definition</li>
-							<li class="slide__list--item slide__list--item--medium">When we invoke a function, we the data we pass are given to the placeholders in the order that the parameters appear when the function is defined</li>
-							<li class="slide__list--item slide__list--item--medium">The data we pass to the function are called <em>arguments</em></li>
+							<li class="slide__list-item slide__list-item--medium">Parameters are variables listed as a part of the function definition</li>
+							<li class="slide__list-item slide__list-item--medium">When we invoke a function, we the data we pass are given to the placeholders in the order that the parameters appear when the function is defined</li>
+							<li class="slide__list-item slide__list-item--medium">The data we pass to the function are called <em>arguments</em></li>
 						</ul>
 
 					</div>
@@ -1057,9 +1057,9 @@ multiply(3);
 					<div class="slide__content">
 						<div class="slide__container">
 							<ul class="slide__list margin-left-2">
-								<li class="slide__list--item slide__list--item">Ends function’s execution</li>
-								<li class="slide__list--item slide__list--item">Returns a value — the result of running the function</li>
-								<li class="slide__list--item slide__list--item"><code class="color-light-blue">console.log()</code> is only useful for the developer</li>
+								<li class="slide__list-item slide__list-item">Ends function’s execution</li>
+								<li class="slide__list-item slide__list-item">Returns a value — the result of running the function</li>
+								<li class="slide__list-item slide__list-item"><code class="color-light-blue">console.log()</code> is only useful for the developer</li>
 							</ul>
 						</div>
 					</div>
@@ -1158,12 +1158,12 @@ speak('Hey!');
 				<div class="slide__content">
 					<h2 class="slide__title">Learning Objectives - Review</h2>
 					<ul class="slide__list">
-						<li class="slide__list--item">Differentiate between true, false, 'truth-y', and 'false-y'</li>
-						<li class="slide__list--item">Use <code>if/else</code> conditionals to control program flow based on boolean conditions</li>
-						<li class="slide__list--item">Use comparison operators to evaluate and compare statements</li>
-						<li class="slide__list--item">Describe how parameters and arguments relate to functions</li>
-						<li class="slide__list--item">Create and call a function that accepts parameters to solve a problem</li>
-						<li class="slide__list--item">Return a value from a function using the <em>return</em> keyword</li>
+						<li class="slide__list-item">Differentiate between true, false, 'truth-y', and 'false-y'</li>
+						<li class="slide__list-item">Use <code>if/else</code> conditionals to control program flow based on boolean conditions</li>
+						<li class="slide__list-item">Use comparison operators to evaluate and compare statements</li>
+						<li class="slide__list-item">Describe how parameters and arguments relate to functions</li>
+						<li class="slide__list-item">Create and call a function that accepts parameters to solve a problem</li>
+						<li class="slide__list-item">Return a value from a function using the <em>return</em> keyword</li>
 						</li>
 					</ul>
 				</div>
@@ -1191,39 +1191,6 @@ speak('Hey!');
 					</div>
 				</div>
 			</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

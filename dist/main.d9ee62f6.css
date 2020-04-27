@@ -2111,6 +2111,9 @@ ul li:before {
 .slides .slide__table th {
   text-transform: uppercase;
 }
+.slides .slide__table th.medium-font {
+  font-size: 1.3rem;
+}
 .slides .slide__table th.large-font {
   font-size: 2rem;
 }
@@ -2141,6 +2144,13 @@ ul li:before {
 .slides .slide__table td.col-75-p {
   width: 75%;
 }
+.slides .slide__table .slide__head--declaration-comparison tr {
+  background-color: #000000;
+}
+.slides .slide__table .slide__head--declaration-comparison th {
+  border: 0.2rem solid #FFFFFF;
+  padding: 0.6rem;
+}
 .slides .slide__table .slide__body tr:nth-child(odd) {
   background-color: #F6F6F6;
 }
@@ -2162,9 +2172,12 @@ ul li:before {
   padding-left: 0.5rem;
   border: 0.2rem solid white;
 }
-.slides .slide__table .slide__body--logical-operators td {
+.slides .slide__table .slide__body--logical-operators td, .slides .slide__table .slide__body--declaration-comparison td {
   border: 0.2rem solid #FFFFFF;
   padding: 0.6rem;
+}
+.slides .slide__table .slide__body--declaration-comparison--hoisting tr td:last-of-type {
+  background-color: #358DF2;
 }
 .slides .slide__code--light-blue {
   color: #34DADF;
@@ -2244,6 +2257,9 @@ ul li:before {
 .slides .slide__text--small {
   font-size: 1.2rem;
 }
+.slides .slide__text--medium {
+  font-size: 1.8rem;
+}
 .slides .slide-timing {
   width: 3rem;
 }
@@ -2298,29 +2314,29 @@ ul li:before {
   position: relative;
   flex-basis: 60%;
 }
-.slides .slide__list--item--small {
+.slides .slide__list-item--small {
   font-size: 1.5rem;
 }
-.slides .slide__list--item--small:before {
+.slides .slide__list-item--small:before {
   border-width: 0.4rem 0 0.4rem 0.4rem;
 }
-.slides .slide__list--item--medium {
+.slides .slide__list-item--medium {
   font-size: 1.9rem;
 }
-.slides .slide__list--item--medium:before {
+.slides .slide__list-item--medium:before {
   border-width: 0.5rem 0 0.5rem 0.5rem;
 }
-.slides .slide__list--item.no-arrow {
+.slides .slide__list-item.no-arrow {
   padding-left: 0;
 }
-.slides .slide__list--item.no-arrow:before {
+.slides .slide__list-item.no-arrow:before {
   display: none;
 }
-.slides .slide__list--item.bullet {
+.slides .slide__list-item.bullet {
   padding-left: 0;
   list-style-type: disc;
 }
-.slides .slide__list--item.bullet:before {
+.slides .slide__list-item.bullet:before {
   display: none;
 }
 
