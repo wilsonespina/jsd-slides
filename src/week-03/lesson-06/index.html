@@ -34,7 +34,7 @@
 
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Objects & JSON</h2>
+						<h2 class="slide__header--title">Scope</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-flex start">
@@ -44,9 +44,10 @@
 						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
-							<li class="slide__list-item">Understand how scope works</li>
-							<li class="slide__list-item">Determine the scope of local and global variables</li>
-							<li class="slide__list-item">Describe what hoisting does</li>
+							<li class="slide__list-item">Know what objects and methods are</li>
+							<li class="slide__list-item">Identify likely objects, properties, and methods in real-world scenarios</li>							</li>
+							<li class="slide__list-item">Understand what is JSON</li>
+							<li class="slide__list-item">Work with JSON-formatted data</li>
 						</ul>
 					</div>
 				</section>
@@ -58,10 +59,150 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
-							<li class="slide__list-item">Variable scope</li>
-							<li class="slide__list-item">The <code>var</code>, <code>let</code>, and <code>const</code> keywords</li>
-							<li class="slide__list-item">Hoisting</li>
+							<li class="slide__list-item">Objects</li>
+							<li class="slide__list-item">Using JSON</li>
 						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects are a data type</h2>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--post-it width-100-p" src="../../assets/images/week-3/data-types-postit.png" alt="Data types post it">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects store data</h2>
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--objects-filing-cabinet width-30" src="../../assets/images/week-3/object-filing-cabinet.svg" alt="Objects in filing cabinet">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Objects are a type of data structure that is nearly universal across programming languages.</li>
+								<li class="slide__list-item">Like arrays, objects can hold multiple pieces of data of varying types.</li>
+								<li class="slide__list-item">Objects store data and are accessed like files in a filing cabinet.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-01 width-100-p" src="../../assets/images/week-3/object-01.png" alt="Object example 01">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-02 width-100-p" src="../../assets/images/week-3/object-02.png" alt="Object example 02">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Objects are a collection of properties.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Property = Key & Value</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-03 width-100-p" src="../../assets/images/week-3/object-03.png" alt="Object example 03">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">A property is an association between a key and a value.</li>
+							<li class="slide__list-item"><em>key:</em> name (often descriptive) used to reference the data.</li>
+							<li class="slide__list-item no-arrow">
+								<ul class="slide__list">
+									<li class="slide__list-item slide__list-item--medium bullet margin-left-5">A key can be either a name, a number or a string.</li>
+								</ul>
+							</li>
+							<li class="slide__list-item"><em>value:</em> the data stored in that property.</li>
+							<li class="slide__list-item no-arrow">
+								<ul class="slide__list">
+									<li class="slide__list-item slide__list-item--medium bullet margin-left-5">Can be any value including arrays, <code>null</code> or <code>undefined</code> and even another object.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Key-value pair</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-04 width-100-p" src="../../assets/images/week-3/object-04.png" alt="Object example 04">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">A property is a know as a <em>key-value pair</em>.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects are not ordered</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-third">
+								<div class="slide__container-flex">
+									<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+//
+// 0
+// 1
+// 2
+//
+									</code></pre>
+									<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+	[
+	  "Dave",
+	  "Benson-Phillips",
+	  55
+	]
+									</code></pre>
+								</div>
+								<p class="slide__text--medium text-transform-uppercase text-align-center">Array</p>
+								<p class="slide__text--medium text-transform-uppercase text-align-center">Ordered</p>
+							</div>
+							<div class="flex-basis-half">
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+{
+  name: "Dave",
+  lastName: "Benson-Phillips",
+  age: 55
+}
+								</code></pre>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item"><code>var</code> does not create local scope within a block</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -132,6 +273,7 @@
 		<script>
 			const srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
             Reveal.initialize({
+				slideNumber: true,
 				controls: true,
 				history: true,
 				transition: 'fade',
