@@ -1948,6 +1948,12 @@ i {
 .slides .slide .color-white {
   color: #FFFFFF;
 }
+.slides .slide .color-red {
+  color: #E51B24;
+}
+.slides .slide .text-transform-uppercase {
+  text-transform: uppercase;
+}
 
 *, *:after, *:before {
   box-sizing: border-box;

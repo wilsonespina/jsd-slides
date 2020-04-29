@@ -74,6 +74,7 @@ i {
 
 .slides {
     .slide {
+		// COLOR
 		.color-dark-blue {
 			color: $darkblue;
 		}
@@ -82,6 +83,16 @@ i {
 		}
 		.color-white {
 			color: $white;
+		}
+		.color-red {
+			color: $red;
+		}
+
+
+		// FONT
+		.text-transform-uppercase {
+			text-transform: uppercase;
+
 		}
 
 	}
