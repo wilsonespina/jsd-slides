@@ -172,22 +172,15 @@
 							<div class="margin-right-1 flex-basis-third">
 								<div class="slide__container-flex">
 									<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
-//
-// 0
-// 1
-// 2
-//
-									</code></pre>
-									<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 	[
-	  "Dave",
-	  "Benson-Phillips",
-	  55
+	  "Dave", 		// 0
+	  "Benson-Phillips",	// 1
+	  55			// 2
 	]
 									</code></pre>
 								</div>
 								<p class="slide__text--medium text-transform-uppercase text-align-center">Array</p>
-								<p class="slide__text--medium text-transform-uppercase text-align-center">Ordered</p>
+								<p class="slide__text--medium text-align-center">Ordered</p>
 							</div>
 							<div class="flex-basis-half">
 								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
@@ -197,10 +190,167 @@
   age: 55
 }
 								</code></pre>
-								<ul class="slide__list margin-top-1">
-									<li class="slide__list-item"><code>var</code> does not create local scope within a block</li>
-								</ul>
+								<p class="slide__text--medium text-transform-uppercase text-align-center">Object</p>
+								<p class="slide__text--medium text-align-center">Not ordered</p>
 							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">A method is a function property</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const animal = {
+  type: 'dog',
+  speak: function() {
+	console.log("Woof!");
+  }
+}
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">A method is a function property</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-05 width-100-p" src="/object-05.19ed17ff.png" alt="Object example 05">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Get / Set Properties</h2>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--get-set width-40" src="/get-set.ed14a6ab.png" alt="Dot notation and square brackets">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Dot Notation</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const person = {
+  name: 'Wilson',
+  location: 'London',
+  shout: function() {
+	console.log("I hate lockdown");
+  }
+};
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+
+person.name // getting a value
+=> "Wilson"
+
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+person.name = 'Steven'; // setting a value
+=> "Steven"
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+person.shout() // calling a method
+=> "I hate lockdown"
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Bracket Notation</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const person = {
+  name: 'Wilson',
+  location: 'London',
+  shout: function() {
+	console.log("I hate lockdown");
+  }
+};
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+person['name']
+=> "Wilson"
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+person['name'] = 'Steven';
+=> "Steven";
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+person['whisper'] = function() {
+  console.log("Social distancing is my jam");
+};
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Using a variable as a property</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const name = 'Jayne';
+const object = {
+    name: name
+};
+
+object;
+=> { name: "Jayne" }
+							</code></pre>
+							<div class="slide__container margin-top-1 fragment">
+								<ul class="slide__list">
+									<li class="slide__list-item--small">When the key and value are the same value, this can be shortened:</li>
+								</ul>
+								<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const object = { name }; // ES6 syntax
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+
+
+
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along">
 						</div>
 					</div>
 				</section>
