@@ -2200,6 +2200,9 @@ ul li:before {
 .slides .slide__code--dark-blue {
   color: #358DF2;
 }
+.slides .slide__code--white span {
+  color: #FFFFFF;
+}
 .slides .slide__code--middle {
   margin: auto 0;
 }
@@ -2407,6 +2410,11 @@ ul li:before {
 }
 .slides .slide__image--iceburg-abstraction:not(.current-fragment), .slides .slide__image--iceburg-abstraction-highlight:not(.current-fragment) {
   display: none;
+}
+.slides .slide__image--coronation-street {
+  position: absolute;
+  right: 2rem;
+  top: 20rem;
 }
 
 .slides .slide {

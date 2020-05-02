@@ -180,6 +180,11 @@
             &--dark-blue {
                 color: $darkblue;
             }
+            &--white{
+                span {
+                    color: $white;
+                }
+            }
             &--middle {
                 margin: auto 0;
             }
