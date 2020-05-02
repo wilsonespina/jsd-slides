@@ -34,7 +34,7 @@
 
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Scope</h2>
+						<h2 class="slide__header--title">Objects & JSON</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-flex start">
@@ -44,7 +44,7 @@
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
 							<li class="slide__list-item">Know what objects and methods are</li>
-							<li class="slide__list-item">Identify likely objects, properties, and methods in real-world scenarios</li>							
+							<li class="slide__list-item">Real World Scenarios</li>
 							<li class="slide__list-item">Understand what is JSON</li>
 							<li class="slide__list-item">Work with JSON-formatted data</li>
 						</ul>
@@ -59,8 +59,18 @@
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
 							<li class="slide__list-item">Objects</li>
+							<li class="slide__list-item">Real World Scenarios</li>
 							<li class="slide__list-item">Using JSON</li>
 						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Objects</h1>
 					</div>
 				</section>
 
@@ -89,6 +99,22 @@
 								<li class="slide__list-item">Like arrays, objects can hold multiple pieces of data of varying types.</li>
 								<li class="slide__list-item">Objects store data and are accessed like files in a filing cabinet.</li>
 							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const myObject = new Object();
+
+const myObject = {};
+// Most common way is 'object literal syntax'							</code></pre>
 						</div>
 					</div>
 				</section>
@@ -335,6 +361,283 @@ const object = { name }; // ES6 syntax
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Property value shorthand</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const name = 'Adrianna';
+const nationality = 'Polish';
+const dob = '1990-10-10';
+
+const person = {
+  name,
+  nationality,
+  dob
+};
+
+person;
+=> Object { name: "Adrianna", nationality: "Polish", dob: "1990-10-10" };
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Deleting Properties</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">If you want to delete a property of an object (and by extension, the value attached to the property), you need to use the <em>delete</em> operator:</li>
+							</ul>
+							<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+const classroom = {
+  name: 'JSD 9',
+  type: 'Remote',
+  start: '11/05/2020'
+};
+
+delete classroom.start;
+
+classroom
+=> Object { name: "WDI 2", type: "Remote" }
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Exercise -  Intro to Objects</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create JavaScript objects using object literal notation</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter code > 1-objects-intr</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">3 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Write code to create a variable whose name corresponds to any one of the following things: (cloud ☁️, houseplant 💐, car 🚙, or airplane ✈).</li>
+													<li class="slide__exercise__header__list--item">Write code to add a property to the object and specify a  value for the property.</li>
+													<li class="slide__exercise__header__list--item">Write code to add a method to the object, and specify a value for the method (use a comment or console.log() statement for the function body).</li>
+													<li class="slide__exercise__header__list--item">BONUS: Rewrite your answers for 1-3 as a single  JavaScript statement.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Real World Scenarios</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects in the Real World</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight">size 10 </span>running shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects = Nouns</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight background-yellow">user</span>, browsing on a <span class="slide__highlight background-yellow">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight">size 10 </span>running shoes, and examines <span class="slide__highlight background-yellow">several pairs</span> before purchasing one."</p>
+						</div>
+
+						<div class="slide__container-flex margin-top-2">
+							<div class="flex-basis-third">
+								<p class="slide__text bold">implicit object:</p>
+							</div>
+							<div class="flex-basis-third background-yellow padding-top-1 padding-bottom-1 padding-left-1">
+								<p class="slide__text--large"><span>shopping cart</span></p>
+							</div>
+							<div class="flex-basis-third"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Properties = Adjectives</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight background-light-green">size 10 running</span> shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p>
+						</div>
+
+						<div class="slide__container-flex margin-top-2">
+							<div class="flex-basis-third">
+								<p class="slide__text bold">implicit properties:</p>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium">for each pair of shoes:</p>
+								<div class="background-light-green padding-left-1 ">
+									<p class="slide__text--large"><span>price</span></p>
+									<p class="slide__text--large"><span>colour</span></p>
+								</div>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium"><span>for the shopping cart:</span></p>
+								<div class="background-light-green padding-left-1 ">
+									<p class="slide__text--large"><span>contents</span></p>
+									<p class="slide__text--large"><span>total</span></p>
+									<p class="slide__text--large"><span>shipping</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Properties = Adjectives</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight background-pink">searches</span> for <span class="slide__highlight">size 10 running</span> shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p>
+						</div>
+
+						<div class="slide__container-flex margin-top-2">
+							<div class="flex-basis-third">
+								<p class="slide__text bold">implicit properties:</p>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium">for each pair of shoes:</p>
+								<div class="background-pink padding-left-1">
+									<p class="slide__text--large"><span>add to cart</span></p>
+								</div>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium"><span>for the shopping cart:</span></p>
+								<div class="background-pink padding-left-1">
+									<p class="slide__text--large"><span>calculate shipping</span></p>
+									<p class="slide__text--large"><span>calculate tax</span></p>
+									<p class="slide__text--large"><span>complete purchase</span></p>
+									<p class="slide__text--large"><span>remove item</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Objects</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create JavaScript objects using object literal notation</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter code > 1-objects-intr</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">20 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open `starter-code > 2-object-exercise > monkey.js` in your editor.</li>
+													<li class="slide__exercise__header__list--item">Create objects for 3 different monkeys each with the properties and methods listed in the start file.</li>
+													<li class="slide__exercise__header__list--item">Practice retrieving properties and using methods with both dot notation and bracket syntax. </li>
+													<li class="slide__exercise__header__list--item">BONUS: Rewrite your code to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_a_constructor_function" target="_blank">constructor function</a>.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">JSON</h1>
+					</div>
+				</section>
+
+
+
+
+
+
+
+
 
 
 
@@ -349,8 +652,8 @@ const object = { name }; // ES6 syntax
 						<div class="slide__container-center">
 							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
 						</div>
-						<div class="slide__container-center margin-top-3">
-							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along">
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/lTRuG1F4VZ3LHMpXY2/giphy.gif" alt="Code Along">
 						</div>
 					</div>
 				</section>
@@ -379,43 +682,8 @@ const object = { name }; // ES6 syntax
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			</div>
 		</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>

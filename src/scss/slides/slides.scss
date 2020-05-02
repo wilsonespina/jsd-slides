@@ -259,6 +259,12 @@
             &--medium {
                 font-size: 1.8rem;
             }
+            &--large {
+                font-size: 2.2rem;
+            }
+            &.bold {
+                font-weight: bold;
+            }
         }
 
         &__icon {
@@ -356,6 +362,10 @@
                     list-style-type: disc;
                 }
             }
+        }
+
+        &__highlight {
+            padding: 0 0.1rem;
         }
     }
 }

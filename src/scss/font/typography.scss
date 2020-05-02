@@ -13,6 +13,8 @@ $grey: #ececec;
 $white: #FFFFFF;
 $black: #000000;
 $cyan: #34DADF;
+$light-green: #6ae4d6;
+$pink: #ffa5b9;
 
 h1 {
 	font-family: 'Pf Din', Impact, sans-serif;
@@ -86,6 +88,16 @@ i {
 		}
 		.color-red {
 			color: $red;
+		}
+
+		.background-yellow {
+			background-color: yellow;
+		}
+		.background-light-green {
+			background-color: $light-green;
+		}
+		.background-pink {
+			background-color: $pink;
 		}
 
 
