@@ -2072,6 +2072,9 @@ ul li:before {
 .slides .slide__container-flex.space-between {
   justify-content: space-between;
 }
+.slides .slide__container-flex.center {
+  justify-content: center;
+}
 .slides .slide__container-flex .flex-basis-half {
   flex-basis: 50%;
 }
@@ -2465,6 +2468,9 @@ ul li:before {
 .slides .slide .height-100-p {
   height: 100%;
 }
+.slides .slide .margin-middle {
+  margin: 0 auto;
+}
 .slides .slide .margin-left-1 {
   margin-left: 1rem;
 }
@@ -2503,6 +2509,9 @@ ul li:before {
 }
 .slides .slide .margin-top-3 {
   margin-top: 3rem;
+}
+.slides .slide .margin-top-4 {
+  margin-top: 4rem;
 }
 .slides .slide .margin-top-10 {
   margin-top: 10rem;
