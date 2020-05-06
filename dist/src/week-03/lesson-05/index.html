@@ -1,11 +1,110 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSD | Lesson 05</title><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-32x32.8ae2cba7.png" sizes="32x32"><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-16x16.74161018.png" sizes="16x16"><link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"><link rel="stylesheet" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/main.d1e53438.css"></head><body> <div class="reveal"> <div class="slides"> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Scope & Variables</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Review</h2> </header> <div class="slide__content"> <h1 class="slide__title--black">What did we do last lesson?</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Understand how scope works</li> <li class="slide__list-item">Determine the scope of local and global variables</li> <li class="slide__list-item">Describe what hoisting does</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Agenda</h2> <ul class="slide__list"> <li class="slide__list-item">Variable scope</li> <li class="slide__list-item">The <code>var</code>, <code>let</code>, and <code>const</code> keywords</li> <li class="slide__list-item">Hoisting</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Scope & Variables</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Scope</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Global Scope</h2> <p class="slide__text">When you start writing JavaScript in a document, you are already in the Global scope:</p> <div class="slide__container-flex height-100-p"> <pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim="">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 05</title>
+		<link rel="icon" type="image/png" href="/favicon-32x32.43b30f10.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="/main.d9ee62f6.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Scope & Variables</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Review</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--black">What did we do last lesson?</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Understand how scope works</li>
+							<li class="slide__list-item">Determine the scope of local and global variables</li>
+							<li class="slide__list-item">Describe what hoisting does</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Variable scope</li>
+							<li class="slide__list-item">The <code>var</code>, <code>let</code>, and <code>const</code> keywords</li>
+							<li class="slide__list-item">Hoisting</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Scope</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Global Scope</h2>
+						<p class="slide__text">When you start writing JavaScript in a document, you are already in the Global scope:</p>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim="">
 let flavour = 'Strawberry'; // global variable
 
 function pick() {
   console.log(flavour); // Strawberry
 }
 console.log(flavour); // Strawberry
-							</code></pre> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">A variable declared outside of a function is accessible everywhere, even within functions. Such a variable is said to have <em>global scope</em>.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Local Scope - Function Scope</h2> <p class="slide__text">Variables defined inside a function are in the local scope.</p> <div class="slide__container-flex height-100-p"> <pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim="">
+							</code></pre>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">A variable declared outside of a function is accessible everywhere, even within functions. Such a variable is said to have <em>global scope</em>.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Local Scope - Function Scope</h2>
+						<p class="slide__text">Variables defined inside a function are in the local scope.</p>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim="">
 let flavour = 'Strawberry';
 
 function pick() {
@@ -15,7 +114,23 @@ function pick() {
 pick();
 console.log(newFlavour); // Throws an error
 
-							</code></pre> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">A variable declared within a function is not accessible outside of that	function. Such a variable is said to have <em>function scope</em>.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Local Scope - Block Scope</h2> <p class="slide__text">A variable created with <code>let</code> or <code>const</code> creates local scope within any block, including blocks that are part of loops and conditionals:</p> <div class="slide__container-flex height-100-p"> <pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim="">
+							</code></pre>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">A variable declared within a function is not accessible outside of that	function. Such a variable is said to have <em>function scope</em>.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Local Scope - Block Scope</h2>
+						<p class="slide__text">A variable created with <code>let</code> or <code>const</code> creates local scope within any block, including blocks that are part of loops and conditionals:</p>
+						<div class="slide__container-flex height-100-p">
+							<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small height-100-p" data-trim="">
 let flavour = 'Strawberry';
 let name = 'Sarah';
 
@@ -25,84 +140,653 @@ if (flavour === 'Strawberry') {
 }
 
 console.log(message + ' ' + name); // 'message' is undefined
-							</code></pre> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">This is known as <em>block scope</em>.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Scope</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Create and call a function that accepts parameters to solve a problem</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter code > 1-scope-lab</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">3 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Open the index.html file in your browser, view the console, and	examine the error.</li> <li class="slide__exercise__header__list--item">Follow the instructions in js > main.js to complete parts A	and B.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Scope & Variables</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Let, Const, Var and Scope</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Javascript Specification</h2> <p class="slide__text">ECMAScript provides the rules, details, and guidelines that a scripting language must observe to be considered ECMAScript compliant</p> <ul class="slide__list"> <li class="slide__list-item--small">JavaScript is a language that conforms to the ECMAScript specification</li> </ul> <div class="slide__container-center"> <img class="slide__image slide__image--js-timeline width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/js-timeline.d3cbb5a3.png" alt="Timeline of JavaScript"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">let</h2> <ul class="slide__list"> <li class="slide__list-item">Keyword in ECMAScript6 (ES6)</li> <li class="slide__list-item">Local scope within functions and within any block (including loops and conditionals)</li> <pre class="slide__pre margin-top-1"><code class="slide__code color-light-blue hljs javascript medium" data-trim="">
+							</code></pre>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">This is known as <em>block scope</em>.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab -  Scope</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create and call a function that accepts parameters to solve a problem</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter code > 1-scope-lab</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">3 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open the index.html file in your browser, view the console, and	examine the error.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions in js > main.js to complete parts A	and B.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Let, Const, Var and Scope</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Javascript Specification</h2>
+						<p class="slide__text">ECMAScript provides the rules, details, and guidelines that a scripting language must observe to be considered ECMAScript compliant</p>
+						<ul class="slide__list">
+							<li class="slide__list-item--small">JavaScript is a language that conforms to the ECMAScript specification</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--js-timeline width-40" src="/js-timeline.619a898b.png" alt="Timeline of JavaScript">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">let</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Keyword in ECMAScript6 (ES6)</li>
+							<li class="slide__list-item">Local scope within functions and within any block (including loops and conditionals)</li>
+							<pre class="slide__pre margin-top-1"><code class="slide__code color-light-blue hljs javascript medium" data-trim="">
 let broadcasters = ['BBC', 'ITV', 'SKY'];
-							</code></pre> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">const</h2> <ul class="slide__list"> <li class="slide__list-item">Part of ES6</li> <li class="slide__list-item">Local scope within functions and within any block (including loops and conditionals)</li> <li class="slide__list-item">Used to declare constants</li> <pre class="slide__pre margin-top-1"><code class="slide__code color-light-blue hljs javascript medium" data-trim="">
+							</code></pre>
+
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">const</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Part of ES6</li>
+							<li class="slide__list-item">Local scope within functions and within any block (including loops and conditionals)</li>
+							<li class="slide__list-item">Used to declare constants</li>
+							<pre class="slide__pre margin-top-1"><code class="slide__code color-light-blue hljs javascript medium" data-trim="">
 const tax = 0.2;
-							</code></pre> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">var</h2> <ul class="slide__list"> <li class="slide__list-item">Original JS keyword for creating variables</li> <li class="slide__list-item">Only type of local scope it can create is function scope</li> <li class="slide__list-item">Generally, <code>var</code> can be avoided outside of working on legacy code</li> <pre class="slide__pre margin-top-1"><code class="slide__code color-light-blue hljs javascript medium" data-trim="">
+							</code></pre>
+
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">var</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Original JS keyword for creating variables</li>
+							<li class="slide__list-item">Only type of local scope it can create is function scope</li>
+							<li class="slide__list-item">Generally, <code>var</code> can be avoided outside of working on legacy code</li>
+							<pre class="slide__pre margin-top-1"><code class="slide__code color-light-blue hljs javascript medium" data-trim="">
 var broadcasters = ['BBC', 'ITV', 'SKY'];
-							</code></pre> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">let/const vs var</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">let/const vs var</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let x = 1;
 if (true) {
   let x = 2;
   console.log(x); // 2
 }
 console.log(x); // 1
-								</code></pre> <ul class="slide__list margin-top-1"> <li class="slide__list-item"><code>let</code> & <code>const</code> create local scope within any block</li> </ul> </div> <div class="flex-basis-half"> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item"><code>let</code> & <code>const</code> create local scope within any block</li>
+								</ul>
+							</div>
+							<div class="flex-basis-half">
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let x = 1;
 if (true) {
   let x = 2;
   console.log(x); // 2
 }
 console.log(x); // 1
-								</code></pre> <ul class="slide__list margin-top-1"> <li class="slide__list-item"><code>var</code> does not create local scope within a block</li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">let, const and var</h2> <table class="slide__table margin-top-1"> <thead class="slide__head slide__head--declaration-comparison"> <tr> <th class="medium-font color-white">Keyword</th> <th class="medium-font color-white">Scope</th> <th class="medium-font color-white">Can Be Assigned</th> <th class="medium-font color-white">Can Be Redeclared</th> </tr> </thead> <tbody class="slide__body slide__body--declaration-comparison"> <tr> <td class="col-15-p"> <code class="slide__code small bold">var</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Function scope</code> </td> <td class="col-25-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-30-p"> <p class="slide__text slide__text--table">Yes</p> </td> </tr> <tr> <td class="col-15-p"> <code class="slide__code small bold">let</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Block scope</code> </td> <td class="col-25-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-30-p"> <p class="slide__text slide__text--table">No</p> </td> </tr> <tr> <td class="col-15-p"> <code class="slide__code small bold">const</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Block scope</code> </td> <td class="col-25-p"> <p class="slide__text slide__text--table">No</p> </td> <td class="col-30-p"> <p class="slide__text slide__text--table">No</p> </td> </tr> </tbody> </table> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/13UZisxBxkjPwI/giphy.gif" alt="Code Along"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - let, var and const</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Determine the scope of local and global variables</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Pairs</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter code > 2-let-var-const-lab</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">3 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Open the index.html file in your browser, view the console, and	examine the error.</li> <li class="slide__exercise__header__list--item">Follow the instructions in js > main.js to complete parts A	and B.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Scope & Variables</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Hoisting</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <ul class="slide__list"> <li class="slide__list-item">When JavaScript compiles all of your code, all variable declarations using <code>var</code> are lifted to the top of their function/local scope</li> <li class="slide__list-item">Hoisting doesn't happen in the code, rather the Compiler</li> <li class="slide__list-item">Google Chrome uses V8 Compile / Interpreter</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item"><code>var</code> does not create local scope within a block</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">let, const and var</h2>
+						<table class="slide__table margin-top-1">
+							<thead class="slide__head slide__head--declaration-comparison">
+								<tr>
+									<th class="medium-font color-white">Keyword</th>
+									<th class="medium-font color-white">Scope</th>
+									<th class="medium-font color-white">Can Be Assigned</th>
+									<th class="medium-font color-white">Can Be Redeclared</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--declaration-comparison">
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">var</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Function scope</code>
+									</td>
+									<td class="col-25-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-30-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">let</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-25-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-30-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">const</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-25-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+									<td class="col-30-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/13UZisxBxkjPwI/giphy.gif" alt="Code Along">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab -  let, var and const</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Determine the scope of local and global variables</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter code > 2-let-var-const-lab</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">3 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open the index.html file in your browser, view the console, and	examine the error.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions in js > main.js to complete parts A	and B.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Hoisting</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">When JavaScript compiles all of your code, all variable declarations using <code>var</code> are lifted to the top of their function/local scope</li>
+							<li class="slide__list-item">Hoisting doesn't happen in the code, rather the Compiler</li>
+							<li class="slide__list-item">Google Chrome uses V8 Compile / Interpreter</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
 
   console.log("Wahoo!");
   var x = 1;
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
   var x; // top of function scope
   console.log("Wahoo!");
   x = 1;
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item fragment">Variable names declared with <code>var</code> are hoisted, but not their values.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item fragment">Variable names declared with <code>var</code> are hoisted, but not their values.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
   console.log("Wahoo!");
   let x = 1;
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
   console.log("Wahoo!");
   let x = 1;
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item fragment">Variable names declared with <code>let</code> or <code>const</code> are not hoisted.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item fragment">Variable names declared with <code>let</code> or <code>const</code> are not hoisted.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo()
 
 function foo() {
   console.log("Hi!");
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function foo() {
   console.log("Hi!");
 }
 
 foo();
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1 fragment"> <li class="slide__list-item">Function declarations are hoisted.</li> <li class="slide__list-item">Your code can call a hoisted function before it has been declared.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting - Function Expressions</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 fragment">
+							<li class="slide__list-item">Function declarations are hoisted.</li>
+							<li class="slide__list-item">Your code can call a hoisted function before it has been declared.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Expressions</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo()
 
 
 var foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 var foo;
 
 foo(); // error foo is not a function
 foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Function expressions are treated like other variables</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting - Function Expressions</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 ">
+							<li class="slide__list-item">Function expressions are treated like other variables</li>
+						</ul>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Expressions</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo()
 
 let foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo(); // error foo is not a function
 
 let foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Function expressions are treated like other variables</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">let, const and var</h2> <table class="slide__table margin-top-1"> <thead class="slide__head slide__head--declaration-comparison"> <tr> <th class="medium-font color-white">Keyword</th> <th class="medium-font color-white">Scope</th> <th class="medium-font color-white">Can Be Assigned</th> <th class="medium-font color-white">Can Be Redeclared</th> <th class="medium-font color-white">Hoisting</th> </tr> </thead> <tbody class="slide__body slide__body--declaration-comparison slide__body--declaration-comparison--hoisting"> <tr> <td class="col-15-p"> <code class="slide__code small bold">var</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Function scope</code> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> </tr> <tr> <td class="col-15-p"> <code class="slide__code small bold">let</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Block scope</code> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> </tr> <tr> <td class="col-15-p"> <code class="slide__code small bold">const</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Block scope</code> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> </tr> </tbody> </table> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Quiz</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" alt="Quiz"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5"> <h2 class="slide__title">Learning Objectives - Review</h2> <ul class="slide__list"> <li class="slide__list-item">Understand how scope works</li> <li class="slide__list-item">Determine the scope of local and global variables</li> <li class="slide__list-item">Describe what hoisting does</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Scope & Variables</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Q&A</h1> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Scope & Variables</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Exit Ticket</h1> <p class="slide__text color-white">(Lesson 05)</p> </div> </div> </section> </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script> <script>var i="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";Reveal.initialize({slideNumber:!0,controls:!0,history:!0,transition:"fade",center:!1,progress:!1,dependencies:[{src:"".concat(i,"plugin/highlight/highlight.min.js"),async:!0,callback:function(){hljs.initHighlightingOnLoad()}}]});</script> </body></html>
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 ">
+							<li class="slide__list-item">Function expressions are treated like other variables</li>
+						</ul>
+
+					</div>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">let, const and var</h2>
+						<table class="slide__table margin-top-1">
+							<thead class="slide__head slide__head--declaration-comparison">
+								<tr>
+									<th class="medium-font color-white">Keyword</th>
+									<th class="medium-font color-white">Scope</th>
+									<th class="medium-font color-white">Can Be Assigned</th>
+									<th class="medium-font color-white">Can Be Redeclared</th>
+									<th class="medium-font color-white">Hoisting</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--declaration-comparison slide__body--declaration-comparison--hoisting">
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">var</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Function scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">let</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">const</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Quiz</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" alt="Quiz">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5">
+						<h2 class="slide__title">Learning Objectives - Review</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Understand how scope works</li>
+							<li class="slide__list-item">Determine the scope of local and global variables</li>
+							<li class="slide__list-item">Describe what hoisting does</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson 05)</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+Reveal.initialize({
+  slideNumber: true,
+  controls: true,
+  history: true,
+  transition: 'fade',
+  center: false,
+  progress: false,
+  dependencies: [{
+    src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
+    async: true,
+    callback: function callback() {
+      hljs.initHighlightingOnLoad();
+    }
+  }]
+});</script>
+	</body>
+</html>
