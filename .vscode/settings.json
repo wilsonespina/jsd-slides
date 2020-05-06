@@ -1,3 +1,6 @@
 {
-    "liveServer.settings.port": 8082
+    "liveServer.settings.port": 8082,
+    "cSpell.words": [
+        "slackbot"
+    ]
 }
