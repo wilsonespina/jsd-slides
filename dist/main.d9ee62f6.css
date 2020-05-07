@@ -2081,6 +2081,12 @@ ul li:before {
 .slides .slide__container-flex .flex-basis-third {
   flex-basis: 33.333%;
 }
+.slides .slide__container-flex .align-items-baseline {
+  align-items: baseline;
+}
+.slides .slide__container-flex .align-items-center {
+  align-items: center;
+}
 .slides .slide__container-flex.height-100-p {
   height: 100%;
 }
@@ -2184,6 +2190,12 @@ ul li:before {
 }
 .slides .slide__table .slide__body--declaration-comparison--hoisting tr td:last-of-type {
   background-color: #358DF2;
+}
+.slides .slide__pre--border-red {
+  border: 5px solid red;
+}
+.slides .slide__pre--border-green {
+  border: 5px solid green;
 }
 .slides .slide__code--light-blue {
   color: #34DADF;

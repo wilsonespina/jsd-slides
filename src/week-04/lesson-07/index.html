@@ -240,7 +240,7 @@
 
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Activity</h2>
+						<h2 class="slide__header--title">Activity - Configure Hubot</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-flex">
@@ -265,6 +265,343 @@
 												<ol class="slide__exercise__header__list">
 													<li class="slide__exercise__header__list--item">Follow the instructions to install command line utilities for building Hubots.</li>
 													<li class="slide__exercise__header__list--item">When you finish, start reading and exploring the sample code in <a href="https://git.generalassemb.ly/wilson-espina/jsd-9-resources/blob/master/07-slackbot-lab/2-slack-bot-code-samples.md">Slack Bot Lab - Sample Code</a> (second link in Resources on website for today’s class).</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">The Hubot Framework</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content height-100-p">
+						<h2 class="slide__title">Basic Structure</h2>
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim>
+module.exports = function(robot) {
+  // command 1
+  robot.verb(parameter1, function(res) {
+    return res.command();
+  });
+  // command 2
+    robot.verb(parameter1, function(res) {
+    return res.command();
+  });
+  ...
+}
+
+						</code></pre>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Interacting with Hubot</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Basic verbs</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item"><em>hear</em>: called anytime a text in the chat matches the text.</li>
+							</ul>
+							<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+bot.hear(/Hello!/, function(res) {
+  return res.send("Hi there!");
+});
+						</code></pre>
+							<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle small" data-trim>
+tim: Hello!
+hubot: Hi there!
+						</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Interacting with Hubot</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Basic verbs</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item"><em>respond</em>: called for messages immediately preceded by the robot’s name or alias.</li>
+							</ul>
+							<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+bot.respond(/What's your favorite food?/, function(res) {
+  return res.send("I'm a robot--I don't eat food!");
+});
+							</code></pre>
+							<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle small" data-trim>
+tim: @hubot What's your favorite food?
+hubot: I'm a robot--I don't eat food!
+jon: What's your favourite food?
+... [no response because Jon didn't tag Hubot in his message]
+						</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Interacting with Hubot</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Sending replies</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item"><code><em>.send</em></code> method allows your Hubot to send a message to the channel.</li>
+								<li class="slide__list-item"><code><em>.reply</em></code> method allows it to respond directly to a user with an @ reply.</li>
+								<li class="slide__list-item"><code><em>(.*)</em></code> wildcards allow us to accept user input in your script.</li>
+							</ul>
+							<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle small" data-trim>
+bot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
+  let name;
+  name = msg.match[1];
+  if (name == "Hubot"){
+	return msg.send("You're not Hubot--I'm Hubot!");
+  } else {
+	return msg.reply("Nice to meet you, " + name + "!");
+  }
+});
+						</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Interacting with Hubot</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Advanced hubot Verbs</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item"><em>random</em>: choose a random element from an array</li>
+								<li class="slide__list-item"><em>topic</em> set the topic of the current channel.</li>
+								<li class="slide__list-item"><em>brain</em> store and retrieve data.</li>
+								<li class="slide__list-item"><em>http</em> make an http request (API data, for instance)</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif" alt="Code Along"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Common Gotchas</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image width-30" src="../../assets/images/week-3/gotcha-1.png" alt="Gotcha 1"/>
+							<div class="slide__container-center slide__container-flex align-items-center">
+								<ul class="slide__list margin-left-2">
+									<li class="slide__list-item slide__list-item--medium no-arrow">❌ Function parameter and argument does not match</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__container-flex start margin-top-3 fragment">
+							<pre class="slide__pre slide__pre--border-green margin-top-1 width-30"><code class="hljs slide__code slide__code--middle small" data-trim>
+module.exports = function(robot) {
+  robot.hear(/Hello!/, function(res) {
+    return res.send("Hi there!");
+  })
+}
+							</code></pre>
+							<div class="slide__container-center slide__container-flex align-items-center">
+								<ul class="slide__list margin-left-2">
+									<li class="slide__list-item slide__list-item--medium no-arrow">✅ Function parameter and argument match</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<div class="width-30">
+								<pre class="slide__pre slide__pre--border-red margin-top-1 width-30"><code class="hljs slide__code slide__code--middle small" data-trim>
+module.exports = function(bot) {
+  bot.respond(/Hello!/, function(res) {
+    return res.send("Hi there!");
+  })
+}
+								</code></pre>
+								<pre class="slide__pre slide__pre--border-red margin-top-1 width-30"><code class="hljs slide__code slide__code--middle small" data-trim>
+bro-bot> Hello!
+bro-bot>
+								</code></pre>
+							</div>
+
+							<div class="slide__container-center slide__container-flex align-items-center">
+								<ul class="slide__list margin-left-2">
+									<li class="slide__list-item slide__list-item--medium no-arrow">❌ No @alias used</li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__container-flex start margin-top-4 fragment">
+							<div class="width-30">
+								<pre class="slide__pre slide__pre--border-green width-30"><code class="hljs slide__code slide__code--middle small" data-trim>
+bro-bot> @bro-bot Hello!
+bro-bot> Hi there!
+								</code></pre>
+							</div>
+							<div class="slide__container-center slide__container-flex align-items-center">
+								<ul class="slide__list margin-left-2">
+									<li class="slide__list-item slide__list-item--medium no-arrow">✅ Hubot name has been called</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<pre class="slide__pre slide__pre--border-red height-100-p flex-basis-third"><code class="hljs slide__code slide__code--middle small" data-trim>
+module.exports = function(bot) {
+  bot.hear(/Hello!/, function(res) {
+    return res.send("Hi there!");
+  });
+};
+module.exports = function(bot) {
+  bot.hear(/Yo/, function(res) {
+    return res.send("Heya");
+  });
+};
+							</code></pre>
+
+							<pre class="slide__pre slide__pre--border-red height-100-p flex-basis-third"><code class="hljs slide__code slide__code--middle small" data-trim>
+bro-bot> Hello!
+bro-bot>
+bro-bot> Yo
+bro-bot> Heya
+							</code></pre>
+						</div>
+
+						<div class="slide__container-flex margin-top-3 fragment">
+							<pre class="slide__pre slide__pre--border-green height-100-p flex-basis-third"><code class="hljs slide__code slide__code--middle small" data-trim>
+module.exports = function(bot) {
+  bot.hear(/Hello!/, function(res) {
+    return res.send("Hi there!");
+  });
+  bot.hear(/Yo/, function(res) {
+    return res.send("Heya");
+  });
+};
+							</code></pre>
+
+							<pre class="slide__pre slide__pre--border-green height-100-p flex-basis-third"><code class="hljs slide__code slide__code--middle small" data-trim>
+bro-bot> Hello!
+bro-bot> Hi there!
+bro-bot> Yo
+bro-bot> Heya
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Slack Bot Lab</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<p class="slide__text">Bot is asleep if the status indicator is not green.</p>
+							<img class="slide__image width-100-p margin-top-1" src="../../assets/images/week-4/sleeping-bot.png" alt="Sleeping Bot">
+							<pre class="slide__pre height-100-p margin-top-3"><code class="hljs slide__code slide__code--middle small" data-trim>
+$ heroku ps:start
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image width-20 margin-top-1" src="../../assets/images/week-4/chris-whitty.png" alt="Chris Whitty">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Build A Slack bot</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Write scripts that allow your Hubot to interact with users of the class Slack organisation.</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">JSD > myhubot > scripts > script.js</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">20 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Uncommenting portions of the sample code in script.js to explore how to code in the Hubot framework, and what a bot can do in Slack.</li>
+													<li class="slide__exercise__header__list--item">Try out some of the code samples in today’s start code files.</li>
+													<li class="slide__exercise__header__list--item">Create a plan for what you want your bot to be able to do, pseudocode it, and start building it!</li>
+													<li class="slide__exercise__header__list--item">Test using the steps in <a href="https://git.generalassemb.ly/wilson-espina/jsd-9-resources/blob/master/07-slackbot-lab/3-slack-bot-testing.md">Slack bot lab - Testing & Troubleshooting</a> (third link on class resources on website).</li>
+													<li class="slide__exercise__header__list--item">BONUS: Experiment with advanced commands documented at <a href="https://github.com/github/hubot/blob/master/docs/scripting.md">https://github.com/github/hubot/blob/master/docs/scripting.md</a></li>
 												</ol>
 											</td>
 										</tr>

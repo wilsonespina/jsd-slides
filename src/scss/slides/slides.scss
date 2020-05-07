@@ -28,6 +28,12 @@
                 .flex-basis-third {
                     flex-basis: 33.333%;
                 }
+                .align-items-baseline {
+                    align-items: baseline;
+                }
+                .align-items-center {
+                    align-items: center;
+                }
                 &.height-100-p {
                     height: 100%;
                 }
@@ -161,6 +167,15 @@
                         }
                     }
                 }
+            }
+        }
+
+        &__pre {
+            &--border-red {
+                border: 5px solid red;
+            }
+            &--border-green {
+                border: 5px solid green;
             }
         }
 
