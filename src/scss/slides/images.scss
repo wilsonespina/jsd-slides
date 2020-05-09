@@ -3,18 +3,18 @@
         width: 30rem;
 
         // Assets modifiers
-        &--pug, &--cat {
+        &--bike, &--cat {
             position: absolute;
         }
-        &--pug {
+        &--bike {
             left: 2rem;
             top: 2rem;
         }
         &--cat {
             right: 6rem;
-            top: 8rem;
+            top: 10rem;
         }
-        &--homepage, &--request-response {
+        &--request-response {
             width: 80%;
         }
         &--website {

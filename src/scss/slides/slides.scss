@@ -247,11 +247,10 @@
             }
         }
         &__name {
-            position: absolute;
-            bottom: 4rem;
             color: $black;
             font-family: 'News 706';
             font-size: 1.5rem;
+            text-transform: uppercase;
             &.white {
                 color: $white;
             }
@@ -275,6 +274,9 @@
             }
             &.bold {
                 font-weight: bold;
+            }
+            &.center {
+                text-align: center;
             }
         }
 
@@ -329,16 +331,16 @@
             }
         }
 
-        &__profile {
-            &__info {
-                position: relative;
-                display: flex;
-                h3, img {
-                    position: absolute;
-                    top: 0;
-                }
-            }
-        }
+        // &__profile {
+        //     &__info {
+        //         position: relative;
+        //         display: flex;
+        //         h3, img {
+        //             position: absolute;
+        //             top: 0;
+        //         }
+        //     }
+        // }
 
         &__thoughts {
             position: relative;
