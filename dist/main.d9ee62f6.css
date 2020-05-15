@@ -2072,6 +2072,9 @@ ul li:before {
 .slides .slide__container-flex.start {
   justify-content: flex-start;
 }
+.slides .slide__container-flex.end {
+  justify-content: flex-end;
+}
 .slides .slide__container-flex.space-between {
   justify-content: space-between;
 }
