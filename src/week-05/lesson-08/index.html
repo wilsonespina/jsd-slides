@@ -45,10 +45,8 @@
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
 							<li class="slide__list-item">Describe the differences between the DOM and HTML</li>
-							<li class="slide__list-item">Create DOM nodes with vanilla JavaScript</li>
-							<li class="slide__list-item">Create DOM event handlers using vanilla JavaScript.</li>
-							<li class="slide__list-item">Select DOM elements and properties using jQuery.</li>
-							<li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li>
+							<li class="slide__list-item">Use the browser’s developer tools to navigate and interact with the DOM</li>
+							<li class="slide__list-item">Select and create DOM nodes with vanilla JavaScript</li>
 						</ul>
 					</div>
 				</section>
@@ -666,30 +664,466 @@ item.innerHTML = 'Toast';
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>className</code> property</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Gets an element's <code>class</code> attribute value.</li>
+						</ul>
+						<div class="slide__container margin-top-4">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle javascript medium" data-trim>
+const item = document.querySelector('li')
 
-
-
-
-
-
-
-
-
-
-
+console.log(item.className);
+// Gets value: ''
+							</code></pre>
+						</div>
+					</div>
+				</section>
 
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Introduction to the DOM</h2>
 					</header>
 					<div class="slide__content">
-						<h2 class="slide__title">Basic Steps</h2>
-						<div class="slide__container-center">
-							<img class="slide__image width-40" src="../../assets/images/ga/general-assembly-site.png" alt="General Assembly website">
-						</div>
-						<img class="slide__image width-100-p fragment margin-top-5" src="../../assets/images/week-5/js-steps-dom-manipulation-basic.png" alt="JS steps">
-						<img class="slide__image width-100-p fragment margin-top-5" src="../../assets/images/week-5/js-steps-dom-manipulation.png" alt="JS steps">
+						<h2 class="slide__title lowercase"><code>className</code> property</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Sets an element's <code>class</code> attribute value.</li>
+							<li class="slide__list-item--medium">CSS style sheet would have style rules for intended application of class name.</li>
+						</ul>
+						<div class="slide__container margin-top-3">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle javascript medium" data-trim>
+const item = document.querySelector('li')
 
+item.className = 'selected';
+// Sets value: 'selected'
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>classList.add</code> method</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Add specific class attribute value(s)</li>
+						</ul>
+						<div class="slide__container margin-top-3">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle javascript medium" data-trim>
+const item = document.querySelector('li')
+
+item.classList.add('selected');
+// Adds value: 'selected'
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>classList.remove</code> method</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Removes specific class attribute value(s)</li>
+						</ul>
+						<div class="slide__container margin-top-3">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle javascript medium" data-trim>
+const item = document.querySelector('li')
+
+item.classList.remove('selected');
+// Removes value: 'selected'
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossOrigin=""/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - DOM Exercise</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Use vanilla JavaScript methods and properties to create and	modify DOM nodes.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual or Pair</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 01-dom-exercise > app.js</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open starter code in your editor.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions to write code that selects and  modifies the indicated elements and content.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - DOM Attributes Exercise</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Use vanilla JavaScript methods and properties to create and	modify DOM nodes.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual or Pair</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 02-dom-attributes-exercise > app.js</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open starter code in your editor.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions to write code that selects and  modifies the indicated elements and content.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">DOM Creation Methods</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Adding Content to the DOM</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Sets new content in an element, including nested HTML tags.</li>
+							</ul>
+							<div class="flex-basis-third width-20">
+								<div class="slide__container-center">
+									<img class="slide__image width-15" src="../../assets/images/week-5/adding-to-dom-1.png" alt="Adding to DOm step 1">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Adding Content to the DOM</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Sets new content in an element, including nested HTML tags.</li>
+								<li class="slide__list-item--medium">add content to that element with a	property such as <code>textContent</code>, <code>innerHTML</code>, or <code>src</code>.</li>
+							</ul>
+							<div class="flex-basis-third width-20">
+								<div class="slide__container-center">
+									<img class="slide__image width-20" src="../../assets/images/week-5/adding-to-dom-2.png" alt="Adding to DOm step 2">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Adding Content to the DOM</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Sets new content in an element, including nested HTML tags.</li>
+								<li class="slide__list-item--medium">add content to that element with a	property such as <code>textContent</code>, <code>innerHTML</code>, or <code>src</code>.</li>
+								<li class="slide__list-item--medium">attach the new element to the DOM	with <code>appendChild()</code></li>
+							</ul>
+							<div class="flex-basis-third width-20">
+								<div class="slide__container-center">
+									<img class="slide__image width-20" src="../../assets/images/week-5/adding-to-dom-3.png" alt="Adding to DOm step 3">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>createElement()</code></h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Creates new element in memory (it's not attached to the DOM).</li>
+							<li class="slide__list-item--medium">Assign it to a variable so you can reference it later.</li>
+						</ul>
+						<div class="slide__container margin-top-2">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle javascript medium" data-trim>
+const item1 = document.createElemement('li');
+const item2 = document.createElemement('li');
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>innerHTML</code></h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Specifies text content of an element.</li>
+							<li class="slide__list-item--medium">‣ May include nested HTML tags.</li>
+						</ul>
+						<div class="slide__container margin-top-2">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle html medium" data-trim>
+item1.innerHTML = '&lt;strong&gt;Tea&lt;/strong&gt;'
+item2.innerHTML = '&lt;em&gt;Coffee&lt;/em&gt;'
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>appendChild()</code></h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Attaches element or node as child of a selected element in the DOM.</li>
+							<li class="slide__list-item--medium">Syntax: <code><em>parent</em>.appendChild(<em>child</em>)</code></li>
+						</ul>
+						<div class="slide__container margin-top-2">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle javascript small" data-trim>
+const list = document.querySelector('ul'); // selects ul element
+
+list.appendChild(item1); // adds item1 li to list ul
+list.appendChild(item2); // adds item2 li to list ul
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossOrigin=""/>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Discussion - DOM Manipulation</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-15" src="../../assets/images/general/discussion.jpg" alt="Discussion">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Use vanilla JavaScript methods and properties to create and	modify DOM nodes.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise Pairs</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">3 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Work together to create and complete a list of the three steps in creating new DOM nodes.</li>
+													<li class="slide__exercise__header__list--item">For each step in your list, add the method/property used.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Add content with JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 04-create-append-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">Until 20:50</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open preview.png. Your task is to use DOM manipulation to build the sidebar shown in the image and add it to the blog.html web page.</li>
+													<li class="slide__exercise__header__list--item">Open app.js in your editor, then follow the instructions to create and the “About us” heading and the 2 paragraphs of text to the sidebar.</li>
+													<li class="slide__exercise__header__list--item">BONUS 1: Open preview-bonus.png, then write JavaScript code to add the image shown to the sidebar. (Filename and location in app.js.).</li>
+													<li class="slide__exercise__header__list--item">BONUS 2: Create and append the “Recent issues” heading and list.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5"
+							src="../../assets/images/general/learning-objective.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives - Review</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Describe the differences between the DOM and HTML</li>
+							<li class="slide__list-item">Use the browser’s developer tools to navigate and interact with the DOM</li>
+							<li class="slide__list-item">Select and create DOM nodes with vanilla JavaScript</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Look Ahead to Next Lesson</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Select DOM elements and properties using jQuery.</li>
+							<li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li>
+							<li class="slide__list-item">Use event delegation to manage dynamic content.</li>
+							<li class="slide__list-item">Use implicit iteration to update elements of a jQuery selection</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson 08)</p>
+						</div>
 					</div>
 				</section>
 
@@ -704,6 +1138,33 @@ item.innerHTML = 'Toast';
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Basic Steps</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-40" src="../../assets/images/ga/general-assembly-site.png" alt="General Assembly website">
+						</div>
+						<img class="slide__image width-100-p fragment margin-top-5" src="../../assets/images/week-5/js-steps-dom-manipulation-basic.png" alt="JS steps">
+						<img class="slide__image width-100-p fragment margin-top-5" src="../../assets/images/week-5/js-steps-dom-manipulation.png" alt="JS steps">
+
+					</div>
+				</section> -->
 
 
 
