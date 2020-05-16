@@ -319,15 +319,68 @@
 					</header>
 					<div class="slide__content">
 						<h2 class="slide__title">Selecting Elements in the DOM</h2>
-						<div class="slide__container-flex">
-							<ul class="slide__list">
-								<li class="slide__list-item--small">The DOM is created by the Browser.</li>
-								<li class="slide__list-item--small">The DOM provides a representation of the document as a structured group of nodes and objects that have <em>properties</em> and <em>methods</em>.</li>
+						<div class="slide__container-relative width-35">
+							<ul class="slide__list padding-left-1">
+								<li class="slide__list-item--medium"><code>getElementById()</code></li>
+								<li class="slide__list-item--medium"><code>getElementsByClassName()</code></li>
+								<li class="slide__list-item--medium"><code>getElementsByTagName()</code></li>
+								<li class="slide__list-item--medium"><code>querySelector()</code></li>
+								<li class="slide__list-item--medium"><code>querySelectorAll()</code></li>
 							</ul>
-							<img class="slide__image width-40 margin-top-1 margin-left-1 height-100-p" src="/dom-tree-basic.5f3012a1.png" alt="Basic DOMbasic">
+							<div class="slide__container-absolute slide__container-absolute--border-red width-35 height-6 fragment" data-fragment-index="1">
+							</div>
+						</div>
+						<div class="slide__container margin-top-2 fragment" data-fragment-index="1">
+							<p class="slide__text red">Lets us select DOM  elements using CSS selector syntax</p>
 						</div>
 					</div>
 				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">DOM & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">CSS Selectors</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">DOM & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Selector All Instances of an Element</h2>
+						<div class="slide__container-center">
+							<p class="slide__text--medium center">The name of the element as a string</p>
+						</div>
+						<div class="slide__container-flex center align-items-center height-100-p">
+							<p class="slide__main-text blue">'div'</p>
+						</div>
+						<pre class="slide__pre fragment"><code class="slide__code slide__code--middle javascript medium" data-trim="">
+document.querySelector('div');
+						</code></pre>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">DOM & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Selecting all instance of multiple elements</h2>
+						<div class="slide__container-center">
+							<p class="slide__text--medium center">The names of the elements separated by commas, as a single string</p>
+						</div>
+						<div class="slide__container-flex center align-items-center height-100-p">
+							<p class="slide__main-text blue">'div, span'</p>
+						</div>
+						<pre class="slide__pre fragment"><code class="slide__code slide__code--middle javascript medium" data-trim="">
+document.querySelector('div, span');
+						</code></pre>
+					</div>
+				</section>
+
 
 
 

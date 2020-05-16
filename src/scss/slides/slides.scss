@@ -4,6 +4,13 @@
 
         // CONTAINER
         &__container {
+            &-absolute {
+                position: absolute;
+                &--border-red {
+                    border: 3px solid red;
+                    bottom: 0;
+                }
+            }
             &-center {
                 text-align: center;
             }
@@ -263,6 +270,9 @@
             &.white {
                 color: $white;
             }
+            &.red {
+                color: $red;
+            }
             &--table {
                 font-size: 1.2rem;
             }
@@ -280,6 +290,13 @@
             }
             &.center {
                 text-align: center;
+            }
+        }
+
+        &__main-text {
+            font-size: 12rem;
+            &.blue {
+                color: $darkblue;
             }
         }
 

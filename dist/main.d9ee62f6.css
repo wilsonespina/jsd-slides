@@ -2059,6 +2059,13 @@ ul li:before {
 .slides .slide {
   height: 100%;
 }
+.slides .slide__container-absolute {
+  position: absolute;
+}
+.slides .slide__container-absolute--border-red {
+  border: 3px solid red;
+  bottom: 0;
+}
 .slides .slide__container-center {
   text-align: center;
 }
@@ -2277,6 +2284,9 @@ ul li:before {
 .slides .slide__text.white {
   color: #FFFFFF;
 }
+.slides .slide__text.red {
+  color: #E51B24;
+}
 .slides .slide__text--table {
   font-size: 1.2rem;
 }
@@ -2294,6 +2304,12 @@ ul li:before {
 }
 .slides .slide__text.center {
   text-align: center;
+}
+.slides .slide__main-text {
+  font-size: 12rem;
+}
+.slides .slide__main-text.blue {
+  color: #358DF2;
 }
 .slides .slide-timing {
   width: 3rem;
@@ -2476,6 +2492,12 @@ ul li:before {
 }
 .slides .slide .height-100-p {
   height: 100%;
+}
+.slides .slide .height-6 {
+  height: 6rem;
+}
+.slides .slide .height-10 {
+  height: 10rem;
 }
 .slides .slide .margin-middle {
   margin: 0 auto;
