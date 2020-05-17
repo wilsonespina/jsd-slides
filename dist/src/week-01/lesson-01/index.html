@@ -1,8 +1,975 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSD | Lesson 01</title><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-32x32.8ae2cba7.png" sizes="32x32"><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-16x16.74161018.png" sizes="16x16"><link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"><link rel="stylesheet" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/main.d5c6a9b4.css"></head><body> <div class="reveal"> <div class="slides"> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Welcome to JavaScript Development</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Your Instructional Team</h2> <div class="slide__container-flex space-between"> <div class="slide__profile"> <img class="slide__image slide__image--instructor width-25" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/profile_pic.b41a0332.png" alt="Profile picture of Wilson"> <div class="slide__container-flex"> <h3 class="slide__name margin-right-2">Wilson</h3> <img class="slide__image slide__image--itv width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/itv.5674c075.png" alt="ITV logo"> </div> </div> <div class="slide__thoughts fragment"> <img class="slide__image slide__image--bike width-20" src="https://media.giphy.com/media/mEyIyoMltSiTFTynJ7/giphy.gif" alt="Pug" crossOrigin=""> <img class="slide__image slide__image--cat width-15" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Coding Cat" crossOrigin=""> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Introduce Yourselves</h2> <p class="slide__text">1. In pairs, take 5 minutes to get to know your classmates by finding out:</p> <ul class="slide__list padding-left-2"> <li class="slide__list-item">Their name</li> <li class="slide__list-item">Why they are taking this course</li> <li class="slide__list-item">First thing they're looking forward to after Lockdown</li> </ul> <p class="slide__text margin-top-2">2. Be prepared to introduce them to the rest of the class</p> <br> <h2 class="slide-timing__header">Intros 5 mins</h2> <h2 class="slide-timing__header">Sharing 10 mins</h2> </div> </section> <section class="slide"> <div class="slide__background" style="background-image:url(https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/course_expectations.a302ff1b.png)"></div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Course Dates</h2> <ul class="slide__list"> <li class="slide__list-item">Mondays & Wednesdays, 6pm - 9pm</li> <li class="slide__list-item">May 11th - July 20th</li> <li class="slide__list-item"><em></em>No lesson on Bank Holiday Monday 25th May</li> <div class="slide__container-center margin-top-2"> <img class="slide__image width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/calendar_cartoon.4d1ad632.png" alt="Calendar"> </div> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Curriculum</h2> </header> <div class="slide__content"> <h2 class="slide__title">Syllabus</h2> <table class="slide__table"> <thead class="slide__head slide__head--syllabus"> <tr> <th class="medium-font color-white">Unit 1:</th> <th class="medium-font color-white">Unit 2:</th> <th class="medium-font color-white">Unit 3:</th> <th class="medium-font color-white">Unit 4:</th> </tr> </thead> <tbody class="slide__body slide__body--syllabus"> <tr> <td class="col-25-p"> <ul> <li class="slide__list-item--xsmall">01 Installfest</li> <li class="slide__list-item--xsmall">02 Command Line & Data Type</li> <li class="slide__list-item--xsmall">03 Collections and Loops</li> <li class="slide__list-item--xsmall">04 Conditionals & Functions</li> <li class="slide__list-item--xsmall">05 Scope & Variables</li> <li class="slide__list-item--xsmall">06 Objects & JSON</li> <li class="slide__list-item--xsmall">07 Slackbot Lab</li> </ul> </td> <td class="col-25-p"> <ul> <li class="slide__list-item--xsmall">08 DOM & jQuery</li> <li class="slide__list-item--xsmall">09 Events jQuery</li> <li class="slide__list-item--xsmall">10 AJAX & APIs</li> <li class="slide__list-item--xsmall">11 Asynchronous JavaScript & Callbacks</li> <li class="slide__list-item--xsmall">12 Advanced APIs</li> <li class="slide__list-item--xsmall">13 APIs Lab</li> </ul> </td> <td class="col-25-p"> <ul> <li class="slide__list-item--xsmall">14 Prototypal Inheritance</li> <li class="slide__list-item--xsmall">15 Closures & this</li> <li class="slide__list-item--xsmall">16 Intro to CRUD and Firebase Lab</li> </ul> </td> <td class="col-25-p"> <ul> <li class="slide__list-item--xsmall">17 Deploying Your App</li> <li class="slide__list-item--xsmall">18 Student Choice</li> <li class="slide__list-item--xsmall">19 Final Project Lab</li> <li class="slide__list-item--xsmall">20 Final Project Presentations</li> </ul> </td> </tr> </tbody> </table> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Homework</h2> <ul class="slide__list"> <li class="slide__list-item">Assigned every Wednesday, starting this week</li> <li class="slide__list-item">Due <span class="bold">End of Day</span> Sunday</li> <li class="slide__list-item">Expect feedback within 5 days</li> <li class="slide__list-item">Late assignments will not receive feedback</li> <li class="slide__list-item">Details of Homework and how to submit it can be found on the JSD Web Portal:</li> </ul> <div class="slide__container-center"> <img class="slide__image width-30" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/homework-screen.fa34ecca.png" alt="Homework screenshot"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Final Projects</h2> </header> <div class="slide__content"> <img class="slide__image slide__image--gallery width-100-p margin-bottom-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga_gallery.4b37079e.png" alt="General Assembly Gallery"> <a class="slide__link" href="https://gallery.generalassemb.ly/JS" target="_blank" data-preview-link="false">https://gallery.generalassemb.ly/JS</a> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Tips for success</h2> <ul class="slide__list"> <li class="slide__list-item">Complete homework on time</li> <li class="slide__list-item">Brush up on HTML/CSS skills</li> <li class="slide__list-item">Challenge yourself</li> <li class="slide__list-item">Ask questions</li> </ul> <div class="slide__container-center"> <img class="slide__image fragment" src="https://media.giphy.com/media/5XRB3Ay93FZw4/giphy.gif" alt="Questions" crossOrigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Classroom Norms for a Remote Class</h2> <div class="slide__container-flex"> <div class="slide__container flex-basis-half padding-left-1 padding-right-1"> <p class="slide__text slide__text--medium bold center">Environment</p> <ul class="slide__list margin-top-1"> <li class="slide__list-item--small">Do you like noise or silence?</li> <li class="slide__list-item--small margin-top-1">Does movement distract you, or does it help you focus on the task at hand?</li> </ul> </div> <div class="slide__container flex-basis-half padding-left-1 padding-right-1"> <p class="slide__text slide__text--medium bold center">Video Practices</p> <ul class="slide__list margin-top-1"> <li class="slide__list-item--small"><span class="bold">Always keeping your video on and your microphone muted is a great way to feel present in a group</span> without disrupting the experience for your peers.</li> <li class="slide__list-item--small">If you would like to chime in or ask a question, you can (and should!) come off mic 🎤</li> <li class="slide__list-item--small">If you need to step away from your computer for a few minutes, direct message your instructor and turn your video off.</li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Classroom Norms for a Remote Class</h2> <div class="slide__container-flex"> <div class="slide__container flex-basis-half padding-left-1 padding-right-1"> <p class="slide__text slide__text--medium bold center">Professionalism</p> <ul class="slide__list margin-top-1"> <li class="slide__list-item--small">Think about the last time you were in a classroom environment - how did you interact with your peers?</li> <li class="slide__list-item--small margin-top-1">Learning in your own space is very comfortable, and at times, it is easy to forget that you are on camera and in class! </li> </ul> </div> <div class="slide__container flex-basis-half padding-left-1 padding-right-1"> <p class="slide__text slide__text--medium bold center">Community</p> <ul class="slide__list margin-top-1"> <li class="slide__list-item--small"><span class="bold">Participate!</span></li> <li class="slide__list-item--small margin-top-1">Come off mic to ask questions, actively engage in the breakout rooms - we learn through doing!</li> <li class="slide__list-item--small margin-top-1">GA's remote classroom is an <span class="bold">interactive experience</span>.</li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Discussion - Classroom Culture</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/discussion.8a7bf605.jpg" alt="Discussion"> <div class="slide__exercise"> <p class="slide__exercise__header">Topic</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Think about what YOU want/need from the instructional team and each other to be successful in this course?</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Pairs</li> <li class="slide__exercise__header__list--item">Breakout rooms</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">6 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">In pairs, discuss what you think you want/need from the instructional team and your classmates.</li> <li class="slide__exercise__header__list--item">Post your answers to the thread on Slack.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <div class="slide__background" style="background-image:url(https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/resources_background.b75e7701.png)"></div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Resources</h2> </header> <div class="slide__content"> <h2 class="slide__title">JSD Web Portal</h2> <div class="slide__container-center"> <img class="slide__image width-50" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jsd-web-portal.721eaeb2.png" alt="Web Portal"> </div> <p class="slide__text margin-top-1">All resources are available on the Web Portal:</p> <p class="slide__text--small"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/" target="_blank">https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/</a></p> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Resources</h2> </header> <div class="slide__content"> <h2 class="slide__title">Github Enterprise</h2> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item">Github Enterprise will have starting code for all class activities and assignments.</li> <li class="slide__list-item">You’ll also use GitHub Enterprise to submit homework.</li> </ul> <img class="slide__image slide__image--github width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/github_enterprise.25f30f72.png" alt="Slack"> </div> <h2 class="slide__title">Slack</h2> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item">All course communication with each other and instructor happens here</li> <li class="slide__list-item">GIFs encouraged</li> </ul> <img class="slide__image slide__image--slack width-20" src="https://media.giphy.com/media/26xBv7ysBfxMkb1ug/giphy.gif" alt="Slack" crossOrigin=""> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Introduction</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Installfest</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Install Visual Studio Code</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image width-10 height-100-p margin-top-10 margin-right-5 margin-left-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/install.151bfc36.png" alt="Install Icon"> <div class="slide__exercise"> <p class="slide__exercise__header">Tasks</p> <h2 class="slide-timing__header">2 mins</h2> <p class="slide__exercise__header">Download Visual Studio Code</p> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Visit <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li> </ol> <img class="slide__image slide__image--visual-studio width-30 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/visual_studio_code.f05ad498.png" alt="Visual Studio Code logo"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Download Slack</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image width-10 height-100-p margin-top-10 margin-right-5 margin-left-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/install.151bfc36.png" alt="Install Icon"> <div class="slide__exercise"> <p class="slide__exercise__header">Tasks</p> <h2 class="slide-timing__header">2 mins</h2> <p class="slide__exercise__header">Download Slack</p> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Visit <a href="https://slack.com/downloads">slack.com/downloads</a> to download the application</li> <li class="slide__exercise__header__list--item">Sign up using your email and join our class Slack channel: <br><strong>js9-11may</strong></li> </ol> <img class="slide__image slide__image--slack width-25" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/slack_logo.7b5840ac.png" alt="Slack logo"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Open the Terminal (Command Line)</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--terminal width-25 margin-right-3 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/terminal.c492dc6b.png" alt="Terminal picture"> <div class="slide__exercise"> <p class="slide__exercise__header">Tasks</p> <h2 class="slide-timing__header">1 min</h2> <p class="slide__exercise__header">Find Your Terminal</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item"><strong>MAC</strong> Open the Terminal app<br>(Applications > Utilities > Terminal)</li> <li class="slide__exercise__header__list--item"><strong>WINDOWS</strong> Open Windows PowerShell <br>(Start Button > type <em>powershell</em>)</li> <li class="slide__exercise__header__list--item"><strong>LINUX</strong> press <code><em>ctrl</em></code> + <code><em>alt</em></code> + T</li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Installation</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image width-10 height-100-p margin-top-10 margin-right-5 margin-left-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/install.151bfc36.png" alt="Install Icon"> <div class="slide__exercise"> <p class="slide__exercise__header">Tasks</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Install all the tools required for development during the course.</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">15 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Follow the instructions on how to install tools with one of the following guides:</li> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/mac-install.html">Mac Instructions</a></li> <li class="slide__exercise__header__list--item"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/windows-install.html">Windows Instructions</a></li> <li class="slide__exercise__header__list--item"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/linux-install.html">Linux Instructions</a></li> </ul> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Installation</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-4"> <img class="slide__image width-30" src="https://media.giphy.com/media/iJW12WieJtRACueT88/giphy.gif" alt="Just breath" crossOrigin=""> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">JavaScript and The Web</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Differentiate between the Internet and the World Wide Web. </li> <li class="slide__list-item">Summarise the client-server model & explain how DNS lookup works. </li> <li class="slide__list-item">Run Node.js, npm, Git, and other command line tools on your computer.</li> <li class="slide__list-item">Write pseudocode and explain how it relates to programmatic thinking.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Introduction</h2> </header> <div class="slide__content"> <h2 class="slide__title">Agenda</h2> <ul class="slide__list"> <li class="slide__list-item">What is the Web?</li> <li class="slide__list-item">What is JavaScript?</li> <li class="slide__list-item">What is Pseudocode?</li> <li class="slide__list-item">How to think Programmatically</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">The Web</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">What is the Web</h2> <ul class="slide__list"> <li class="slide__list-item">The World Wide Web is a collection of HTML pages accessed by the Internet.</li> <li class="slide__list-item">Accessed over the Internet.</li> <li class="slide__list-item">Communication is based on Hypertext Transfer Protocol (HTTP).</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">What is the Web Development</h2> <p class="slide__text">The process of building sites and applications for The Web which falls under two categories:</p> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Front-end Development</li> <li class="slide__list-item">Back-end Development</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">What is Front-End Development</h2> <p class="slide__text">The development of code for the client/browser (HTML, CSS, JavaScript).</p> <ul class="slide__list"> <li class="slide__list-item">Interactive elements on a web page</li> <li class="slide__list-item">The way a website looks and feels</li> </ul> <div class="slide__container-center"> <img class="slide__image slide__image--website width-25" src="https://media.giphy.com/media/xT0Gqn9yuw8hnPGn5K/giphy.gif" alt="Websites" crossOrigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">What is Back-end development</h2> <p class="slide__text">Server-side code that handles routing, data handling and databases.</p> <ul class="slide__list"> <li class="slide__list-item">Python, Java, Ruby, JavaScript</li> </ul> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--server-room width-50" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/server-room.6cf6b717.jpg" alt="Websites"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">The Internet</h2> <div class="slide__container-center"> <img class="slide__image width-30" src="https://media.giphy.com/media/l41YvpiA9uMWw5AMU/giphy.gif" alt="Internet flow" crossOrigin=""> </div> <p class="slide__text">The Internet is a Big Collection of Computers and Cables.</p> <ul class="slide__list"> <li class="slide__list-item">”Internet” is short for "interconnection of computer networks."</li> <li class="slide__list-item">It's an infrastructure that connects millions of computers around the world together.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <p class="slide__text">There are around 380 underwater cables in operation around the world, spanning a length of over 1.2 million kilometers (745,645 miles).</p> <img class="slide__image slide__image--web width-100-p margin-top-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/internet-cables.d3f9e8c3.png" alt="Internet diagram"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">Internet vs The Web</h2> <p class="slide__text">Name some things you use the Internet for that are not part of The Web:</p> <ul class="slide__list fragment"> <li class="slide__list-item">Email</li> <li class="slide__list-item">Skype/Zoom/FaceTime</li> <li class="slide__list-item">Cloud storage/iCloud/Google Drive</li> <li class="slide__list-item">Spotify</li> <li class="slide__list-item">YouTube/Netflix</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">First Website</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--small">In March 1989, Berners-Lee gave managers at CERN a proposal for an information management system that used hypertext to link documents on different computers that were connected to the Internet.</li> <li class="slide__list-item slide__list-item--small">Sir Tim Berners-Lee published site on 6th August 1991.</li> </ul> <div class="slide__container-center"> <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank"><img class="slide__image slide__image--request-response" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/first_website.1f79e245.png" alt="First Website"></a> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">Client Server Model</h2> <div class="slide__container-center"> <img class="slide__image slide__image--request-response width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/request_response.0915ac4b.png" alt="Request response diagram"> </div> <div class="fragment"> <p class="slide__text"><em>H</em>yper <em>T</em>ext <em>T</em>ranfer <em>P</em>rotocol</p> <ul class="slide__list"> <li class="slide__list-item">Set of rules for communication between <strong>clients</strong> and <strong>servers</strong></li> </ul> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">How do you reach a specfic server</h2> <img class="slide__image slide__image--dns width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/dns_diagram.a814f47a.png" alt="DNS diagram"> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Demonstration</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-30 margin-top-3" src="https://media.giphy.com/media/JUh0yTz4h931K/giphy.gif" alt="Demonstration" crossOrigin=""> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">What is JavaScript</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">JavaScripts Role in The Web</h2> <div class="slide__container-center"> <img class="slide__image slide__image--javascript width-50" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/js-role-in-web.3ffd459e.png" alt="Javascript role in web"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">What is JavaScript</h2> <div class="slide__container-flex"> <div> <p class="slide__text">A scripting or programming language that allows you to implement complex features on web pages and servers</p> <ul class="slide__list"> <li class="slide__list-item">The language of the browser</li> <li class="slide__list-item">Front-end <strong>AND</strong> Back-end language</li> <li class="slide__list-item">Extremely Popular</li> </ul> </div> <img class="slide__image slide__image--javascript width-20 margin-left-5 height-100-p margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/javascript.92e7dae5.png" alt="Javascript logo"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">JavaScript Popularity</h2> <div class="slide__container-center"> <img class="slide__image height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/stackoverflow-survey.204bdebc.png" alt="Stackoverflow chart"> <p class="slide__text--small margin-top-2"><a href="https://insights.stackoverflow.com/survey/2019">Stack Overflow's 2019 Annual Developer Survey</a></p> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">The Birth of JavaScript</h2> <div class="slide__container"> <p class="slide__text">Brendan Eich was hired by Netscape to build their new client-side language in 1995. It was first released with Netscape 2, early in 1996</p> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item">Brendan Eich wrote the original code for Javascript in 10 days.</li> <li class="slide__list-item">There is a lot of rumours about the fact that he was either drunk or potentially high when he wrote it...</li> </ul> <img class="slide__image slide__image--javascript width-20 margin-right-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/brandon-eich.8c8ce1c9.jpg" alt="Brandon Eich"> </div> <p class="slide__text--small"><a href="https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/">BONUS - A brief history of JavaScript</a></p> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">How is Javascript used?</h2> <img class="slide__image slide__image--javascript-fe-be width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/javascript_fe_be.08c33c82.png" alt="Javascript logo"> </div> </section>  <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Pseudocode</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">The importance of planning</h2> <div class="slide__container-center"> <img class="slide__image width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/railway.a27ba66c.jpg" alt="Railway misalignment"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">Pseudo Code</h2> <ul class="slide__list"> <li class="slide__list-item">A great way to break down a problem into small chunks is to use pseudo code.</li> <li class="slide__list-item">Pseudo code is usually typed using comments, so that it has no effect on the program being written. It is typically written in a mixture of natural language and high-level programming constructs.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Webe</h2> </header> <div class="slide__content"> <h2 class="slide__title">JS Comments</h2> <p class="slide__text">These comments for pseudo-code can be either single line or multi-line syntax:</p> <pre class="slide__pre margin-top-2"><code class="hljs slide__code slide__code--middle bash small" data-trim="">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 01</title>
+		<link rel="icon" type="image/png" href="/favicon-32x32.43b30f10.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="/main.d9ee62f6.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Welcome to JavaScript Development</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Your Instructional Team</h2>
+						<div class="slide__container-flex space-between">
+							<div class="slide__profile">
+								<img class="slide__image slide__image--instructor width-25" src="/profile_pic.687ca2cb.png" alt="Profile picture of Wilson">
+								<div class="slide__container-flex">
+									<h3 class="slide__name margin-right-2">Wilson</h3>
+									<img class="slide__image slide__image--itv width-10" src="/itv.71cdcd11.png" alt="ITV logo">
+								</div>
+							</div>
+							<div class="slide__thoughts fragment">
+								<img class="slide__image slide__image--bike width-20" src="https://media.giphy.com/media/mEyIyoMltSiTFTynJ7/giphy.gif" alt="Pug" crossOrigin="">
+								<img class="slide__image slide__image--cat width-15" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="Coding Cat" crossOrigin="">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Introduce Yourselves</h2>
+						<p class="slide__text">1. In pairs, take 5 minutes to get to know your classmates by finding out:</p>
+						<ul class="slide__list padding-left-2">
+							<li class="slide__list-item">Their name</li>
+							<li class="slide__list-item">Why they are taking this course</li>
+							<li class="slide__list-item">First thing they're looking forward to after Lockdown</li>
+						</ul>
+						<p class="slide__text margin-top-2">2. Be prepared to introduce them to the rest of the class</p>
+						<br>
+						<h2 class="slide-timing__header">Intros 5 mins</h2>
+						<h2 class="slide-timing__header">Sharing 10 mins</h2>
+					</div>
+				</section>
+
+				<section class="slide">
+					<div class="slide__background" style="background-image: url('/course_expectations.533b24e8.png')"></div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Course Dates</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Mondays & Wednesdays, 6pm - 9pm</li>
+							<li class="slide__list-item">May 11th - July 20th</li>
+							<li class="slide__list-item"><em></em>No lesson on Bank Holiday Monday 25th May</li>
+							<div class="slide__container-center margin-top-2">
+								<img class="slide__image width-20" src="/calendar_cartoon.48893c43.png" alt="Calendar">
+							</div>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Curriculum</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Syllabus</h2>
+						<table class="slide__table">
+							<thead class="slide__head slide__head--syllabus">
+								<tr>
+									<th class="medium-font color-white">Unit 1:</th>
+									<th class="medium-font color-white">Unit 2:</th>
+									<th class="medium-font color-white">Unit 3:</th>
+									<th class="medium-font color-white">Unit 4:</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--syllabus">
+								<tr>
+									<td class="col-25-p">
+										<ul>
+											<li class="slide__list-item--xsmall">01 Installfest</li>
+											<li class="slide__list-item--xsmall">02 Command Line & Data Type</li>
+											<li class="slide__list-item--xsmall">03 Collections and Loops</li>
+											<li class="slide__list-item--xsmall">04 Conditionals & Functions</li>
+											<li class="slide__list-item--xsmall">05 Scope & Variables</li>
+											<li class="slide__list-item--xsmall">06 Objects & JSON</li>
+											<li class="slide__list-item--xsmall">07 Slackbot Lab</li>
+										</ul>
+									</td>
+									<td class="col-25-p">
+										<ul>
+											<li class="slide__list-item--xsmall">08 DOM & jQuery</li>
+											<li class="slide__list-item--xsmall">09 Events jQuery</li>
+											<li class="slide__list-item--xsmall">10 AJAX & APIs</li>
+											<li class="slide__list-item--xsmall">11 Asynchronous JavaScript & Callbacks</li>
+											<li class="slide__list-item--xsmall">12 Advanced APIs</li>
+											<li class="slide__list-item--xsmall">13 APIs Lab</li>
+										</ul>
+									</td>
+									<td class="col-25-p">
+										<ul>
+											<li class="slide__list-item--xsmall">14 Prototypal Inheritance</li>
+											<li class="slide__list-item--xsmall">15 Closures & this</li>
+											<li class="slide__list-item--xsmall">16 Intro to CRUD and Firebase Lab</li>
+										</ul>
+									</td>
+									<td class="col-25-p">
+										<ul>
+											<li class="slide__list-item--xsmall">17 Deploying Your App</li>
+											<li class="slide__list-item--xsmall">18 Student Choice</li>
+											<li class="slide__list-item--xsmall">19 Final Project Lab</li>
+											<li class="slide__list-item--xsmall">20 Final Project Presentations</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Homework</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Assigned every Wednesday, starting this week</li>
+							<li class="slide__list-item">Due <span class="bold">End of Day</span> Sunday</li>
+							<li class="slide__list-item">Expect feedback within 5 days</li>
+							<li class="slide__list-item">Late assignments will not receive feedback</li>
+							<li class="slide__list-item">Details of Homework and how to submit it can be found on the JSD Web Portal:</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-30" src="/homework-screen.2d928024.png" alt="Homework screenshot">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Final Projects</h2>
+					</header>
+					<div class="slide__content">
+						<img class="slide__image slide__image--gallery width-100-p margin-bottom-1" src="/ga_gallery.0bc8a886.png" alt="General Assembly Gallery">
+						<a class="slide__link " href="https://gallery.generalassemb.ly/JS" target="_blank" data-preview-link="false">https://gallery.generalassemb.ly/JS</a>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Tips for success</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Complete homework on time</li>
+							<li class="slide__list-item">Brush up on HTML/CSS skills</li>
+							<li class="slide__list-item">Challenge yourself</li>
+							<li class="slide__list-item">Ask questions</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image fragment" src="https://media.giphy.com/media/5XRB3Ay93FZw4/giphy.gif" alt="Questions" crossOrigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Norms for a Remote Class</h2>
+
+						<div class="slide__container-flex">
+							<div class="slide__container flex-basis-half padding-left-1 padding-right-1">
+								<p class="slide__text slide__text--medium bold center">Environment</p>
+
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item--small">Do you like noise or silence?</li>
+									<li class="slide__list-item--small margin-top-1">Does movement distract you, or does it help you focus on the task at hand?</li>
+								</ul>
+							</div>
+							<div class="slide__container flex-basis-half padding-left-1 padding-right-1">
+								<p class="slide__text slide__text--medium bold center">Video Practices</p>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item--small"><span class="bold">Always keeping your video on and your microphone muted is a great way to feel present in a group</span> without disrupting the experience for your peers.</li>
+									<li class="slide__list-item--small">If you would like to chime in or ask a question, you can (and should!) come off mic 🎤</li>
+									<li class="slide__list-item--small">If you need to step away from your computer for a few minutes, direct message your instructor and turn your video off.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Norms for a Remote Class</h2>
+
+						<div class="slide__container-flex">
+							<div class="slide__container flex-basis-half padding-left-1 padding-right-1">
+								<p class="slide__text slide__text--medium bold center">Professionalism</p>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item--small">Think about the last time you were in a classroom environment - how did you interact with your peers?</li>
+									<li class="slide__list-item--small margin-top-1">Learning in your own space is very comfortable, and at times, it is easy to forget that you are on camera and in class! </li>
+								</ul>
+							</div>
+							<div class="slide__container flex-basis-half padding-left-1 padding-right-1">
+								<p class="slide__text slide__text--medium bold center">Community</p>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item--small"><span class="bold">Participate!</span></li>
+									<li class="slide__list-item--small margin-top-1">Come off mic to ask questions, actively engage in the breakout rooms - we learn through doing!</li>
+									<li class="slide__list-item--small margin-top-1">GA's remote classroom is an <span class="bold">interactive experience</span>.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Discussion - Classroom Culture</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-15" src="/discussion.3c3b2973.jpg" alt="Discussion">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Topic</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Think about what YOU want/need from the instructional team and each other to be successful in this course?</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Pairs</li>
+									<li class="slide__exercise__header__list--item">Breakout rooms</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">6 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">In pairs, discuss what you think you want/need from the instructional team and your classmates.</li>
+													<li class="slide__exercise__header__list--item">Post your answers to the thread on Slack.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<div class="slide__background" style="background-image: url('/resources_background.3854b2de.png')"></div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Resources</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JSD Web Portal</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-50" src="/jsd-web-portal.123dda23.png" alt="Web Portal">
+						</div>
+						<p class="slide__text margin-top-1">All resources are available on the Web Portal:</p>
+						<p class="slide__text--small"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/" target="_blank">https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/</a></p>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Resources</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Github Enterprise</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item">Github Enterprise will have starting code for all class activities and assignments.</li>
+								<li class="slide__list-item">You’ll also use GitHub Enterprise to submit homework.</li>
+							</ul>
+							<img class="slide__image slide__image--github width-15" src="/github_enterprise.841fc5d6.png" alt="Slack">
+						</div>
+						<h2 class="slide__title">Slack</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item">All course communication with each other and instructor happens here</li>
+								<li class="slide__list-item">GIFs encouraged</li>
+							</ul>
+							<img class="slide__image slide__image--slack width-20" src="https://media.giphy.com/media/26xBv7ysBfxMkb1ug/giphy.gif" alt="Slack" crossOrigin="">
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Installfest</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Install Visual Studio Code</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image width-10 height-100-p margin-top-10 margin-right-5 margin-left-5" src="/install.9a01b6a3.png" alt="Install Icon">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Tasks</p>
+								<h2 class="slide-timing__header">2 mins</h2>
+								<p class="slide__exercise__header">Download Visual Studio Code</p>
+								<ol class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Visit <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+								</ol>
+								<img class="slide__image slide__image--visual-studio width-30 margin-top-3" src="/visual_studio_code.064c51e7.png" alt="Visual Studio Code logo">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Download Slack</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image width-10 height-100-p margin-top-10 margin-right-5 margin-left-5" src="/install.9a01b6a3.png" alt="Install Icon">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Tasks</p>
+								<h2 class="slide-timing__header">2 mins</h2>
+								<p class="slide__exercise__header">Download Slack</p>
+								<ol class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Visit <a href="https://slack.com/downloads">slack.com/downloads</a> to download the application</li>
+									<li class="slide__exercise__header__list--item">Sign up using your email and join our class Slack channel: <br><strong>js9-11may</strong></li>
+								</ol>
+								<img class="slide__image slide__image--slack width-25" src="/slack_logo.f9fd3d07.png" alt="Slack logo">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Open the Terminal (Command Line)</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--terminal width-25 margin-right-3 margin-top-2" src="/terminal.a5533ad7.png" alt="Terminal picture">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Tasks</p>
+								<h2 class="slide-timing__header">1 min</h2>
+								<p class="slide__exercise__header">Find Your Terminal</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item"><strong>MAC</strong> Open the Terminal app<br>(Applications > Utilities > Terminal)</li>
+									<li class="slide__exercise__header__list--item"><strong>WINDOWS</strong>  Open Windows PowerShell <br>(Start Button > type <em>powershell</em>)</li>
+									<li class="slide__exercise__header__list--item"><strong>LINUX</strong>  press <code><em>ctrl</em></code> + <code><em>alt</em></code> + T</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Installation</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image width-10 height-100-p margin-top-10 margin-right-5 margin-left-5" src="/install.9a01b6a3.png" alt="Install Icon">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Tasks</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Install all the tools required for development during the course.</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">15 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Follow the instructions on how to install tools with one of the following guides:</li>
+													<ul class="slide__exercise__header__list">
+														<li class="slide__exercise__header__list--item"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/mac-install.html">Mac Instructions</a></li>
+														<li class="slide__exercise__header__list--item"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/windows-install.html">Windows Instructions</a></li>
+														<li class="slide__exercise__header__list--item"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/linux-install.html">Linux Instructions</a></li>
+													</ul>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Installation</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-4">
+							<img class="slide__image width-30" src="https://media.giphy.com/media/iJW12WieJtRACueT88/giphy.gif" alt="Just breath" crossOrigin="">
+						</div>
+					</div>
+				</section>
+
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">JavaScript and The Web</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Differentiate between the Internet and the World Wide Web. </li>
+							<li class="slide__list-item">Summarise the client-server model & explain how DNS lookup works. </li>
+							<li class="slide__list-item">Run Node.js, npm, Git, and other command line tools on your computer.</li>
+							<li class="slide__list-item">Write pseudocode and explain how it relates to programmatic thinking.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">What is the Web?</li>
+							<li class="slide__list-item">What is JavaScript?</li>
+							<li class="slide__list-item">What is Pseudocode?</li>
+							<li class="slide__list-item">How to think Programmatically</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">The Web</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is the Web</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">The World Wide Web is a collection of HTML pages accessed by the Internet.</li>
+							<li class="slide__list-item">Accessed over the Internet.</li>
+							<li class="slide__list-item">Communication is based on Hypertext Transfer Protocol (HTTP).</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is the Web Development</h2>
+						<p class="slide__text">The process of building sites and applications for The Web which falls under two categories:</p>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Front-end Development</li>
+							<li class="slide__list-item">Back-end Development</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is Front-End Development</h2>
+						<p class="slide__text">The development of code for the client/browser (HTML, CSS, JavaScript).</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Interactive elements on a web page</li>
+							<li class="slide__list-item">The way a website looks and feels</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--website width-25" src="https://media.giphy.com/media/xT0Gqn9yuw8hnPGn5K/giphy.gif" alt="Websites" crossOrigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is Back-end development</h2>
+						<p class="slide__text">Server-side code that handles routing, data handling and databases.</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Python, Java, Ruby, JavaScript</li>
+						</ul>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--server-room width-50" src="/server-room.fe5329cf.jpg" alt="Websites">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">The Internet</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-30" src="https://media.giphy.com/media/l41YvpiA9uMWw5AMU/giphy.gif" alt="Internet flow" crossOrigin="">
+						</div>
+						<p class="slide__text">The Internet is a Big Collection of Computers and Cables.</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">”Internet” is short for "interconnection of computer networks."</li>
+							<li class="slide__list-item">It's an infrastructure that connects millions of computers around the world together.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<p class="slide__text">There are around 380 underwater cables in operation around the world, spanning a length of over 1.2 million kilometers (745,645 miles).</p>
+							<img class="slide__image slide__image--web width-100-p margin-top-1" src="/internet-cables.67c77ed5.png" alt="Internet diagram">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Internet vs The Web</h2>
+						<p class="slide__text">Name some things you use the Internet for that are not part of The Web:</p>
+						<ul class="slide__list fragment">
+							<li class="slide__list-item">Email</li>
+							<li class="slide__list-item">Skype/Zoom/FaceTime</li>
+							<li class="slide__list-item">Cloud storage/iCloud/Google Drive</li>
+							<li class="slide__list-item">Spotify</li>
+							<li class="slide__list-item">YouTube/Netflix</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">First Website</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--small">In March 1989, Berners-Lee gave managers at CERN a proposal for an information management system that used hypertext to link documents on different computers that were connected to the Internet.</li>
+							<li class="slide__list-item slide__list-item--small">Sir Tim Berners-Lee published site on 6th August 1991.</li>
+						</ul>
+						<div class="slide__container-center">
+							<a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank"><img class="slide__image slide__image--request-response" src="/first_website.370c26df.png" alt="First Website"></a>
+						</div>
+					</div>
+				</section>
+
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Client Server Model</h2>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--request-response width-100-p" src="/request_response.d577fa5a.png" alt="Request response diagram">
+						</div>
+						<div class="fragment">
+							<p class="slide__text"><em>H</em>yper <em>T</em>ext <em>T</em>ranfer <em>P</em>rotocol</p>
+							<ul class="slide__list">
+								<li class="slide__list-item">Set of rules for communication between <strong>clients</strong> and <strong>servers</strong></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">How do you reach a specfic server</h2>
+						<img class="slide__image slide__image--dns width-100-p" src="/dns_diagram.5b93ad6b.png" alt="DNS diagram">
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Demonstration</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-30 margin-top-3" src="https://media.giphy.com/media/JUh0yTz4h931K/giphy.gif" alt="Demonstration" crossOrigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">What is JavaScript</h1>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JavaScripts Role in The Web</h2>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--javascript width-50" src="/js-role-in-web.241c2e95.png" alt="Javascript role in web">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is JavaScript</h2>
+						<div class="slide__container-flex">
+							<div>
+								<p class="slide__text">A scripting or programming language that allows you to implement complex features on web pages and servers</p>
+								<ul class="slide__list">
+									<li class="slide__list-item">The language of the browser</li>
+									<li class="slide__list-item">Front-end <strong>AND</strong> Back-end language</li>
+									<li class="slide__list-item">Extremely Popular</li>
+								</ul>
+							</div>
+							<img class="slide__image slide__image--javascript width-20 margin-left-5 height-100-p margin-top-2" src="/javascript.5249d823.png" alt="Javascript logo">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JavaScript Popularity</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p" src="/stackoverflow-survey.f76e0952.png" alt="Stackoverflow chart">
+							<p class="slide__text--small margin-top-2"><a href="https://insights.stackoverflow.com/survey/2019">Stack Overflow's 2019 Annual Developer Survey</a></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">The Birth of JavaScript</h2>
+						<div class="slide__container">
+							<p class="slide__text">Brendan Eich was hired by Netscape to build their new client-side language in 1995. It was first released with Netscape 2, early in 1996</p>
+							<div class="slide__container-flex">
+								<ul class="slide__list">
+									<li class="slide__list-item">Brendan Eich wrote the original code for Javascript in 10 days.</li>
+									<li class="slide__list-item">There is a lot of rumours about the fact that he was either drunk or potentially high when he wrote it...</li>
+								</ul>
+								<img class="slide__image slide__image--javascript width-20 margin-right-2" src="/brandon-eich.c20837ed.jpg" alt="Brandon Eich">
+							</div>
+							<p class="slide__text--small"><a href="https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/">BONUS - A brief history of JavaScript</a></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">How is Javascript used?</h2>
+						<img class="slide__image slide__image--javascript-fe-be width-100-p" src="/javascript_fe_be.c90f1aa5.png" alt="Javascript logo">
+					</div>
+				</section>
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="../../assets/images/general/exercise.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Differentiate between the Internet and the World Wide Web.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Group Activity - Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">4 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">What is the Internet?</li>
+													<li class="slide__exercise__header__list--item">What is the World Wide Web?</li>
+													<li class="slide__exercise__header__list--item">What is the difference between the two?</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Pseudocode</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">The importance of planning</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-40" src="/railway.3b02c0dc.jpg" alt="Railway misalignment">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Pseudo Code</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">A great way to break down a problem into small chunks is to use pseudo code.</li>
+							<li class="slide__list-item">Pseudo code is usually typed using comments, so that it has no effect on the program being written. It is typically written in a mixture of natural language and high-level programming constructs.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Webe</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JS Comments</h2>
+						<p class="slide__text">These comments for pseudo-code can be either single line or multi-line syntax:</p>
+						<pre class="slide__pre margin-top-2"><code class="hljs slide__code slide__code--middle bash small" data-trim="">
 // Single-line comment syntax
 
 /*
 multi-line
 comment
 */
-						</code></pre> <p class="slide__text margin-top-2">To comment out a line hit <code><em>cmd</em></code> + <code><em>/</em></code></p> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <p class="slide__text">We want to make a cup of tea, let's think about the steps involved.</p> <div class="slide__container-center"> <img class="slide__image width-20" src="https://media.giphy.com/media/WPO1IoXaFIVuE/giphy.gif" alt="Cup of tea" crossOrigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Coloured Light Bulb</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/pseudocode-bulb.785b2ac9.png" alt="Bulb exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Task</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item"> Imagine that we have 3 different colored buttons (red, blue and yellow) and if a user taps one of the colored buttons the light changes to the selected color. If the selected color is tapped again, the light turns off.</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Groups (2-3 people)</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">10 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Write the pseudocode for a program for that controls a light that can change colour based on user input.</li> <li class="slide__exercise__header__list--item">Choose 1 person to write your pseudocode as JS comments</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Javascript & The Web</h2> </header> <div class="slide__content"> <h2 class="slide__title">Learning Objectives - Review</h2> <ul class="slide__list"> <li class="slide__list-item">Differentiate between the Internet and the World Wide Web.</li> <li class="slide__list-item">Summarise the client-server model & explain how DNS lookup works.</li> <li class="slide__list-item">Run Node.js, npm, Git, and other command line tools on your computer.</li> <li class="slide__list-item">Write pseudocode and explain how it relates to programmatic thinking.</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Javascript & The Web</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Q&A</h1> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Resources</h2> </header> <div class="slide__content"> <h2 class="slide__title">Exit Tickets</h2> <p class="slide__text--medium">Please complete this brief Exit Ticket at the end of each lesson to check in with you and you can tell me if you need more help on the day's topic: <a href="https://forms.gle/KtEYnHVYJuKDaqbm7" target="_blank">link</a></p> <ul class="slide__list"> <li class="slide__list-item--small">There is also a link in the Web Portal.</li> </ul> <div class="slide__container-center"> <img class="slide__image width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exit-ticket.8596624e.png" alt="Exit Ticket"> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Javascript & The Web</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Exit Ticket</h1> <p class="slide__text color-white">(Lesson 01)</p> </div> </div> </section> </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script> <script>var i="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";Reveal.initialize({slideNumber:!0,controls:!0,history:!0,transition:"fade",center:!1,progress:!1,dependencies:[{src:"".concat(i,"plugin/highlight/highlight.min.js"),async:!0,callback:function(){hljs.initHighlightingOnLoad()}}]});</script> </body></html>
+						</code></pre>
+						<p class="slide__text margin-top-2">To comment out a line hit <code><em>cmd</em></code> + <code><em>/</em></code></p>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<p class="slide__text">We want to make a cup of tea, let's think about the steps involved.</p>
+						<div class="slide__container-center">
+							<img class="slide__image width-20" src="https://media.giphy.com/media/WPO1IoXaFIVuE/giphy.gif" alt="Cup of tea" crossOrigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Coloured Light Bulb</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-20" src="/pseudocode-bulb.dbe154c4.png" alt="Bulb exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Task</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">
+										Imagine that we have 3 different colored buttons (red, blue and yellow) and if a user taps one of the colored buttons the light changes to the selected color.
+										If the selected color is tapped again, the light turns off.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Groups (2-3 people)</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Write the pseudocode for a program for that controls a light that can change colour based on user input.</li>
+													<li class="slide__exercise__header__list--item">Choose 1 person to write your pseudocode as JS comments</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Learning Objectives - Review</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Differentiate between the Internet and the World Wide Web.</li>
+							<li class="slide__list-item">Summarise the client-server model & explain how DNS lookup works.</li>
+							<li class="slide__list-item">Run Node.js, npm, Git, and other command line tools on your computer.</li>
+							<li class="slide__list-item">Write pseudocode and explain how it relates to programmatic thinking.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Resources</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Exit Tickets</h2>
+						<p class="slide__text--medium">Please complete this brief Exit Ticket at the end of each lesson to check in with you and you can tell me if you need more help on the day's topic: <a href="https://forms.gle/KtEYnHVYJuKDaqbm7" target="_blank">link</a></p>
+						<ul class="slide__list">
+							<li class="slide__list-item--small">There is also a link in the Web Portal.</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-40" src="/exit-ticket.b3ae814a.png" alt="Exit Ticket">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Javascript & The Web</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson 01)</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+Reveal.initialize({
+  slideNumber: true,
+  controls: true,
+  history: true,
+  transition: 'fade',
+  center: false,
+  progress: false,
+  dependencies: [{
+    src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
+    async: true,
+    callback: function callback() {
+      hljs.initHighlightingOnLoad();
+    }
+  }]
+});</script>
+	</body>
+</html>
