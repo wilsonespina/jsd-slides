@@ -1,4 +1,381 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSD | Lesson 03</title><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-32x32.8ae2cba7.png" sizes="32x32"><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-16x16.74161018.png" sizes="16x16"><link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"><link rel="stylesheet" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/main.01e7a6f2.css"></head><body> <div class="reveal"> <div class="slides"> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Arrays and Loops</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Review</h2> </header> <div class="slide__content"> <h1 class="slide__title--black">What did we do last lesson?</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Exit Ticket Questions</h2> <div class="slide__container"> <ol class="slide__list margin-top-1 padding-left-2"> <li class="slide__list-item">Can I get more help with the installation?</li> </ol> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Run JavaScript in the Browser.</li> <li class="slide__list-item">Create arrays and access values in them.</li> <li class="slide__list-item">Build iterative loops using <em>for</em> statements.</li> <li class="slide__list-item">Iterate over and manipulate values in an array. </li>  </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Agenda</h2> <ul class="slide__list"> <li class="slide__list-item">Classroom Resources</li> <li class="slide__list-item">JavaScript in the Browser</li> <li class="slide__list-item">Arrays</li> <li class="slide__list-item">Loops</li> <li class="slide__list-item">Array Iterators</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Classroom Resources</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Create a JSD classroom folder</h2> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Create a directory called <code>JSD</code> on your machine.</li> <li class="slide__list-item">A suitable place would be in your <code>Documents</code> folder: <code>~/Documents/JSD</code></li> </ul> <img class="slide__image width-30 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/github-enterprise-step0.eeab0e67.png" alt="Github Enterprise step 0"> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Pull from Github Enterprise</h2> <p class="slide__text--medium">Head to : <a href="https://git.generalassemb.ly/wilson-espina/jsd-9-resources" target="_blank">https://git.generalassemb.ly/wilson-espina/jsd-9-resources</a></p> <div class="slide__container-center"> <img class="slide__image width-50 margin-top-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/github-enterprise-step1.bbc36067.png" alt="Github Enterprise step 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Pull from Github Enterprise</h2> <div class="slide__container-flex"> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Click on 'Clone or Download'</li> <li class="slide__list-item">Make sure the Heading says 'Clone with HTTPS'</li> <li class="slide__list-item">Select the Clipboard item to to copy the URL</li> </ul> <div class="slide__container-center"> <img class="slide__image width-30 margin-top-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/github-enterprise-step2.f5287324.png" alt="Github Enterprise step 2"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Clone JSD-9 Resources locally</h2> <div class="slide__container"> <ul class="slide__list margin-top-1"> <li class="slide__list-item"><code>cd</code> into your <code>JSD</code> folder</li> <li class="slide__list-item">Type <code>git clone</code></li> <li class="slide__list-item">Paste the URL you just copied from Github Enterprise and hit return. This should clone the repo into your JSD folder</li> </ul> <div class="slide__container"> <img class="slide__image width-50 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/github-enterprise-step3.6762c984.png" alt="Github Enterprise step 3"> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">JavaScript in the Browser</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Chrome Console</h2> <p class="slide__text">Access by pressing <em><code>cmd + alt + j</code></em></p> <img class="slide__image slide__image--chrome-console margin-top-2 width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/chrome-console.72be93d3.png" alt="Chrome dev tools"> <ul class="slide__list fragment"> <li class="slide__list-item">JavaScript can be run directly in the console</li> <li class="slide__list-item">Useful to write and execute code quickly</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Debugging</h2> <img class="slide__image slide__image--chrome-console-debug width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/chrome-console-debug.98125a68.png" alt="Chrome dev debugging tools"> <ul class="slide__list"> <li class="slide__list-item">Error messages can be useful when debugging code.</li> <li class="slide__list-item">Often verbose in saying what the mistake is and on which line.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Debugging</h2> <p class="slide__text">Google is your friend - Don't be afraid to Google JavaScript methods or syntax.</p> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/google-screenshot.68e9fc2b.png" alt="Google screenshot"> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Google Search Terms</h2> <img class="slide__image width-100-p margin-top-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/google-bad-and-good.fbdf987c.png" alt="Google search terms examples"> <ul class="slide__list margin-top-2"> <li class="slide__list-item--medium">Always include the programming language and key terms.</li> <li class="slide__list-item--medium">Questions can be similar to how you would ask a person.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Useful Resources</h2> <div class="slide__container-flex start"> <ul class="slide__list margin-top-2"> <li class="slide__list-item--medium">Stack Overflow</li> <li class="slide__list-item--medium">Mozilla Developer Networks (MDN)</li> <li class="slide__list-item--medium">W3Schools</li> <li class="slide__list-item--medium">Medium Articles</li> <li class="slide__list-item--medium">Blogs</li> </ul> <div class="margin-left-2"> <img class="slide__image block width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/stackoverflow.f3774caf.png" alt="Stack Overflow logo"> <img class="slide__image block width-25 margin-top-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/mdn-web-docs.72cac16b.png" alt="Mozilla Development Network logo"> <img class="slide__image block width-20 margin-top-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/w3schools.bb03645e.png" alt="W3Schools logo"> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Arrays</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Arrays</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium">An array acts like a list.</li> <li class="slide__list-item slide__list-item--medium">Array items are separated by commas.</li> <li class="slide__list-item slide__list-item--medium">Arrays are enclosed by square brackets <code>[ ]</code></li> </ul> <div class="slide__container-center"> <img class="slide__image width-40 margin-top-4" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-example-1.a107fc35.png" alt="Array example 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Arrays</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium">Each item in an array is called an <em>element</em>.</li> <li class="slide__list-item slide__list-item--medium">Elements can be any data type.</li> </ul> <div class="slide__container-center"> <img class="slide__image width-40 margin-top-6" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-example-2.34b6534e.png" alt="Array example 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Array Index</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium">Each array element is assigned an <em>index</em>, which is a number used to reference that element.</li> <li class="slide__list-item slide__list-item--medium">Index starts at <em>0</em></li> </ul> <div class="slide__container-center"> <img class="slide__image width-40 margin-top-4" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-example-3.4f2fade0.png" alt="Array example 3"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Array Index</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium">The final index value is always the length of the array minus 1.</li> </ul> <div class="slide__container-center"> <img class="slide__image width-40 margin-top-4" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-example-4.ea44295e.png" alt="Array example 4"> <img class="slide__image width-20 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-length.aae6dbec.png" alt="Array length example"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Length Property</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium"><code>length</code> property is a number 1 greater than the final index number.</li> <li class="slide__list-item slide__list-item--medium"><code>length !==</code> number of elements in the array.</li> </ul> <div class="slide__container-center"> <img class="slide__image width-40 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-example-4.ea44295e.png" alt="Array example 4"> <img class="slide__image width-25 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/array-length-2.ff6ea0e8.png" alt="Array length example 2"> </div> </div> </section>  <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Getting values from an Array</h2> <ul class="slide__list"> <li class="slide__list-item slide__list-item--small">Array index starts from <em>0</em></li> </ul> <pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 03</title>
+		<link rel="icon" type="image/png" href="/favicon-32x32.43b30f10.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="/main.d9ee62f6.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Arrays and Loops</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Review</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--black">What did we do last lesson?</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Exit Ticket Questions</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">Can I get more help with the installation?</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Run JavaScript in the Browser.</li>
+							<li class="slide__list-item">Create arrays and access values in them.</li>
+							<li class="slide__list-item">Build iterative loops using <em>for</em> statements.</li>
+							<li class="slide__list-item">Iterate over and manipulate values in an array. </li>
+							
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Classroom Resources</li>
+							<li class="slide__list-item">JavaScript in the Browser</li>
+							<li class="slide__list-item">Arrays</li>
+							<li class="slide__list-item">Loops</li>
+							<li class="slide__list-item">Array Iterators</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Classroom Resources</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Create a JSD classroom folder</h2>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Create a directory called <code>JSD</code> on your machine.</li>
+							<li class="slide__list-item">A suitable place would be in your <code>Documents</code> folder: <code>~/Documents/JSD</code></li>
+						</ul>
+						<img class="slide__image width-30 margin-top-3" src="/github-enterprise-step0.1a99fa8e.png" alt="Github Enterprise step 0">
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Pull from Github Enterprise</h2>
+						<p class="slide__text--medium">Head to : <a href="https://git.generalassemb.ly/wilson-espina/jsd-9-resources" target="_blank">https://git.generalassemb.ly/wilson-espina/jsd-9-resources</a></p>
+						<div class="slide__container-center">
+							<img class="slide__image width-50 margin-top-1" src="/github-enterprise-step1.1a3a2603.png" alt="Github Enterprise step 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Pull from Github Enterprise</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Click on 'Clone or Download'</li>
+								<li class="slide__list-item">Make sure the Heading says 'Clone with HTTPS'</li>
+								<li class="slide__list-item">Select the Clipboard item to to copy the URL</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image width-30 margin-top-1" src="/github-enterprise-step2.09edccb7.png" alt="Github Enterprise step 2">
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Clone JSD-9 Resources locally</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item"><code>cd</code> into your <code>JSD</code> folder</li>
+								<li class="slide__list-item">Type <code>git clone</code></li>
+								<li class="slide__list-item">Paste the URL you just copied from Github Enterprise and hit return. This should clone the repo into your JSD folder</li>
+							</ul>
+							<div class="slide__container">
+								<img class="slide__image width-50 margin-top-2" src="/github-enterprise-step3.faf10c61.png" alt="Github Enterprise step 3">
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">JavaScript in the Browser</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Chrome Console</h2>
+						<p class="slide__text">Access by pressing <em><code>cmd + alt + j</code></em></p>
+						<img class="slide__image slide__image--chrome-console margin-top-2 width-100-p" src="/chrome-console.6215f720.png" alt="Chrome dev tools">
+						<ul class="slide__list fragment">
+							<li class="slide__list-item">JavaScript can be run directly in the console</li>
+							<li class="slide__list-item">Useful to write and execute code quickly</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Debugging</h2>
+						<img class="slide__image slide__image--chrome-console-debug width-100-p" src="/chrome-console-debug.87d22619.png" alt="Chrome dev debugging tools">
+						<ul class="slide__list">
+							<li class="slide__list-item">Error messages can be useful when debugging code.</li>
+							<li class="slide__list-item">Often verbose in saying what the mistake is and on which line.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Debugging</h2>
+						<p class="slide__text">Google is your friend - Don't be afraid to Google JavaScript methods or syntax.</p>
+						<img class="slide__image width-100-p" src="/google-screenshot.6f1cd024.png" alt="Google screenshot">
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Google Search Terms</h2>
+						<img class="slide__image width-100-p margin-top-1" src="/google-bad-and-good.9c62be40.png" alt="Google search terms examples">
+						<ul class="slide__list margin-top-2">
+							<li class="slide__list-item--medium">Always include the programming language and key terms.</li>
+							<li class="slide__list-item--medium">Questions can be similar to how you would ask a person.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Useful Resources</h2>
+						<div class="slide__container-flex start">
+							<ul class="slide__list margin-top-2">
+								<li class="slide__list-item--medium">Stack Overflow</li>
+								<li class="slide__list-item--medium">Mozilla Developer Networks (MDN)</li>
+								<li class="slide__list-item--medium">W3Schools</li>
+								<li class="slide__list-item--medium">Medium Articles</li>
+								<li class="slide__list-item--medium">Blogs</li>
+							</ul>
+							<div class="margin-left-2">
+								<img class="slide__image block width-20" src="/stackoverflow.9b784054.png" alt="Stack Overflow logo">
+								<img class="slide__image block width-25 margin-top-1" src="/mdn-web-docs.987fdc71.png" alt="Mozilla Development Network logo">
+								<img class="slide__image block width-20 margin-top-1" src="/w3schools.c20a95dc.png" alt="W3Schools logo">
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+
+
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Arrays</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Arrays</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--medium">An array acts like a list.</li>
+							<li class="slide__list-item slide__list-item--medium">Array items are separated by commas.</li>
+							<li class="slide__list-item slide__list-item--medium">Arrays are enclosed by square brackets <code>[ ]</code></li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-40 margin-top-4" src="/array-example-1.cf6e1974.png" alt="Array example 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Arrays</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--medium">Each item in an array is called an <em>element</em>.</li>
+							<li class="slide__list-item slide__list-item--medium">Elements can be any data type.</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-40 margin-top-6" src="/array-example-2.99c946b8.png" alt="Array example 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Array Index</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--medium">Each array element is assigned an <em>index</em>, which is a number used to reference that element.</li>
+							<li class="slide__list-item slide__list-item--medium">Index starts at <em>0</em></li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-40 margin-top-4" src="/array-example-3.e0127344.png" alt="Array example 3">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Array Index</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--medium">The final index value is always the length of the array minus 1.</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-40 margin-top-4" src="/array-example-4.3816a3f7.png" alt="Array example 4">
+							<img class="slide__image width-20 margin-top-2" src="/array-length.cfd26106.png" alt="Array length example">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Length Property</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--medium"><code>length</code> property is a number 1 greater than the final index number.</li>
+							<li class="slide__list-item slide__list-item--medium"><code>length !==</code> number of elements in the array.</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-40 margin-top-2" src="/array-example-4.3816a3f7.png" alt="Array example 4">
+							<img class="slide__image width-25 margin-top-2" src="/array-length-2.2203b9e0.png" alt="Array length example 2">
+						</div>
+					</div>
+				</section>
+
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Arrays</h2>
+						<p class="slide__text">JavaScript arrays are used to store multiple values in a single variable.</p>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--small">Can be declared using an array literal <em><code>[ ]</code></em></li>
+							<li class="slide__list-item slide__list-item--small">Array items are separated by commas</li>
+						</ul>
+						<pre class="slide__pre margin-top-2 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim>
+let a = ['dog', 'cat', 'hen'];
+undefined
+
+a.length; // array property
+3
+						</code></pre>
+						<ul class="slide__list margin-top-2 fragment">
+							<li class="slide__list-item slide__list-item--small"><code>length</code> property is always one more than the highest index in the array.</li>
+							<li class="slide__list-item slide__list-item--small">Highest index in this case is <em>2</em></li>
+						</ul>
+					</div>
+				</section> -->
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Getting values from an Array</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item slide__list-item--small">Array index starts from <em>0</em></li>
+						</ul>
+						<pre class="slide__pre margin-top-1 width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let a = ['dog', 'cat', 'hen'];
 undefined
 
@@ -10,19 +387,243 @@ a[1];
 
 a[2];
 "hen"
-						</code></pre> <ul class="slide__list margin-top-1 fragment"> <li class="slide__list-item slide__list-item--small"><code>array.length</code> isn't necessarily the number of items in the array</li> <pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+						</code></pre>
+						<ul class="slide__list margin-top-1 fragment">
+							<li class="slide__list-item slide__list-item--small"><code>array.length</code> isn't necessarily the number of items in the array</li>
+						<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 a[100] = 'fox';
 a.length; // 101
-						</code></pre> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Arrays Loops Section 1</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Understand how to use and apply Array methods</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 0-arrays-loops-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">8 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">In the <code>app.js</code> file, complete questions 1-4.</li> <li class="slide__exercise__header__list--item">Note that most of your answers should be stored in variables called q1, q2 etc., and the variables printed to the console. See Question 0, which is already completed, for an example.</li> <li class="slide__exercise__header__list--item">You will work on the remaining questions later in class	today.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Array Helper Methods</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Array Helper Methods</h2> <table class="slide__table"> <thead> <tr> <th class="large-font">Method</th> <th class="large-font">Use</th> </tr> </thead> <tbody class="slide__body slide__body--arrays"> <tr> <td class="col-25-p"> <code class="slide__code small bold">toString()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Returns a single string consisting of the array elements converted to strings and separated by commas</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">join()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Same as <code>toString()</code>, but allows you to pass a custom separator as an argument</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">concat()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Merges two or more arrays together</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">pop()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Removes and returns the item at the end of the array</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">push(item1, …, itemN)</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Adds one or more items to the end of the array</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">reverse()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Reverses the array</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">shift()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Removes and returns the item at the start of the array</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">unshift(item1, …, itemN)</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Adds one or more items to the start of the array</p> </td> </tr> </tbody> </table> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>1-loops-codealong</code></p>  </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Loops</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Iteration</h2> <p class="slide__text">Iterating is a way of incrementally repeating a task, one at a time.</p> <div class="slide__container-center"> <img class="slide__image slide__image--stacking-cat width-30" src="https://media.giphy.com/media/E6OyZu1OU3emc/giphy.gif" alt="Stacking cat" crossOrigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">While</h2> <p class="slide__text"><code>while</code> is a loop statement that will run while a condition is <code>true</code></p> <div class="slide__container"> <ul class="slide__list"> <li class="slide__list-item">While loops are good for basic looping, but there's a possibility it will never get run</li> </ul> <pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+						</code></pre>
+					</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Arrays Loops Section 1</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Understand how to use and apply Array methods</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 0-arrays-loops-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">8 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">In the <code>app.js</code> file, complete questions 1-4.</li>
+													<li class="slide__exercise__header__list--item">Note that most of your answers should be stored in variables called q1, q2 etc., and the variables printed to the console. See Question 0, which is already completed, for an example.</li>
+													<li class="slide__exercise__header__list--item">You will work on the remaining questions later in class	today.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Array Helper Methods</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Array Helper Methods</h2>
+						<table class="slide__table">
+							<thead>
+								<tr>
+									<th class="large-font">Method</th>
+									<th class="large-font">Use</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--arrays">
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">toString()</code>
+									</td>
+									<td class="col-75-p ">
+										<p class="slide__text slide__text--table">Returns a single string consisting of the array elements converted to strings and separated by commas</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">join()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Same as <code>toString()</code>, but allows you to pass a custom separator as an argument</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">concat()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Merges two or more arrays together</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">pop()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Removes and returns the item at the end of the array</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">push(item1, …, itemN)</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Adds one or more items to the end of the array</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">reverse()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Reverses the array</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">shift()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Removes and returns the item at the start of the array</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">unshift(item1, …, itemN)</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Adds one or more items to the start of the array</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>1-loops-codealong</code></p>
+							<!-- <img class="slide__image slide__image--code-along width-15 margin-top-2" src="https://media.giphy.com/media/UcK7JalnjCz0k/giphy.gif" alt="Code Along" crossOrigin=""/> -->
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Loops</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Iteration</h2>
+						<p class="slide__text">Iterating is a way of incrementally repeating a task, one at a time.</p>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--stacking-cat width-30" src="https://media.giphy.com/media/E6OyZu1OU3emc/giphy.gif" alt="Stacking cat" crossOrigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">While</h2>
+						<p class="slide__text"><code>while</code> is a loop statement that will run while a condition is <code>true</code></p>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">While loops are good for basic looping, but there's a possibility it will never get run</li>
+							</ul>
+							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 while (true) {
 // an infinite loop!
 }
-							</code></pre> <ul class="slide__list"> <li class="slide__list-item fragment">This would cause a Browser to break</li> </ul> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Do-While</h2> <p class="slide__text">Using a <code>do-while</code> loop makes sure that the body of the loop is executed at least once.</p> <div class="slide__container"> <ul class="slide__list"> <li class="slide__list-item"><code>while()</code> isn't evaluated until after the block of code runs.</li> </ul> <pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<ul class="slide__list">
+								<li class="slide__list-item fragment">This would cause a Browser to break</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Do-While</h2>
+						<p class="slide__text">Using a <code>do-while</code> loop makes sure that the body of the loop is executed at least once.</p>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item"><code>while()</code> isn't evaluated until after the block of code runs.</li>
+							</ul>
+							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 let input = 0;
 do {
   console.log(input++);
 } while (input < 10);
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">While Loop</h2> <p class="slide__text">It is possible to iterate over an array with a while loop:</p> <div class="slide__container"> <pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">While Loop</h2>
+						<p class="slide__text">It is possible to iterate over an array with a while loop:</p>
+						<div class="slide__container">
+							<pre class="slide__pre width-100-p height-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim="">
 let a = [1, 2, 3, 4, 5]
 let len = a.length;
 let i = 0;
@@ -31,7 +632,20 @@ while(i < len) {
   console.log(i);
   i++;
 }
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">For Loop</h2> <p class="slide__text">You can also iterate over an array with:</p> <div class="slide__container"> <pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">For Loop</h2>
+						<p class="slide__text">You can also iterate over an array with:</p>
+						<div class="slide__container">
+							<pre class="slide__pre width-100-p height-100-p"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim="">
 let teams = ['Liverpool', 'Arsenal', 'Chelsea'];
 
 for (let i = 0; i < teams.length; i++) {
@@ -40,10 +654,332 @@ for (let i = 0; i < teams.length; i++) {
 // Liverpool
 // Arsenal
 // Chelsea
-							</code></pre> <div class="slide__container"> <img class="slide__image slide__image--for-loop width-35 fragment" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/for-statement.df69ab40.png" alt="For statement"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 2-loops-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">10 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Write code that creates a for loop that calculates 2 to the 10th power, and <code>console.log</code>s each step of the calculation.</li> <li class="slide__exercise__header__list--item">BONUS 1: Rewrite your code to allow a user to enter the exponent value, rather than hard-coding it into your program. (Hint: Read up on the window.prompt method.)</li> <li class="slide__exercise__header__list--item">BONUS 2: Rewrite your code to use a while loop rather than a for loop.</li> <li class="slide__exercise__header__list--item">BONUS 3: Rewrite your code to use a do/while loop rather than a for loop or while loop.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Array Iterator Methods</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">forEach Loop</h2> <p class="slide__text">Another way of iterating over an array that was added with ECMAScript 5 is <code>forEach()</code>:</p> <div class="slide__container"> <pre class="slide__pre width-100-p height-100-p margin-top-1"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim="">
+							</code></pre>
+							<div class="slide__container">
+								<img class="slide__image slide__image--for-loop width-35 fragment" src="/for-statement.77bfea84.png" alt="For statement">
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 2-loops-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Write code that creates a for loop that calculates 2 to the 10th power, and <code>console.log</code>s each step of the calculation.</li>
+													<li class="slide__exercise__header__list--item">BONUS 1: Rewrite your code to allow a user to enter the exponent value, rather than hard-coding it into your program. (Hint: Read up on the window.prompt method.)</li>
+													<li class="slide__exercise__header__list--item">BONUS 2: Rewrite your code to use a while loop rather than a for loop.</li>
+													<li class="slide__exercise__header__list--item">BONUS 3: Rewrite your code to use a do/while loop rather than a for loop or while loop.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Array Iterator Methods</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">forEach Loop</h2>
+						<p class="slide__text">Another way of iterating over an array that was added with ECMAScript 5 is <code>forEach()</code>:</p>
+						<div class="slide__container">
+							<pre class="slide__pre width-100-p height-100-p margin-top-1"><code class="hljs slide__code slide__code--middle javascript xsmall" data-trim="">
 let teams = ['Tottenham', 'QPR', 'Watford'];
 
 teams.forEach(function(element)) {
   console.log(element);
 };
-							</code></pre> <div class="slide__container"> <img class="slide__image slide__image--for-each-loop margin-top-1 width-35 fragment" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/for-each.d65ac6a9.png" alt="For each statement"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Arrays Loops Section 2</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / Pair</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 0-arrays-loops-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">6 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">In the index.js file, complete questions 5-6.</li> <li class="slide__exercise__header__list--item">As in the section you did earlier, your answers should be stored in variables called q1, q2 etc., and the variables	logged to the console.</li> <li class="slide__exercise__header__list--item">Answer these questions using <code>forEach()</code> loops, not for loops.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Array Iterator Methods</h2> <table class="slide__table"> <thead> <tr> <th class="large-font">Method</th> <th class="large-font">Use</th> </tr> </thead> <tbody class="slide__body slide__body--arrays"> <tr> <td class="col-25-p"> <code class="slide__code small bold">forEach()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Executes a provided function once per array element</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">every()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Tests whether all elements in the array pass the test implemented by the provided function</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">some()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Tests whether some element in the array passes the text implemented by the provided function</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">filter()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Creates a new array with all elements that pass the test implemented by the provided function</p> </td> </tr> <tr> <td class="col-25-p"> <code class="slide__code small bold">map()</code> </td> <td class="col-75-p"> <p class="slide__text slide__text--table">Creates a new array with the results of calling a provided function on every element in this array</p> </td> </tr> </tbody> </table> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>3-array-iterators-codealong</code></p>  </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Arrays Loops Section 3</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / Pairs</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 0-arrays-loops-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">5 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">In the index.js file, complete question 7.</li> <li class="slide__exercise__header__list--item">As in the section you did earlier, your answer should be stored in a variable called q7 and the variable logged to the <code>console</code>.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Putting it all together</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / Pairs</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 4-arrays-loops-exercise-2</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">Until 20:45</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Write code for a website shopping cart that calculates the sales tax for each item in a cart array and stores the result in a 2nd array.</li> <li class="slide__exercise__header__list--item">Calculate the total with tax of all cart items and store the result in a new variable.</li> <li class="slide__exercise__header__list--item">BONUS: Update your code to round each item to the nearest penny. (Hint: Read up on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round</a>).</li> <li class="slide__exercise__header__list--item">BONUS: Rewrite your code to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.map</a> method.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Arrays and Loops</h2> </header> <div class="slide__content"> <h2 class="slide__title">Learning Objectives - Review</h2> <ul class="slide__list"> <li class="slide__list-item">Run JavaScript in the Browser</li> <li class="slide__list-item">Create arrays and access values in them</li> <li class="slide__list-item">Build iterative loops using <em>for</em> statements.</li> <li class="slide__list-item">Iterate over and manipulate values in an array.</li>  </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Q&A</h1> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Arrays and Loops</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Exit Ticket</h1> <p class="slide__text color-white">(Lesson 03)</p> </div> </div> </section> </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script> <script>var i="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";Reveal.initialize({slideNumber:!0,controls:!0,history:!0,transition:"fade",center:!1,progress:!1,dependencies:[{src:"".concat(i,"plugin/highlight/highlight.min.js"),async:!0,callback:function(){hljs.initHighlightingOnLoad()}}]});</script> </body></html>
+							</code></pre>
+							<div class="slide__container">
+								<img class="slide__image slide__image--for-each-loop margin-top-1 width-35 fragment" src="/for-each.555a4584.png" alt="For each statement">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Arrays Loops Section 2</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / Pair</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 0-arrays-loops-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">6 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">In the index.js file, complete questions 5-6.</li>
+													<li class="slide__exercise__header__list--item">As in the section you did earlier, your answers should be stored in variables called q1, q2 etc., and the variables	logged to the console.</li>
+													<li class="slide__exercise__header__list--item">Answer these questions using <code>forEach()</code> loops, not for loops.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Array Iterator Methods</h2>
+						<table class="slide__table">
+							<thead>
+								<tr>
+									<th class="large-font">Method</th>
+									<th class="large-font">Use</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--arrays">
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">forEach()</code>
+									</td>
+									<td class="col-75-p ">
+										<p class="slide__text slide__text--table">Executes a provided function once per array element</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">every()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Tests whether all elements in the array pass the test implemented by the provided function</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">some()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Tests whether some element in the array passes the text implemented by the provided function</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">filter()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Creates a new array with all elements that pass the test implemented by the provided function</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-25-p">
+										<code class="slide__code small bold">map()</code>
+									</td>
+									<td class="col-75-p">
+										<p class="slide__text slide__text--table">Creates a new array with the results of calling a provided function on every element in this array</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>3-array-iterators-codealong</code></p>
+							<!-- <img class="slide__image slide__image--code-along width-15 margin-top-2" src="https://media.giphy.com/media/UcK7JalnjCz0k/giphy.gif" alt="Code Along" crossOrigin=""/> -->
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Arrays Loops Section 3</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 0-arrays-loops-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">In the index.js file, complete question 7.</li>
+													<li class="slide__exercise__header__list--item">As in the section you did earlier, your answer should be stored in a variable called q7 and the variable logged to the <code>console</code>.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Putting it all together</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 4-arrays-loops-exercise-2</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">Until 20:45</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Write code for a website shopping cart that calculates the sales tax for each item in a cart array and stores the result in a 2nd array.</li>
+													<li class="slide__exercise__header__list--item">Calculate the total with tax of all cart items and store the result in a new variable.</li>
+													<li class="slide__exercise__header__list--item">BONUS: Update your code to round each item to the nearest penny. (Hint: Read up on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round">Math.round</a>).</li>
+													<li class="slide__exercise__header__list--item">BONUS: Rewrite your code to use the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.map</a> method.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Learning Objectives - Review</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Run JavaScript in the Browser</li>
+							<li class="slide__list-item">Create arrays and access values in them</li>
+							<li class="slide__list-item">Build iterative loops using <em>for</em> statements.</li>
+							<li class="slide__list-item">Iterate over and manipulate values in an array.</li>
+							
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Arrays and Loops</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson 03)</p>
+						</div>
+					</div>
+				</section>
+
+
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+Reveal.initialize({
+  slideNumber: true,
+  controls: true,
+  history: true,
+  transition: 'fade',
+  center: false,
+  progress: false,
+  dependencies: [{
+    src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
+    async: true,
+    callback: function callback() {
+      hljs.initHighlightingOnLoad();
+    }
+  }]
+});</script>
+	</body>
+</html>
