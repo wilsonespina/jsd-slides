@@ -2108,6 +2108,9 @@ ul li:before {
 .slides .slide__container-flex.center {
   justify-content: center;
 }
+.slides .slide__container-flex .flex-basis-quarter {
+  flex-basis: 25%;
+}
 .slides .slide__container-flex .flex-basis-half {
   flex-basis: 50%;
 }
@@ -2515,6 +2518,9 @@ ul li:before {
 }
 .slides .slide .width-30-p {
   width: 30%;
+}
+.slides .slide .width-80-p {
+  width: 80%;
 }
 .slides .slide .width-100-p {
   width: 100%;

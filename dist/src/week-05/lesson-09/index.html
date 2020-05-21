@@ -43,7 +43,11 @@
 						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
-							<li class="slide__list-item"></li>
+							<li class="slide__list-item">Create DOM event handlers using vanilla JavaScript.</li>
+							<li class="slide__list-item">Select DOM elements and properties using jQuery.</li>
+							<li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li>
+							<li class="slide__list-item">Use event delegation to manage dynamic content.</li>
+							<li class="slide__list-item">Use implicit iteration to update elements of a jQuery selection.</li>
 						</ul>
 					</div>
 				</section>
@@ -55,7 +59,11 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
-							<li class="slide__list-item"></li>
+							<li class="slide__list-item">JavaScript events</li>
+							<li class="slide__list-item">Event delegation</li>
+							<li class="slide__list-item">jQuery</li>
+							<li class="slide__list-item">Getting and setting DOM elements with jQuery</li>
+							<li class="slide__list-item">Implicit iteration</li>
 						</ul>
 					</div>
 				</section>
@@ -85,6 +93,222 @@
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">DOM Events</h2>
+						<div class="slide__container">
+							<div class="slide__container-center">
+								<img class="slide__image height-100-p width-30" src="https://media.giphy.com/media/l3vQXZiBGhxBEALEk/giphy.gif" alt="Pensive statue" crossOrigin="">
+							</div>
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Most modern websites have interactive elements.</li>
+								<li class="slide__list-item">Interactivity is triggered by user driven events.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">DOM Events</h2>
+						<div class="slide__container-flex">
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/mouse.30df6c45.png" alt="Mouse">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/keyboard.97a36a19.png" alt="Keyboard">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/form.a50135dc.png" alt="Form">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/document.8c740310.png" alt="Document">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const button = document.querySelector(‘.submitBtn’);
+							</code></pre>
+						</div>
+						<div class="slide__container fragment margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-1.2df4f6b7.png" alt="Event Listener diagram 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const button = document.querySelector(‘.submitBtn’);
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-2.0dfea7b6.png" alt="Event Listener diagram 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const button = document.querySelector(‘.submitBtn’);
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-3.9ff3eab5.png" alt="Event Listener diagram 3">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const button = document.querySelector(‘.submitBtn’);
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-4.7cab47bb.png" alt="Event Listener diagram 4">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex margin-top-1">
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/mouse.30df6c45.png" alt="Mouse">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/keyboard.97a36a19.png" alt="Keyboard">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/form.a50135dc.png" alt="Form">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/document.8c740310.png" alt="Document">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__container margin-top-1">
+							<img class="slide__image width-100-p" src="/event-listener-5.01e960fd.png" alt="Event Listener diagram 5">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+const button = document.querySelector(‘.submitBtn’);
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-6.f3c5dac7.png" alt="Event Listener diagram 6">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/l3vRfNA1p0rvhMSvS/giphy.gif" alt="Code Along" crossOrigin="">
+						</div>
+					</div>
+				</section>
 
 
 
@@ -107,7 +331,10 @@
 
 
 
-				<section class="slide" data-background-color="black">
+
+
+
+				<!-- <section class="slide" data-background-color="black">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Events & jQuery</h2>
 					</header>
@@ -116,7 +343,7 @@
 							<h1 class="slide__title--white">Homework</h1>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 
 
