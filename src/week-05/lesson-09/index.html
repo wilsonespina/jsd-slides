@@ -715,6 +715,232 @@ submitButton.on('click', (event) => {
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">a jQuery Statement involves 2 parts</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-40 margin-top-3" src="../../assets/images/week-5/jquery-selection-step-1.png" alt="jQuery selection part 1"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Selector</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-50 margin-top-3" src="../../assets/images/week-5/jquery-selector-1.png" alt="jQuery selector"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Selectors at a glance</h2>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-selectors">
+									<tr>
+										<th class="medium-font"></th>
+										<th class="medium-font bold padding-left-1">CSS</th>
+										<th class="medium-font bold padding-left-1">JQUERY</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-selectors">
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">ELEMENT</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">a</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">a</span>')</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">ID</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">#main</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">#main</span>')</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">CLASS</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">.info</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">.info</span>')</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">NESTED SELECTOR</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">div span</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">div span</span>')</code></p>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Objects</h2>
+						<p class="slide__text--medium">Selecting elements with vanilla JavaScript returns an element reference (<code>querySelector</code>) or a collection of element references (<code>querySelectorAll</code>)</p>
+						<div class="slide__container-flex margin-top-3">
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">Vanilla JavaScript Selector</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim>
+querySelector('selector')
+								</code></pre>
+							</div>
+							<img class="slide__image height-100-p width-15 margin-left-3 margin-right-3 margin-top-2" src="../../assets/images/week-5/blue-arrow.png" alt="Blue arrow"/>
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">Plain Element Selector</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim>
+&lt;element reference&gt;
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Objects</h2>
+						<p class="slide__text--medium">Selecting elements with jQuery returns a <em>jQuery object</em>, which is one or more element references packaged with jQuery methods and properties.</p>
+						<div class="slide__container-flex margin-top-3">
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">jQuery Selector</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim>
+$('selector')
+								</code></pre>
+							</div>
+							<img class="slide__image height-100-p width-15 margin-left-3 margin-right-3 margin-top-2" src="../../assets/images/week-5/blue-arrow.png" alt="Blue arrow"/>
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">jQuery Object</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim>
+{
+  element reference
+  methods
+  properties
+}
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Naming Variables</h2>
+						<p class="slide__text--medium">A typical naming convention is to include <code>$</code> at start of variable name to indicate that its value is a jQuery object.</p>
+						<pre class="slide__pre"><code class="slide__code javascript medium margin-top-2" data-trim>
+const $openTab = $('.open');
+						</code></pre>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-2">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin=""/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">a jQuery Statement involves 2 parts</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-40 margin-top-3" src="../../assets/images/week-5/jquery-selection-step-2.png" alt="jQuery selection part 2"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Methods</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-40 margin-top-3" src="../../assets/images/week-5/jquery-selector-2.png" alt="jQuery methods"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Documentation</h2>
+						<div class="slide__container-center">
+							<a href="https://api.jquery.com/"><p class="slide__text--large">api.jquery.com/</p></a>
+
+							<img class="slide__image height-100-p width-40 margin-top-2" src="../../assets/images/week-5/jquery-docs.png" alt="jQuery docs"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">what we can do with jQuery</h2>
+						<div class="slide__container">
+
+						</div>
+					</div>
+				</section>
+
 
 
 
