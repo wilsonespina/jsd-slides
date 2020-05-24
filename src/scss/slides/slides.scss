@@ -157,6 +157,22 @@
                         padding: 0.6rem;
                     }
                 }
+                &--jquery, &--javascript {
+                    th {
+                        border: 0.2rem solid $white;
+                        padding: 0.6rem;
+                    }
+                }
+                &--jquery {
+                    tr {
+                        background-color: $light-green;
+                    }
+                }
+                &--javascript {
+                    tr {
+                        background-color: $darkblue;
+                    }
+                }
             }
 
             .slide__body {

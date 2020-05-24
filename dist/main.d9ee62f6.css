@@ -2202,6 +2202,16 @@ ul li:before {
   border: 0.2rem solid #FFFFFF;
   padding: 0.6rem;
 }
+.slides .slide__table .slide__head--jquery th, .slides .slide__table .slide__head--javascript th {
+  border: 0.2rem solid #FFFFFF;
+  padding: 0.6rem;
+}
+.slides .slide__table .slide__head--jquery tr {
+  background-color: #6ae4d6;
+}
+.slides .slide__table .slide__head--javascript tr {
+  background-color: #358DF2;
+}
 .slides .slide__table .slide__body tr:nth-child(odd) {
   background-color: #F6F6F6;
 }
