@@ -1966,6 +1966,9 @@ i {
 .slides .slide .bold {
   font-weight: bold;
 }
+.slides .slide .large-icon {
+  font-size: 3rem;
+}
 
 *, *:after, *:before {
   box-sizing: border-box;
@@ -2075,6 +2078,9 @@ ul li:before {
 }
 .slides .slide__container-absolute.bottom-2 {
   bottom: 2rem;
+}
+.slides .slide__container-absolute.bottom-5 {
+  bottom: 5rem;
 }
 .slides .slide__container-absolute.bottom-10 {
   bottom: 10rem;
@@ -2212,6 +2218,16 @@ ul li:before {
 .slides .slide__table .slide__head--javascript tr {
   background-color: #358DF2;
 }
+.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th {
+  border: 0.2rem solid #FFFFFF;
+  padding: 0.5rem 1rem;
+}
+.slides .slide__table .slide__head--jquery-selectors th:nth-child(n+2):nth-child(-n+3) {
+  background-color: #feee9b;
+}
+.slides .slide__table .slide__head--jquery-traversal th {
+  background-color: #feee9b;
+}
 .slides .slide__table .slide__body tr:nth-child(odd) {
   background-color: #F6F6F6;
 }
@@ -2220,15 +2236,18 @@ ul li:before {
   border-bottom: 0.2rem solid white;
   padding: 0.3rem 0.2rem;
 }
-.slides .slide__table .slide__body--jquery-selectors tr {
-  background-color: #feee9b;
+.slides .slide__table .slide__body--jquery-selectors tr, .slides .slide__table .slide__body--jquery-traversal tr {
+  background-color: #FFD800;
 }
-.slides .slide__table .slide__body--jquery-selectors tr:nth-child(odd) {
-  background-color: #feee9b;
+.slides .slide__table .slide__body--jquery-selectors tr:nth-child(odd), .slides .slide__table .slide__body--jquery-traversal tr:nth-child(odd) {
+  background-color: #FFD800;
 }
-.slides .slide__table .slide__body--jquery-selectors td {
+.slides .slide__table .slide__body--jquery-selectors td, .slides .slide__table .slide__body--jquery-traversal td {
   border: 0.2rem solid #FFFFFF;
   padding: 0.8rem 1rem;
+}
+.slides .slide__table .slide__body--jquery-selectors td:nth-child(1) {
+  background-color: #feee9b;
 }
 .slides .slide__table .slide__body--node tr:nth-child(odd) {
   background-color: #F6F6F6;
@@ -2353,6 +2372,9 @@ ul li:before {
 }
 .slides .slide__text.bold {
   font-weight: bold;
+}
+.slides .slide__text.italic {
+  font-style: italic;
 }
 .slides .slide__text.center {
   text-align: center;

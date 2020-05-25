@@ -313,7 +313,6 @@ const button = document.querySelector(‘.submitBtn’);
 					</div>
 				</section>
 
-
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Lab - DOM Events</h2>
@@ -922,8 +921,39 @@ const $openTab = $('.open');
 						<h2 class="slide__title">jQuery Documentation</h2>
 						<div class="slide__container-center">
 							<a href="https://api.jquery.com/"><p class="slide__text--large">api.jquery.com/</p></a>
-
 							<img class="slide__image height-100-p width-40 margin-top-2" src="/jquery-docs.dcfb0b27.png" alt="jQuery docs">
+						</div>
+					</div>
+				</section>
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="../../assets/images/week-5/what-we-can-do-with-jquery.png" alt="Whgat we can do with jQuery"/>
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/jquery-find-elements.feed7a51.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
 						</div>
 					</div>
 				</section>
@@ -933,13 +963,421 @@ const $openTab = $('.open');
 						<h2 class="slide__header--title">Events & jQuery</h2>
 					</header>
 					<div class="slide__content">
-						<h2 class="slide__title">what we can do with jQuery</h2>
-						<div class="slide__container">
+						<div class="slide__container-flex end">
+							<img class="slide__image margin-left-2 height-100-p width-15" src="/find-elements.0fb83430.png" alt="Finding elements block">
 
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-30 margin-top-3" src="/jquery-traversing-dom-1.16248510.png" alt="jQuery traversing the DOM 1">
 						</div>
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex end">
+							<img class="slide__image margin-left-2 height-100-p width-15" src="/find-elements.0fb83430.png" alt="Finding elements block">
+
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-30 margin-top-3" src="/jquery-traversing-dom-2.61db2577.png" alt="jQuery traversing the DOM 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Traversing the DOM</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/find-elements.0fb83430.png" alt="Finding elements block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.find()</code> finds all descendants</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('div').find('a');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.parent()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('#box1').parent();</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.siblings()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').siblings('.important');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.children()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('ul').children('li');</code></p>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/get-set-content.c88aeb00.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">Common DOM Manipulation Methods</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/get-set-elements.478bbe83.png" alt="Get/Set elements block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.html()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$(‘h1').html('<strong>Content</strong>');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.text()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$(‘h1’).text('Just text content!’);</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.attr()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('img').attr('src', ‘images/bike.png');</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">Common DOM Manipulation Methods - Classes</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/get-set-elements.478bbe83.png" alt="Get/Set elements block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.addClass()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').addClass('success');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.removeClass()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').removeClass('my-class-here');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.toggleClass()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').toggleClass('special');</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - jQuery DOM Manipulation</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Utilise jQuery to access and manipulate DOM elements.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">05-jquery-statements-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Follow the instructions under part 1 in main.js</li>													
+													<li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/add-effects.2764c74e.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Common Effects Methods</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/add-effects-block.64dc6958.png" alt="Add effects block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.show()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('h1').show();</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.hide()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('ul').hide();</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.fadeIn()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('h1').fadeIn(300);</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.fadeOut()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('.special').fadeOut('fast');</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.slideUp()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('div').slideUp();</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.slideDown()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('#box1').slideDown('slow');</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.slideToggle()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').slideToggle(300); animation speed</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/create-event-listeners.106029b4.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">jQuery Events</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Event Listeners</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/create-event-listeners-block.ef6bc60a.png" alt="Create event listeners block">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p>
+						</div>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image width-100-p" src="/event-listener-2.0dfea7b6.png" alt="Event Listener diagram 2">
+						</div>
+					</div>
+				</section>
 
 
 
