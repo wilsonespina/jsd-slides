@@ -2468,6 +2468,9 @@ ul li:before {
 .slides .slide__list-item.center {
   text-align: center;
 }
+.slides .slide__list-item--flex {
+  display: flex;
+}
 .slides .slide__highlight {
   padding: 0 0.1rem;
 }
