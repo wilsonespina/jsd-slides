@@ -85,27 +85,6 @@
 					</div>
 				</section>
 
-				<section class="slide">
-					<header class="slide__header">
-						<h2 class="slide__header--title">Scope & Variables</h2>
-					</header>
-					<div class="slide__content">
-						<h2 class="slide__title">Classroom Resources</h2>
-						<div class="slide__container">
-							<ol class="slide__list margin-top-1 padding-left-2">
-								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer:</li>
-								<ul class="slide__list">
-									<li class="slide__list-item">Open the Terminal</li>
-									<li class="slide__list-item"><code>cd</code> to the <code>Documents/JSD/jsd-9-resources</code> directory</li>
-									<li class="slide__list-item">Type <code class="bold">git pull origin master</code> and press <code class="bold">return</code></li>
-									<li class="slide__list-item">Enter you github credentials</li>
-								</ul>
-								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/05-scope-variables</code></li>
-							</ol>
-						</div>
-					</div>
-				</section>
-
 				<section class="slide" data-background-color="black">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Scope & Variables</h2>
@@ -301,6 +280,22 @@
 							<li class="slide__list-item"><em>Secure Shell</em> or <em>Secure Socket Shell</em> is a network protocol that gives users a secure way to access a computer over an unsecured network.</li>
 							<li class="slide__list-item">SSH keys are a way to identify trusted computers, without involving passwords.</li>
 						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-20 height-100-p margin-top-2" src="../../assets/images/week-3/ssh-logo.webp" alt="SSH">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">SSH vs HTTPS</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">SSH lets us <code>pull</code> and <code>push</code> code from Github <em>without</em> having to enter credentials each time! <span class="large-icon">🥳 🎉</span></li>
+							<li class="slide__list-item">Github recommend using HTTPS as you are less likely to encounter problems with firewalls or proxies: <a class="slide__link" href="https://help.github.com/en/github/using-git/which-remote-url-should-i-use">https://help.github.com/en/github/using-git/which-remote-url-should-i-use</a></li>
+						</ul>
 					</div>
 				</section>
 
@@ -340,6 +335,62 @@
 						</div>
 					</div>
 				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Switching from HTTPS to SSH</h2>
+						<p class="slide__text--medium">Open Terminal:</p>
+
+						<ul class="slide__list">
+							<li class="slide__list-item--medium">Navigate to<code>jsd-9-resources</code> folder</li>
+							<li class="slide__list-item--medium">Head to your repo on Github and click 'Clone or Download'</li>
+							<li class="slide__list-item--medium">Click on 'Use SSH' and copy to the clipboard</li>
+							<li class="slide__list-item--medium">Type <code>git remote set-url origin </code> and paste the copied text
+								<pre class="slide__pre height-100-p width-50"><code class="hljs slide__code bash xsmall height-100-p" data-trim>
+git remote set-url origin git@hostname:USERNAME/jsd-9-resources.git
+								</code></pre>
+							</li>
+							<li class="slide__list-item--medium">Verify that the remote URL has changed
+								<pre class="slide__pre height-100-p width-50"><code class="hljs slide__code bash xsmall height-100-p" data-trim>
+git remote -v
+# Verify new remote URL
+origin  git@hostname:USERNAME/jsd-9-resources.git.git (fetch)
+origin  git@hostname:USERNAME/jsd-9-resources.git.git (push)
+								</code></pre>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Resources</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer:</li>
+								<ul class="slide__list">
+									<li class="slide__list-item">Open the Terminal</li>
+									<li class="slide__list-item"><code>cd</code> to the <code>Documents/JSD/jsd-9-resources</code> directory</li>
+									<li class="slide__list-item">Type <code class="bold">git pull origin master</code> and press <code class="bold">return</code></li>
+									<li class="slide__list-item">Enter you github credentials</li>
+								</ul>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/05-scope-variables</code></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+
+
+
+
 
 				<section class="slide" data-background-color="black">
 					<header class="slide__header-intro">
