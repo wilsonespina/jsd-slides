@@ -58,6 +58,8 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
+							<li class="slide__list-item">Homework Review</li>
+							<li class="slide__list-item">Hoisting</li>
 							<li class="slide__list-item">Objects</li>
 							<li class="slide__list-item">Real World Scenarios</li>
 							<li class="slide__list-item">Using JSON</li>
@@ -80,6 +82,313 @@
 						</div>
 					</div>
 				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Homework Review</h1>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Hoisting</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item">When JavaScript compiles all of your code, all variable declarations using <code>var</code> are lifted to the top of their function/local scope.</li>
+								<li class="slide__list-item">Hoisting doesn't happen in the code, rather the Compiler.</li>
+								<li class="slide__list-item">Google Chrome uses V8 Compiler / Interpreter.</li>
+							</ul>
+							<img class="slide__image width-20 height-100-p margin-left-2 margin-top-2" src="https://media.giphy.com/media/HlcFs8tJ1Dfu8/giphy.gif" alt="Hoisting" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+function celebrate() {
+
+  console.log("Wahoo!");
+  var x = 1;
+}
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+function celebrate() {
+  var x; // top of function scope
+  console.log("Wahoo!");
+  x = 1;
+}
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Variable names declared with <code>var</code> are hoisted, but not their values.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+function celebrate() {
+  console.log("Wahoo!");
+  let x = 1;
+}
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+function celebrate() {
+  console.log("Wahoo!");
+  let x = 1;
+}
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Variable names declared with <code>let</code> or <code>const</code> are not hoisted.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Declarations</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+foo()
+
+function foo() {
+  console.log("Hi!");
+}
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+function foo() {
+  console.log("Hi!");
+}
+
+foo();
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 fragment">
+							<li class="slide__list-item">Function declarations are hoisted.</li>
+							<li class="slide__list-item">Your code can call a hoisted function before it has been declared.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Expressions</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+foo()
+
+
+var foo = function() {
+  console.log("Hi!");
+}
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+var foo;
+
+foo(); // error foo is not a function
+foo = function() {
+  console.log("Hi!");
+}
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 ">
+							<li class="slide__list-item">Function expressions are treated like other variables</li>
+						</ul>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Expressions</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+foo()
+
+let foo = function() {
+  console.log("Hi!");
+}
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+foo(); // foo is not defined
+
+let foo = function() {
+  console.log("Hi!");
+}
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 ">
+							<li class="slide__list-item">Function expressions are treated like other variables</li>
+						</ul>
+
+					</div>
+				</section>
+
+
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">let, const and var</h2>
+						<table class="slide__table margin-top-1">
+							<thead class="slide__head slide__head--declaration-comparison">
+								<tr>
+									<th class="medium-font color-white">Keyword</th>
+									<th class="medium-font color-white">Scope</th>
+									<th class="medium-font color-white">Can Be Reassigned</th>
+									<th class="medium-font color-white">Hoisting</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--declaration-comparison slide__body--declaration-comparison--hoisting">
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">var</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Function scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">let</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">const</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>2-scope-codealong</code></p>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20 margin-top-2" src="https://media.giphy.com/media/13UZisxBxkjPwI/giphy.gif" alt="Code Along" crossorigin=""/>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Quiz - Variables & Scope</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-2">
+							<img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" alt="Quiz" crossorigin="">
+					</div>
+				</div></section>
+
+
+
+
+
+
 
 				<section class="slide" data-background-color="black">
 					<header class="slide__header-intro">
@@ -459,8 +768,11 @@ classroom
 						<div class="slide__container-center">
 							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
 						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>1-object-codealong</code></p>
+						</div>
 						<div class="slide__container-center margin-top-3">
-							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin="">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin="">
 						</div>
 					</div>
 				</section>
@@ -490,7 +802,7 @@ classroom
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">3 mins</h2>
+												<h2 class="slide-timing__header">5 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
@@ -636,14 +948,14 @@ classroom
 								</ul>
 								<p class="slide__exercise__header">Location</p>
 								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 2-object-exercise > monkey.js</li>
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 3-object-exercise > monkey.js</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
 								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">20 mins</h2>
+												<h2 class="slide-timing__header">15 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
@@ -786,15 +1098,15 @@ const course = {
   "synopsis":
   	"Geoff forces Yasmeen into an embarrassing situation in the Rovers.",
   "image":
-  	"https://hubimages.itv.com/episode/1_0694_10056?w={width}&h={height}&q={quality}&blur={blur}&bg={bg}",
+  	"https://images-itv.com/episode/8290/1019",
   "description":
   	"Geoff forces Yasmeen into an embarrassing situation in the Rovers.",
   "dateTime": "2020-05-01T18:30:00.000Z",
   "channel": "itv",
   "production":
-  	{ "productionId": "1/0694/10056#001",
-  	  "productionType": "PROGRAMME",
-  	  "episodeId": "1/0694/10056" }
+  	{ "productionId": "8290/1019/11",
+	  "productionType": "PROGRAMME"
+	}
 }
 							</code></pre>
 							<img class="slide__image slide__image--coronation-street width-20" src="/itv-coronation-street.b3b9848f.png" alt="Coronation street">
@@ -858,6 +1170,9 @@ JSON.parse(json);
 						<div class="slide__container-center">
 							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
 						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>4-json-codealong</code></p>
+						</div>
 						<div class="slide__container-center margin-top-1">
 							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/lTRuG1F4VZ3LHMpXY2/giphy.gif" alt="Code Along" crossorigin="">
 						</div>
@@ -883,7 +1198,7 @@ JSON.parse(json);
 								</ul>
 								<p class="slide__exercise__header">Location</p>
 								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 4-json-exercise > app.js</li>
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 5-json-exercise > app.js</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
 								<table class="slide__table">
@@ -1041,7 +1356,10 @@ Motivator","Cathy Burke","Carl Cox",
 							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
 						</div>
 						<div class="slide__container-center">
-							<img class="slide__image slide__image--code-along width-20" src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Code Along" crossorigin="">
+							<p class="slide__text--medium">Open up: <code>6-cat-facts-json</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Code Along" crossorigin="">
 						</div>
 					</div>
 				</section>
@@ -1064,14 +1382,14 @@ Motivator","Cathy Burke","Carl Cox",
 								</ul>
 								<p class="slide__exercise__header">Location</p>
 								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 5-data-structure—exercise > app.js</li>
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 7-data-structure-exercise > app.js</li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
 								<table class="slide__table">
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">5 mins</h2>
+												<h2 class="slide-timing__header">8 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
@@ -1104,6 +1422,24 @@ Motivator","Cathy Burke","Carl Cox",
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Lookahead to Next Lesson (03/06/20)</h2>
+						<h2 class="slide__title">SlackBot Lab</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Introduction to SlackBots.</li>
+							<li class="slide__list-item">Use API keys to interact with the Hubot Framework.</li>
+							<li class="slide__list-item">Write scripts that allow your bot to interact with users of the class Slack workspace.</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-12" src="/hubot.b74c9f95.png" alt="Hubot">
+						</div>
+					</div>
+				</section>
+
 				<section class="slide" data-background-color="black">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Objects & JSON</h2>
@@ -1122,7 +1458,7 @@ Motivator","Cathy Burke","Carl Cox",
 					<div class="slide__content">
 						<div class="slide__container-center margin-top-10">
 							<h1 class="slide__title--white">Exit Ticket</h1>
-							<p class="slide__text color-white">(Lesson 06)</p>
+							<p class="slide__text color-white">(Lesson #06)</p>
 						</div>
 					</div>
 				</section>
