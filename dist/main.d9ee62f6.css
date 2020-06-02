@@ -2218,7 +2218,7 @@ ul li:before {
 .slides .slide__table .slide__head--javascript tr {
   background-color: #358DF2;
 }
-.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th {
+.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th, .slides .slide__table .slide__head--http th {
   border: 0.2rem solid #FFFFFF;
   padding: 0.5rem 1rem;
 }
@@ -2226,6 +2226,9 @@ ul li:before {
   background-color: #feee9b;
 }
 .slides .slide__table .slide__head--jquery-traversal th {
+  background-color: #feee9b;
+}
+.slides .slide__table .slide__head--http th {
   background-color: #feee9b;
 }
 .slides .slide__table .slide__body tr:nth-child(odd) {
@@ -2243,6 +2246,19 @@ ul li:before {
   background-color: #FFD800;
 }
 .slides .slide__table .slide__body--jquery-selectors td, .slides .slide__table .slide__body--jquery-traversal td {
+  border: 0.2rem solid #FFFFFF;
+  padding: 0.8rem 1rem;
+}
+.slides .slide__table .slide__body--http tr {
+  background-color: #FFD800;
+}
+.slides .slide__table .slide__body--http tr:nth-child(odd) {
+  background-color: #FFD800;
+}
+.slides .slide__table .slide__body--http tr.red {
+  background-color: #E51B24;
+}
+.slides .slide__table .slide__body--http td {
   border: 0.2rem solid #FFFFFF;
   padding: 0.8rem 1rem;
 }

@@ -177,7 +177,7 @@
                         background-color: $darkblue;
                     }
                 }
-                &--jquery-selectors, &--jquery-traversal {
+                &--jquery-selectors, &--jquery-traversal, &--http {
                     th {
                         border: 0.2rem solid $white;
                         padding: 0.5rem 1rem;
@@ -189,6 +189,11 @@
                     }
                 }
                 &--jquery-traversal {
+                    th {
+                        background-color: $lightyellow;
+                    }
+                }
+                &--http {
                     th {
                         background-color: $lightyellow;
                     }
@@ -210,6 +215,21 @@
                     }
                     tr:nth-child(odd) {
                         background-color: $yellow;
+                    }
+                    td {
+                        border: 0.2rem solid $white;
+                        padding: 0.8rem 1rem;
+                    }
+                }
+                &--http {
+                    tr {
+                        background-color: $yellow;
+                    }
+                    tr:nth-child(odd) {
+                        background-color: $yellow;
+                    }
+                    tr.red {
+                            background-color: $red;
                     }
                     td {
                         border: 0.2rem solid $white;
