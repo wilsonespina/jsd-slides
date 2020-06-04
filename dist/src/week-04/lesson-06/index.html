@@ -1,87 +1,625 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSD | Lesson 06</title><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-32x32.8ae2cba7.png" sizes="32x32"><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-16x16.74161018.png" sizes="16x16"><link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"><link rel="stylesheet" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/main.8c0775e8.css"></head><body> <div class="reveal"> <div class="slides"> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Objects & JSON</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Review</h2> </header> <div class="slide__content"> <h1 class="slide__title--black">What did we do last lesson?</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Know what objects and methods are</li> <li class="slide__list-item">Real World Scenarios</li> <li class="slide__list-item">Understand what is JSON</li> <li class="slide__list-item">Work with JSON-formatted data</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Agenda</h2> <ul class="slide__list"> <li class="slide__list-item">Homework Review</li> <li class="slide__list-item">Hoisting</li> <li class="slide__list-item">Objects</li> <li class="slide__list-item">Real World Scenarios</li> <li class="slide__list-item">Using JSON</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Exit Ticket Questions</h2> <div class="slide__container"> <ol class="slide__list margin-top-1 padding-left-2"> <li class="slide__list-item">Still don't really understand the utility of SSH.</li> <li class="slide__list-item">There's an information overload!</li> </ol> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Classroom Resources</h2> <div class="slide__container"> <ol class="slide__list margin-top-1 padding-left-2"> <li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer:</li> <ul class="slide__list"> <li class="slide__list-item">Open the Terminal</li> <li class="slide__list-item"><code>cd</code> to the <code>Documents/JSD/jsd-9-resources</code> directory</li> <li class="slide__list-item">Type <code class="bold">git pull origin master</code> and press <code class="bold">return</code></li> </ul> <li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/06-objects-json</code></li> </ol> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Homework Review</h1> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Scope & Variables</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Hoisting</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item">When JavaScript compiles all of your code, all variable declarations using <code>var</code> are lifted to the top of their function/local scope.</li> <li class="slide__list-item">Hoisting doesn't happen in the code, rather the Compiler.</li> <li class="slide__list-item">Google Chrome uses V8 Compiler / Interpreter.</li> </ul> <img class="slide__image width-20 height-100-p margin-left-2 margin-top-2" src="https://media.giphy.com/media/HlcFs8tJ1Dfu8/giphy.gif" alt="Hoisting" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 06</title>
+		<link rel="icon" type="image/png" href="/favicon-32x32.43b30f10.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="/main.d9ee62f6.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Objects & JSON</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Review</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--black">What did we do last lesson?</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Know what objects and methods are</li>
+							<li class="slide__list-item">Real World Scenarios</li>
+							<li class="slide__list-item">Understand what is JSON</li>
+							<li class="slide__list-item">Work with JSON-formatted data</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Homework Review</li>
+							<li class="slide__list-item">Hoisting</li>
+							<li class="slide__list-item">Objects</li>
+							<li class="slide__list-item">Real World Scenarios</li>
+							<li class="slide__list-item">Using JSON</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Exit Ticket Questions</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">Still don't really understand the utility of SSH.</li>
+								<li class="slide__list-item">There's an information overload!</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Resources</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer:</li>
+								<ul class="slide__list">
+									<li class="slide__list-item">Open the Terminal</li>
+									<li class="slide__list-item"><code>cd</code> to the <code>Documents/JSD/jsd-9-resources</code> directory</li>
+									<li class="slide__list-item">Type <code class="bold">git pull origin master</code> and press <code class="bold">return</code></li>
+								</ul>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/06-objects-json</code></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Homework Review</h1>
+					</div>
+				</section>
+
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Hoisting</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item">When JavaScript compiles all of your code, all variable declarations using <code>var</code> are lifted to the top of their function/local scope.</li>
+								<li class="slide__list-item">Hoisting doesn't happen in the code, rather the Compiler.</li>
+								<li class="slide__list-item">Google Chrome uses V8 Compiler / Interpreter.</li>
+							</ul>
+							<img class="slide__image width-20 height-100-p margin-left-2 margin-top-2" src="https://media.giphy.com/media/HlcFs8tJ1Dfu8/giphy.gif" alt="Hoisting" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
 
   console.log("Wahoo!");
   var x = 1;
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
   var x; // top of function scope
   console.log("Wahoo!");
   x = 1;
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Variable names declared with <code>var</code> are hoisted, but not their values.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Variable names declared with <code>var</code> are hoisted, but not their values.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
   console.log("Wahoo!");
   let x = 1;
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function celebrate() {
   console.log("Wahoo!");
   let x = 1;
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Variable names declared with <code>let</code> or <code>const</code> are not hoisted.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting - Function Declarations</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Variable names declared with <code>let</code> or <code>const</code> are not hoisted.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Declarations</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo()
 
 function foo() {
   console.log("Hi!");
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 function foo() {
   console.log("Hi!");
 }
 
 foo();
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1 fragment"> <li class="slide__list-item">Function declarations are hoisted.</li> <li class="slide__list-item">Your code can call a hoisted function before it has been declared.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting - Function Expressions</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 fragment">
+							<li class="slide__list-item">Function declarations are hoisted.</li>
+							<li class="slide__list-item">Your code can call a hoisted function before it has been declared.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Expressions</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo()
 
 
 var foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 var foo;
 
 foo(); // error foo is not a function
 foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Function expressions are treated like other variables</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">Hoisting - Function Expressions</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 ">
+							<li class="slide__list-item">Function expressions are treated like other variables</li>
+						</ul>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Hoisting - Function Expressions</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code written by developer</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo()
 
 let foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> <div class="flex-basis-half"> <p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-half">
+								<p class="slide__text--medium text-align-center color-red text-transform-uppercase">Code as intrerpreted by parser</p>
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 foo(); // foo is not defined
 
 let foo = function() {
   console.log("Hi!");
 }
-								</code></pre> </div> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Function expressions are treated like other variables</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Scope & Variables</h2> </header> <div class="slide__content"> <h2 class="slide__title">let, const and var</h2> <table class="slide__table margin-top-1"> <thead class="slide__head slide__head--declaration-comparison"> <tr> <th class="medium-font color-white">Keyword</th> <th class="medium-font color-white">Scope</th> <th class="medium-font color-white">Can Be Reassigned</th> <th class="medium-font color-white">Hoisting</th> </tr> </thead> <tbody class="slide__body slide__body--declaration-comparison slide__body--declaration-comparison--hoisting"> <tr> <td class="col-15-p"> <code class="slide__code small bold">var</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Function scope</code> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> </tr> <tr> <td class="col-15-p"> <code class="slide__code small bold">let</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Block scope</code> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">Yes</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> </tr> <tr> <td class="col-15-p"> <code class="slide__code small bold">const</code> </td> <td class="col-25-p"> <code class="slide__code small bold">Block scope</code> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> <td class="col-15-p"> <p class="slide__text slide__text--table">No</p> </td> </tr> </tbody> </table> </div> </section>  <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Quiz - Variables & Scope</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-2"> <img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" alt="Quiz" crossorigin=""> </div> </div></section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Objects</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects are a data type</h2> <div class="slide__container-center"> <img class="slide__image slide__image--post-it width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/data-types-postit.88db5aff.png" alt="Data types post it"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects store data</h2> <div class="slide__container-flex"> <img class="slide__image slide__image--objects-filing-cabinet width-30" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/object-filing-cabinet.9145e429.svg" alt="Objects in filing cabinet"> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Objects are a type of data structure that is nearly universal across programming languages.</li> <li class="slide__list-item">Like arrays, objects can hold multiple pieces of data of varying types.</li> <li class="slide__list-item">Objects store data and are accessed like files in a filing cabinet.</li> </ul> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects</h2> <div class="slide__container"> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+						<ul class="slide__list margin-top-1 ">
+							<li class="slide__list-item">Function expressions are treated like other variables</li>
+						</ul>
+
+					</div>
+				</section>
+
+
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Scope & Variables</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">let, const and var</h2>
+						<table class="slide__table margin-top-1">
+							<thead class="slide__head slide__head--declaration-comparison">
+								<tr>
+									<th class="medium-font color-white">Keyword</th>
+									<th class="medium-font color-white">Scope</th>
+									<th class="medium-font color-white">Can Be Reassigned</th>
+									<th class="medium-font color-white">Hoisting</th>
+								</tr>
+							</thead>
+							<tbody class="slide__body slide__body--declaration-comparison slide__body--declaration-comparison--hoisting">
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">var</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Function scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">let</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">Yes</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="col-15-p">
+										<code class="slide__code small bold">const</code>
+									</td>
+									<td class="col-25-p">
+										<code class="slide__code small bold">Block scope</code>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+									<td class="col-15-p">
+										<p class="slide__text slide__text--table">No</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="../../assets/images/general/code_along.png" alt="Code Along"/>
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>2-scope-codealong</code></p>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20 margin-top-2" src="https://media.giphy.com/media/13UZisxBxkjPwI/giphy.gif" alt="Code Along" crossorigin=""/>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Quiz - Variables & Scope</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-2">
+							<img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/LOznMvZUKneOhiIscg/giphy.gif" alt="Quiz" crossorigin="">
+					</div>
+				</div></section>
+
+
+
+
+
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Objects</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects are a data type</h2>
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--post-it width-100-p" src="/data-types-postit.bb711039.png" alt="Data types post it">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects store data</h2>
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--objects-filing-cabinet width-30" src="/object-filing-cabinet.cfb8b83e.svg" alt="Objects in filing cabinet">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Objects are a type of data structure that is nearly universal across programming languages.</li>
+								<li class="slide__list-item">Like arrays, objects can hold multiple pieces of data of varying types.</li>
+								<li class="slide__list-item">Objects store data and are accessed like files in a filing cabinet.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const myObject = new Object();
 
 const myObject = {};
-// Most common way is 'object literal syntax'							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects</h2> <div class="slide__container"> <img class="slide__image slide__image--object-01 width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/object-01.43a4ca6a.png" alt="Object example 01"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects</h2> <div class="slide__container"> <img class="slide__image slide__image--object-02 width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/object-02.6da93560.png" alt="Object example 02"> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Objects are a collection of properties.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Property = Key & Value</h2> <div class="slide__container"> <img class="slide__image slide__image--object-03 width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/object-03.3f191df6.png" alt="Object example 03"> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">A property is an association between a key and a value.</li> <li class="slide__list-item"><em>key:</em> name (often descriptive) used to reference the data.</li> <li class="slide__list-item no-arrow"> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium bullet margin-left-5">A key can be either a name, a number or a string.</li> </ul> </li> <li class="slide__list-item"><em>value:</em> the data stored in that property.</li> <li class="slide__list-item no-arrow"> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium bullet margin-left-5">Can be any value including arrays, <code>null</code> or <code>undefined</code> and even another object.</li> </ul> </li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Key-value pair</h2> <div class="slide__container"> <img class="slide__image slide__image--object-04 width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/object-04.7b83957f.png" alt="Object example 04"> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">A property is a know as a <em>key-value pair</em>.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects are not ordered</h2> <div class="slide__container-flex space-between"> <div class="margin-right-1 flex-basis-third"> <div class="slide__container-flex"> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+// Most common way is 'object literal syntax'							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-01 width-100-p" src="/object-01.31206eed.png" alt="Object example 01">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-02 width-100-p" src="/object-02.fe001879.png" alt="Object example 02">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Objects are a collection of properties.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Property = Key & Value</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-03 width-100-p" src="/object-03.d721cb3e.png" alt="Object example 03">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">A property is an association between a key and a value.</li>
+							<li class="slide__list-item"><em>key:</em> name (often descriptive) used to reference the data.</li>
+							<li class="slide__list-item no-arrow">
+								<ul class="slide__list">
+									<li class="slide__list-item slide__list-item--medium bullet margin-left-5">A key can be either a name, a number or a string.</li>
+								</ul>
+							</li>
+							<li class="slide__list-item"><em>value:</em> the data stored in that property.</li>
+							<li class="slide__list-item no-arrow">
+								<ul class="slide__list">
+									<li class="slide__list-item slide__list-item--medium bullet margin-left-5">Can be any value including arrays, <code>null</code> or <code>undefined</code> and even another object.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Key-value pair</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-04 width-100-p" src="/object-04.9ae33429.png" alt="Object example 04">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">A property is a know as a <em>key-value pair</em>.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects are not ordered</h2>
+						<div class="slide__container-flex space-between">
+							<div class="margin-right-1 flex-basis-third">
+								<div class="slide__container-flex">
+									<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 	[
 	  "Dave", 		// 0
 	  "Benson-Phillips",	// 1
 	  55			// 2
 	]
-									</code></pre> </div> <p class="slide__text--medium text-transform-uppercase text-align-center">Array</p> <p class="slide__text--medium text-align-center">Ordered</p> </div> <div class="flex-basis-half"> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+									</code></pre>
+								</div>
+								<p class="slide__text--medium text-transform-uppercase text-align-center">Array</p>
+								<p class="slide__text--medium text-align-center">Ordered</p>
+							</div>
+							<div class="flex-basis-half">
+								<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 {
   name: "Dave",
   lastName: "Benson-Phillips",
   age: 55
 }
-								</code></pre> <p class="slide__text--medium text-transform-uppercase text-align-center">Object</p> <p class="slide__text--medium text-align-center">Not ordered</p> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">A method is a function property</h2> <div class="slide__container"> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+								</code></pre>
+								<p class="slide__text--medium text-transform-uppercase text-align-center">Object</p>
+								<p class="slide__text--medium text-align-center">Not ordered</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">A method is a function property</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const animal = {
   type: 'dog',
   speak: function() {
 	console.log("Woof!");
   }
 }
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">A method is a function property</h2> <div class="slide__container"> <img class="slide__image slide__image--object-05 width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/object-05.f2b6eebf.png" alt="Object example 05"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Get / Set Properties</h2> <div class="slide__container-center margin-top-3"> <img class="slide__image slide__image--get-set width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/get-set.95f7f879.png" alt="Dot notation and square brackets"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Dot Notation</h2> <div class="slide__container"> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">A method is a function property</h2>
+						<div class="slide__container">
+							<img class="slide__image slide__image--object-05 width-100-p" src="/object-05.19ed17ff.png" alt="Object example 05">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Get / Set Properties</h2>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--get-set width-40" src="/get-set.ed14a6ab.png" alt="Dot notation and square brackets">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Dot Notation</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const person = {
   name: 'Wilson',
   location: 'London',
@@ -89,18 +627,33 @@ const person = {
 	console.log("I hate lockdown");
   }
 };
-							</code></pre> <pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 
 person.name // getting a value
 => "Wilson"
 
-							</code></pre> <pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 person.name = 'Steven'; // setting a value
 => "Steven"
-							</code></pre> <pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 person.shout() // calling a method
 => "I hate lockdown"
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Bracket Notation</h2> <div class="slide__container"> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Bracket Notation</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const person = {
   name: 'Wilson',
   location: 'London',
@@ -108,17 +661,32 @@ const person = {
 	console.log("I hate lockdown");
   }
 };
-							</code></pre> <pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 person['name']
 => "Wilson"
-							</code></pre> <pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 person['name'] = 'Steven';
 => "Steven";
-							</code></pre> <pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<pre class="slide__pre fragment"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 person['whisper'] = function() {
   console.log("Social distancing is my jam");
 };
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Using a variable as a property</h2> <div class="slide__container"> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Using a variable as a property</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const name = 'Jayne';
 const object = {
     name: name
@@ -126,9 +694,27 @@ const object = {
 
 object;
 => { name: "Jayne" }
-							</code></pre> <div class="slide__container margin-top-1 fragment"> <ul class="slide__list"> <li class="slide__list-item--small">When the key and value are the same value, this can be shortened:</li> </ul> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+							<div class="slide__container margin-top-1 fragment">
+								<ul class="slide__list">
+									<li class="slide__list-item--small">When the key and value are the same value, this can be shortened:</li>
+								</ul>
+								<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const object = { name }; // ES6 syntax
-								</code></pre> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Property value shorthand</h2> <div class="slide__container"> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Property value shorthand</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const name = 'Adrianna';
 const nationality = 'Polish';
 const dob = '1990-10-10';
@@ -137,7 +723,22 @@ const person = { name, nationality, dob };
 
 person;
 => Object { name: "Adrianna", nationality: "Polish", dob: "1990-10-10" };
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Destructuring</h2> <div class="slide__container"> <ul class="slide__list"> <li class="slide__list-item--small">The opposite of this is known as <em>destructuring</em>. We can create variables based on the properties of an object:</li> </ul> <pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Destructuring</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--small">The opposite of this is known as <em>destructuring</em>. We can create variables based on the properties of an object:</li>
+							</ul>
+							<pre class="slide__pre"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const person = { name: 'Adrianna', nationality: 'Polish', dob: '1990-10-10' };
 const { name, dob, nationality } = person;
 
@@ -149,7 +750,22 @@ nationality;
 
 dob;
 => "1990-10-10";
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Deleting Properties</h2> <div class="slide__container"> <ul class="slide__list"> <li class="slide__list-item">If you want to delete a property of an object (and by extension, the value attached to the property), you need to use the <em>delete</em> operator:</li> </ul> <pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Deleting Properties</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">If you want to delete a property of an object (and by extension, the value attached to the property), you need to use the <em>delete</em> operator:</li>
+							</ul>
+							<pre class="slide__pre margin-top-1"><code class="hljs slide__code slide__code--middle javascript small" data-trim="">
 const classroom = {
   name: 'JSD 9',
   type: 'Remote',
@@ -160,7 +776,243 @@ delete classroom.start;
 
 classroom
 => Object { name: "WDI 2", type: "Remote" }
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>1-object-codealong</code></p> </div> <div class="slide__container-center margin-top-3"> <img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Exercise - Intro to Objects</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Create JavaScript objects using object literal notation</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter code > 2-objects-intro</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">5 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Write code to create a variable whose name corresponds to any one of the following things: (cloud ☁️, houseplant 💐, car 🚙, or airplane ✈).</li> <li class="slide__exercise__header__list--item">Write code to add a property to the object and specify a value for the property.</li> <li class="slide__exercise__header__list--item">Write code to add a method to the object, and specify a value for the method (use a comment or console.log() statement for the function body).</li> <li class="slide__exercise__header__list--item">BONUS: Rewrite your answers for 1-3 as a single JavaScript statement.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Real World Scenarios</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects in the Real World</h2> <div class="slide__container"> <p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight">size 10 </span>running shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects = Nouns</h2> <div class="slide__container"> <p class="slide__text">"A <span class="slide__highlight background-yellow">user</span>, browsing on a <span class="slide__highlight background-yellow">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight">size 10 </span>running shoes, and examines <span class="slide__highlight background-yellow">several pairs</span> before purchasing one."</p> </div> <div class="slide__container-flex margin-top-2"> <div class="flex-basis-third"> <p class="slide__text bold">implicit object:</p> </div> <div class="flex-basis-third background-yellow padding-top-1 padding-bottom-1 padding-left-1"> <p class="slide__text--large"><span>shopping cart</span></p> </div> <div class="flex-basis-third"></div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Properties = Adjectives</h2> <div class="slide__container"> <p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight background-light-green">size 10 running</span> shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p> </div> <div class="slide__container-flex margin-top-2"> <div class="flex-basis-third"> <p class="slide__text bold">implicit properties:</p> </div> <div class="flex-basis-third margin-left-1"> <p class="slide__text--medium">for each pair of shoes:</p> <div class="background-light-green padding-left-1"> <p class="slide__text--large"><span>price</span></p> <p class="slide__text--large"><span>colour</span></p> </div> </div> <div class="flex-basis-third margin-left-1"> <p class="slide__text--medium"><span>for the shopping cart:</span></p> <div class="background-light-green padding-left-1"> <p class="slide__text--large"><span>contents</span></p> <p class="slide__text--large"><span>total</span></p> <p class="slide__text--large"><span>shipping</span></p> </div> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Properties = Adjectives</h2> <div class="slide__container"> <p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight background-pink">searches</span> for <span class="slide__highlight">size 10 running</span> shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p> </div> <div class="slide__container-flex margin-top-2"> <div class="flex-basis-third"> <p class="slide__text bold">implicit properties:</p> </div> <div class="flex-basis-third margin-left-1"> <p class="slide__text--medium">for each pair of shoes:</p> <div class="background-pink padding-left-1"> <p class="slide__text--large"><span>add to cart</span></p> </div> </div> <div class="flex-basis-third margin-left-1"> <p class="slide__text--medium"><span>for the shopping cart:</span></p> <div class="background-pink padding-left-1"> <p class="slide__text--large"><span>calculate shipping</span></p> <p class="slide__text--large"><span>calculate tax</span></p> <p class="slide__text--large"><span>complete purchase</span></p> <p class="slide__text--large"><span>remove item</span></p> </div> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Objects</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Create JavaScript objects using object literal notation</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 3-object-exercise > monkey.js</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">15 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Open <code>monkey.js</code> in your editor.</li> <li class="slide__exercise__header__list--item">Create objects for 3 different monkeys each with the properties and methods listed in the start file.</li> <li class="slide__exercise__header__list--item">Practice retrieving properties and using methods with both dot notation and bracket syntax. </li> <li class="slide__exercise__header__list--item">BONUS: Rewrite your code to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_a_constructor_function" target="_blank">constructor function</a>.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">JSON</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Objects vs JSON</h2> <div class="slide__container-flex"> <div class="flex-basis-third space-between"> <p class="slide__text--medium text-align-center">Object</p> <pre class="slide__pre"><code class="slide__code slide__code--white slide__code--middle javascript small color-white padding-left-1 padding-right-1" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>1-object-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-3">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Exercise -  Intro to Objects</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create JavaScript objects using object literal notation</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter code > 2-objects-intro</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Write code to create a variable whose name corresponds to any one of the following things: (cloud ☁️, houseplant 💐, car 🚙, or airplane ✈).</li>
+													<li class="slide__exercise__header__list--item">Write code to add a property to the object and specify a  value for the property.</li>
+													<li class="slide__exercise__header__list--item">Write code to add a method to the object, and specify a value for the method (use a comment or console.log() statement for the function body).</li>
+													<li class="slide__exercise__header__list--item">BONUS: Rewrite your answers for 1-3 as a single  JavaScript statement.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Real World Scenarios</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects in the Real World</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight">size 10 </span>running shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects = Nouns</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight background-yellow">user</span>, browsing on a <span class="slide__highlight background-yellow">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight">size 10 </span>running shoes, and examines <span class="slide__highlight background-yellow">several pairs</span> before purchasing one."</p>
+						</div>
+
+						<div class="slide__container-flex margin-top-2">
+							<div class="flex-basis-third">
+								<p class="slide__text bold">implicit object:</p>
+							</div>
+							<div class="flex-basis-third background-yellow padding-top-1 padding-bottom-1 padding-left-1">
+								<p class="slide__text--large"><span>shopping cart</span></p>
+							</div>
+							<div class="flex-basis-third"></div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Properties = Adjectives</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight">searches</span> for <span class="slide__highlight background-light-green">size 10 running</span> shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p>
+						</div>
+
+						<div class="slide__container-flex margin-top-2">
+							<div class="flex-basis-third">
+								<p class="slide__text bold">implicit properties:</p>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium">for each pair of shoes:</p>
+								<div class="background-light-green padding-left-1 ">
+									<p class="slide__text--large"><span>price</span></p>
+									<p class="slide__text--large"><span>colour</span></p>
+								</div>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium"><span>for the shopping cart:</span></p>
+								<div class="background-light-green padding-left-1 ">
+									<p class="slide__text--large"><span>contents</span></p>
+									<p class="slide__text--large"><span>total</span></p>
+									<p class="slide__text--large"><span>shipping</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Properties = Adjectives</h2>
+						<div class="slide__container">
+							<p class="slide__text">"A <span class="slide__highlight">user</span>, browsing on a <span class="slide__highlight">shopping website,</span> <span class="slide__highlight background-pink">searches</span> for <span class="slide__highlight">size 10 running</span> shoes, and examines <span class="slide__highlight">several pairs</span> before purchasing one."</p>
+						</div>
+
+						<div class="slide__container-flex margin-top-2">
+							<div class="flex-basis-third">
+								<p class="slide__text bold">implicit properties:</p>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium">for each pair of shoes:</p>
+								<div class="background-pink padding-left-1">
+									<p class="slide__text--large"><span>add to cart</span></p>
+								</div>
+							</div>
+							<div class="flex-basis-third margin-left-1">
+								<p class="slide__text--medium"><span>for the shopping cart:</span></p>
+								<div class="background-pink padding-left-1">
+									<p class="slide__text--large"><span>calculate shipping</span></p>
+									<p class="slide__text--large"><span>calculate tax</span></p>
+									<p class="slide__text--large"><span>complete purchase</span></p>
+									<p class="slide__text--large"><span>remove item</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Objects</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create JavaScript objects using object literal notation</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 3-object-exercise > monkey.js</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">15 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open <code>monkey.js</code> in your editor.</li>
+													<li class="slide__exercise__header__list--item">Create objects for 3 different monkeys each with the properties and methods listed in the start file.</li>
+													<li class="slide__exercise__header__list--item">Practice retrieving properties and using methods with both dot notation and bracket syntax. </li>
+													<li class="slide__exercise__header__list--item">BONUS: Rewrite your code to use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Using_a_constructor_function" target="_blank">constructor function</a>.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">JSON</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Objects vs JSON</h2>
+						<div class="slide__container-flex">
+							<div class="flex-basis-third space-between">
+								<p class="slide__text--medium text-align-center">Object</p>
+								<pre class="slide__pre"><code class="slide__code slide__code--white slide__code--middle javascript small color-white padding-left-1 padding-right-1" data-trim="">
 const course = {
   name: 'JSD',
   weeks: 10,
@@ -178,7 +1030,11 @@ const course = {
     end: '2020-07-20'
   }
 }
-								</code></pre> </div> <div class="flex-basis-third space-between"> <p class="slide__text--medium text-align-center">JSON</p> <pre class="slide__pre"><code class="slide__code slide__code--white slide__code--middle javascript small color-white padding-left-1 padding-right-1" data-trim="">
+								</code></pre>
+							</div>
+							<div class="flex-basis-third space-between">
+								<p class="slide__text--medium text-align-center">JSON</p>
+								<pre class="slide__pre"><code class="slide__code slide__code--white slide__code--middle javascript small color-white padding-left-1 padding-right-1" data-trim="">
 const course = {
   "name": "JSD",
   "weeks": 10,
@@ -196,7 +1052,26 @@ const course = {
     "end": "2020-07-20"
   }
 }
-								</code></pre> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">JSON</h2> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item slide__list-item--medium"><em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation (JSON)</li> <li class="slide__list-item slide__list-item--medium">Lightweight text-based data format that's based on JS	objects.</li> <li class="slide__list-item slide__list-item--medium">Easy for humans to read and write AND easy for programs to parse and generate.</li> </ul> <pre class="slide__pre margin-left-1"><code class="slide__code slide__code--white slide__code--middle javascript small color-white padding-left-1 padding-right-1" data-trim="">
+								</code></pre>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JSON</h2>
+						<div class="slide__container-flex">
+								<ul class="slide__list">
+									<li class="slide__list-item slide__list-item--medium"><em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation (JSON)</li>
+									<li class="slide__list-item slide__list-item--medium">Lightweight text-based data format that's based on JS	objects.</li>
+									<li class="slide__list-item slide__list-item--medium">Easy for humans to read and write AND easy for programs to parse and generate.</li>
+								</ul>
+								<pre class="slide__pre margin-left-1"><code class="slide__code slide__code--white slide__code--middle javascript small color-white padding-left-1 padding-right-1" data-trim="">
 const course = {
   "name": "JSD",
   "weeks": 10,
@@ -214,7 +1089,31 @@ const course = {
     "end": "2020-07-20"
   }
 }
-								</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">JSON is not JavaScript Specific</h2> <img class="slide__image slide__image--json-locations width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/json-locations.65859307.png" alt="JSON Locations"> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">JSON in action</h2> <div class="slide__container-flex start"> <pre class="slide__pre width-50"><code class="slide__code slide__code--middle javascript xsmall" data-trim="">
+								</code></pre>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JSON is not JavaScript Specific</h2>
+						<img class="slide__image slide__image--json-locations width-100-p" src="/json-locations.8bcdd5c0.png" alt="JSON Locations">
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JSON in action</h2>
+						<div class="slide__container-flex start">
+							<pre class="slide__pre width-50"><code class="slide__code slide__code--middle javascript xsmall" data-trim="">
 "Programme": {
   "title": "Coronation Street",
   "synopsis":
@@ -230,11 +1129,136 @@ const course = {
 	  "productionType": "PROGRAMME"
 	}
 }
-							</code></pre> <img class="slide__image slide__image--coronation-street width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/itv-coronation-street.9f43afcd.png" alt="Coronation street"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <h2 class="slide__title">JSON Rules</h2> <img class="slide__image slide__image--json-logo margin-left-1 height-100-p width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/json-logo.7e50cfa4.png" alt="JSON logo"> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item--medium fragment">JSON object must be surrounded by curly braces <code>{}</code></li> <li class="slide__list-item--medium fragment">Name-value pairs are grouped by a <code>:</code> and separated by a comma<code>,</code>.</li> <li class="slide__list-item--medium fragment">Each key must be unique and enclosed within double quotes <code>""</code></li> <li class="slide__list-item--medium fragment">No trailing commas.</li> <li class="slide__list-item--medium fragment">In numbers, a decimal point must be followed by at least one digit.</li> <li class="slide__list-item--medium fragment"><code>Boolean</code> values can either be <code>true</code> or <code>false</code> and NULL values are represented with <code>null</code> (without quotes).</li> <li class="slide__list-item--medium fragment">No comments.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">To convert an object to JSON</h2> <pre class="slide__pre width-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim="">
+							</code></pre>
+							<img class="slide__image slide__image--coronation-street width-20" src="/itv-coronation-street.b3b9848f.png" alt="Coronation street">
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">JSON Rules</h2>
+							<img class="slide__image slide__image--json-logo margin-left-1 height-100-p width-10" src="/json-logo.1b2961c7.png" alt="JSON logo">
+						</div>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item--medium fragment">JSON object must be surrounded by curly braces <code>{}</code></li>
+							<li class="slide__list-item--medium fragment">Name-value pairs are grouped by a <code>:</code> and separated by a comma<code>,</code>.</li>
+							<li class="slide__list-item--medium fragment">Each key must be unique and enclosed within double quotes <code>""</code></li>
+							<li class="slide__list-item--medium fragment">No trailing commas.</li>
+							<li class="slide__list-item--medium fragment">In numbers, a decimal point must be followed by at least one digit.</li>
+							<li class="slide__list-item--medium fragment"><code>Boolean</code> values can either be <code>true</code> or <code>false</code> and NULL values are represented with <code>null</code> (without quotes).</li>
+							<li class="slide__list-item--medium fragment">No comments.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">To convert an object to JSON</h2>
+						<pre class="slide__pre width-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim="">
 JSON.stringify(object);
-						</code></pre> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">To convert an JSON to an Object</h2> <pre class="slide__pre width-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim="">
+						</code></pre>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">To convert an JSON to an Object</h2>
+						<pre class="slide__pre width-100-p margin-top-2"><code class="hljs slide__code slide__code--middle javascript large height-100-p" data-trim="">
 JSON.parse(json);
-						</code></pre> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>4-json-codealong</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/lTRuG1F4VZ3LHMpXY2/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Exercise - JSON</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Implement and work with JSON data</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual or Pair</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 5-json-exercise > app.js</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">10 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Open the started code in your editor.</li> <li class="slide__exercise__header__list--item">Follow the instructions to write code that produces the stated output.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Working with nested Data Structures</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Using JSON Data</h2> <div class="slide__container margin-middle width-30"> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--white slide__code--middle javascript small width-100-p" data-trim="">
+						</code></pre>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>4-json-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/lTRuG1F4VZ3LHMpXY2/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Exercise -  JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Implement and work with JSON data</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual or Pair</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 5-json-exercise > app.js</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open the started code in your editor.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions to write code that produces the stated output.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Working with nested Data Structures</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Using JSON Data</h2>
+						<div class="slide__container margin-middle width-30">
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--white slide__code--middle javascript small width-100-p" data-trim="">
 const course = '{"name":"JSD","weeks":
 10,"location":"Remote","instructor":
 "Wilson Espina","students":["Mr 
@@ -242,4 +1266,243 @@ Motivator","Cathy Burke","Carl Cox",
 "Steven King","Susie Dent"],"dates":
 {"start":"2020-05-11","end":"2020-07-
 20"}}'
-							</code></pre> </div> <div class="slide__container-center margin-top-2 fragment"> <img class="slide__image slide__image--what width-30" src="https://media.giphy.com/media/SDxzM5LAVq5Tq/giphy.gif" alt="What gif" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data.8aa3e31a.png" alt="Working with data structures"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step1.0ec1690e.png" alt="Working with data structures step 1"> <img class="slide__image width-30 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step1-image.e587cd72.png" alt="Working with data structures step 1 image"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step2.9d0f8da4.png" alt="Working with data structures step 2"> <img class="slide__image width-100-p margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step2-image.67af58dd.png" alt="Working with data structures step 2 image"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step3.857568d4.png" alt="Working with data structures step 3"> <img class="slide__image width-15 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step3-image.04485b83.png" alt="Working with data structures step 3 image"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step4.0bfd1766.png" alt="Working with data structures step 4"> <img class="slide__image width-50 margin-top-4" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step4-image.95b5582a.png" alt="Working with data structures step 4 image"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step4.0bfd1766.png" alt="Working with data structures step 4"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step5.236fa249.png" alt="Working with data structures step 5"> <img class="slide__image width-50" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step5-image.7a6e38c0.png" alt="Working with data structures step 5 image"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with nested data structure</h2> <div class="slide__container-center"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step4.0bfd1766.png" alt="Working with data structures step 4"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step5.236fa249.png" alt="Working with data structures step 5"> <img class="slide__image width-50" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/working-with-nested-data-step6-image.a62f3ff4.png" alt="Working with data structures step 6 image"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>6-cat-facts-json</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - JSON</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Implement and work with JSON data</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">starter-code > 7-data-structure-exercise > app.js</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">8 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Open <code>app.js</code> in your editor.</li> <li class="slide__exercise__header__list--item">Follow the instructions to write code that produces the stated output</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <h2 class="slide__title">Learning Objectives - Review</h2> </div> <ul class="slide__list"> <li class="slide__list-item">Know what objects and methods are</li> <li class="slide__list-item">Real World Scenarios</li> <li class="slide__list-item">Understand what is JSON</li> <li class="slide__list-item">Work with JSON-formatted data</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Objects & JSON</h2> </header> <div class="slide__content"> <h2 class="slide__title">Lookahead to Next Lesson (03/06/20)</h2> <h2 class="slide__title">SlackBot Lab</h2> <ul class="slide__list"> <li class="slide__list-item">Introduction to SlackBots.</li> <li class="slide__list-item">Use API keys to interact with the Hubot Framework.</li> <li class="slide__list-item">Write scripts that allow your bot to interact with users of the class Slack workspace.</li> </ul> <div class="slide__container-center"> <img class="slide__image width-12" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/hubot.ac15a2a1.png" alt="Hubot"> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Q&A</h1> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Objects & JSON</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Exit Ticket</h1> <p class="slide__text color-white">(Lesson #06)</p> </div> </div> </section> </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script> <script>var i="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";Reveal.initialize({slideNumber:!0,controls:!0,history:!0,transition:"fade",center:!1,progress:!1,dependencies:[{src:"".concat(i,"plugin/highlight/highlight.min.js"),async:!0,callback:function(){hljs.initHighlightingOnLoad()}}]});</script> </body></html>
+							</code></pre>
+						</div>
+						<div class="slide__container-center margin-top-2 fragment">
+							<img class="slide__image slide__image--what width-30" src="https://media.giphy.com/media/SDxzM5LAVq5Tq/giphy.gif" alt="What gif" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data.a315af6a.png" alt="Working with data structures">
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step1.6deba71a.png" alt="Working with data structures step 1">
+							<img class="slide__image width-30 margin-top-2" src="/working-with-nested-data-step1-image.c394ded0.png" alt="Working with data structures step 1 image">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step2.0026c0ea.png" alt="Working with data structures step 2">
+							<img class="slide__image width-100-p margin-top-2" src="/working-with-nested-data-step2-image.559602bf.png" alt="Working with data structures step 2 image">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step3.7a0cee48.png" alt="Working with data structures step 3">
+							<img class="slide__image width-15 margin-top-2" src="/working-with-nested-data-step3-image.4c75089e.png" alt="Working with data structures step 3 image">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step4.b7b1e779.png" alt="Working with data structures step 4">
+							<img class="slide__image width-50 margin-top-4" src="/working-with-nested-data-step4-image.e6c5d541.png" alt="Working with data structures step 4 image">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step4.b7b1e779.png" alt="Working with data structures step 4">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step5.fbba9d84.png" alt="Working with data structures step 5">
+							<img class="slide__image width-50" src="/working-with-nested-data-step5-image.81475041.png" alt="Working with data structures step 5 image">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with nested data structure</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step4.b7b1e779.png" alt="Working with data structures step 4">
+							<img class="slide__image width-100-p" src="/working-with-nested-data-step5.fbba9d84.png" alt="Working with data structures step 5">
+							<img class="slide__image width-50" src="/working-with-nested-data-step6-image.fdddd7e3.png" alt="Working with data structures step 6 image">
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>6-cat-facts-json</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Implement and work with JSON data</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">starter-code > 7-data-structure-exercise > app.js</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">8 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Open <code>app.js</code> in your editor.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions to write code that produces the stated output</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">Learning Objectives - Review</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Know what objects and methods are</li>
+							<li class="slide__list-item">Real World Scenarios</li>
+							<li class="slide__list-item">Understand what is JSON</li>
+							<li class="slide__list-item">Work with JSON-formatted data</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Lookahead to Next Lesson (03/06/20)</h2>
+						<h2 class="slide__title">SlackBot Lab</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Introduction to SlackBots.</li>
+							<li class="slide__list-item">Use API keys to interact with the Hubot Framework.</li>
+							<li class="slide__list-item">Write scripts that allow your bot to interact with users of the class Slack workspace.</li>
+						</ul>
+						<div class="slide__container-center">
+							<img class="slide__image width-12" src="/hubot.b74c9f95.png" alt="Hubot">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Objects & JSON</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson #06)</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+Reveal.initialize({
+  slideNumber: true,
+  controls: true,
+  history: true,
+  transition: 'fade',
+  center: false,
+  progress: false,
+  dependencies: [{
+    src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
+    async: true,
+    callback: function callback() {
+      hljs.initHighlightingOnLoad();
+    }
+  }]
+});</script>
+	</body>
+</html>
