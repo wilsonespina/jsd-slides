@@ -23,22 +23,26 @@
 					</div>
 				</section>
 
-
-
-
-
-
-
-
-
-
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Review</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--black">What did we do last lesson?</h1>
+					</div>
+				</section>
 
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
 					</header>
 					<div class="slide__content">
-						<h2 class="slide__title">Look Ahead to Next Lesson </h2>
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5"
+							src="../../assets/images/general/learning-objective.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
 							<li class="slide__list-item">Describe what asynchronous means in relation to JavaScript</li>
 							<li class="slide__list-item">Pass functions as arguments to functions that expect them.</li>
@@ -47,6 +51,252 @@
 						</ul>
 					</div>
 				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Item 1</li>
+							<li class="slide__list-item">Item 2</li>
+							<li class="slide__list-item">Item 3</li>
+							<li class="slide__list-item">Item 4</li>
+							<li class="slide__list-item">Item 5</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Exit Ticket Questions</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">First item</li>
+								<li class="slide__list-item">Second item</li>
+								<li class="slide__list-item">third item</li>
+								<li class="slide__list-item">Fourth item</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Resources</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer</li>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/11-async-callbacks</code></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Homework Review</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Resources</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer</li>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/11-async-callbacks</code></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Asynchronous Programming</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Synchronous Code</h2>
+						<div class="slide__container-flex start">
+							<div>
+								<pre class="slide__pre "><code class="slide__code javascript small margin-top-1" data-trim>
+let status
+function doSomething() {
+    for (let i	= 0; i < 1000000000; i++) {
+        numberArray.push(i)
+    }
+    status = 'done'
+    console.log('First function done')
+}
+function doAnotherThing() {
+    console.log('Second function done')
+}
+function doSomethingElse() {
+    console.log('Third function: '+ status)
+}
+								</code></pre>
+							</div>
+							<div class="margin-left-1">
+
+
+								<div class="slide__container margin-top-1 margin-left-2">
+									<p class="slide__text-small"><code class="slide__code--light-blue">doSomething()</code></p>
+									<p class="slide__text-small"><code class="slide__code--light-blue">doAnotherThing()</code></p>
+									<p class="slide__text-small"><code class="slide__code--light-blue">doSomethingElse()</code></p>
+								</div>
+								<div class="width-25 fragment">
+									<pre class="slide__pre "><code class="slide__code javascript small margin-top-1" data-trim>
+// result in console
+// (after a few seconds):
+
+> "First function done"
+> "Second function done"
+> "Third function: done"
+									</code></pre>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Synchronous Code</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">Statements are executed in order, one after another.</li>
+								<li class="slide__list-item">Code blocks program flow to wait for results.</li>
+								<li class="slide__list-item">Most JavaScript code is synchronous.</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image width-100-p margin-top-2" src="../../assets/images/week-6/statements-synchronous.png" alt="Statements blocks synchronous"/>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Asynchronous Code</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">Code execution is independent of the main program flow.</li>
+								<li class="slide__list-item">Statements are executed concurrently.</li>
+								<li class="slide__list-item">Program does not block program flow to wait for results.</li>
+								<li class="slide__list-item">Certain JS statements are asynchronous by default.</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image width-25 margin-top-2" src="../../assets/images/week-6/statements-asynchronous.png" alt="Statements blocks asynchronous"/>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Asynchronous Program Flow</h2>
+						<div class="slide__container">
+							<pre class="slide__pre "><code class="slide__code javascript small margin-top-1" data-trim>
+$('button').on('click', doSomething);
+
+$.ajax(url, function(data) {
+    doAnotherThing(data)
+});
+
+fetch(url).then(response => {
+    if (response.ok) {
+	    return response.json();
+    } else {
+        console.log('There was a problem.');
+    }
+}).then(doSomethingElse);
+							</code></pre>
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Approaches to Asynchronous Program Flow</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-50 margin-top-2" src="../../assets/images/week-6/async-flow.png" alt="Asynchronous flow options"/>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Functions & Callbacks</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">How many arguments in this code?</h2>
+						<div class="slide__container">
+							<pre class="slide__pre "><code class="slide__code javascript medium margin-top-1" data-trim>
+$('button').on('click', function() {
+	// your code here
+});
+							</code></pre>
+
+							<pre class="slide__pre fragment margin-top-3"><code class="slide__code javascript medium margin-top-1" data-trim>
+								$('button').on(parameter1, parameter2);
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+
+
+
+
+
+
+
+
 
 
 
