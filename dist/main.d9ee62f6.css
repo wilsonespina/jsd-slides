@@ -2218,7 +2218,7 @@ ul li:before {
 .slides .slide__table .slide__head--javascript tr {
   background-color: #358DF2;
 }
-.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th, .slides .slide__table .slide__head--http th {
+.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th, .slides .slide__table .slide__head--http th, .slides .slide__table .slide__head--restful th {
   border: 0.2rem solid #FFFFFF;
   padding: 0.5rem 1rem;
 }
@@ -2265,16 +2265,19 @@ ul li:before {
 .slides .slide__table .slide__body--jquery-selectors td:nth-child(1) {
   background-color: #feee9b;
 }
-.slides .slide__table .slide__body--node tr:nth-child(odd) {
-  background-color: #F6F6F6;
-}
-.slides .slide__table .slide__body--node tr:nth-child(even) {
-  background-color: #E4F1FE;
-}
 .slides .slide__table .slide__body--node tr {
   height: 6rem;
 }
-.slides .slide__table .slide__body--node td {
+.slides .slide__table .slide__body--restful tr {
+  height: 4rem;
+}
+.slides .slide__table .slide__body--restful tr:nth-child(odd), .slides .slide__table .slide__body--node tr:nth-child(odd) {
+  background-color: #F6F6F6;
+}
+.slides .slide__table .slide__body--restful tr:nth-child(even), .slides .slide__table .slide__body--node tr:nth-child(even) {
+  background-color: #E4F1FE;
+}
+.slides .slide__table .slide__body--restful td, .slides .slide__table .slide__body--node td {
   padding-left: 0.5rem;
   border: 0.2rem solid white;
 }
@@ -2466,6 +2469,12 @@ ul li:before {
   font-size: 1.9rem;
 }
 .slides .slide__list-item--medium:before {
+  border-width: 0.5rem 0 0.5rem 0.5rem;
+}
+.slides .slide__list-item--large {
+  font-size: 3rem;
+}
+.slides .slide__list-item--large:before {
   border-width: 0.5rem 0 0.5rem 0.5rem;
 }
 .slides .slide__list-item.no-arrow {
@@ -2687,6 +2696,9 @@ ul li:before {
 }
 .slides .slide .padding-left-3 {
   padding-left: 3rem;
+}
+.slides .slide .padding-left-20 {
+  padding-left: 20rem;
 }
 .slides .slide .padding-right-1 {
   padding-right: 1rem;

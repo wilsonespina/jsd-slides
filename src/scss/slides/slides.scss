@@ -177,7 +177,7 @@
                         background-color: $darkblue;
                     }
                 }
-                &--jquery-selectors, &--jquery-traversal, &--http {
+                &--jquery-selectors, &--jquery-traversal, &--http, &--restful {
                     th {
                         border: 0.2rem solid $white;
                         padding: 0.5rem 1rem;
@@ -242,20 +242,28 @@
                     }
                 }
 
-                &--node {
+                &--node{
+                    tr {
+                        height: 6rem;
+                    }
+                }
+                &--restful {
+                    tr {
+                        height: 4rem;
+                    }
+                }
+                &--restful, &--node  {
                     tr:nth-child(odd) {
                         background-color: $lightgrey;
                     }
                     tr:nth-child(even) {
                         background-color: $lightblue;
                     }
-                    tr {
-                        height: 6rem;
-                    }
                     td {
                         padding-left: 0.5rem;
                         border: 0.2rem solid white;
                     }
+
                 }
                 &--logical-operators, &--declaration-comparison, &--syllabus  {
                     td {
@@ -480,6 +488,12 @@
                 }
                 &--medium {
                     font-size: 1.9rem;
+                    &:before {
+                        border-width: 0.5rem 0 0.5rem 0.5rem;
+                    }
+                }
+                &--large {
+                    font-size: 3rem;
                     &:before {
                         border-width: 0.5rem 0 0.5rem 0.5rem;
                     }

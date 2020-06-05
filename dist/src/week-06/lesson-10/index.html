@@ -43,10 +43,10 @@
 						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
-							<li class="slide__list-item">Intro to AJAX.</li>
-							<li class="slide__list-item">Making API calls.</li>
-							<li class="slide__list-item">Consuming and working with API data.</li>
 							<li class="slide__list-item">Describe APIs and how to make calls and consume API data.</li>
+							<li class="slide__list-item">Understand API calls.</li>
+							<li class="slide__list-item">Consuming and working with API data.</li>
+							<li class="slide__list-item">Intro to AJAX.</li>
 							<li class="slide__list-item">Access public APIs and get information back.</li>
 							<li class="slide__list-item">Implement an Ajax request with Fetch.</li>
 							<li class="slide__list-item">Create an Ajax request using jQuery.</li>
@@ -858,12 +858,14 @@
 						<h2 class="slide__title">7 Restful Routes</h2>
 						<div class="slide__container">
 							<p class="slide__text--medium">Consider the 7 RESTFUL routes for requesting a resource of <em>photos</em>.</p>
-
-							
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image width-40 margin-top-2" src="/photos-site.1b65ef49.png" alt="Photos site">
 
 						</div>
 					</div>
 				</section>
+
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Ajax & APIS</h2>
@@ -871,70 +873,112 @@
 					<div class="slide__content">
 						<h2 class="slide__title">7 Restful Routes</h2>
 						<div class="slide__container">
-							<p class="slide__text--medium">Consider the 7 RESTFUL routes for requesting a resource of <em>photos</em>.</p>
-
-							<table class="slide__table margin-top-1 width-100-p fragment">
-								<thead class="slide__head slide__head--http">
+							<table class="slide__table width-100-p">
+								<thead class="slide__head slide__head--restful">
 									<tr>
 										<th class="medium-font bold padding-left-1">URL</th>
 										<th class="medium-font bold padding-left-1">HTTP VERB</th>
-										<th class="medium-font bold padding-left-1">OPERATION</th>
+										<th class="medium-font bold padding-left-1">Action</th>
+										<th class="medium-font bold padding-left-1">Result</th>
 									</tr>
 								</thead>
-								<tbody class="slide__body slide__body--http">
+								<tbody class="slide__body slide__body--restful">
 									<tr>
-										<td class="col-30-p">
+										<td class="col-25-p">
 											<p class="slide__text slide__text--table"><code>/photos/</code></p>
 										</td>
-										<td class="col-30-p">
+										<td class="col-25-p">
 											<p class="slide__text slide__text--table">GET</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">Retrieve a new resource</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Index</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Display all photos</p>
 										</td>
 									</tr>
 									<tr>
-										<td class="col-30-p">
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table"><code>/photos/new</code></p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">GET</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">New</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Show a form to upload a new photo</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table"><code>/photos/create</code></p>
+										</td>
+										<td class="col-25-p">
 											<p class="slide__text slide__text--table">POST</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">POST</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Create</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">Create a new resource</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Add a new photo to database, then redirect</p>
 										</td>
 									</tr>
 									<tr>
-										<td class="col-30-p">
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table"><code>/photos/:id</code></p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">GET</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Show</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Show info about one photo</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table"><code>/photos/:id/edit</code></p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">GET</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Edit</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Show edit for for one photo</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table"><code>/photos/:id</code></p>
+										</td>
+										<td class="col-25-p">
 											<p class="slide__text slide__text--table">PUT</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">PUT</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Update</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">Replace a resource</p>
-										</td>
-									</tr>
-									<tr>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">PATCH</p>
-										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">PATCH</p>
-										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">Update an existing resource</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Update a particular photo, then redirect</p>
 										</td>
 									</tr>
 									<tr>
-										<td class="col-30-p">
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table"><code>/photos/:id</code></p>
+										</td>
+										<td class="col-25-p">
 											<p class="slide__text slide__text--table">DELETE</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">DELETE</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Destroy</p>
 										</td>
-										<td class="col-30-p">
-											<p class="slide__text slide__text--table">Delete a resource resource</p>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">Destroy a particular photo, then redirect</p>
 										</td>
 									</tr>
 								</tbody>
@@ -944,54 +988,290 @@
 					</div>
 				</section>
 
-
-
-
-
-
-
-
-
-
-
-				
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!-- <section class="slide" data-background-color="black">
+				<section class="slide" data-background-color="black">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Ajax & APIS</h2>
 					</header>
 					<div class="slide__content">
-						<h1 class="slide__title--white">AJAX</h1>
+						<h1 class="slide__title--white">Ajax</h1>
 					</div>
-				</section> -->
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">AJAX</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-2 padding-left-20">
+								<li class="slide__list-item slide__list-item--large no-arrow"><em>A</em>syncronous</li>
+								<li class="slide__list-item slide__list-item--large no-arrow"><em>J</em>avaScript</li>
+								<li class="slide__list-item slide__list-item--large no-arrow"><em>A</em>nd</li>
+								<li class="slide__list-item slide__list-item--large no-arrow"><em>X</em>ML (or JSON)</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">AJAX</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">AJAX is a method of building interactive applications for the Web that processes user requests immediately, without re-rendering a whole page.</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image slide__image--code-along width-30" src="https://media.giphy.com/media/ZgTR3UQ9XAWDvqy9jv/giphy.gif" alt="Interactive website" crossorigin="">
+							</div>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">AJAX - Advantages 😀</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium"><em>FASTER</em> - AJAX allows easier and quicker interaction between user and website as pages are not reloaded for content to be displayed.</li>
+								<li class="slide__list-item--medium"><em>COMPACT</em> -  With AJAX, several application features can be handled using a single web page.</li>
+								<li class="slide__list-item--medium"><em>BACKEND SEPARATED FROM FRONTEND</em> -  Applications that use AJAX-heavy frontends means developers don't have to work on both sides of the stack at the same time.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">AJAX - Disadvantages 🙁</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium"><em>JAVASCRIPT CAN BE DISABLED</em> - Some website users prefer to turn javascript functionality off on their browser, rendering the AJAX application totally useless.</li>
+								<li class="slide__list-item--medium"><em>MORE RELIANT ON UX</em> - The fact that a page doesn't refresh means you have to be even more considerate of what a user is experiencing.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Vanilla JavaScript Ajax</h1>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase">FETCH = Ajax request in vanilla JavaScript</h2>
+						<div class="slide__container margin-top-2">
+							<pre class="slide__pre "><code class="slide__code javascript small margin-top-1" data-trim="">
+fetch(url)
+    .then((response) => {
+	  if (!response.ok) throw Error(response.statusText);
+	  return response.json();
+    })
+    .then((responseData) => {
+	  const data = JSON.stringify(responseData);
+	  // do something with the data
+    });
+							</code></pre>
 
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>01-fetch-ajax-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">jQuery Ajax</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery AJAX Method</h2>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--http">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHOD</th>
+										<th class="medium-font bold padding-left-1">DESCRIPTION</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--http">
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>$.get()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table">Retrieve a new resource</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>$.ajax()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table">Create a new resource</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>01-fetch-ajax-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - JQUERY AJAX</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create an Ajax request using jQuery or Fetch.</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue"><code>02-fetch-ajax-exercise</code></li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Copy the code from the codealong to the main.js file.</li>
+													<li class="slide__exercise__header__list--item">Change the URL to the one shown in the instructions.</li>
+													<li class="slide__exercise__header__list--item">Verify that a new set of results is shown in the console.</li>
+													<li class="slide__exercise__header__list--item">BONUS - Read the instruction in main.js for bonus tasks.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives - Review</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Describe APIs and how to make calls and consume API data.</li>
+							<li class="slide__list-item">Understand API calls.</li>
+							<li class="slide__list-item">Consuming and working with API data.</li>
+							<li class="slide__list-item">Intro to AJAX.</li>
+							<li class="slide__list-item">Access public APIs and get information back.</li>
+							<li class="slide__list-item">Implement an Ajax request with Fetch.</li>
+							<li class="slide__list-item">Create an Ajax request using jQuery.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Look Ahead to Next Lesson </h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Describe what asynchronous means in relation to JavaScript</li>
+							<li class="slide__list-item">Pass functions as arguments to functions that expect them.</li>
+							<li class="slide__list-item">Write functions that take other functions as arguments.</li>
+							<li class="slide__list-item">Build asynchronous program flow using Fetch</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIS</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson #10)</p>
+						</div>
+					</div>
+				</section>
 
 
 			</div>
