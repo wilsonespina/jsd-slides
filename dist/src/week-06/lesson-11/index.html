@@ -593,6 +593,104 @@ doSomething((result) => {
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Promises</h2>
+						<div class="slide__container">
+							<p class="slide__text">Traditional Callback:</p>
+							<pre class="slide__pre"><code class="slide__code medium javascript margin-top-1" data-trim="">
+doSomething(successCallback, failureCallback);
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2 fragment">
+							<p class="slide__text">Callback using a promise:</p>
+							<pre class="slide__pre"><code class="slide__code medium javascript margin-top-1" data-trim="">
+doSomething()
+  .then(successCallback)  // work with result
+  .catch(failureCallback) // handle error
+							</code></pre>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Multiple Callback with Promises</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="slide__code medium javascript margin-top-1" data-trim="">
+doSomething()
+  .then(result => doSomethingElse(result))
+  .then(result => doThirdThing(result))
+  .then(result => {
+    console.log('Got the final result: ' + result)
+  })
+  .catch((error) => {
+    console.log('There was an error: ' + error);
+  });
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Error Handling with Promises</h2>
+						<div class="slide__container">
+							<img class="slide__image width-100-p margin-top-1" src="/promises-error-handling.f876aee4.png" alt="Promises error handling">
+
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Creating Promises</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="slide__code medium javascript margin-top-1" data-trim="">
+const fooPromise = () => {
+  new Promise(function(resolve, reject) {
+    setTimeout(() => {
+      resolve('foo')
+    }, 300)
+  });
+}
+
+fooPromise()
+  .then(value => {
+  console.log(value) /* expected output: "foo" */
+});
+
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Promises</h2>
+						<div class="slide__container">
+							<!-- <img class="slide__image width-100-p margin-top-1" src="../../assets/images/week-6/promises-error-handling.png" alt="Promises error handling"/> -->
+
+						</div>
+					</div>
+				</section>
+
 
 
 
