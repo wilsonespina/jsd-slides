@@ -80,6 +80,46 @@
 					</div>
 				</section>
 
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Homework Review</h1>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to the DOM</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Resources</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer:</li>
+								<ul class="slide__list">
+									<li class="slide__list-item">Open the Terminal</li>
+									<li class="slide__list-item"><code>cd</code> to the <code>Documents/JSD/jsd-9-resources</code> directory</li>
+									<li class="slide__list-item">Type <code class="bold">git pull origin master</code> and press <code class="bold">return</code></li>
+								</ul>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/08-intro-dom</code></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Ajax & APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Document Object Model</h1>
+					</div>
+				</section>
+
 
 				<section class="slide">
 					<header class="slide__header">
@@ -284,7 +324,7 @@
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">2 mins</h2>
+												<h2 class="slide-timing__header">3 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
@@ -769,11 +809,11 @@ item.classList.remove('selected');
 							<div class="slide__exercise">
 								<p class="slide__exercise__header">Key Objective</p>
 								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item">Use vanilla JavaScript methods and properties to create and	modify DOM nodes.</li>
+									<li class="slide__exercise__header__list--item">Use vanilla JavaScript methods and properties to access DOM nodes.</li>
 								</ul>
 								<p class="slide__exercise__header">Type of Exercise</p>
 								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item">Individual or Pair</li>
+									<li class="slide__exercise__header__list--item">Individual</li>
 								</ul>
 								<p class="slide__exercise__header">Location</p>
 								<ul class="slide__exercise__header__list">
@@ -784,12 +824,13 @@ item.classList.remove('selected');
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">5 mins</h2>
+												<h2 class="slide-timing__header">6 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
 													<li class="slide__exercise__header__list--item">Open starter code in your editor.</li>
-													<li class="slide__exercise__header__list--item">Follow the instructions to write code that selects and  modifies the indicated elements and content.</li>
+													<li class="slide__exercise__header__list--item">Follow the instructions in to write code that selects and modifies the indicated elements and content in PARTS 1 - 3</li>
+													<li class="slide__exercise__header__list--item">BONUS - Target the third element by reading up on the css selector <code>nth-of-type</code></li>
 												</ol>
 											</td>
 										</tr>
@@ -799,7 +840,7 @@ item.classList.remove('selected');
 						</div>
 					</div>
 				</section>
-
+				
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Lab - DOM Attributes Exercise</h2>
@@ -825,12 +866,13 @@ item.classList.remove('selected');
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">5 mins</h2>
+												<h2 class="slide-timing__header">6 mins</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
 													<li class="slide__exercise__header__list--item">Open starter code in your editor.</li>
 													<li class="slide__exercise__header__list--item">Follow the instructions to write code that selects and  modifies the indicated elements and content.</li>
+													<li class="slide__exercise__header__list--item">BONUS - Use a <code>forEach</code> loop to iterate through DOM elements.</li>
 												</ol>
 											</td>
 										</tr>
@@ -858,7 +900,7 @@ item.classList.remove('selected');
 						<h2 class="slide__title">Adding Content to the DOM</h2>
 						<div class="slide__container-flex">
 							<ul class="slide__list">
-								<li class="slide__list-item--medium">Sets new content in an element, including nested HTML tags.</li>
+								<li class="slide__list-item--medium">Create a new element with <code>document.createElement()</code></li>
 							</ul>
 							<div class="flex-basis-third width-20">
 								<div class="slide__container-center">
@@ -877,8 +919,8 @@ item.classList.remove('selected');
 						<h2 class="slide__title">Adding Content to the DOM</h2>
 						<div class="slide__container-flex">
 							<ul class="slide__list">
-								<li class="slide__list-item--medium">Sets new content in an element, including nested HTML tags.</li>
-								<li class="slide__list-item--medium">add content to that element with a	property such as <code>textContent</code>, <code>innerHTML</code>, or <code>src</code>.</li>
+								<li class="slide__list-item--medium">Create a new element with <code>document.createElement()</code></li>
+								<li class="slide__list-item--medium">Add content to that element with a	property such as <code>textContent</code>, <code>innerHTML</code>, or <code>src</code>.</li>
 							</ul>
 							<div class="flex-basis-third width-20">
 								<div class="slide__container-center">
@@ -897,9 +939,9 @@ item.classList.remove('selected');
 						<h2 class="slide__title">Adding Content to the DOM</h2>
 						<div class="slide__container-flex">
 							<ul class="slide__list">
-								<li class="slide__list-item--medium">Sets new content in an element, including nested HTML tags.</li>
-								<li class="slide__list-item--medium">add content to that element with a	property such as <code>textContent</code>, <code>innerHTML</code>, or <code>src</code>.</li>
-								<li class="slide__list-item--medium">attach the new element to the DOM	with <code>appendChild()</code></li>
+								<li class="slide__list-item--medium">Create a new element with <code>document.createElement()</code></li>
+								<li class="slide__list-item--medium">Add content to that element with a	property such as <code>textContent</code>, <code>innerHTML</code>, or <code>src</code>.</li>
+								<li class="slide__list-item--medium">Attach the new element to the DOM	with <code>appendChild()</code></li>
 							</ul>
 							<div class="flex-basis-third width-20">
 								<div class="slide__container-center">
@@ -937,12 +979,13 @@ const item2 = document.createElemement('li');
 						<h2 class="slide__title lowercase"><code>innerHTML</code></h2>
 						<ul class="slide__list">
 							<li class="slide__list-item--medium">Specifies text content of an element.</li>
-							<li class="slide__list-item--medium">‣ May include nested HTML tags.</li>
+							<li class="slide__list-item--medium">May include nested HTML tags.</li>
 						</ul>
 						<div class="slide__container margin-top-2">
 							<pre class="slide__pre"><code class="slide__code slide__code--middle html medium" data-trim>
 item1.innerHTML = '&lt;strong&gt;Tea&lt;/strong&gt;'
 item2.innerHTML = '&lt;em&gt;Coffee&lt;/em&gt;'
+item3.innerHTML = 'Just normal text'
 							</code></pre>
 						</div>
 					</div>
@@ -988,7 +1031,7 @@ list.appendChild(item2); // adds item2 li to list ul
 				</section>
 
 
-				<section class="slide">
+				<!-- <section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Discussion - DOM Manipulation</h2>
 					</header>
@@ -1023,7 +1066,7 @@ list.appendChild(item2); // adds item2 li to list ul
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<section class="slide">
 					<header class="slide__header">
@@ -1046,7 +1089,7 @@ list.appendChild(item2); // adds item2 li to list ul
 									<tbody>
 										<tr>
 											<td class="slide-timing">
-												<h2 class="slide-timing__header">Until 20:50</h2>
+												<h2 class="slide-timing__header">Until 20:45</h2>
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
