@@ -1,50 +1,1677 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSD | Lesson 09</title><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-32x32.8ae2cba7.png" sizes="32x32"><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-16x16.74161018.png" sizes="16x16"><link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"><link rel="stylesheet" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/main.57857517.css"></head><body> <div class="reveal"> <div class="slides"> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Events & jQuery</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Review</h2> </header> <div class="slide__content"> <h1 class="slide__title--black">What did we do last lesson?</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Create DOM event handlers using vanilla JavaScript.</li> <li class="slide__list-item">Select DOM elements and properties using jQuery.</li> <li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Agenda</h2> <ul class="slide__list"> <li class="slide__list-item">JavaScript events</li> <li class="slide__list-item">Event Objects</li> <li class="slide__list-item">Introduction to jQuery</li> <li class="slide__list-item">Getting and setting DOM elements with jQuery</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Exit Ticket Questions</h2> <div class="slide__container"> <ol class="slide__list margin-top-1 padding-left-2"> <li class="slide__list-item">Can we have more similar code-alongs and exercises?</li> <li class="slide__list-item">Can we have some help with css referencing?</li> </ol> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Mid-Course Feedback</h1> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Events</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">DOM Events</h2> <div class="slide__container"> <div class="slide__container-center"> <img class="slide__image height-100-p width-30" src="https://media.giphy.com/media/l3vQXZiBGhxBEALEk/giphy.gif" alt="Pensive statue" crossorigin=""> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Most modern websites have interactive elements.</li> <li class="slide__list-item">Interactivity is triggered by user driven events.</li> </ul> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">DOM Events</h2> <div class="slide__container-flex"> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/mouse.a0bea49a.png" alt="Mouse"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/keyboard.057eda2c.png" alt="Keyboard"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/form.af37f552.png" alt="Form"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/document.7398d015.png" alt="Document"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Event Listeners</h2> <div class="slide__container"> <p class="slide__text--medium">Select the DOM Element:</p> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 09</title>
+		<link rel="icon" type="image/png" href="/favicon-32x32.43b30f10.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="/main.d9ee62f6.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Events & jQuery</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Review</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--black">What did we do last lesson?</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Create DOM event handlers using vanilla JavaScript.</li>
+							<li class="slide__list-item">Select DOM elements and properties using jQuery.</li>
+							<li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">JavaScript events</li>
+							<li class="slide__list-item">Event Objects</li>
+							<li class="slide__list-item">Introduction to jQuery</li>
+							<li class="slide__list-item">Getting and setting DOM elements with jQuery</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Exit Ticket Questions</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">Can we have more similar code-alongs and exercises?</li>
+								<li class="slide__list-item">Can we have some help with css referencing?</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Mid-Course Feedback</h1>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Events</h1>
+					</div>
+				</section>
+
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">DOM Events</h2>
+						<div class="slide__container">
+							<div class="slide__container-center">
+								<img class="slide__image height-100-p width-30" src="https://media.giphy.com/media/l3vQXZiBGhxBEALEk/giphy.gif" alt="Pensive statue" crossorigin="">
+							</div>
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Most modern websites have interactive elements.</li>
+								<li class="slide__list-item">Interactivity is triggered by user driven events.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">DOM Events</h2>
+						<div class="slide__container-flex">
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/mouse.30df6c45.png" alt="Mouse">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/keyboard.97a36a19.png" alt="Keyboard">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/form.a50135dc.png" alt="Form">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/document.8c740310.png" alt="Document">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const button = document.querySelector(‘.submitBtn’);
-							</code></pre> </div> <div class="slide__container fragment margin-top-2"> <p class="slide__text--medium">Attach event listener to DOM element:</p> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/event-listener-1.1c92f84b.png" alt="Event Listener diagram 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Event Listeners</h2> <div class="slide__container"> <p class="slide__text--medium">Select the DOM Element:</p> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+							</code></pre>
+						</div>
+						<div class="slide__container fragment margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-1.2df4f6b7.png" alt="Event Listener diagram 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const button = document.querySelector(‘.submitBtn’);
-							</code></pre> </div> <div class="slide__container margin-top-2"> <p class="slide__text--medium">Attach event listener to DOM element:</p> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/event-listener-2.64ab5c40.png" alt="Event Listener diagram 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Event Listeners</h2> <div class="slide__container"> <p class="slide__text--medium">Select the DOM Element:</p> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-2.0dfea7b6.png" alt="Event Listener diagram 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const button = document.querySelector(‘.submitBtn’);
-							</code></pre> </div> <div class="slide__container margin-top-2"> <p class="slide__text--medium">Attach event listener to DOM element:</p> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/event-listener-3.e12a75e0.png" alt="Event Listener diagram 3"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Event Listeners</h2> <div class="slide__container"> <p class="slide__text--medium">Select the DOM Element:</p> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-3.9ff3eab5.png" alt="Event Listener diagram 3">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const button = document.querySelector(‘.submitBtn’);
-							</code></pre> </div> <div class="slide__container margin-top-2"> <p class="slide__text--medium">Attach event listener to DOM element:</p> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/event-listener-4.fc88a87a.png" alt="Event Listener diagram 4"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex margin-top-1"> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/mouse.a0bea49a.png" alt="Mouse"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/keyboard.057eda2c.png" alt="Keyboard"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/form.af37f552.png" alt="Form"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/document.7398d015.png" alt="Document"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li> </ul> </div> </div> <div class="slide__container margin-top-1"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/event-listener-5.059375f1.png" alt="Event Listener diagram 5"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Event Listeners</h2> <div class="slide__container"> <p class="slide__text--medium">Select the DOM Element:</p> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-4.7cab47bb.png" alt="Event Listener diagram 4">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex margin-top-1">
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/mouse.30df6c45.png" alt="Mouse">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/keyboard.97a36a19.png" alt="Keyboard">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/form.a50135dc.png" alt="Form">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/document.8c740310.png" alt="Document">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__container margin-top-1">
+							<img class="slide__image width-100-p" src="/event-listener-5.01e960fd.png" alt="Event Listener diagram 5">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Event Listeners</h2>
+						<div class="slide__container">
+							<p class="slide__text--medium">Select the DOM Element:</p>
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 const button = document.querySelector(‘.submitBtn’);
-							</code></pre> </div> <div class="slide__container margin-top-2"> <p class="slide__text--medium">Attach event listener to DOM element:</p> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/event-listener-6.cd092c85.png" alt="Event Listener diagram 6"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>00-events-codealong</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - DOM Events</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Create DOM event handlers using vanilla JavaScript</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / Pairs</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">01-events-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">8 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Add event listeners to the 3 buttons at the top of the page.</li>  <li class="slide__exercise__header__list--item">Clicking each button should hide the block below it with	the corresponding color.</li> <li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li> <ul class="slide__list"> <li class="slide__list--item no-arrow"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-08-dom-handout.pdf">Lesson 08 Handout</a></li> <li class="slide__list--item no-arrow"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-09-events-jquery-handout.pdf">Lesson 09 Handout</a></li> </ul> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Event Objects</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Referencing an Event</h2> <ul class="slide__list"> <li class="slide__list-item">The event object contains information about the triggering event is passed	to a function called in response to an event.</li> <li class="slide__list-item">We can specify a parameter to be able to reference this event in your code.</li> <li class="slide__list-item">By convention we use <code>event</code> or <code>e</code></li> </ul> <div class="slide__container margin-top-1"> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+							</code></pre>
+						</div>
+						<div class="slide__container margin-top-2">
+							<p class="slide__text--medium">Attach event listener to DOM element:</p>
+							<img class="slide__image width-100-p" src="/event-listener-6.f3c5dac7.png" alt="Event Listener diagram 6">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>00-events-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - DOM Events</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Create DOM event handlers using vanilla JavaScript</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">01-events-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">8 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Add event listeners to the 3 buttons at the top of the page.</li>													
+													<li class="slide__exercise__header__list--item">Clicking each button should hide the block below it with	the corresponding color.</li>
+													<li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li>
+													<ul class="slide__list">
+														<li class="slide__list--item no-arrow"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-08-dom-handout.pdf">Lesson 08 Handout</a></li>
+														<li class="slide__list--item no-arrow"><a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-09-events-jquery-handout.pdf">Lesson 09 Handout</a></li>
+													</ul>
+
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Event Objects</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Referencing an Event</h2>
+
+
+						<ul class="slide__list">
+							<li class="slide__list-item">The event object contains information about the triggering event is passed	to a function called in response to an event.</li>
+							<li class="slide__list-item">We can specify a parameter to be able to reference this event in your code.</li>
+							<li class="slide__list-item">By convention we use <code>event</code> or <code>e</code></li>
+						</ul>
+
+						<div class="slide__container margin-top-1">
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 submitButton.on('click', (event) => {
   console.log(event); // Access to event object
 });
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title lowercase"><code>preventDefault()</code></h2> <ul class="slide__list"> <li class="slide__list-item">Prevents element from executing default behaviour in response to an event, e.g. preventing the browser from refreshing when submitting a form.</li> </ul> <div class="slide__container margin-top-1"> <pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title lowercase"><code>preventDefault()</code></h2>
+
+
+						<ul class="slide__list">
+							<li class="slide__list-item">Prevents element from executing default behaviour in response to an event, e.g. preventing the browser from refreshing when submitting a form.</li>
+						</ul>
+
+						<div class="slide__container margin-top-1">
+							<pre class="slide__pre width-100-p"><code class="hljs slide__code slide__code--middle javascript medium" data-trim="">
 submitButton.on('click', (event) => {
   event.preventDefault();
 });
-							</code></pre> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>02-event-object-codealong</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Exercise - Event Object</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">03-event object—exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">3 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Update the code to prevent the form from submitting	when the button is clicked.</li> <li class="slide__exercise__header__list--item">Test your code in the browser and check the URL to verify that the form is not being submitted.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">jQuery</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">JavaScript Libraries</h2> <div class="slide__container-flex"> <div class="slide__container"> <ul class="slide__list"> <li class="slide__list-item">A JavaScript library is a collection of code, predominantly reusable methods, that serve a particular purpose.</li> <li class="slide__list-item">Developers often come across the same problems in their day-to-day work.</li> <li class="slide__list-item">Libraries can often save time and allow you to do more with less code.</li> <li class="slide__list-item">There's no need to reinvent the wheel!</li> </ul> </div> <div class="slide-container margin-left-1"> <img class="slide__image width-20" src="https://media.giphy.com/media/128MHrlrHNwwU0/giphy.gif" crossorigin="" alt="Library gif"> <div class="slide__container-center fragment"> <img class="slide__image width-15 height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/react-logo.92ba3a32.png" alt="React js logo"> <img class="slide__image width-10 height-100-p margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/underscore-logo.ec4f9780.png" alt="Underscore js logo"> <img class="slide__image width-10 height-100-p margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/d3-logo.e489ddc6.png" alt="D3 js logo"> </div> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">What is jQuery?</h2> <div class="slide__container"> <div class="slide__container-center"> <img class="slide__image width-30" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-logo.acf6c8ca.jpg" alt="jQuery logo"> </div> <ul class="slide__list margin-top-1"> <li class="slide__list-item">jQuery is a JavaScript library that you include in your project.</li> <li class="slide__list-item">It provides hundreds of helpful methods for interacting with the DOM.</li> <li class="slide__list-item">jQuery's syntax was developed to mimic CSS selector syntax, making code easier to develop, read, and manage.</li> <li class="slide__list-item"><em>jQuery is just JavaScript.</em></li> </ul> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery Popularity</h2> <div class="slide__container"> <ul class="slide__list margin-top-1"> <li class="slide__list-item">jQuery is very popular with developers in 2020 (link: <a href="https://insights.stackoverflow.com/survey/2020#technology-web-frameworks">Stackoverflow survey 2020</a>).</li> </ul> <div class="slide__container-center margin-top-1"> <img class="slide__image width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/stackoverflow-survey-2020.9fedb1dd.png" alt="Stackoverflow survey 2020"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">How it works</h2> <div class="slide__container"> <p class="slide__text">jQuery allows us to keep using the CSS-style selectors with a more concise syntax:</p> <img class="slide__image width-100-p margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-vs-javascript-1.289a4d52.png" alt="jQuery vs javascript 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">DOM Manipulation</h2> <div class="slide__container"> <p class="slide__text">jQuery statements for DOM manipulation are more concise than Vanilla JavaScript:</p> <img class="slide__image width-100-p margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-vs-javascript-2.a0e94604.png" alt="jQuery vs javascript 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery vs JavaScript</h2> <div class="slide__container"> <div class="slide__container-flex start"> <table class="slide__table margin-top-1 width-30"> <thead class="slide__head slide__head--jquery"> <tr> <th class="medium-font">JQUERY</th> </tr> </thead> <tbody class="slide__body slide__body--jquery"> <tr> <td class="col-15-p"> <p class="slide__text slide__text--table">✅ Write less code</p> </td> </tr> <tr> <td class="col-15-p"> <p class="slide__text slide__text--table">✅ Plenty of tutorials / examples</p> </td> </tr> </tbody> </table> <img class="slide__image width-20 height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-logo.acf6c8ca.jpg" alt="jQuery logo"> </div> <div class="slide__container-flex start"> <table class="slide__table margin-top-2 width-30"> <thead class="slide__head slide__head--javascript"> <tr> <th class="medium-font">VANILLA JAVASCRIPT</th> </tr> </thead> <tbody class="slide__body slide__body--javascript"> <tr> <td class="col-25-p"> <p class="slide__text slide__text--table">✅ Better performance</p> </td> </tr> <tr> <td class="col-25-p"> <p class="slide__text slide__text--table">✅ Faster</p> </td> </tr> </tbody> </table> <img class="slide__image width-12 height-100-p margin-left-3 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/javascript-logo.0f8f6851.png" alt="JavaScript logo"> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Using jQuery</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Working with Script files</h2> <div class="slide__container"> <ul class="slide__list margin-top-1"> <li class="slide__list-item--medium">It is considered <em>best practice</em> to keep JavaScript files organised in one folder.</li> <li class="slide__list-item--medium">The JavaScript folder is typically called <code>scripts</code> or <code>js</code>.</li> </ul> <div class="slide__container-center margin-top-2"> <img class="slide__image height-100-p width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/js-folder-structure.d5b053c4.png" alt="Folder structure screenshot"> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Referencing Script Files in HTML</h2> <div class="slide__container"> <pre class="slide__pre"><code class="slide__code slide__code--middle html small" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>02-event-object-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Exercise - Event Object</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">03-event object—exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">3 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Update the code to prevent the form from submitting	when the button is clicked.</li>
+													<li class="slide__exercise__header__list--item">Test your code in the browser and check that the form is not being submitted and causing a full page reload.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">jQuery</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">JavaScript Libraries</h2>
+						<div class="slide__container-flex">
+							<div class="slide__container">
+								<ul class="slide__list">
+									<li class="slide__list-item">A JavaScript library is a collection of code, predominantly reusable methods, that serve a particular purpose.</li>
+									<li class="slide__list-item">Developers often come across the same problems in their day-to-day work.</li>
+									<li class="slide__list-item">Libraries can often save time and allow you to do more with less code.</li>
+									<li class="slide__list-item">There's no need to reinvent the wheel!</li>
+								</ul>
+							</div>
+							<div class="slide-container margin-left-1">
+								<img class="slide__image width-20" src="https://media.giphy.com/media/128MHrlrHNwwU0/giphy.gif" crossorigin="" alt="Library gif">
+								<div class="slide__container-center fragment">
+									<img class="slide__image width-15 height-100-p" src="/react-logo.3902ae1d.png" alt="React js logo">
+									<img class="slide__image width-10 height-100-p margin-top-2" src="/underscore-logo.3dbaf146.png" alt="Underscore js logo">
+									<img class="slide__image width-10 height-100-p margin-top-2" src="/d3-logo.5a1be4d7.png" alt="D3 js logo">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What is jQuery?</h2>
+							<div class="slide__container">
+								<div class="slide__container-center">
+									<img class="slide__image width-30" src="/jquery-logo.ef4e184c.jpg" alt="jQuery logo">
+
+								</div>
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item">jQuery is a JavaScript library that you include in your project.</li>
+									<li class="slide__list-item">It provides hundreds of helpful methods for interacting with the DOM.</li>
+									<li class="slide__list-item">jQuery's syntax was developed to mimic CSS selector syntax, making code easier to develop, read, and manage.</li>
+									<li class="slide__list-item"><em>jQuery is just JavaScript.</em></li>
+								</ul>
+							</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Popularity</h2>
+							<div class="slide__container">
+
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item">jQuery is very popular with developers in 2020 (link: <a href="https://insights.stackoverflow.com/survey/2020#technology-web-frameworks">Stackoverflow survey 2020</a>).</li>
+								</ul>
+								<div class="slide__container-center margin-top-1">
+									<img class="slide__image width-40" src="/stackoverflow-survey-2020.d9a92202.png" alt="Stackoverflow survey 2020">
+								</div>
+							</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">How it works</h2>
+						<div class="slide__container">
+							<p class="slide__text">jQuery allows us to keep using the CSS-style selectors with a more concise syntax:</p>
+							<img class="slide__image width-100-p margin-top-2" src="/jquery-vs-javascript-1.4852ada2.png" alt="jQuery vs javascript 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">DOM Manipulation</h2>
+						<div class="slide__container">
+							<p class="slide__text">jQuery statements for DOM manipulation are more concise than Vanilla JavaScript:</p>
+							<img class="slide__image width-100-p margin-top-2" src="/jquery-vs-javascript-2.63cbf9fc.png" alt="jQuery vs javascript 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery vs JavaScript</h2>
+						<div class="slide__container">
+							<div class="slide__container-flex start">
+								<table class="slide__table margin-top-1 width-30">
+									<thead class="slide__head slide__head--jquery">
+										<tr>
+											<th class="medium-font">JQUERY</th>
+										</tr>
+									</thead>
+									<tbody class="slide__body slide__body--jquery">
+										<tr>
+											<td class="col-15-p">
+												<p class="slide__text slide__text--table">✅ Write less code</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-15-p">
+												<p class="slide__text slide__text--table">✅ Plenty of tutorials / examples</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<img class="slide__image width-20 height-100-p" src="/jquery-logo.ef4e184c.jpg" alt="jQuery logo">
+							</div>
+							<div class="slide__container-flex start">
+								<table class="slide__table margin-top-2 width-30">
+									<thead class="slide__head slide__head--javascript">
+										<tr>
+											<th class="medium-font">VANILLA JAVASCRIPT</th>
+										</tr>
+									</thead>
+									<tbody class="slide__body slide__body--javascript">
+										<tr>
+											<td class="col-25-p">
+												<p class="slide__text slide__text--table">✅ Better performance</p>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-25-p">
+												<p class="slide__text slide__text--table">✅ Faster</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<img class="slide__image width-12 height-100-p margin-left-3 margin-top-3" src="/javascript-logo.504e179a.png" alt="JavaScript logo">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Using jQuery</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Working with Script files</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item--medium">It is considered <em>best practice</em> to keep JavaScript files organised in one folder.</li>
+								<li class="slide__list-item--medium">The JavaScript folder is typically called <code>scripts</code> or <code>js</code>.</li>
+							</ul>
+							<div class="slide__container-center margin-top-2">
+								<img class="slide__image height-100-p width-40" src="/js-folder-structure.d283ce51.png" alt="Folder structure screenshot">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Referencing Script Files in HTML</h2>
+						<div class="slide__container">
+
+
+
+							<pre class="slide__pre"><code class="slide__code slide__code--middle html small" data-trim="">
 &lt;body&gt;
   &lt;!-- HTML content goes here --&gt;
 
   &lt;script src="js/main.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-							</code></pre> <ol class="slide__list margin-top-2 padding-left-2"> <li class="slide__list-item--medium">Create your custom JavaScript file with a <code>.js</code> extension (example: <code>main.js</code>).</li> <li class="slide__list-item--medium">Add your script just before the closing <code>&lt;/body&gt;</code> tag and after the <code>&lt;script&gt;</code></li> </ol> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Add jQuery Script</h2> <div class="slide__container"> <pre class="slide__pre"><code class="slide__code slide__code--middle html small" data-trim="">
+							</code></pre>
+
+							<ol class="slide__list margin-top-2 padding-left-2">
+								<li class="slide__list-item--medium">Create your custom JavaScript file with a <code>.js</code> extension (example: <code>main.js</code>).</li>
+								<li class="slide__list-item--medium">Add your script just before the closing <code>&lt;/body&gt;</code> tag and after the <code>&lt;script&gt;</code></li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Add jQuery Script</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="slide__code slide__code--middle html small" data-trim="">
 &lt;body&gt;
   &lt;!-- HTML content goes here --&gt;
   &lt;script src="js/jquery-3.2.1.min.js"&gt;&lt;/script&gt;
   &lt;script src="js/main.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-							</code></pre> <ol class="slide__list margin-top-2 padding-left-2"> <li class="slide__list-item--medium">Create your custom JavaScript file with a <code>.js</code> extension (example: <code>main.js</code>).</li> <li class="slide__list-item--medium">Add your script just before the closing <code>&lt;/body&gt;</code> tag and after the <code>&lt;script&gt;</code></li> <li class="slide__list-item--medium">Add the jQuery <code>&lt;script&gt;</code> tag <em>before</em> the <code>main.js</code> file (the order matters).</li> </ol> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Using a CDN</h2> <div class="slide__container"> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item--medium">The jQuery library can be loaded from a CDN (content delivery network) instead of downloading it locally.</li> <li class="slide__list-item--medium">Visit <a href="https://code.jquery.com">https://code.jquery.com</a> and choose the minified option for the latest release. Copy and paste the script tag into your file.</li> </ul> <img class="slide__image height-100-p width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/cdn.75cc65a1.png" alt="CDN"> </div> <pre class="slide__pre"><code class="slide__code slide__code--middle html small margin-top-1 fragment" data-trim="">
+							</code></pre>
+
+							<ol class="slide__list margin-top-2 padding-left-2">
+								<li class="slide__list-item--medium">Create your custom JavaScript file with a <code>.js</code> extension (example: <code>main.js</code>).</li>
+								<li class="slide__list-item--medium">Add your script just before the closing <code>&lt;/body&gt;</code> tag and after the <code>&lt;script&gt;</code></li>
+								<li class="slide__list-item--medium">Add the jQuery <code>&lt;script&gt;</code> tag <em>before</em> the <code>main.js</code> file (the order matters).</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Using a CDN</h2>
+						<div class="slide__container">
+							<div class="slide__container-flex">
+								<ul class="slide__list">
+									<li class="slide__list-item--medium">The jQuery library can be loaded from a CDN (content delivery network) instead of downloading it locally.</li>
+									<li class="slide__list-item--medium">Visit <a href="https://code.jquery.com">https://code.jquery.com</a> and choose the minified option for the latest release. Copy and paste the script tag into your file.</li>
+								</ul>
+								<img class="slide__image height-100-p width-20" src="/cdn.29160324.png" alt="CDN">
+							</div>
+							<pre class="slide__pre"><code class="slide__code slide__code--middle html small margin-top-1 fragment" data-trim="">
 &lt;script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"&gt;&lt;/script&gt;
-							</code></pre> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">jQuery Selections</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">a jQuery Statement involves 2 parts</h2> <div class="slide__container-center"> <img class="slide__image height-100-p width-40 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-selection-step-1.4ab90910.png" alt="jQuery selection part 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery Selector</h2> <div class="slide__container-center"> <img class="slide__image height-100-p width-50 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-selector-1.af312dca.png" alt="jQuery selector"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Selectors at a glance</h2> <div class="slide__container"> <table class="slide__table margin-top-1 width-100-p"> <thead class="slide__head slide__head--jquery-selectors"> <tr> <th class="medium-font"></th> <th class="medium-font bold padding-left-1">CSS</th> <th class="medium-font bold padding-left-1">JQUERY</th> </tr> </thead> <tbody class="slide__body slide__body--jquery-selectors"> <tr> <td class="col-25-p"> <p class="slide__text slide__text--table bold">ELEMENT</p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="css"><span class="color-red">a</span> { color: blue; } </code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">a</span>')</code></p> </td> </tr> <tr> <td class="col-25-p"> <p class="slide__text slide__text--table bold">ID</p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="css"><span class="color-red">#main</span> { color: blue; } </code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">#main</span>')</code></p> </td> </tr> <tr> <td class="col-25-p"> <p class="slide__text slide__text--table bold">CLASS</p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="css"><span class="color-red">.info</span> { color: blue; } </code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">.info</span>')</code></p> </td> </tr> <tr> <td class="col-25-p"> <p class="slide__text slide__text--table bold">NESTED SELECTOR</p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="css"><span class="color-red">div span</span> { color: blue; } </code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">div span</span>')</code></p> </td> </tr> </tbody> </table> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery Objects</h2> <p class="slide__text--medium">Selecting elements with vanilla JavaScript returns an element reference (<code>querySelector</code>) or a collection of element references (<code>querySelectorAll</code>)</p> <div class="slide__container-flex margin-top-3"> <div class="slide__container"> <h2 class="slide__text slide__text--medium uppercase">Vanilla JavaScript Selector</h2> <pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">jQuery Selections</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">a jQuery Statement involves 2 parts</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-40 margin-top-3" src="/jquery-selection-step-1.5e179d4e.png" alt="jQuery selection part 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Selector</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-50 margin-top-3" src="/jquery-selector-1.def097db.png" alt="jQuery selector">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Selectors at a glance</h2>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-selectors">
+									<tr>
+										<th class="medium-font"></th>
+										<th class="medium-font bold padding-left-1">CSS</th>
+										<th class="medium-font bold padding-left-1">JQUERY</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-selectors">
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">ELEMENT</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">a</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">a</span>')</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">ID</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">#main</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">#main</span>')</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">CLASS</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">.info</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">.info</span>')</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">NESTED SELECTOR</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="css"><span class="color-red">div span</span> { color: blue; } </code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="jquery">$('<span class="color-red">div span</span>')</code></p>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Objects</h2>
+						<p class="slide__text--medium">Selecting elements with vanilla JavaScript returns an element reference (<code>querySelector</code>) or a collection of element references (<code>querySelectorAll</code>)</p>
+						<div class="slide__container-flex margin-top-3">
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">Vanilla JavaScript Selector</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
 querySelector('selector')
-								</code></pre> </div> <img class="slide__image height-100-p width-15 margin-left-3 margin-right-3 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/blue-arrow.ae53b7c5.png" alt="Blue arrow"> <div class="slide__container"> <h2 class="slide__text slide__text--medium uppercase">Plain Element Selector</h2> <pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
+								</code></pre>
+							</div>
+							<img class="slide__image height-100-p width-15 margin-left-3 margin-right-3 margin-top-2" src="/blue-arrow.9593c884.png" alt="Blue arrow">
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">Plain Element Selector</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
 &lt;element reference&gt;
-								</code></pre> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery Objects</h2> <p class="slide__text--medium">Selecting elements with jQuery returns a <em>jQuery object</em>, which is one or more element references packaged with jQuery methods and properties.</p> <div class="slide__container-flex margin-top-3"> <div class="slide__container"> <h2 class="slide__text slide__text--medium uppercase">jQuery Selector</h2> <pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Objects</h2>
+						<p class="slide__text--medium">Selecting elements with jQuery returns a <em>jQuery object</em>, which is one or more element references packaged with jQuery methods and properties.</p>
+						<div class="slide__container-flex margin-top-3">
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">jQuery Selector</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
 $('selector')
-								</code></pre> </div> <img class="slide__image height-100-p width-15 margin-left-3 margin-right-3 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/blue-arrow.ae53b7c5.png" alt="Blue arrow"> <div class="slide__container"> <h2 class="slide__text slide__text--medium uppercase">jQuery Object</h2> <pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
+								</code></pre>
+							</div>
+							<img class="slide__image height-100-p width-15 margin-left-3 margin-right-3 margin-top-2" src="/blue-arrow.9593c884.png" alt="Blue arrow">
+							<div class="slide__container">
+								<h2 class="slide__text slide__text--medium uppercase">jQuery Object</h2>
+								<pre class="slide__pre"><code class="slide__code javascript small margin-top-1" data-trim="">
 {
   element reference
   methods
   properties
 }
-								</code></pre> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Naming Variables</h2> <p class="slide__text--medium">A typical naming convention is to include <code>$</code> at start of variable name to indicate that its value is a jQuery object.</p> <pre class="slide__pre"><code class="slide__code javascript medium margin-top-2" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Naming Variables</h2>
+						<p class="slide__text--medium">A typical naming convention is to include <code>$</code> at start of variable name to indicate that its value is a jQuery object.</p>
+						<pre class="slide__pre"><code class="slide__code javascript medium margin-top-2" data-trim="">
 const $openTab = $('.open');
-						</code></pre> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p> </div> <div class="slide__container-center margin-top-2"> <img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">a jQuery Statement involves 2 parts</h2> <div class="slide__container-center"> <img class="slide__image height-100-p width-40 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-selection-step-2.08f8292a.png" alt="jQuery selection part 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery Methods</h2> <div class="slide__container-center"> <img class="slide__image height-100-p width-40 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-selector-2.02f5b372.png" alt="jQuery methods"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">jQuery Documentation</h2> <div class="slide__container-center"> <a href="https://api.jquery.com/"><p class="slide__text--large">api.jquery.com/</p></a> <img class="slide__image height-100-p width-40 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-docs.35f2e4a4.png" alt="jQuery docs"> </div> </div> </section>  <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">What we can do with jQuery</h2> <div class="slide__container"> <img class="slide__image height-100-p width-100-p margin-top-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-find-elements.b3379276.png" alt="What we can do with jQuery"> </div> <div class="slide__container-absolute bottom-5"> <p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex end"> <img class="slide__image margin-left-2 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/find-elements.70bc2dc2.png" alt="Finding elements block"> </div> <div class="slide__container-center"> <img class="slide__image height-100-p width-30 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-traversing-dom-1.54858756.png" alt="jQuery traversing the DOM 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex end"> <img class="slide__image margin-left-2 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/find-elements.70bc2dc2.png" alt="Finding elements block"> </div> <div class="slide__container-center"> <img class="slide__image height-100-p width-30 margin-top-3" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-traversing-dom-2.e5476e94.png" alt="jQuery traversing the DOM 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Traversing the DOM</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/find-elements.70bc2dc2.png" alt="Finding elements block"> </div> <div class="slide__container"> <table class="slide__table margin-top-1 width-100-p"> <thead class="slide__head slide__head--jquery-traversal"> <tr> <th class="medium-font bold padding-left-1">METHODS</th> <th class="medium-font bold padding-left-1">EXAMPLES</th> </tr> </thead> <tbody class="slide__body slide__body--jquery-traversal"> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.find()</code> finds all descendants</p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('div').find('a');</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.parent()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('#box1').parent();</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.siblings()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('p').siblings('.important');</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.children()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('ul').children('li');</code></p> </td> </tr> </tbody> </table> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">What we can do with jQuery</h2> <div class="slide__container"> <img class="slide__image height-100-p width-100-p margin-top-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/get-set-content.86d382d8.png" alt="What we can do with jQuery"> </div> <div class="slide__container-absolute bottom-5"> <p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <h2 class="slide__title">Common DOM Manipulation Methods</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/get-set-elements.e302478d.png" alt="Get/Set elements block"> </div> <div class="slide__container"> <table class="slide__table margin-top-1 width-100-p"> <thead class="slide__head slide__head--jquery-traversal"> <tr> <th class="medium-font bold padding-left-1">METHODS</th> <th class="medium-font bold padding-left-1">EXAMPLES</th> </tr> </thead> <tbody class="slide__body slide__body--jquery-traversal"> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.html()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$(‘h1').html('<strong>Content</strong>');</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.text()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$(‘h1’).text('Just text content!’);</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.attr()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('img').attr('src', ‘images/bike.png');</code></p> </td> </tr> </tbody> </table> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <h2 class="slide__title">Common DOM Manipulation Methods - Classes</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/get-set-elements.e302478d.png" alt="Get/Set elements block"> </div> <div class="slide__container"> <table class="slide__table margin-top-1 width-100-p"> <thead class="slide__head slide__head--jquery-traversal"> <tr> <th class="medium-font bold padding-left-1">METHODS</th> <th class="medium-font bold padding-left-1">EXAMPLES</th> </tr> </thead> <tbody class="slide__body slide__body--jquery-traversal"> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.addClass()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('p').addClass('success');</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.removeClass()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('p').removeClass('my-class-here');</code></p> </td> </tr> <tr> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>.toggleClass()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('p').toggleClass('special');</code></p> </td> </tr> </tbody> </table> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - jQuery DOM Manipulation - Part 1</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Utilise jQuery to access and manipulate DOM elements.</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Pairs</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">05-jquery-statements-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">5 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Follow the instructions under Part 1 in main.js</li>  <li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">What we can do with jQuery</h2> <div class="slide__container"> <img class="slide__image height-100-p width-100-p margin-top-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/add-effects.4baa4229.png" alt="What we can do with jQuery"> </div> <div class="slide__container-absolute bottom-5"> <p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Common Effects Methods</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/add-effects-block.70055d48.png" alt="Add effects block"> </div> <div class="slide__container"> <table class="slide__table margin-top-1 width-100-p"> <thead class="slide__head slide__head--jquery-traversal"> <tr> <th class="medium-font bold padding-left-1">METHODS</th> <th class="medium-font bold padding-left-1">EXAMPLES</th> </tr> </thead> <tbody class="slide__body slide__body--jquery-traversal"> <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.show()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('h1').show();</code></p> </td> </tr> <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.hide()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('ul').hide();</code></p> </td> </tr> <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.fadeIn()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('h1').fadeIn(300);</code></p> </td> </tr>  <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.fadeOut()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('.special').fadeOut('fast');</code></p> </td> </tr>  <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.slideUp()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('div').slideUp();</code></p> </td> </tr>  <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.slideDown()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('#box1').slideDown('slow');</code></p> </td> </tr>  <tr> <td class="col-30-p"> <p class="slide__text slide__text--table"><code>.slideToggle()</code></p> </td> <td class="col-50-p"> <p class="slide__text slide__text--table"><code>$('p').slideToggle(300); animation speed</code></p> </td> </tr> </tbody> </table> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">What we can do with jQuery</h2> <div class="slide__container"> <img class="slide__image height-100-p width-100-p margin-top-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/create-event-listeners.f01837a7.png" alt="What we can do with jQuery"> </div> <div class="slide__container-absolute bottom-5"> <p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">jQuery Events</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Event Listeners</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/create-event-listeners-block.3b1399cf.png" alt="Create event listeners block"> </div> <div class="slide__container"> <p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p> </div> <div class="slide__container margin-top-2"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-events-1.fc84da92.png" alt="jQuery events 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Event Listeners</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/create-event-listeners-block.3b1399cf.png" alt="Create event listeners block"> </div> <div class="slide__container"> <p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p> </div> <div class="slide__container margin-top-2"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-events-2.fd04f7ab.png" alt="jQuery events 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Event Listeners</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/create-event-listeners-block.3b1399cf.png" alt="Create event listeners block"> </div> <div class="slide__container"> <p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p> </div> <div class="slide__container margin-top-2"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-events-3.1219de13.png" alt="jQuery events 3"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Event Listeners</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/create-event-listeners-block.3b1399cf.png" alt="Create event listeners block"> </div> <div class="slide__container"> <p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p> </div> <div class="slide__container margin-top-2"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-events-4.3a4d54ca.png" alt="jQuery events 4"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex margin-top-1"> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/mouse.a0bea49a.png" alt="Mouse"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/keyboard.057eda2c.png" alt="Keyboard"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/form.af37f552.png" alt="Form"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li> </ul> </div> <div class="slide__container-center flex-basis-quarter"> <img class="slide__image width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/document.7398d015.png" alt="Document"> <ul class="slide__list margin-top-1"> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li> <li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li> </ul> </div> </div> <div class="slide__container margin-top-1"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-events-5.4f624fbf.png" alt="jQuery events 5"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex space-between"> <h2 class="slide__title">Event Listeners</h2> <img class="slide__image margin-left-5 height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/create-event-listeners-block.3b1399cf.png" alt="Create event listeners block"> </div> <div class="slide__container"> <p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p> </div> <div class="slide__container margin-top-2"> <img class="slide__image width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/jquery-events-6.764dea77.png" alt="jQuery events 6"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Open up: <code>06-jquery-events-codealong</code></p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - jQuery DOM Manipulation - Part 2</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Utilise jQuery to access and manipulate DOM elements.</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / Pairs</li> </ul> <p class="slide__exercise__header">Location</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item color-dark-blue">Continue with 05-jquery-statements-exercise</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">5 mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Follow the instructions under Part 2 in main.js</li>  <li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives - Review</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Create DOM event handlers using vanilla JavaScript.</li> <li class="slide__list-item">Select DOM elements and properties using jQuery.</li> <li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Events & jQuery</h2> </header> <div class="slide__content"> <h2 class="slide__title">Look Ahead to Next Lesson </h2> <ul class="slide__list"> <li class="slide__list-item">Identify all the HTTP verbs & their uses.</li> <li class="slide__list-item">Describe APIs and how to make calls and consume API data.</li> <li class="slide__list-item">Access public APIs and get information back.</li> <li class="slide__list-item">Implement an Ajax request with Fetch.</li> <li class="slide__list-item">Create an Ajax request using jQuery.</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Q&A</h1> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Homework</h1> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Events & jQuery</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Exit Ticket</h1> <p class="slide__text color-white">(Lesson #09)</p> </div> </div> </section> </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script> <script>var i="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";Reveal.initialize({slideNumber:!0,controls:!0,history:!0,transition:"fade",center:!1,progress:!1,dependencies:[{src:"".concat(i,"plugin/highlight/highlight.min.js"),async:!0,callback:function(){hljs.initHighlightingOnLoad()}}]});</script> </body></html>
+						</code></pre>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-2">
+							<img class="slide__image slide__image--code-along width-15" src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">a jQuery Statement involves 2 parts</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-40 margin-top-3" src="/jquery-selection-step-2.77323d05.png" alt="jQuery selection part 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Methods</h2>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-40 margin-top-3" src="/jquery-selector-2.c97bfbe9.png" alt="jQuery methods">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">jQuery Documentation</h2>
+						<div class="slide__container-center">
+							<a href="https://api.jquery.com/"><p class="slide__text--large">api.jquery.com/</p></a>
+							<img class="slide__image height-100-p width-40 margin-top-2" src="/jquery-docs.dcfb0b27.png" alt="jQuery docs">
+						</div>
+					</div>
+				</section>
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="../../assets/images/week-5/what-we-can-do-with-jquery.png" alt="Whgat we can do with jQuery"/>
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/jquery-find-elements.feed7a51.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex end">
+							<img class="slide__image margin-left-2 height-100-p width-15" src="/find-elements.0fb83430.png" alt="Finding elements block">
+
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-30 margin-top-3" src="/jquery-traversing-dom-1.16248510.png" alt="jQuery traversing the DOM 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex end">
+							<img class="slide__image margin-left-2 height-100-p width-15" src="/find-elements.0fb83430.png" alt="Finding elements block">
+
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image height-100-p width-30 margin-top-3" src="/jquery-traversing-dom-2.61db2577.png" alt="jQuery traversing the DOM 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Traversing the DOM</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/find-elements.0fb83430.png" alt="Finding elements block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.find()</code> finds all descendants</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('div').find('a');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.parent()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('#box1').parent();</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.siblings()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').siblings('.important');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.children()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('ul').children('li');</code></p>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/get-set-content.c88aeb00.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">Common DOM Manipulation Methods</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/get-set-elements.478bbe83.png" alt="Get/Set elements block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.html()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$(‘h1').html('<strong>Content</strong>');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.text()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$(‘h1’).text('Just text content!’);</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.attr()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('img').attr('src', ‘images/bike.png');</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<h2 class="slide__title">Common DOM Manipulation Methods - Classes</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/get-set-elements.478bbe83.png" alt="Get/Set elements block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.addClass()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').addClass('success');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.removeClass()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').removeClass('my-class-here');</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>.toggleClass()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').toggleClass('special');</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - jQuery DOM Manipulation - Part 1</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Utilise jQuery to access and manipulate DOM elements.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">05-jquery-statements-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Follow the instructions under Part 1 in main.js</li>													
+													<li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/add-effects.2764c74e.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Common Effects Methods</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/add-effects-block.64dc6958.png" alt="Add effects block">
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--jquery-traversal">
+									<tr>
+										<th class="medium-font bold padding-left-1">METHODS</th>
+										<th class="medium-font bold padding-left-1">EXAMPLES</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--jquery-traversal">
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.show()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('h1').show();</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.hide()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('ul').hide();</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.fadeIn()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('h1').fadeIn(300);</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.fadeOut()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('.special').fadeOut('fast');</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.slideUp()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('div').slideUp();</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.slideDown()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('#box1').slideDown('slow');</code></p>
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="col-30-p">
+											<p class="slide__text slide__text--table"><code>.slideToggle()</code></p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code>$('p').slideToggle(300); animation speed</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>04-jquery-statements-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What we can do with jQuery</h2>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p margin-top-5" src="/create-event-listeners.106029b4.png" alt="What we can do with jQuery">
+						</div>
+
+						<div class="slide__container-absolute bottom-5">
+							<p class="slide__text--small"><span class="large-icon">📚</span> See your handout or the <a href="https://api.jquery.com/" target="_blank">jQuery docs</a> for the list</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">jQuery Events</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Event Listeners</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/create-event-listeners-block.ef6bc60a.png" alt="Create event listeners block">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p>
+						</div>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image width-100-p" src="/jquery-events-1.4fb73335.png" alt="jQuery events 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Event Listeners</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/create-event-listeners-block.ef6bc60a.png" alt="Create event listeners block">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p>
+						</div>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image width-100-p" src="/jquery-events-2.3b3b63b0.png" alt="jQuery events 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Event Listeners</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/create-event-listeners-block.ef6bc60a.png" alt="Create event listeners block">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p>
+						</div>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image width-100-p" src="/jquery-events-3.f7435f06.png" alt="jQuery events 3">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Event Listeners</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/create-event-listeners-block.ef6bc60a.png" alt="Create event listeners block">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p>
+						</div>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image width-100-p" src="/jquery-events-4.a8adb079.png" alt="jQuery events 4">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex margin-top-1">
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/mouse.30df6c45.png" alt="Mouse">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>click</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>dblcode</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseenter</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>mouseleave</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/keyboard.97a36a19.png" alt="Keyboard">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keypress</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keydown</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>keyup</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/form.a50135dc.png" alt="Form">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>submit</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>change</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>focus</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>blur</code></li>
+								</ul>
+							</div>
+							<div class="slide__container-center flex-basis-quarter">
+								<img class="slide__image width-10" src="/document.8c740310.png" alt="Document">
+								<ul class="slide__list margin-top-1">
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>resize</code></li>
+									<li class="slide__list-item slide__list-item--small no-arrow margin-top-1"><code>scroll</code></li>
+								</ul>
+							</div>
+						</div>
+						<div class="slide__container margin-top-1">
+							<img class="slide__image width-100-p" src="/jquery-events-5.aa59f73f.png" alt="jQuery events 5">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex space-between">
+							<h2 class="slide__title">Event Listeners</h2>
+							<img class="slide__image margin-left-5 height-100-p width-15" src="/create-event-listeners-block.ef6bc60a.png" alt="Create event listeners block">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--medium">We use the <code>on()</code> method to handle events in jQuery:</p>
+						</div>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image width-100-p" src="/jquery-events-6.8ce265b4.png" alt="jQuery events 6">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>06-jquery-events-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - jQuery DOM Manipulation - Part 2</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Utilise jQuery to access and manipulate DOM elements.</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / Pairs</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue">Continue with 05-jquery-statements-exercise</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">5 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Follow the instructions under Part 2 in main.js</li>													
+													<li class="slide__exercise__header__list--item">Use handout/slides as a guide for syntax.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives - Review</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Create DOM event handlers using vanilla JavaScript.</li>
+							<li class="slide__list-item">Select DOM elements and properties using jQuery.</li>
+							<li class="slide__list-item">Manipulate the DOM by using jQuery selectors and functions.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Look Ahead to Next Lesson </h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Identify all the HTTP verbs & their uses.</li>
+							<li class="slide__list-item">Describe APIs and how to make calls and consume API data.</li>
+							<li class="slide__list-item">Access public APIs and get information back.</li>
+							<li class="slide__list-item">Implement an Ajax request with Fetch.</li>
+							<li class="slide__list-item">Create an Ajax request using jQuery.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Q&A</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Homework</h1>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Events & jQuery</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson #09)</p>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+Reveal.initialize({
+  slideNumber: true,
+  controls: true,
+  history: true,
+  transition: 'fade',
+  center: false,
+  progress: false,
+  dependencies: [{
+    src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
+    async: true,
+    callback: function callback() {
+      hljs.initHighlightingOnLoad();
+    }
+  }]
+});</script>
+	</body>
+</html>
