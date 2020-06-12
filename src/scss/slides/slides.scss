@@ -364,6 +364,9 @@
             &.lowercase {
                 text-transform: unset;
             }
+            &.center {
+                text-align: center;
+            }
         }
         &__name {
             color: $black;

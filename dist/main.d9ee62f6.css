@@ -2359,6 +2359,9 @@ ul li:before {
 .slides .slide__title.lowercase {
   text-transform: unset;
 }
+.slides .slide__title.center {
+  text-align: center;
+}
 .slides .slide__name {
   color: #000000;
   font-family: "News 706";
