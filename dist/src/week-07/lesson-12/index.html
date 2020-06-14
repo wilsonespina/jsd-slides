@@ -234,8 +234,6 @@
 					</div>
 				</section>
 
-
-
 				<section class="slide" data-background-color="#6ae4d6">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Advanced APIs</h2>
@@ -288,7 +286,6 @@
 								<li class="slide__list-item--medium">We can add Headers and other metadata to requests.</li>
 							</ul>
 
-							
 						</div>
 					</div>
 				</section>
@@ -302,9 +299,18 @@
 					</div>
 				</section>
 
+				<section class="slide" data-background-color="#6ae4d6">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title slide__title--white center margin-top-10">6. Create an information window for when a user selects a bike point</h1>
+					</div>
+				</section>
+
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Exercise - Async</h2>
+						<h2 class="slide__header--title">Exercise - TFL API</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-flex">
@@ -312,7 +318,7 @@
 							<div class="slide__exercise">
 								<p class="slide__exercise__header">Location</p>
 								<ul class="slide__exercise__header__list">
-									<li class="slide__exercise__header__list--item color-dark-blue"><code>starter-code > 03-async-lab</code></li>
+									<li class="slide__exercise__header__list--item color-dark-blue"><code>starter-code > 01-bike-map</code></li>
 								</ul>
 								<p class="slide__exercise__header">Timing</p>
 								<table class="slide__table">
@@ -323,8 +329,14 @@
 											</td>
 											<td>
 												<ol class="slide__exercise__header__list">
-													<li class="slide__exercise__header__list--item">Add</li>
-													<li class="slide__exercise__header__list--item">Follow the instructions to add a Fetch request for weather data that uses the results of the existing post	lookup.</li>
+													<li class="slide__exercise__header__list--item">Add image element to the InfoWindow content string with the source being
+														the bike.jpg file in the images folder. Give this image element a class of 'bike'.</li>
+													<li class="slide__exercise__header__list--item">Add the Total Number of Docks to the InfoWindow information as a new line
+														in the InfoWindow. HINT: Use the NbDocks value from the bikePoint data.</li>
+													<li class="slide__exercise__header__list--item">Add another line to the InfoWindow showing the number of available bikes
+														as a percentage of the total number of Bikes. round this percentage to the nearest whole number: e.g: Bike Availabilty: 23%</li>
+													<li class="slide__exercise__header__list--item">BONUS: Read the Google Maps docs on custom markers and add custom markers of your own (https://developers.google.com/maps/documentation/javascript/custom-markers) HINT: If you image size is too large, try using the scaled size property 
+														(https://stackoverflow.com/questions/15096461/resize-google-maps-marker-icon-image)</li>
 												</ol>
 											</td>
 										</tr>
@@ -335,55 +347,79 @@
 					</div>
 				</section>
 
-				
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives - Review</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Describe what asynchronous means in relation to JavaScript</li>
+							<li class="slide__list-item">Pass functions as arguments to functions that expect them.</li>
+							<li class="slide__list-item">Write functions that take other functions as arguments.</li>
+							<li class="slide__list-item">Build asynchronous program flow using Fetch.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Look Ahead to Next Lesson </h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Familiarise yourself with the API documentation from the APIs list.</li>
+							<li class="slide__list-item">Fork and clone your starter code.</li>
+							<li class="slide__list-item">Strategise ways to hide the loader and replace the content of the #main container with that of the API.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">API List</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item--xsmall">The Movie DB: <a href="https://www.themoviedb.org/documentation/api">https://www.themoviedb.org/documentation/api</a> 🔑</li>
+							<li class="slide__list-item--xsmall">Star Wars: <a href="https://swapi.co/">https://swapi.co/</a></li>
+							<li class="slide__list-item--xsmall">Weather: <a href="https://openweathermap.org/api">https://openweathermap.org/api</a> 🔑</li>
+							<li class="slide__list-item--xsmall">Giphy: <a href="https://developers.giphy.com/">https://developers.giphy.com/</a> 🔑</li>
+							<li class="slide__list-item--xsmall">Pokemon: <a href="http://pokeapi.co/">http://pokeapi.co/</a></li>
+							<li class="slide__list-item--xsmall">Card Deck: <a href="https://deckofcardsapi.com/">https://deckofcardsapi.com/</a></li>
+							<li class="slide__list-item--xsmall">Beer: <a href="https://www.brewerydb.com/developers">https://www.brewerydb.com/developers</a> 🔑</li>
+							<li class="slide__list-item--xsmall">Chuck Norris: <a href="http://www.icndb.com/">http://www.icndb.com/</a></li>
+							<li class="slide__list-item--xsmall">Rick and Morty: <a href="https://rickandmortyapi.com/documentation/#rest">https://rickandmortyapi.com/documentation/#rest</a></li>
+							<li class="slide__list-item--xsmall">Tvmaze: <a href="https://www.tvmaze.com/api">https://www.tvmaze.com/api</a></li>
+							<li class="slide__list-item--xsmall">SpaceX: <a href="https://docs.spacexdata.com/?version=latest">https://docs.spacexdata.com/?version=latest</a></li>
+							<li class="slide__list-item--xsmall">The Cat API: <a href="https://thecatapi.com/">https://thecatapi.com/</a></li>
+							<li class="slide__list-item--xsmall">The Hiking Project Data API: <a href="https://www.hikingproject.com/data">https://www.hikingproject.com/data</a> 🔑</li>
+							<li class="slide__list-item--xsmall">The Official Joke API: <a href="https://official-joke-api.appspot.com/random_ten">https://official-joke-api.appspot.com/random_ten</a></li>
+							<li class="slide__list-item--xsmall">NASA API: <a href="https://api.nasa.gov/">https://api.nasa.gov/</a> 🔑</li>
+							<li class="slide__list-item--xsmall">The Cocktail API: <a href="https://www.thecocktaildb.com/">https://www.thecocktaildb.com/</a></li>
+							<li class="slide__list-item--xsmall">The MealDB: <a href="https://www.themealdb.com/api.php">https://www.themealdb.com/api.php</a></li>
+						</ul>
+					</div>
+				</section>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson #12)</p>
+						</div>
+					</div>
+				</section>
 
 			</div>
 		</div>
