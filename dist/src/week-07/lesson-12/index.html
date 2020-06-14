@@ -105,6 +105,7 @@
 							<ul class="slide__list">
 								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer</li>
 								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/11-advanced-apis</code></li>
+								<li class="slide__list-item">If you haven’t already, sign up for a Postman account at <a href="https://www.postman.com/downloads/">https://getpostman.com</a>, and optionally download the Postman app.</li>
 							</ul>
 						</div>
 					</div>
@@ -126,7 +127,7 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Building Our App</h2>
 						<div class="slide__container-center">
-							<img class="slide__image width-35" src="/bike-maps-screenshot.fe64ff62.png" alt="Bike app screenshot">
+							<img class="slide__image width-30" src="/bike-maps-screenshot.fe64ff62.png" alt="Bike app screenshot">
 							<div class="slide__container-flex center margin-top-1">
 								<img class="slide__image width-12 height-100-p" src="/google-maps-api.35d87177.jpg" alt="Google maps api logo">
 								<img class="slide__image width-15 height-100-p margin-left-2" src="/tfl.a9db87a1.png" alt="TFL logo">
@@ -143,11 +144,11 @@
 						<h2 class="slide__title">Building Our App - Steps</h2>
 						<div class="slide__container">
 							<ol class="slide__list padding-left-2">
-								<li class="slide__list-item fragment">Get user’s location.</li>
-								<li class="slide__list-item fragment">Create request to Google Maps with user’s location info.</li>
-								<li class="slide__list-item fragment">Render a map.</li>
-								<li class="slide__list-item fragment">Create request to TFL for bike information.</li>
-								<li class="slide__list-item fragment">Parse API response and add locations to map.</li>
+								<li class="slide__list-item">Get user’s location.</li>
+								<li class="slide__list-item">Render a Google map.</li>
+								<li class="slide__list-item">Create request to Google Maps with user’s location info.</li>
+								<li class="slide__list-item">Create request to TFL for bike information.</li>
+								<li class="slide__list-item">Parse API response and add locations to map.</li>
 							</ol>
 						</div>
 					</div>
@@ -165,31 +166,6 @@
 					</div>
 				</section>
 
-				<section class="slide">
-					<header class="slide__header">
-						<h2 class="slide__header--title">Advanced APIs</h2>
-					</header>
-					<div class="slide__content">
-						<h2 class="slide__title">Google Maps</h2>
-						<div class="slide__container">
-							<!-- <img class="slide__image width-100-p height-100-p" src="../../assets/images/week-7/bike-map-steps.png" alt="Bike map steps"/> -->
-						</div>
-					</div>
-				</section>
-
-				<section class="slide">
-					<header class="slide__header">
-						<h2 class="slide__header--title">Advanced APIs</h2>
-					</header>
-					<div class="slide__content">
-						<h2 class="slide__title">TFL</h2>
-						<div class="slide__container">
-							<!-- <img class="slide__image width-100-p height-100-p" src="../../assets/images/week-7/bike-map-steps.png" alt="Bike map steps"/> -->
-						</div>
-					</div>
-				</section>
-
-
 				<section class="slide" data-background-color="#6ae4d6">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Advanced APIs</h2>
@@ -199,12 +175,27 @@
 					</div>
 				</section>
 
-				<section class="slide" data-background-color="#6ae4d6">
-					<header class="slide__header-intro">
-						<h2 class="slide__header-intro--title">Advanced APIs</h2>
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
 					</header>
 					<div class="slide__content">
-						<h1 class="slide__title slide__title--white center margin-top-10">2. Create request to Google Maps with user’s location info</h1>
+						<h2 class="slide__title">Navigator API</h2>
+						<div class="slide__container-flex">
+							<div class="slide__container margin-top-1">
+								<img class="slide__image width-20" src="/navigator-api.b70a4787.png" alt="Access Location screenshot">
+								<p class="slide__text--small margin-top-1">LINK:
+									<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator" class="slide__link" target="_blank"><code>window.navigator</code></a>
+								</p>
+							</div>
+							<div class="slide__container margin-left-1">
+								<ul class="slide__list">
+									<li class="slide__list-item">The <code>Window.navigator</code> property gives us reference to the <em><code>Navigator</code></em> object.</li>
+									<li class="slide__list-item"><code>Navigator</code> exposes data such as <em>User Agent</em> (Browser type) and <em>Geolocation</em>.</li>
+								</ul>
+							</div>
+
+						</div>
 					</div>
 				</section>
 
@@ -213,9 +204,37 @@
 						<h2 class="slide__header-intro--title">Advanced APIs</h2>
 					</header>
 					<div class="slide__content">
-						<h1 class="slide__title slide__title--white center margin-top-10">3. Render a map</h1>
+						<h1 class="slide__title slide__title--white center margin-top-10">2. Render a Google map</h1>
 					</div>
 				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Google Maps</h2>
+						<div class="slide__container">
+							<p class="slide__text--small">LINK:
+								<a href="https://developers.google.com/maps/documentation/javascript/tutorial" class="slide__link" target="_blank"><code>Google Maps API docs</code></a>
+							</p>
+							<div class="slide__container-center margin-top-1">
+								<img class="slide__image width-40 height-100-p" src="/google-maps-ga.07eca9f8.png" alt="Google maps GA London">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="#6ae4d6">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title slide__title--white center margin-top-10">3. Center Google Maps on user’s location</h1>
+					</div>
+				</section>
+
+
 
 				<section class="slide" data-background-color="#6ae4d6">
 					<header class="slide__header-intro">
@@ -226,18 +245,62 @@
 					</div>
 				</section>
 
-				<!-- <section class="slide" data-background-color="#6ae4d6">
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start space-between">
+							<h2 class="slide__title">Transport For London</h2>
+							<img class="slide__image width-15 height-100-p" src="/tfl.a9db87a1.png" alt="TFL logo">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--small">LINK:
+								<a href="https://api.tfl.gov.uk/" class="slide__link" target="_blank"><code>TFL API docs</code></a>
+							</p>
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item--medium">TFL provide real-time data about their transport network around London.</li>
+								<li class="slide__list-item--medium">The open API is used by companies such as CityMapper.</li>
+								<li class="slide__list-item--medium">Datasets are available for: Journey Planning, Disruptions, timetables, Fares and lots more.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Advanced APIs</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start space-between">
+							<h2 class="slide__title">Postman</h2>
+							<img class="slide__image width-15 height-100-p" src="/postman-logo.530e69d7.png" alt="Post man logo">
+						</div>
+						<div class="slide__container">
+							<p class="slide__text--small">LINK:
+								<a href="https://api.tfl.gov.uk/" class="slide__link" target="_blank"><code>TFL API > Run in Postman</code></a>
+							</p>
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item--medium">Postman allows us send <em>HTTP requests</em> and view <em>responses</em> without a browser.</li>
+								<li class="slide__list-item--medium">Highly customisable tool that allows us to develop APIs.</li>
+								<li class="slide__list-item--medium">We can add Headers and other metadata to requests.</li>
+							</ul>
+
+							
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="#6ae4d6">
 					<header class="slide__header-intro">
 						<h2 class="slide__header-intro--title">Advanced APIs</h2>
 					</header>
 					<div class="slide__content">
 						<h1 class="slide__title slide__title--white center margin-top-10">5. Parse API response and add locations to map</h1>
 					</div>
-				</section> -->
-
-
-
-
+				</section>
 
 				<section class="slide">
 					<header class="slide__header">
