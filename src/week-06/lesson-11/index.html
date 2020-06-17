@@ -264,7 +264,7 @@ $('button').on('click', function() {
 							</code></pre>
 
 							<pre class="slide__pre fragment margin-top-3"><code class="slide__code javascript medium margin-top-1" data-trim>
-								$('button').on(parameter1, parameter2);
+								$('button').on(argument1, argument2);
 							</code></pre>
 						</div>
 					</div>
@@ -281,6 +281,20 @@ $('button').on('click', function() {
 						</div>
 					</div>
 				</section>
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Functions are first-class objects</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Can store a function as a variable value.</li>
+							<li class="slide__list-item">Can return a function from another function.</li>
+							<li class="slide__list-item">Can pass a function as an argument to another function.</li>
+						</ul>
+					</div>
+				</section>
+
 
 				<section class="slide">
 					<header class="slide__header">
@@ -336,7 +350,7 @@ const programmeModule = (() => {
 					</div>
 				</section>
 
-				<section class="slide">
+				<!-- <section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
 					</header>
@@ -353,7 +367,7 @@ departments.forEach((dept) => {
 						</code></pre>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<section class="slide">
 					<header class="slide__header">
@@ -645,6 +659,57 @@ doSomething()
 
 const fooPromise = () => {
   return new Promise(function(resolve, reject) {
+
+
+
+
+  });
+}
+
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Creating Promises</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="slide__code small javascript margin-top-1" data-trim>
+
+const fooPromise = () => {
+  return new Promise(function(resolve, reject) {
+	if (/* everything turned out fine */) {
+	  resolve("Stuff worked!");
+	} else {
+	  reject(Error("It broke"));
+	}
+  });
+}
+
+							</code></pre>
+							<ul class="slide__list fragment margin-top-1">
+								<li class="slide__list-item"><em>Resolve</em> and <em>Reject</em> are callbacks</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Asynchronous JavaScript</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Creating Promises - SetTimeout</h2>
+						<div class="slide__container">
+							<pre class="slide__pre"><code class="slide__code small javascript margin-top-1" data-trim>
+
+const fooPromise = () => {
+  return new Promise(function(resolve, reject) {
     setTimeout(() => {
       resolve('foo')
     }, 5000)
@@ -660,6 +725,8 @@ fooPromise()
 						</div>
 					</div>
 				</section>
+
+
 
 				<section class="slide">
 					<header class="slide__header">
