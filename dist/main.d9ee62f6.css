@@ -2604,6 +2604,9 @@ ul li:before {
 .slides .slide .width-100-p {
   width: 100%;
 }
+.slides .slide .height-80-p {
+  height: 80%;
+}
 .slides .slide .height-100-p {
   height: 100%;
 }
