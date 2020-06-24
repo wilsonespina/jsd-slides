@@ -2628,6 +2628,9 @@ ul li:before {
 .slides .slide .margin-left-3 {
   margin-left: 3rem;
 }
+.slides .slide .margin-left-4 {
+  margin-left: 4rem;
+}
 .slides .slide .margin-left-5 {
   margin-left: 5rem;
 }
@@ -2642,6 +2645,9 @@ ul li:before {
 }
 .slides .slide .margin-right-3 {
   margin-right: 3rem;
+}
+.slides .slide .margin-right-4 {
+  margin-right: 4rem;
 }
 .slides .slide .margin-right-5 {
   margin-right: 5rem;
