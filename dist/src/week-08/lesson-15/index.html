@@ -253,23 +253,62 @@ function getTemp() {
 						<div class="slide__container">
 							<ol class="slide__list margin-top-1 padding-left-2">
 								<li class="slide__list-item"><span class="bold">Nested functions</span>.</li>
-								<li class="slide__list-item"><span class="bold">Scope</span>innerfunction has access to outer function’s variables.</li>
-								<li class="slide__list-item">A <code>return</code> <span class="bold">statement</span>outer function returns reference to inner function.</li>
 							</ol>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p margin-top-10" src="/nested-function.3870e4a3.png" alt="Nested functions">
 						</div>
 					</div>
 				</section>
 
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Code along</h2>
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Building Blocks of a Closure</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item"><span class="bold">Nested functions</span>.</li>
+								<li class="slide__list-item"><span class="bold">Scope:</span> inner function has access to outer function’s variables.</li>
+								<!-- <li class="slide__list-item">A <code>return</code> <span class="bold">statement:</span> outer function returns reference to inner function.</li> -->
+							</ol>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p margin-top-6" src="/inner-functions.58fb56c3.png" alt="Inner functions">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Building Blocks of a Closure</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item"><span class="bold">Nested functions</span>.</li>
+								<li class="slide__list-item"><span class="bold">Scope:</span> inner function has access to outer function’s variables.</li>
+								<li class="slide__list-item">A <code>return</code> <span class="bold">statement:</span> outer function returns reference to inner function.</li>
+							</ol>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p margin-top-1" src="/return-statement.d83b0544.png" alt="Return statement">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along - Closures</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-center">
 							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
 						</div>
 						<div class="slide__container-center">
-							<p class="slide__text--medium">Open up: <code>00-</code></p>
+							<p class="slide__text--medium">Open up: <code>00-closures-codealong</code></p>
 						</div>
 						<div class="slide__container-center margin-top-1">
 							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
@@ -282,30 +321,27 @@ function getTemp() {
 						<h2 class="slide__header--title">Closures & This</h2>
 					</header>
 					<div class="slide__content">
-						<h2 class="slide__title">Closures: Key Points</h2>
+						<h2 class="slide__title">Closures: Key Points 🔑 </h2>
 						<div class="slide__container">
 							<ol class="slide__list margin-top-1 padding-left-2">
 								<li class="slide__list-item">Closures have access to the outer function’s variables (including parameters) <span class="bold">even after the outer function returns</span>.</li>
 								<li class="slide__list-item">Closures store <span class="bold">references</span> to the outer function’s variables, not the actual values.</li>
+								<li class="slide__list-item">In JavaScript, closures are created every time a function is created, at function creation time.</li>
 							</ol>
 						</div>
 					</div>
 				</section>
 
-
-
-
-
 				<section class="slide">
 					<header class="slide__header">
-						<h2 class="slide__header--title">Code along</h2>
+						<h2 class="slide__header--title">Code along - Closures</h2>
 					</header>
 					<div class="slide__content">
 						<div class="slide__container-center">
 							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
 						</div>
 						<div class="slide__container-center">
-							<p class="slide__text--medium">Open up: <code>00-</code></p>
+							<p class="slide__text--medium">Open up: <code>00-closures-codealong</code></p>
 						</div>
 						<div class="slide__container-center margin-top-1">
 							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
@@ -313,6 +349,324 @@ function getTemp() {
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">What are Closures used for?</h2>
+						<div class="slide__container-flex">
+							<div class="slide___container">
+								<img class="slide__image width-15 margin-top-1" src="/notepad.e5178954.jpg" alt="Notepad">
+							</div>
+							<ol class="slide__list margin-top-1 padding-left-2 margin-left-2">
+								<li class="slide__list-item">Turning an outer variable into a private variable.</li>
+								<li class="slide__list-item">Namespacing private functions.</li>
+								<!-- <li class="slide__list-item">Creating function factories and currying.</li> -->
+								<li class="slide__list-item">Creating function factories (any function which is not a class or constructor that returns a new object).</li>
+							</ol>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Closures</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Understand and explain closures</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / pair</li>
+								</ul>
+								<p class="slide__exercise__header">Location</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item color-dark-blue"><code>starter-code > 01-closures-lab</code></li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">12 mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Follow the instructions in app.js to build and test code that uses ra closure.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white lowercase">IIFE</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<!-- <h2 class="slide__title">IIFE</h2> -->
+						<div class="slide__container-center margin-top-5">
+							<p class="slide__text slide__text--xxlarge">Immediatley-Invoked Function Expression</p>
+							<p class="slide__text slide__text--xlarge med-grey italic margin-top-3">"Iffy"</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">The Module Pattern</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-50 margin-top-2" src="/iife-circles.c00c7ac4.png" alt="Module pattern IIFE">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Immediatley-Invoked Function Expression (IIFE)</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">A function expression that is executed as soon as it is declared.</li>
+								<li class="slide__list-item">Used to avoid global namespace issues.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">IIFE based on a function expression</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Make a function expression into an IIFE by adding () to the end (before the semicolon).</li>
+							</ul>
+							<pre class="slide__pre margin-top-2"><code class="slide__code javascript small" data-trim="">
+const countDown = function() {
+  let counter;
+  for(counter = 3; counter > 0; counter--) {
+    console.log(counter);
+  }
+}();
+
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">IIFE based on a function expression</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Make a function expression into an IIFE by adding () to the end (before the semicolon).</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image width-100-p margin-top-2" src="/iife-1.48ca9cd3.png" alt="IIFE function expression">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">IIFE based on a function declaration</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Make a function declaration into an IIFE by wrapping in parentheses and adding () to the end.</li>
+							</ul>
+							<pre class="slide__pre margin-top-2"><code class="slide__code javascript small" data-trim="">
+(function countDown() {
+  let counter;
+  for(counter = 3; counter > 0; counter--) {
+    console.log(counter);
+  }
+})();
+							</code></pre>
+						</div>
+					</div>
+				</section>
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">IIFE based on a function declaration</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item--medium">Make a function declaration into an IIFE by wrapping in parentheses and adding () to the end.</li>
+							</ul>
+							<div class="slide__container-center">
+								<img class="slide__image width-100-p margin-top-2" src="/iife-2.53cfab66.png" alt="IIFE function declaration">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along - IIFEs</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Open up: <code>02-iife-codealong</code></p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white lowercase">The Module Pattern</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">The Module Pattern</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-50 margin-top-2" src="/module-pattern.90dbfeb5.png" alt="Module pattern overview">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">The Module Pattern</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Using an IIFE to return an object literal</li>
+								<li class="slide__list-item">The methods of the returned object can access the private properties and methods of the IIFE (closures!), but other code cannot do this.</li>
+								<li class="slide__list-item">This means specific parts of the IIFE are not available in the global scope.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Building a Module</h2>
+						<div class="slide__container">
+							<pre class="slide__pre margin-top-1"><code class="slide__code javascript small" data-trim="">
+const counter = function () {
+  let count = 0;
+    return {
+      reset: function () {
+        count = 0;
+      }
+      getCount: function () {
+        return count;
+      }
+      increment: function () {
+        count++
+      }
+    }
+}();
+							</code></pre>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Building a Module</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p margin-top-1" src="/building-a-module-1.1fe43222.png" alt="Building a module 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Building a Module</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p margin-top-1" src="/building-a-module-2.a4b65d71.png" alt="Building a module 2">
+						</div>
+					</div>
+				</section>
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Building a Module</h2>
+						<div class="slide__container-center">
+							<img class="slide__image width-100-p margin-top-1" src="/building-a-module-3.bfc0fd32.png" alt="Building a module 3">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Closures & This</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Benefits of the Module Pattern</h2>
+						<div class="slide__container">
+							<ul class="slide__list margin-top-1">
+								<li class="slide__list-item">Keeps some functions and variables private. ✅</li>
+								<li class="slide__list-item">Avoids polluting the global scope. ✅</li>
+								<li class="slide__list-item">Organises code into objects. ✅</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 
 
 
@@ -322,6 +676,7 @@ function getTemp() {
 
 
 
+				
 
 
 

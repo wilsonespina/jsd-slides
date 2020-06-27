@@ -2377,6 +2377,9 @@ ul li:before {
 .slides .slide__text.red {
   color: #E51B24;
 }
+.slides .slide__text.med-grey {
+  color: #585858;
+}
 .slides .slide__text--table {
   font-size: 1.2rem;
 }
@@ -2391,6 +2394,9 @@ ul li:before {
 }
 .slides .slide__text--xlarge {
   font-size: 2.8rem;
+}
+.slides .slide__text--xxlarge {
+  font-size: 5rem;
 }
 .slides .slide__text.bold {
   font-weight: bold;
