@@ -132,6 +132,9 @@
                 &.large-font {
                     font-size: 2rem;
                 }
+                &.lowercase {
+                    text-transform: unset;
+                }
             }
             td {
                 &.col-15-p {
@@ -177,7 +180,7 @@
                         background-color: $darkblue;
                     }
                 }
-                &--jquery-selectors, &--jquery-traversal, &--http, &--restful {
+                &--jquery-selectors, &--jquery-traversal, &--http, &--restful, &--context {
                     th {
                         border: 0.2rem solid $white;
                         padding: 0.5rem 1rem;
@@ -188,7 +191,7 @@
                         background-color: $lightyellow;
                     }
                 }
-                &--jquery-traversal {
+                &--jquery-traversal, &--context {
                     th {
                         background-color: $lightyellow;
                     }
@@ -221,7 +224,7 @@
                         padding: 0.8rem 1rem;
                     }
                 }
-                &--http {
+                &--http, &--context {
                     tr {
                         background-color: $yellow;
                     }
@@ -366,6 +369,9 @@
             }
             &.center {
                 text-align: center;
+            }
+            &.xlarge {
+                font-size: 10rem;
             }
         }
         &__name {

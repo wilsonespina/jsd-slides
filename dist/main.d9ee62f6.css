@@ -1966,6 +1966,9 @@ i {
 .slides .slide .bold {
   font-weight: bold;
 }
+.slides .slide .medium-icon {
+  font-size: 2rem;
+}
 .slides .slide .large-icon {
   font-size: 3rem;
 }
@@ -2186,6 +2189,9 @@ ul li:before {
 .slides .slide__table th.large-font {
   font-size: 2rem;
 }
+.slides .slide__table th.lowercase {
+  text-transform: unset;
+}
 .slides .slide__table td.col-15-p {
   width: 15%;
 }
@@ -2218,14 +2224,14 @@ ul li:before {
 .slides .slide__table .slide__head--javascript tr {
   background-color: #358DF2;
 }
-.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th, .slides .slide__table .slide__head--http th, .slides .slide__table .slide__head--restful th {
+.slides .slide__table .slide__head--jquery-selectors th, .slides .slide__table .slide__head--jquery-traversal th, .slides .slide__table .slide__head--http th, .slides .slide__table .slide__head--restful th, .slides .slide__table .slide__head--context th {
   border: 0.2rem solid #FFFFFF;
   padding: 0.5rem 1rem;
 }
 .slides .slide__table .slide__head--jquery-selectors th:nth-child(n+2):nth-child(-n+3) {
   background-color: #feee9b;
 }
-.slides .slide__table .slide__head--jquery-traversal th {
+.slides .slide__table .slide__head--jquery-traversal th, .slides .slide__table .slide__head--context th {
   background-color: #feee9b;
 }
 .slides .slide__table .slide__head--http th {
@@ -2249,16 +2255,16 @@ ul li:before {
   border: 0.2rem solid #FFFFFF;
   padding: 0.8rem 1rem;
 }
-.slides .slide__table .slide__body--http tr {
+.slides .slide__table .slide__body--http tr, .slides .slide__table .slide__body--context tr {
   background-color: #FFD800;
 }
-.slides .slide__table .slide__body--http tr:nth-child(odd) {
+.slides .slide__table .slide__body--http tr:nth-child(odd), .slides .slide__table .slide__body--context tr:nth-child(odd) {
   background-color: #FFD800;
 }
-.slides .slide__table .slide__body--http tr.red {
+.slides .slide__table .slide__body--http tr.red, .slides .slide__table .slide__body--context tr.red {
   background-color: #E51B24;
 }
-.slides .slide__table .slide__body--http td {
+.slides .slide__table .slide__body--http td, .slides .slide__table .slide__body--context td {
   border: 0.2rem solid #FFFFFF;
   padding: 0.8rem 1rem;
 }
@@ -2361,6 +2367,9 @@ ul li:before {
 }
 .slides .slide__title.center {
   text-align: center;
+}
+.slides .slide__title.xlarge {
+  font-size: 10rem;
 }
 .slides .slide__name {
   color: #000000;
