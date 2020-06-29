@@ -60,7 +60,7 @@
 					</div>
 				</section>
 
-				<section class="slide">
+				<!-- <section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Prototypal Inheritance</h2>
 					</header>
@@ -74,7 +74,7 @@
 							</ol>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<section class="slide">
 					<header class="slide__header">
@@ -83,7 +83,12 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
-							<li class="slide__list-item">TBC</li>
+							<li class="slide__list-item">Homework Review</li>
+							<li class="slide__list-item">Constructor Functions</li>
+							<li class="slide__list-item">Prototypes</li>
+							<li class="slide__list-item">Prototype Property</li>
+							<li class="slide__list-item">Prototype Chain</li>
+							<li class="slide__list-item">Classes</li>
 						</ul>
 					</div>
 				</section>
@@ -257,7 +262,7 @@ const spiderman = {
 						<h2 class="slide__title">Constructors</h2>
 						<div class="slide__container-flex start margin-top-1">
 							<pre class="slide__pre width-40"><code class="slide__code javascript small" data-trim>
-function Hero(name, alias, power) {
+function Hero(name, alias, power, usePower) {
   this.name = name
   this.alias = alias
   this.power = power
