@@ -43,7 +43,10 @@
 						</div>
 						<p class="slide__text">At the end of this class, you will be able to:</p>
 						<ul class="slide__list">
-							<li class="slide__list-item">TBC.</li>
+							<li class="slide__list-item">Explain what CRUD is.</li>
+							<li class="slide__list-item">Explain the HTTP methods associated with CRUD.</li>
+							<li class="slide__list-item">Implement Firebase in an application.</li>
+							<li class="slide__list-item">Build a full-stack app with CRUD functionality.</li>
 						</ul>
 					</div>
 				</section>
@@ -71,7 +74,12 @@
 					<div class="slide__content">
 						<h2 class="slide__title">Agenda</h2>
 						<ul class="slide__list">
-							<li class="slide__list-item">TBC</li>
+							<li class="slide__list-item">CRUD
+							</li><li class="slide__list-item">Firebase intro and setup</li>
+							<li class="slide__list-item">Create</li>
+							<li class="slide__list-item">Read</li>
+							<li class="slide__list-item">Update</li>
+							<li class="slide__list-item">Delete</li>
 						</ul>
 					</div>
 				</section>
@@ -108,6 +116,294 @@
 						<h1 class="slide__title--white">Introduction to CRUD & Firebase</h1>
 					</div>
 				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">CRUD</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">What is CRUD?</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Databases are used to persist data.</li>
+							<li class="slide__list-item">In computer programming, <em>create</em>, <em>read</em>, <em>update</em>,
+								and <em>delete</em> (<span class="bold">CRUD</span>) are the four basic functions of <span class="bold">persistent storage</span>.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image width-20" src="/question.593af470.webp" alt="Question">
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<h2 class="slide__title lowercase center">What are some apps that allow you to
+								create, read, update, and delete data?</h2>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">CRUD and HTTP</h2>
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table margin-top-1 width-100-p">
+								<thead class="slide__head slide__head--context">
+									<tr>
+										<th class="medium-font bold padding-left-1">SITUATION</th>
+										<th class="medium-font bold padding-left-1 lowercase">HTTP VERB</th>
+										<th class="medium-font bold padding-left-1 lowercase">OPERATION</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--context">
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold"><span class="slide__text red">C</span>reate</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">POST</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table">Create a new resource</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold"><span class="slide__text red">R</span>ead</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">GET</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table">Read a resource</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold"><span class="slide__text red">U</span>pdate</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">PUT/PATCH</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table">Update a resource</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold"><span class="slide__text red">D</span>elete</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">DELETE</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table">Delete a resource</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Firebase</h1>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">The Client-Server model with CRUD</h2>
+						</div>
+						<div class="slide__container-flex">
+							<img class="slide__image width-35 height-100-p margin-top-5" src="/client-server-model.87be819a.png" alt="Client-server model">
+							<ul class="slide__list margin-left-2">
+								<p class="slide__text slide__text--medium bold">Stores HTML/CSS/JS code</p>
+								<li class="slide__list-item--small">Accepts HTTP requests</li>
+								<li class="slide__list-item--small">Generates HTTP responses</li>
+								<p class="slide__text slide__text--medium bold light-green">Stores database</p>
+								<li class="slide__list-item slide__list-item--small light-green">Provides create access</li>
+								<li class="slide__list-item slide__list-item--small light-green">Provides read access</li>
+								<li class="slide__list-item slide__list-item--small light-green">Provides update access</li>
+								<li class="slide__list-item slide__list-item--small light-green">Provides delete accesss</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Firebase</h2>
+						</div>
+						<div class="slide__container-flex">
+							<img class="slide__image width-35 height-100-p margin-top-2" src="/firebase.45cfaa17.png" alt="Firebase">
+							<ul class="slide__list margin-left-2 margin-top-5">
+								<p class="slide__text slide__text--medium bold">Google Cloud Services including:</p>
+								<li class="slide__list-item">Hosting</li>
+								<li class="slide__list-item">Authentication</li>
+								<li class="slide__list-item red bold">Realtime Database</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Alternative "Serverless" Services</h2>
+						</div>
+						<div class="slide__container-center">
+							<img class="slide__image width-25 height-100-p" src="/serverless.f3134ec2.png" alt="Serverless resources">
+							<p class="slide__text-small light-blue"><a href="https://serverless.css-tricks.com/services/major" target="_blank">https://serverless.css-tricks.com/services/major</a></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Firebase Reatime Database</h2>
+						</div>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">Automatically sends updates to all clients.</li>
+								<li class="slide__list-item">Provides an SDK (software development kit) for connecting to the database with methods for CRUD operations.</li>
+								<li class="slide__list-item">Each record has a unique ID that we use to reference the data.</li>
+								<li class="slide__list-item">Integrates with the Google ecosystem.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">CRUD and HTTP</h2>
+						</div>
+						<div class="slide__container">
+
+							<table class="slide__table width-100-p">
+								<thead class="slide__head slide__head--context">
+									<tr>
+										<th class="medium-font bold padding-left-1">CRUD Action</th>
+										<th class="medium-font bold padding-left-1 lowercase">HTTP VERB</th>
+										<th class="medium-font bold padding-left-1 lowercase">FIREBASE METHOD</th>
+									</tr>
+								</thead>
+								<tbody class="slide__body slide__body--context">
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">Create</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">POST</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="slide__code--dark-blue">push()</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">Read</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">GET</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="slide__code--dark-blue">ref()</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">Update</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">PUT</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="slide__code--dark-blue">set()</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">Update</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">PATCH</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="slide__code--dark-blue">update()</code></p>
+										</td>
+									</tr>
+									<tr>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table bold">Delete</p>
+										</td>
+										<td class="col-25-p">
+											<p class="slide__text slide__text--table">DELETE</p>
+										</td>
+										<td class="col-50-p">
+											<p class="slide__text slide__text--table"><code class="slide__code--dark-blue">remove()</code></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -394,6 +394,9 @@
             &.med-grey {
                 color: $medgrey;
             }
+            &.light-green {
+                color: $light-green;
+            }
             &--table {
                 font-size: 1.2rem;
             }
@@ -531,6 +534,12 @@
                 }
                 &--flex {
                     display: flex;
+                }
+                &.light-green {
+                    color: $light-green;
+                }
+                &.red {
+                    color: $red;
                 }
             }
         }

@@ -2389,6 +2389,9 @@ ul li:before {
 .slides .slide__text.med-grey {
   color: #585858;
 }
+.slides .slide__text.light-green {
+  color: #6ae4d6;
+}
 .slides .slide__text--table {
   font-size: 1.2rem;
 }
@@ -2513,6 +2516,12 @@ ul li:before {
 }
 .slides .slide__list-item--flex {
   display: flex;
+}
+.slides .slide__list-item.light-green {
+  color: #6ae4d6;
+}
+.slides .slide__list-item.red {
+  color: #E51B24;
 }
 .slides .slide__highlight {
   padding: 0 0.1rem;
