@@ -824,7 +824,7 @@
 					</div>
 				</section>
 
-				<section class="slide">
+				<!-- <section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
 					</header>
@@ -832,7 +832,7 @@
 						<div class="slide__container">
 							<h2 class="slide__title">Create Messages</h2>
 						</div>
-						<pre class="slide__pre width-100-p"><code class="slide__code javascript xxsmall" data-trim="">
+						<pre class="slide__pre width-100-p"><code class="slide__code javascript xxsmall" data-trim>
 // Connect to our Firebase app using the reference URL
 const db = firebase.database();
 
@@ -858,7 +858,7 @@ $('#message-form').submit(function (event) {
 });
 						</code></pre>
 					</div>
-				</section>
+				</section> -->
 
 				<section class="slide">
 					<header class="slide__header">
@@ -976,15 +976,6 @@ Lorem ipsum
 					</div>
 				</section>
 
-
-
-
-
-
-
-
-
-
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
@@ -995,18 +986,20 @@ Lorem ipsum
 						</div>
 						<ol class="slide__list padding-left-2">
 							<li class="slide__list-item">Create a <code>getPosts</code> function.</li>
+							<li class="slide__list-item">Retrieve messages using the <code>.on('value')</code> method.</li>
+							<li class="slide__list-item">Create a <code>messages</code> array.</li>
+							<li class="slide__list-item">Iterate through all messages in the database and append a new list item.</li>
+							<li class="slide__list-item">Add a <em>down vote</em>, <em>upvote</em> and <em>delete</em> icon to each list item</li>.
+							<div class="slide__container-center">
+								<img class="slide__image height-100-p width-50" src="/list-tems.d08a23e1.png" alt="List Items">
+							</div>
+							<li class="slide__list-item">Append list items to the DOM.</li>
 						</ol>
 					</div>
 				</section>
 
 
-
-
-
-
-
-
-				<section class="slide">
+				<!-- <section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
 					</header>
@@ -1014,7 +1007,7 @@ Lorem ipsum
 						<div class="slide__container">
 							<h2 class="slide__title">Read Messages</h2>
 						</div>
-						<pre class="slide__pre width-100-p"><code class="slide__code javascript xxsmall" data-trim="">
+						<pre class="slide__pre width-100-p"><code class="slide__code javascript xxsmall" data-trim>
 function getPosts() {
   messageAppReference.ref('messages').on('value', function (results) {
   const $messageBoard = $('.message-board');
@@ -1040,32 +1033,10 @@ function getPosts() {
   $messageBoard.empty();
   // Append message to message board
 }
-						</li></code></pre>
+						</code></pre>
 					</div>
-				</section>
+				</section> -->
 
-
-
-
-
-
-
-
-
-
-				<section class="slide">
-					<header class="slide__header">
-						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
-					</header>
-					<div class="slide__content">
-						<div class="slide__container">
-							<h2 class="slide__title">Read Messages</h2>
-						</div>
-						<ol class="slide__list padding-left-2">
-							<li class="slide__list-item">Create a variable to reference the Firebase database.</li>
-						</ol>
-					</div>
-				</section>
 
 				<section class="slide">
 					<header class="slide__header">
@@ -1084,36 +1055,139 @@ function getPosts() {
 					</div>
 				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Implement Update Functionality</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Build the Update functionality of a full-stack app</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / pair</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">20mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Examine the API documentation at
+														<ul>
+															<li><a href="https://firebase.google.com/docs/reference/js/firebase.database.Reference#update">https://firebase.google.com/docs/reference/js/
+																firebase.database.Reference#update</a></li>
+															<li><a href="https://firebase.google.com/docs/reference/js/firebase.database.Reference#set">https://firebase.google.com/docs/reference/js/
+																firebase.database.Reference#set</a></li>
+														</ul>
+													</li><li class="slide__exercise__header__list--item">Create a function to make updates to the database.</li>
+													<li class="slide__exercise__header__list--item">Add calls to your new function when a user clicks on the upvote and down vote elements.<br>
+														HINT: You can access elements in event listeners via the <code>event</code> object, e.g.: <code>e.target</code>.
+													</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Implement Delete Functionality</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Build the Delete functionality of a full-stack app</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / pair</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Examine the API documentation at
+														<ul>
+															<li><a href="https://firebase.google.com/docs/reference/js/firebase.database.Reference#remove">https://firebase.google.com/docs/reference/js/
+																firebase.database.Reference#remove</a></li>
+														</ul>
+													</li><li class="slide__exercise__header__list--item">Create a function to delete records from the database.</li>
+													<li class="slide__exercise__header__list--item">Add calls to your new function when a user clicks on the delete element.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Explain what CRUD is.</li>
+							<li class="slide__list-item">Explain the HTTP methods associated with CRUD.</li>
+							<li class="slide__list-item">Implement Firebase in an application.</li>
+							<li class="slide__list-item">Build a full-stack app with CRUD functionality.</li>
+						</ul>
+					</div>
+				</section>
 
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Look Ahead to Next Lesson</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Understand what hosting is.</li>
+							<li class="slide__list-item">Identify a program’s needs in terms of host providers.</li>
+							<li class="slide__list-item">Ensure backward compatibility by using Babel to transpile code.</li>
+							<li class="slide__list-item">Optimize code before deployment</li>
+							<li class="slide__list-item">Deploy to a web host.</li>
+						</ul>
+					</div>
+				</section>
 
-
-
-				
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson #16)</p>
+						</div>
+					</div>
+				</section>
 
 			</div>
 		</div>
