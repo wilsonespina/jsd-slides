@@ -2622,6 +2622,9 @@ ul li:before {
 .slides .slide .width-30-p {
   width: 30%;
 }
+.slides .slide .width-35-p {
+  width: 35%;
+}
 .slides .slide .width-80-p {
   width: 80%;
 }
