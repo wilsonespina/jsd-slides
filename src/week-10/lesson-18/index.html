@@ -74,10 +74,12 @@
 						<h2 class="slide__header--title">React</h2>
 					</header>
 					<div class="slide__content">
-						<h2 class="slide__title">Lesson Resources</h2>
+						<h2 class="slide__title">Classroom Resources</h2>
 						<div class="slide__container">
 							<ul class="slide__list">
-								<li class="slide__list-item">LINK to handout</li>
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer</li>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/18-react</code></li>
+								<li class="slide__list-item">Lesson Handout: <a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-18-react-handout.pdf">https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-18-react-handout.pdf</a></li>
 							</ul>
 						</div>
 					</div>
@@ -104,9 +106,9 @@
 								<img class="slide__image width-25 margin-top-2" src="../../assets/images/week-10/react-logo.png" alt="React logo"/>
 							</div>
 							<ul class="slide__list fragment">
-								<li class="slide__list-item--small"><em>Declarative</em>: Design different views for each state, which will be efficiently updated and re-rendered.</li>
+								<li class="slide__list-item--small"><em>Declarative</em>: We describe the program/UI and React implements it (like ordering a pizza rather than making one).</li>
 								<li class="slide__list-item--small"><em>Component-based</em>: Build components, that manage their own state and structure them together into more complex UIs.</li>
-								<li class="slide__list-item--small">Maintains an internal representation of the rendered UI (“<em>virtual DOM</em>”), that renders only the changed elements.</li>
+								<li class="slide__list-item--small"><em>Virtual DOM</em>: Maintains a representation of the rendered UI, that renders only the changed elements.</li>
 							</ul>
 						</div>
 
@@ -374,7 +376,7 @@ function Welcome(props) {
 						</div>
 					</div>
 				</section>
-
+<!-- 
 				<section class="slide">
 					<header class="slide__header">
 						<h2 class="slide__header--title">React</h2>
@@ -387,7 +389,7 @@ function Welcome(props) {
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> -->
 
 				<section class="slide">
 					<header class="slide__header">
@@ -769,7 +771,7 @@ class Welcome extends React.Component {
 						<p class="slide__text">In programming, composition allows you to build more complex functionality by <em>combining small and focused functions</em>.</p>
 						<div class="slide__container margin-top-1">
 							<ul class="slide__list">
-								<li class="slide__list-item">In parent class, call each child with JSX using element syntax.</li>
+								<li class="slide__list-item">In the parent class, call each child with JSX using element syntax.</li>
 								<li class="slide__list-item">Pass necessary props as attributes, referencing <code>this.props</code>.</li>
 								<li class="slide__list-item">For child classes, move data manipulation outside of <code>render()</code> method, and reference the result instead.</li>
 								<li class="slide__list-item">Call <code>ReactDOM.render()</code> only on parent class.</li>
