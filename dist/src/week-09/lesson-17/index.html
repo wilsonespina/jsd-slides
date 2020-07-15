@@ -1,4 +1,280 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JSD | Lesson 17</title><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-32x32.8ae2cba7.png" sizes="32x32"><link rel="icon" type="image/png" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/favicon-16x16.74161018.png" sizes="16x16"><link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet"><link rel="stylesheet" href="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/main.6472261a.css"></head><body> <div class="reveal"> <div class="slides"> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <img class="slide__header-intro--logo height-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/ga-logo.3a7100bb.png" alt="General Assembly logo"> <h2 class="slide__header-intro--title">General Assembly</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Deploying Your App</h1> <h3 class="slide__name white">Wilson Espina</h3> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Review</h2> </header> <div class="slide__content"> <h1 class="slide__title--black">What did we do last lesson?</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <p class="slide__text">At the end of this class, you will be able to:</p> <ul class="slide__list"> <li class="slide__list-item">Understand what hosting is.</li> <li class="slide__list-item">Understand Firebase Authentication.</li> <li class="slide__list-item">Understand Firebase security.</li> <li class="slide__list-item">Use Static Site Hosting.</li> </ul> </div> </section>  <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <h2 class="slide__title">Agenda</h2> <ul class="slide__list"> <li class="slide__list-item">Update</li> <li class="slide__list-item">Delete</li> <li class="slide__list-item">Firebase Authentication</li> <li class="slide__list-item">Firebase Security</li> <li class="slide__list-item">Static Site hosting</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <h2 class="slide__title">Classroom Resources</h2> <div class="slide__container"> <ul class="slide__list"> <li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer</li> <li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/17-deploying-your-app</code></li> </ul> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Update</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">UPDATE</p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Delete</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Implement Delete Functionality</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Build the Delete functionality of a full-stack app</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / pair</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">10mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Examine the API documentation at <ul> <li><a href="https://firebase.google.com/docs/reference/js/firebase.database.Reference#remove">https://firebase.google.com/docs/reference/js/ firebase.database.Reference#remove</a></li> </ul> </li><li class="slide__exercise__header__list--item">Create a function to delete records from the database.</li> <li class="slide__exercise__header__list--item">Add calls to your new function when a user clicks on the delete element.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Deploying Your App</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Deploying Your App</h1> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Deploying Your App</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Firebase Authentication</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Firebase Authentication</h2> </div> <ul class="slide__list"> <li class="slide__list-item">Easily add <em>authentication</em> and <em>authorisation</em> to your app with Firebase.</li> <li class="slide__list-item">Authentication verifies who the user is.</li> <li class="slide__list-item">Authorisation validates what the user can do.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <img class="slide__image height-100-p width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/firebase-auth-1.bd07ed93.png" alt="Firebase auth step 1"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <img class="slide__image height-100-p width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/firebase-auth-2.b7c8933b.png" alt="Firebase auth step 2"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <img class="slide__image height-100-p width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/firebase-auth-3.f9163aae.png" alt="Firebase auth step 3"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <img class="slide__image height-100-p width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/firebase-auth-4.bf2ce569.png" alt="Firebase auth step 4"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <h2 class="slide__title">Firebase Auth SDK</h2> <div class="slide__container margin-top-2"> <img class="slide__image height-100-p width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/auth-sdk.3e23b04d.png" alt="auth SDK"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Config and Initialisation</h2> </div> <div class="slide__container"> <div class="slide__container"> <pre class="slide__pre width-100-p"><code class="slide__code javascript small" data-trim="">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JSD | Lesson 17</title>
+		<link rel="icon" type="image/png" href="/favicon-32x32.43b30f10.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.442c5440.png" sizes="16x16">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700" rel="stylesheet">
+		<link rel="stylesheet" href="/main.d9ee62f6.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<img class="slide__header-intro--logo height-100-p" src="/ga-logo.e5581a45.png" alt="General Assembly logo">
+						<h2 class="slide__header-intro--title">General Assembly</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Deploying Your App</h1>
+						<h3 class="slide__name white">Wilson Espina</h3>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Review</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--black">What did we do last lesson?</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<p class="slide__text">At the end of this class, you will be able to:</p>
+						<ul class="slide__list">
+							<li class="slide__list-item">Understand what hosting is.</li>
+							<li class="slide__list-item">Understand Firebase Authentication.</li>
+							<li class="slide__list-item">Understand Firebase security.</li>
+							<li class="slide__list-item">Use Static Site Hosting.</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- <section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Exit Ticket Comments</h2>
+						<div class="slide__container">
+							<ol class="slide__list margin-top-1 padding-left-2">
+								<li class="slide__list-item">"Really exciting. Great to see we are able to start building these kind of apps!"</li>
+								<li class="slide__list-item">"Really cool to see practical examples and build an app from scratch."</li>
+							</ol>
+						</div>
+					</div>
+				</section> -->
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Agenda</h2>
+						<ul class="slide__list">
+							<li class="slide__list-item">Update</li>
+							<li class="slide__list-item">Delete</li>
+							<li class="slide__list-item">Firebase Authentication</li>
+							<li class="slide__list-item">Firebase Security</li>
+							<li class="slide__list-item">Static Site hosting</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Classroom Resources</h2>
+						<div class="slide__container">
+							<ul class="slide__list">
+								<li class="slide__list-item">Pull changes from the <code>wilson-espina/jsd-9-resources</code> repo to your computer</li>
+								<li class="slide__list-item">In your editor, open the following folder:	<code>Documents/JSD/jsd-9-resources/17-deploying-your-app</code></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Update</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">UPDATE</p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Introduction to CRUD & Firebase</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Delete</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Implement Delete Functionality</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Build the Delete functionality of a full-stack app</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / pair</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Examine the API documentation at
+														<ul>
+															<li><a href="https://firebase.google.com/docs/reference/js/firebase.database.Reference#remove">https://firebase.google.com/docs/reference/js/
+																firebase.database.Reference#remove</a></li>
+														</ul>
+													</li><li class="slide__exercise__header__list--item">Create a function to delete records from the database.</li>
+													<li class="slide__exercise__header__list--item">Add calls to your new function when a user clicks on the delete element.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Deploying Your App</h1>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Firebase Authentication</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Firebase Authentication</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Easily add <em>authentication</em> and <em>authorisation</em> to your app with Firebase.</li>
+							<li class="slide__list-item">Authentication verifies who the user is.</li>
+							<li class="slide__list-item">Authorisation validates what the user can do.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p" src="/firebase-auth-1.0d65e0bd.png" alt="Firebase auth step 1">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p" src="/firebase-auth-2.335e0ad6.png" alt="Firebase auth step 2">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p" src="/firebase-auth-3.fc3f122a.png" alt="Firebase auth step 3">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p" src="/firebase-auth-4.a203d509.png" alt="Firebase auth step 4">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h2 class="slide__title">Firebase Auth SDK</h2>
+						<div class="slide__container margin-top-2">
+							<img class="slide__image height-100-p width-100-p" src="/auth-sdk.8cf338ff.png" alt="auth SDK">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Config and Initialisation</h2>
+						</div>
+						<div class="slide__container">
+							<div class="slide__container">
+								<pre class="slide__pre width-100-p"><code class="slide__code javascript small" data-trim="">
 // Your web app's Firebase configuration
 var firebaseConfig = {
 // Your app's config properties
@@ -9,10 +285,29 @@ firebase.initializeApp(firebaseConfig);
 // Connect to our Firebase app using the reference URL
 const db = firebase.database();
 
-								</code></pre> <pre class="slide__pre width-100-p fragment margin-top-1"><code class="slide__code javascript small" data-trim="">
+								</code></pre>
+								<pre class="slide__pre width-100-p fragment margin-top-1"><code class="slide__code javascript small" data-trim="">
 // Add authentication ref
 const authRef = firebase.auth();
-								</code></pre> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Sign in with Google OAuth</h2> </div> <div class="slide__container"> <div class="slide__container"> <pre class="slide__pre width-100-p"><code class="slide__code javascript small" data-trim="">
+								</code></pre>
+
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Sign in with Google OAuth</h2>
+						</div>
+						<div class="slide__container">
+							<div class="slide__container">
+								<pre class="slide__pre width-100-p"><code class="slide__code javascript small" data-trim="">
 const provider = new firebase.auth.GoogleAuthProvider();
   authRef.signInWithPopup(provider)
     .then(() => {
@@ -22,21 +317,165 @@ const provider = new firebase.auth.GoogleAuthProvider();
       console.error(error);
     });
 
-								</code></pre> </div> <a href="https://firebase.google.com/docs/auth/web/google-signin" class="margin-top-2">https://firebase.google.com/docs/auth/web/google-signin</a> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Sign-in</p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Lab - Implement Sign Out</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Key Objective</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Understand Firebase Authentication</li> </ul> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual / pair</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">10mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Examine the API documentation at <ul> <li><a href="https://firebase.google.com/docs/auth/web/google-signin#next_steps">https://firebase.google.com/docs/auth/web/google-signin#next_steps</a></li> </ul> </li><li class="slide__exercise__header__list--item">Create a function to handle when a user signs out.</li> <li class="slide__exercise__header__list--item">Make sure the new function is fired when a user requires signing out.</li> <li class="slide__exercise__header__list--item">Add functionality to update the text on the Sign-in / Sign out button.</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Deploying Your App</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Firebase Security</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Securing your data</h2> </div> <ul class="slide__list"> <li class="slide__list-item">Firebase uses security rules in the form of a JSON object.</li> <li class="slide__list-item">Rules <em>cascade</em> making it possible to create rules that allow you to lockdown entire collections or individual fields.</li> <li class="slide__list-item">Rules can include variables (using a <em><code>$</code></em>).</li> <li class="slide__list-item">There are built in features for Firebase Authentication.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Sample Security Rules</h2> </div> <div class="slide__container"> <div class="slide__container"> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+								</code></pre>
+							</div>
+							<a href="https://firebase.google.com/docs/auth/web/google-signin" class="margin-top-2">https://firebase.google.com/docs/auth/web/google-signin</a>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Sign-in</p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Lab - Implement Sign Out</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Key Objective</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Understand Firebase Authentication</li>
+								</ul>
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual / pair</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">10mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Examine the API documentation at
+														<ul>
+															<li><a href="https://firebase.google.com/docs/auth/web/google-signin#next_steps">https://firebase.google.com/docs/auth/web/google-signin#next_steps</a></li>
+														</ul>
+													</li><li class="slide__exercise__header__list--item">Create a function to handle when a user signs out.</li>
+													<li class="slide__exercise__header__list--item">Make sure the new function is fired when a user requires signing out.</li>
+													<li class="slide__exercise__header__list--item">Add functionality to update the text on the Sign-in / Sign out button.</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Firebase Security</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Securing your data</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Firebase uses security rules in the form of a JSON object.</li>
+							<li class="slide__list-item">Rules <em>cascade</em> making it possible to create rules that allow you to lockdown entire collections or individual fields.</li>
+							<li class="slide__list-item">Rules can include variables (using a <em><code>$</code></em>).</li>
+							<li class="slide__list-item">There are built in features for Firebase Authentication.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Sample Security Rules</h2>
+						</div>
+						<div class="slide__container">
+							<div class="slide__container">
+								<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 {
   "rules": {
     ".read": true,
     ".write": true
   }
 }
-								</code></pre> <ul class="slide__list"> <li class="slide__list-item margin-top-1">Everybody can READ and WRITE to the database.</li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Sample Security Rules</h2> </div> <div class="slide__container"> <div class="slide__container"> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+								</code></pre>
+								<ul class="slide__list">
+									<li class="slide__list-item margin-top-1">Everybody can READ and WRITE to the database.</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Sample Security Rules</h2>
+						</div>
+						<div class="slide__container">
+							<div class="slide__container">
+								<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 {
   "rules": {
     ".read": true,
     ".write": "auth != null"
   }
 }
-								</code></pre> <ul class="slide__list"> <li class="slide__list-item margin-top-1"><code>auth</code> object relates to the current user.</li> <li class="slide__list-item margin-top-1">Everybody can READ and only logged in users can WRITE to the database.</li> </ul> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Sample Security Rules</h2> </div> <div class="slide__container"> <div class="slide__container"> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+								</code></pre>
+								<ul class="slide__list">
+									<li class="slide__list-item margin-top-1"><code>auth</code> object relates to the current user.</li>
+									<li class="slide__list-item margin-top-1">Everybody can READ and only logged in users can WRITE to the database.</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Sample Security Rules</h2>
+						</div>
+						<div class="slide__container">
+							<div class="slide__container">
+								<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 {
   "rules": {
     ".read": true,
@@ -49,20 +488,350 @@ const provider = new firebase.auth.GoogleAuthProvider();
     }
   }
 }
-								</code></pre> </div> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Security rules</h2> </div> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+								</code></pre>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Security rules</h2>
+						</div>
+						<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 {
   "rules": {
     ".read": true,
-						</code></pre> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Everyone can READ documents.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Security rules</h2> </div> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+						</code></pre>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Everyone can READ documents.</li>
+
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Security rules</h2>
+						</div>
+						<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 "messages": {
   ".write": "auth != null && !data.exists() ||
     (auth != null && data.exists() && data.child('uid').val() == auth.uid)",
-						</code></pre> <ul class="slide__list margin-top-1"> <li class="slide__list-item">In messages you can write documents IF: <ul class="slide__list"> <li class="slide__list-item">You are logged in <code><em>auth != null</em></code> AND you are creating a new doc <code><em>!data.exists()</em></code> </li> <li class="slide__list-item">If you are updating a document <code><em>data.exists()</em></code>, then the id you are currently logged in with <code><em>auth.uid</em></code> must match the id of the uid field in the data you are trying to update <code><em>data.child('uid').val()</em></code>.</li> </ul> </li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Security rules</h2> </div> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+						</code></pre>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">In messages you can write documents IF:
+								<ul class="slide__list">
+									<li class="slide__list-item">You are logged in <code><em>auth != null</em></code> AND you are creating a new doc <code><em>!data.exists()</em></code> </li>
+									<li class="slide__list-item">If you are updating a document <code><em>data.exists()</em></code>, then the id you
+										are currently logged in with <code><em>auth.uid</em></code> must match the id of the uid field in the data you are trying to update <code><em>data.child('uid').val()</em></code>.</li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Security rules</h2>
+						</div>
+						<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 "$votesId": {
   ".write": "auth != null"
 }
-						</code></pre> <ul class="slide__list margin-top-1"> <li class="slide__list-item">Anyone who is logged in can update votes.</li> <li class="slide__list-item"><code>$votesId</code> is the wildcard location for all votes.</li> </ul> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <img class="slide__image height-100-p width-100-p" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/database-rules.7b16364e.png" alt="Database rules"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Youtube Tutorial</h2> </div> <div class="slide__container"> <img class="slide__image height-100-p width-40" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/firebase-youtube.f41991c1.png" alt="Firebase youtiube tutorial"> </div> <a href="https://www.youtube.com/watch?v=PUBnlbjZFAI">https://www.youtube.com/watch?v=PUBnlbjZFAI</a> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Activity - Add Security Rules</h2> </header> <div class="slide__content"> <div class="slide__container-flex"> <img class="slide__image slide__image--exercise width-10" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/exercise.659950dc.png" alt="Exercise"> <div class="slide__exercise"> <p class="slide__exercise__header">Type of Exercise</p> <ul class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Individual</li> </ul> <p class="slide__exercise__header">Timing</p> <table class="slide__table"> <tbody> <tr> <td class="slide-timing"> <h2 class="slide-timing__header">8mins</h2> </td> <td> <ol class="slide__exercise__header__list"> <li class="slide__exercise__header__list--item">Go to your projectʼs console.</li> <li class="slide__exercise__header__list--item">Navigate to the Database/Rules tab.</li> <li class="slide__exercise__header__list--item">Edit the rules and test them with different <code>.read</code> and <code>.write</code> rules. <ul class="slide__list"> <li class="slide__lst-item">HINT: Checkout this post: <a href="https://gist.github.com/codediodeio/6dbce1305b9556c2136492522e2100f6">https://gist.github.com/codediodeio/ 6dbce1305b9556c2136492522e2100f6</a></li> </ul> </li> <li class="slide__exercise__header__list--item">When done, copy and paste the JSON from Slack into the tab.</li> <li class="slide__exercise__header__list--item">Properly format your rules as JSON, publish them and test!</li> </ol> </td> </tr> </tbody> </table> </div> </div> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Deploying Your App</h2> </header> <div class="slide__content"> <h1 class="slide__title--white">Static Site Hosting</h1> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Firebase Hosting</h2> </div> <div class="slide__container"> <ol class="slide__list padding-left-2"> <li class="slide__list-item--small">On firebase.google.com, in the console for your app, click Hosting, then click <code><em>Get Started</em></code>.</li> <li class="slide__list-item--small">Execute the command shown using the terminal on your computer, then return to the browser and click <code><em>Continue</em></code>.</li> <li class="slide__list-item--small">In your Terminal app, execute the <code>firebase login</code> command.</li> <li class="slide__list-item--small">In your Terminal app, navigate to the folder containing your app files, then execute the <code>firebase init</code> command.</li> <li class="slide__list-item--small">Move the files for your app into the newly created public subfolder.</li> <li class="slide__list-item--small">In your Terminal app, execute the firebase deploy command. </li> </ol> <p class="slide__text--small padding-left-2"> <a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-17-deploying-handout.pdf">LINK: Lesson Resources</a> </p> </div> <div class="slide__container-center margin-top-2"> <img class="slide__image height-100-p width-15" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/firebase-logo.f5bde9df.png" alt="firebase logo"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Firebase</p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">GitHub Pages</h2> </div> <div class="slide__container-flex start"> <ul class="slide__list"> <li class="slide__list-item">Head to Settings in Github repo.</li> <li class="slide__list-item">Scroll to the GitHub Pages Section and click on the Source dropdown menu.</li> <li class="slide__list-item">Select <code>master branch</code>.</li> <li class="slide__list-item">Your site will be publish on a <em> https://pages.git.generalassemb.ly</em> URL.</li> <p class="slide__text--small margin-top-3 padding-left-2"> <a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-17-deploying-handout.pdf">LINK: Lesson Resources</a> </p> </ul> <img class="slide__image height-100-p width-30 margin-left-1" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/github-pages-screenshot.f602f50d.png" alt="Github screenshot"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Github Pages</p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container"> <h2 class="slide__title">Surge Hosting</h2> </div> <div class="slide__container-flex"> <ul class="slide__list"> <li class="slide__list-item">Install surge CLI:</li> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+						</code></pre>
+						<ul class="slide__list margin-top-1">
+							<li class="slide__list-item">Anyone who is logged in can update votes.</li>
+							<li class="slide__list-item"><code>$votesId</code> is the wildcard location for all votes.</li>
+
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-100-p" src="/database-rules.fec4d4b9.png" alt="Database rules">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Youtube Tutorial</h2>
+						</div>
+						<div class="slide__container">
+							<img class="slide__image height-100-p width-40" src="/firebase-youtube.42750975.png" alt="Firebase youtiube tutorial">
+						</div>
+						<a href="https://www.youtube.com/watch?v=PUBnlbjZFAI">https://www.youtube.com/watch?v=PUBnlbjZFAI</a>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Activity - Add Security Rules</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex">
+							<img class="slide__image slide__image--exercise width-10" src="/exercise.6eb7bca9.png" alt="Exercise">
+							<div class="slide__exercise">
+								<p class="slide__exercise__header">Type of Exercise</p>
+								<ul class="slide__exercise__header__list">
+									<li class="slide__exercise__header__list--item">Individual</li>
+								</ul>
+								<p class="slide__exercise__header">Timing</p>
+								<table class="slide__table">
+									<tbody>
+										<tr>
+											<td class="slide-timing">
+												<h2 class="slide-timing__header">8mins</h2>
+											</td>
+											<td>
+												<ol class="slide__exercise__header__list">
+													<li class="slide__exercise__header__list--item">Go to your projectʼs console.</li>
+													<li class="slide__exercise__header__list--item">Navigate to the Database/Rules tab.</li>
+													<li class="slide__exercise__header__list--item">Edit the rules and test them with different <code>.read</code> and <code>.write</code> rules.
+														<ul class="slide__list">
+															<li class="slide__lst-item">HINT: Checkout this post: <a href="https://gist.github.com/codediodeio/6dbce1305b9556c2136492522e2100f6">https://gist.github.com/codediodeio/
+																6dbce1305b9556c2136492522e2100f6</a></li>
+														</ul>
+													</li>
+													<li class="slide__exercise__header__list--item">When done, copy and paste the JSON from Slack into the tab.</li>
+													<li class="slide__exercise__header__list--item">Properly format your rules as JSON, publish them and test!</li>
+												</ol>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<h1 class="slide__title--white">Static Site Hosting</h1>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Firebase Hosting</h2>
+						</div>
+						<div class="slide__container">
+							<ol class="slide__list padding-left-2">
+								<li class="slide__list-item--small">On firebase.google.com, in the console for your app, click Hosting, then click <code><em>Get Started</em></code>.</li>
+								<li class="slide__list-item--small">Execute the command shown using the terminal on your computer, then return to the browser and click <code><em>Continue</em></code>.</li>
+								<li class="slide__list-item--small">In your Terminal app, execute the <code>firebase login</code> command.</li>
+								<li class="slide__list-item--small">In your Terminal app, navigate to the folder containing your app files, then execute the <code>firebase init</code> command.</li>
+								<li class="slide__list-item--small">Move the files for your app into the newly created public subfolder.</li>
+								<li class="slide__list-item--small">In your Terminal app, execute the firebase deploy command. </li>
+							</ol>
+							<p class="slide__text--small padding-left-2">
+								<a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-17-deploying-handout.pdf">LINK: Lesson Resources</a>
+							</p>
+						</div>
+						<div class="slide__container-center margin-top-2">
+							<img class="slide__image height-100-p width-15" src="/firebase-logo.16b9f34c.png" alt="firebase logo">
+						</div>
+
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Firebase</p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">GitHub Pages</h2>
+						</div>
+						<div class="slide__container-flex start">
+							<ul class="slide__list">
+								<li class="slide__list-item">Head to Settings in Github repo.</li>
+								<li class="slide__list-item">Scroll to the GitHub Pages Section and click on the Source dropdown menu.</li>
+								<li class="slide__list-item">Select <code>master branch</code>.</li>
+								<li class="slide__list-item">Your site will be publish on a <em> https://pages.git.generalassemb.ly</em> URL.</li>
+								<p class="slide__text--small margin-top-3 padding-left-2">
+									<a href="https://pages.git.generalassemb.ly/wilson-espina/jsd-portal/resources/JSD-17-deploying-handout.pdf">LINK: Lesson Resources</a>
+								</p>
+							</ul>
+							<img class="slide__image height-100-p width-30 margin-left-1" src="/github-pages-screenshot.433a7930.png" alt="Github screenshot">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Github Pages</p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container">
+							<h2 class="slide__title">Surge Hosting</h2>
+						</div>
+						<div class="slide__container-flex">
+							<ul class="slide__list">
+								<li class="slide__list-item">Install surge CLI:</li>
+								<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 npm install --global surge
-								</code></pre> <li class="slide__list-item margin-top-1">Switch into your directory where your index.html file is and type:</li> <pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
+								</code></pre>
+								<li class="slide__list-item margin-top-1">Switch into your directory where your index.html file is and type:</li>
+								<pre class="slide__pre width-100-p"><code class="slide__code json small" data-trim="">
 surge
-								</code></pre> <li class="slide__list-item margin-top-1">Follow the prompts</li> <li class="slide__list-item">Go to surge.sh for more details.</li> </ul> <img class="slide__image height-100-p width-30 margin-left-2 margin-top-2" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/surge.e8710953.png" alt="Surge logo"> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Code along</h2> </header> <div class="slide__content"> <div class="slide__container-center"> <img class="slide__image slide__image--code-along width-20" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/code_along.7c247edc.png" alt="Code Along"> </div> <div class="slide__container-center"> <p class="slide__text--medium">Surge</p> </div> <div class="slide__container-center margin-top-1"> <img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin=""> </div> </div> </section> <section class="slide"> <header class="slide__header"> <h2 class="slide__header--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container-flex start"> <img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="https://pages.git.generalassemb.ly/wilson-espina/jsd-slides/learning-objective.ac57ca5b.jpg" alt="Learning Objective"> <h2 class="slide__title">Learning Objectives</h2> </div> <ul class="slide__list"> <li class="slide__list-item">Understand what hosting is.</li> <li class="slide__list-item">Understand Firebase Authentication.</li> <li class="slide__list-item">Understand Firebase security.</li> <li class="slide__list-item">Use Static Site Hosting.</li> </ul> </div> </section> <section class="slide" data-background-color="black"> <header class="slide__header-intro"> <h2 class="slide__header-intro--title">Deploying Your App</h2> </header> <div class="slide__content"> <div class="slide__container-center margin-top-10"> <h1 class="slide__title--white">Exit Ticket</h1> <p class="slide__text color-white">(Lesson #17)</p> </div> </div> </section>  </div> </div> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script> <script>var i="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/";Reveal.initialize({slideNumber:!0,controls:!0,history:!0,transition:"fade",center:!1,progress:!1,dependencies:[{src:"".concat(i,"plugin/highlight/highlight.min.js"),async:!0,callback:function(){hljs.initHighlightingOnLoad()}}]});</script> </body></html>
+								</code></pre>
+								<li class="slide__list-item margin-top-1">Follow the prompts</li>
+								<li class="slide__list-item">Go to surge.sh for more details.</li>
+							</ul>
+							<img class="slide__image height-100-p width-30 margin-left-2 margin-top-2" src="/surge.7047ab0a.png" alt="Surge logo">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Code along</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center">
+							<img class="slide__image slide__image--code-along width-20" src="/code_along.934111e5.png" alt="Code Along">
+						</div>
+						<div class="slide__container-center">
+							<p class="slide__text--medium">Surge</p>
+						</div>
+						<div class="slide__container-center margin-top-1">
+							<img class="slide__image slide__image--code-along width-10" src="https://media.giphy.com/media/26n7b7PjSOZJwVCmY/giphy.gif" alt="Code Along" crossorigin="">
+						</div>
+					</div>
+				</section>
+
+				<section class="slide">
+					<header class="slide__header">
+						<h2 class="slide__header--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-flex start">
+							<img class="slide__image slide__image--learning-objective margin-right-1 height-100-p width-5" src="/learning-objective.37f53354.jpg" alt="Learning Objective">
+							<h2 class="slide__title">Learning Objectives</h2>
+						</div>
+						<ul class="slide__list">
+							<li class="slide__list-item">Understand what hosting is.</li>
+							<li class="slide__list-item">Understand Firebase Authentication.</li>
+							<li class="slide__list-item">Understand Firebase security.</li>
+							<li class="slide__list-item">Use Static Site Hosting.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Exit Ticket</h1>
+							<p class="slide__text color-white">(Lesson #17)</p>
+						</div>
+					</div>
+				</section>
+
+<!-- 
+
+
+				<section class="slide" data-background-color="black">
+					<header class="slide__header-intro">
+						<h2 class="slide__header-intro--title">Deploying Your App</h2>
+					</header>
+					<div class="slide__content">
+						<div class="slide__container-center margin-top-10">
+							<h1 class="slide__title--white">Homework</h1>
+						</div>
+					</div>
+				</section> -->
+
+
+
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+		<script>var srcUrlPrefix = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/';
+Reveal.initialize({
+  slideNumber: true,
+  controls: true,
+  history: true,
+  transition: 'fade',
+  center: false,
+  progress: false,
+  dependencies: [{
+    src: "".concat(srcUrlPrefix, "plugin/highlight/highlight.min.js"),
+    async: true,
+    callback: function callback() {
+      hljs.initHighlightingOnLoad();
+    }
+  }]
+});</script>
+	</body>
+</html>
