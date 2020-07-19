@@ -2595,6 +2595,9 @@ ul li:before {
 .slides .slide .width-15 {
   width: 15rem;
 }
+.slides .slide .width-18 {
+  width: 18rem;
+}
 .slides .slide .width-20 {
   width: 20rem;
 }
